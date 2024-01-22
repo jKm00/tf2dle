@@ -14,6 +14,6 @@
 
 <style scoped>
 	.width {
-		width: min(100%, 500px);
+		width: min(100%, 700px);
 	}
 </style>

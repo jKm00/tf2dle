@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Axe, Map } from 'lucide-svelte';
+	import * as Card from '$lib/components/ui/card';
 
 	const gameModes = [
 		{
@@ -15,19 +16,24 @@
 	];
 </script>
 
-<div class="bg-background p-2 rounded-md shadow-">
-	<h2 class="text-foreground mb-2 uppercase font-bold">Game modes</h2>
-	<ul class="flex flex-col gap-2">
-		{#each gameModes as gameMode}
-			<a href={`/game-modes/${gameMode.name.toLowerCase()}`}>
-				<li class="flex gap-2 items-center bg-card rounded shadow-inner py-2 px-4">
-					<svelte:component this={gameMode.icon} />
-					<div class="flex flex-col">
-						<h2 class="uppercase font-bold">{gameMode.name}</h2>
-						<p class="text-sm">{gameMode.description}</p>
-					</div>
-				</li>
-			</a>
-		{/each}
-	</ul>
-</div>
+<Card.Root>
+	<Card.Header>
+		<Card.Title>Game mode</Card.Title>
+		<Card.Description>Choose a game mode to play</Card.Description>
+	</Card.Header>
+	<Card.Content>
+		<ul class="grid gap-2">
+			{#each gameModes as gameMode}
+				<a href={`/game-modes/${gameMode.name.toLowerCase()}`}>
+					<li class="flex items-center gap-4 bg-secondary rounded px-4 py-2">
+						<svelte:component this={gameMode.icon} />
+						<div>
+							<h2>{gameMode.name}</h2>
+							<p>{gameMode.description}</p>
+						</div>
+					</li>
+				</a>
+			{/each}
+		</ul>
+	</Card.Content>
+</Card.Root>
