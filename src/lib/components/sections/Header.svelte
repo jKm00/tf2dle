@@ -1,5 +1,5 @@
 <header class="text-center">
-	<h1 class="text-white text-outline font-black text-4xl"><a href="/">TF2DLE</a></h1>
+	<h1 class="text-white text-outline font-black text-7xl"><a href="/">TF2DLE</a></h1>
 </header>
 
 <style scoped>

@@ -15,7 +15,7 @@
 	];
 </script>
 
-<div class="bg-background p-2 rounded">
+<div class="bg-background p-2 rounded-md shadow-">
 	<h2 class="text-foreground mb-2 uppercase font-bold">Game modes</h2>
 	<ul class="flex flex-col gap-2">
 		{#each gameModes as gameMode}
