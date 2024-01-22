@@ -4,5 +4,11 @@
 		"gameMode": "Capture the Flag",
 		"releaseDate": "launch",
 		"imgUrl": "https://wiki.teamfortress.com/w/images/a/a1/Ctf_2fort_bridge_ss.png"
+	},
+	{
+		"name": "Frosty",
+		"gameMode": "Capture the Flag",
+		"releaseDate": "5. December 2022",
+		"imgUrl": "https://wiki.teamfortress.com/w/images/thumb/a/ac/Ctf_frosty.png/600px-Ctf_frosty.png"
 	}
 ]

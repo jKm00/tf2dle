@@ -1,8 +1,9 @@
 import maps from '$lib/server/data/maps.json';
-import type { Map } from '$lib/types';
+import type { Map, SelectedMap } from '$lib/types';
 
 class MapService {
 	private maps: Map[];
+	private current: SelectedMap | null = null;
 
 	private static instance: MapService;
 
@@ -18,19 +19,32 @@ class MapService {
 		return MapService.instance;
 	}
 
-	public getTodaysMap() {
-		const MULTIPLIER = 1;
+	public selectRandomMap() {
+		const map = this.maps[Math.floor(Math.random() * this.maps.length)];
 
+		const MULTIPLIER = 5;
 		const startingPos = {
 			x: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER,
 			y: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER
 		};
+
+		this.current = {
+			map,
+			startingPos
+		};
+	}
+
+	public getTodaysMap() {
+		if (this.current === null) {
+			this.selectRandomMap();
+		}
+
 		return {
 			image: {
-				url: this.maps[0].imgUrl,
-				startingPos
+				url: this.current!.map.imgUrl,
+				startingPos: this.current!.startingPos
 			},
-			hints: [maps[0].releaseDate, maps[0].gameMode]
+			hints: [this.current!.map.releaseDate, this.current!.map.gameMode]
 		};
 	}
 }
