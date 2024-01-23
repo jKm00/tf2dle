@@ -22,7 +22,7 @@ export type MapGuessResponse = {
 	};
 	releaseDate: {
 		correct: 'correct' | 'earlier' | 'later';
-		value: string;
+		value: number;
 	};
 	thumbnail: string;
 };

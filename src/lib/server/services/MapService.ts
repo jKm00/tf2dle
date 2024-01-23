@@ -98,7 +98,7 @@ class MapService {
 					: dayjs(guessedMap?.releaseDate).isBefore(dayjs(this.current!.releaseDate))
 						? 'later'
 						: 'earlier',
-				value: guessedMap?.releaseDate ?? ''
+				value: dayjs(guessedMap?.releaseDate).year() ?? ''
 			},
 			thumbnail: guessedMap?.thumbnail ?? ''
 		};

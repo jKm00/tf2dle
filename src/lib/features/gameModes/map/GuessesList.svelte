@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { MapGuessResponse } from '$lib/dtos';
-	import { ChevronDown, ChevronUp } from 'lucide-svelte';
+	import { ArrowBigDown, ArrowBigUp } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 
 	export let guesses: MapGuessResponse[];
@@ -13,7 +13,7 @@
 			<p>Image</p>
 			<p>Name</p>
 			<p>Game Mode</p>
-			<p>Release Date</p>
+			<p>Release Year</p>
 		</div>
 	{/if}
 	<div class="custom-grid gap-4">
@@ -49,11 +49,11 @@
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
 				class={`${
 					guess.releaseDate.correct === 'correct' ? 'bg-green-500' : 'bg-red-500'
-				} flex items-center justify-center gap-2 rounded-sm`}
+				} flex items-center justify-center gap-1 rounded-sm`}
 			>
 				{guess.releaseDate.value}
-				<ChevronDown class={guess.releaseDate.correct === 'earlier' ? '' : 'hidden'} />
-				<ChevronUp class={guess.releaseDate.correct === 'later' ? '' : 'hidden'} />
+				<ArrowBigDown class={guess.releaseDate.correct === 'earlier' ? '' : 'hidden'} />
+				<ArrowBigUp class={guess.releaseDate.correct === 'later' ? '' : 'hidden'} />
 			</p>
 		{/each}
 	</div>
