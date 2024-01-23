@@ -1,11 +1,45 @@
-.DS_Store
 node_modules
+/package
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Virtual Environment
+pyvenv.cfg
+Include/
+Lib/
+Lib/site-packages/
+Scripts/
+bin/
+
+# Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / Build Artifacts
+build/
+dist/
+*.egg-info/
 /build
 /.svelte-kit
-/package
+
+# Local Configuration Files
+.vscode/
+.idea/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python Debugging Files
+*.pdb
+
+# Jupyter Notebook Files
+.ipynb_checkpoints/
+
+# Environment Variable Files
 .env
 .env.*
 !.env.example
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
-.vscode
+.flaskenv

@@ -1,9 +1,9 @@
 export type Map = {
 	name: string;
+	thumbnail: string;
+	image: string;
 	gameModes: string[];
 	releaseDate: string;
-	image: string;
-	thumbnail: string;
 };
 
 export type SelectedMap = {

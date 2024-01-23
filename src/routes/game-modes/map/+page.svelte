@@ -127,7 +127,7 @@
 							guessedMaps={$guesses.map((guess) => guess.name)}
 						/>
 					{/if}
-					<GuessesList guesses={$guesses.reverse()} />
+					<GuessesList guesses={[...$guesses].reverse()} />
 				{/if}
 			</div>
 		</Card.Content>

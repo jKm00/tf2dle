@@ -1,30 +1,1553 @@
 [
-	{
-		"name": "2Fort",
-		"gameModes": ["Capture the Flag"],
-		"releaseDate": "10.10.2007",
-		"image": "https://wiki.teamfortress.com/w/images/a/a1/Ctf_2fort_bridge_ss.png",
-		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a1/Ctf_2fort_bridge_ss.png/150px-Ctf_2fort_bridge_ss.png"
-	},
-	{
-		"name": "Sawmill",
-		"gameModes": ["Capture the Flag", "King of the Hill"],
-		"releaseDate": "13.08.2009",
-		"image": "https://wiki.teamfortress.com/w/images/b/bd/CTF_Sawmill_Center.png",
-		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/bd/CTF_Sawmill_Center.png/150px-CTF_Sawmill_Center.png"
-	},
-	{
-		"name": "Badlands",
-		"gameModes": ["Control Point", "King of the Hill", "Arena"],
-		"releaseDate": "14.02.2008",
-		"image": "https://wiki.teamfortress.com/w/images/7/79/Badlands2.png",
-		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/CP_Badlands_Central_point.PNG/150px-CP_Badlands_Central_point.PNG"
-	},
-	{
-		"name": "Egypt",
-		"gameModes": ["Attack/Defend"],
-		"releaseDate": "24.02.2009",
-		"image": "https://wiki.teamfortress.com/w/images/thumb/4/45/Egypt_01.jpg/300px-Egypt_01.jpg",
-		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/45/Egypt_01.jpg/150px-Egypt_01.jpg"
-	}
+    {
+        "name": "2Fort",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a1/Ctf_2fort_bridge_ss.png/150px-Ctf_2fort_bridge_ss.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/a1/Ctf_2fort_bridge_ss.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2007-10-10"
+    },
+    {
+        "name": "2Fort Invasion",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/dd/Ctf_2fort_invasion.png/150px-Ctf_2fort_invasion.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/dd/Ctf_2fort_invasion.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2015-10-06"
+    },
+    {
+        "name": "Crasher",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/83/Ctf_crasher.png/150px-Ctf_crasher.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/83/Ctf_crasher.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2022-10-05"
+    },
+    {
+        "name": "Double Cross",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/ae/CTF_DoubleCross_RedBase.png/150px-CTF_DoubleCross_RedBase.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/ae/CTF_DoubleCross_RedBase.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2009-12-17"
+    },
+    {
+        "name": "Doublefrost",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/65/Ctf_doublecross_snowy.png/150px-Ctf_doublecross_snowy.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/65/Ctf_doublecross_snowy.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2021-12-02"
+    },
+    {
+        "name": "Frosty",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/ac/Ctf_frosty.png/150px-Ctf_frosty.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/ac/Ctf_frosty.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2022-12-05"
+    },
+    {
+        "name": "Haarp",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/42/Ctf_haarp.png/150px-Ctf_haarp.png",
+        "image": "https://wiki.teamfortress.com/w/images/4/42/Ctf_haarp.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Helltrain",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/24/Ctf_helltrain_event.png/150px-Ctf_helltrain_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/24/Ctf_helltrain_event.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2022-10-05"
+    },
+    {
+        "name": "Landfall",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/ca/Ctf_landfall_rc0005.jpg/150px-Ctf_landfall_rc0005.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/c/ca/Ctf_landfall_rc0005.jpg",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2015-12-17"
+    },
+    {
+        "name": "Pelican Peak",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/96/Ctf_pelican_peak.png/150px-Ctf_pelican_peak.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/96/Ctf_pelican_peak.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Sawmill",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/bd/CTF_Sawmill_Center.png/150px-CTF_Sawmill_Center.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/bd/CTF_Sawmill_Center.png",
+        "gameModes": [
+            "Capture the Flag",
+            "Arena",
+            "King of the Hill"
+        ],
+        "releaseDate": "2009-08-13"
+    },
+    {
+        "name": "Snowfall",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Ctf_snowfall_final.png/150px-Ctf_snowfall_final.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d0/Ctf_snowfall_final.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2020-12-03"
+    },
+    {
+        "name": "Turbine",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/dc/CTF_Turbine_Center.png/150px-CTF_Turbine_Center.png.jpeg",
+        "image": "https://wiki.teamfortress.com/w/images/d/dc/CTF_Turbine_Center.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2008-06-19"
+    },
+    {
+        "name": "Turbine Center",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/ba/Ctf_turbine_winter.png/150px-Ctf_turbine_winter.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/ba/Ctf_turbine_winter.png",
+        "gameModes": [
+            "Capture the Flag"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Well",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e1/Ctfwell04.png/150px-Ctfwell04.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e1/Ctfwell04.png",
+        "gameModes": [
+            "Capture the Flag",
+            "Control Point",
+            "Arena"
+        ],
+        "releaseDate": "2008-01-25"
+    },
+    {
+        "name": "5Gorge",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/81/5gorge1.png/150px-5gorge1.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/81/5gorge1.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2011-01-19"
+    },
+    {
+        "name": "Badlands",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/CP_Badlands_Central_point.PNG/150px-CP_Badlands_Central_point.PNG",
+        "image": "https://wiki.teamfortress.com/w/images/7/7d/CP_Badlands_Central_point.PNG",
+        "gameModes": [
+            "Control Point",
+            "Arena",
+            "King of the Hill"
+        ],
+        "releaseDate": "2008-02-14"
+    },
+    {
+        "name": "Coldfront",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/13/Coldfront5.png/150px-Coldfront5.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/13/Coldfront5.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2010-07-08"
+    },
+    {
+        "name": "Fastlane",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/ee/Fastlane1.png/150px-Fastlane1.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/ee/Fastlane1.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2008-06-19"
+    },
+    {
+        "name": "Foundry",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/24/Cp_foundry_mid.png/150px-Cp_foundry_mid.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/24/Cp_foundry_mid.png",
+        "gameModes": [
+            "Control Point",
+            "Mannpower"
+        ],
+        "releaseDate": "2011-12-15"
+    },
+    {
+        "name": "Freight",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/da/Freight1.png/150px-Freight1.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/da/Freight1.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2010-04-28"
+    },
+    {
+        "name": "Granary",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/TF2_Granary_Map.jpg/150px-TF2_Granary_Map.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/d/d0/TF2_Granary_Map.jpg",
+        "gameModes": [
+            "Control Point",
+            "Arena"
+        ],
+        "releaseDate": "2007-10-10"
+    },
+    {
+        "name": "Gullywash",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/17/CP_Gullywash_3.png/150px-CP_Gullywash_3.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/17/CP_Gullywash_3.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2011-10-13"
+    },
+    {
+        "name": "Metalworks",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fa/Cp_metalworks_b22_5.jpg/150px-Cp_metalworks_b22_5.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/f/fa/Cp_metalworks_b22_5.jpg",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2016-07-07"
+    },
+    {
+        "name": "Powerhouse",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d1/Cp_powerhouse.png/150px-Cp_powerhouse.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d1/Cp_powerhouse.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2015-07-02"
+    },
+    {
+        "name": "Process",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/56/Cp_process_middle_point.png/150px-Cp_process_middle_point.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/56/Cp_process_middle_point.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2013-07-10"
+    },
+    {
+        "name": "Reckoner",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e1/Cp_reckoner.png/150px-Cp_reckoner.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e1/Cp_reckoner.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Sinshine",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/48/Cp_sunshine_event.jpg/150px-Cp_sunshine_event.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/4/48/Cp_sunshine_event.jpg",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2015-10-28"
+    },
+    {
+        "name": "Snakewater",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/84/Snakewater_mid.png/150px-Snakewater_mid.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/84/Snakewater_mid.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2013-11-21"
+    },
+    {
+        "name": "Sunshine",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e9/Sunshine_main.png/150px-Sunshine_main.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e9/Sunshine_main.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2016-07-07"
+    },
+    {
+        "name": "Vanguard",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b2/Cp_vanguard.png/150px-Cp_vanguard.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/b2/Cp_vanguard.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2015-12-17"
+    },
+    {
+        "name": "Yukon",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8a/CP_Yukon_overview.png/150px-CP_Yukon_overview.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8a/CP_Yukon_overview.png",
+        "gameModes": [
+            "Control Point"
+        ],
+        "releaseDate": "2009-08-13"
+    },
+    {
+        "name": "Altitude",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/68/Cp_altitude.png/150px-Cp_altitude.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/68/Cp_altitude.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2021-12-02"
+    },
+    {
+        "name": "Brew",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/32/Cp_brew.png/150px-Cp_brew.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/32/Cp_brew.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Carrier",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/69/Cp_carrier.png/150px-Cp_carrier.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/69/Cp_carrier.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Coal Pit",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/18/Cp_gravelpit_snowy.png/150px-Cp_gravelpit_snowy.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/18/Cp_gravelpit_snowy.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2022-12-05"
+    },
+    {
+        "name": "Dustbowl",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/31/TF2_Dustbowl_Map.jpg/150px-TF2_Dustbowl_Map.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/3/31/TF2_Dustbowl_Map.jpg",
+        "gameModes": [
+            "Attack/Defend",
+            "Training Mode"
+        ],
+        "releaseDate": "2007-10-10"
+    },
+    {
+        "name": "Erebus",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/35/Cp_ambush_event.png/150px-Cp_ambush_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/35/Cp_ambush_event.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2021-10-05"
+    },
+    {
+        "name": "Egypt",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/45/Egypt_01.jpg/150px-Egypt_01.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/4/45/Egypt_01.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2009-02-24"
+    },
+    {
+        "name": "Frostwatch",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/91/Cp_frostwatch.png/150px-Cp_frostwatch.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/91/Cp_frostwatch.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2022-12-05"
+    },
+    {
+        "name": "Gorge",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/25/Cp_gorge.jpg/150px-Cp_gorge.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/2/25/Cp_gorge.jpg",
+        "gameModes": [
+            "Attack/Defend",
+            "Mannpower"
+        ],
+        "releaseDate": "2009-12-17"
+    },
+    {
+        "name": "Gorge Event",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/70/Cp_gorge_event.png/150px-Cp_gorge_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/70/Cp_gorge_event.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2015-10-28"
+    },
+    {
+        "name": "Gravel Pit",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e4/Tf2_gravelpit.jpg/150px-Tf2_gravelpit.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/e/e4/Tf2_gravelpit.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2007-10-10"
+    },
+    {
+        "name": "Hardwood",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1e/Cp_hardwood.png/150px-Cp_hardwood.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/1e/Cp_hardwood.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Junction",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/23/Junct_01.jpg/150px-Junct_01.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/2/23/Junct_01.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2009-02-24"
+    },
+    {
+        "name": "Lava Pit",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/96/Cp_lavapit_final.png/150px-Cp_lavapit_final.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/96/Cp_lavapit_final.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Mann Manor",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/4d/Mann_manor_event.jpg/150px-Mann_manor_event.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/4/4d/Mann_manor_event.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2010-10-27"
+    },
+    {
+        "name": "Mercenary Park",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/53/Yetipark_5.png/150px-Yetipark_5.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/53/Yetipark_5.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2017-10-20"
+    },
+    {
+        "name": "Mossrock",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/92/Mossrock_main.jpg/150px-Mossrock_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/9/92/Mossrock_main.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2017-10-20"
+    },
+    {
+        "name": "Mountain Lab",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c2/Art_Pass_Winner_3DNJ.jpg/150px-Art_Pass_Winner_3DNJ.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/c/c2/Art_Pass_Winner_3DNJ.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2010-10-27"
+    },
+    {
+        "name": "Snowplow",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a7/Cp_snowplow.jpg/150px-Cp_snowplow.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/a/a7/Cp_snowplow.jpg",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2015-07-02"
+    },
+    {
+        "name": "Spookeyridge",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8f/Cp_spookeyridge.png/150px-Cp_spookeyridge.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8f/Cp_spookeyridge.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2022-10-05"
+    },
+    {
+        "name": "Steel",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/39/Steel_Main.png/150px-Steel_Main.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/39/Steel_Main.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2008-08-19"
+    },
+    {
+        "name": "Sulfur",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/72/Cp_sulfur.png/150px-Cp_sulfur.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/72/Cp_sulfur.png",
+        "gameModes": [
+            "Attack/Defend"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "DeGroot Keep",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/0e/Degroot_Keep_Castle.png/150px-Degroot_Keep_Castle.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/0e/Degroot_Keep_Castle.png",
+        "gameModes": [
+            "Attack/Defend(Medieval Mode)"
+        ],
+        "releaseDate": "2010-12-17"
+    },
+    {
+        "name": "Sandcastle",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8a/Cp_degrootkeep_rats.png/150px-Cp_degrootkeep_rats.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8a/Cp_degrootkeep_rats.png",
+        "gameModes": [
+            "Attack/Defend(Medieval Mode)"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Standin",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/73/Cp_standin_B.jpg/150px-Cp_standin_B.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/7/73/Cp_standin_B.jpg",
+        "gameModes": [
+            "Control Point(Domination)"
+        ],
+        "releaseDate": "2013-07-10"
+    },
+    {
+        "name": "Hydro",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e8/TF2_Hydro_Map.jpg/150px-TF2_Hydro_Map.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/e/e8/TF2_Hydro_Map.jpg",
+        "gameModes": [
+            "Territorial Control"
+        ],
+        "releaseDate": "2007-10-10"
+    },
+    {
+        "name": "Badwater Basin",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/3a/Plbadwater.png/150px-Plbadwater.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/3a/Plbadwater.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2008-08-19"
+    },
+    {
+        "name": "Barnblitz",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7b/Barnblitz.PNG/150px-Barnblitz.PNG",
+        "image": "https://wiki.teamfortress.com/w/images/7/7b/Barnblitz.PNG",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2011-06-23"
+    },
+    {
+        "name": "Bloodwater",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/64/Pl_bloodwater.png/150px-Pl_bloodwater.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/64/Pl_bloodwater.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2020-10-01"
+    },
+    {
+        "name": "Borneo",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d3/Pl_Borneo.jpg/150px-Pl_Borneo.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/d/d3/Pl_Borneo.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2015-07-02"
+    },
+    {
+        "name": "Bread Space",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/91/Pl_breadspace.png/150px-Pl_breadspace.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/91/Pl_breadspace.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2021-12-02"
+    },
+    {
+        "name": "Brimstone",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6d/Pl_fifthcurve_event.png/150px-Pl_fifthcurve_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/6d/Pl_fifthcurve_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2016-10-21"
+    },
+    {
+        "name": "Cactus Canyon",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/13/Cactus_Canyon.jpg/150px-Cactus_Canyon.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/1/13/Cactus_Canyon.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2014-07-08"
+    },
+    {
+        "name": "Camber",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/53/Pl_camber.png/150px-Pl_camber.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/53/Pl_camber.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Cashworks",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/32/Pl_cashworks.png/150px-Pl_cashworks.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/32/Pl_cashworks.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Chilly",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d5/Pl_chilly.png/150px-Pl_chilly.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d5/Pl_chilly.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2021-12-02"
+    },
+    {
+        "name": "Corruption",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Pl_corruption.png/150px-Pl_corruption.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d0/Pl_corruption.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Emerge",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/67/Pl_emerge.png/150px-Pl_emerge.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/67/Pl_emerge.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Enclosure",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e9/Enclosure_main.jpg/150px-Enclosure_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/e/e9/Enclosure_main.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2017-10-20"
+    },
+    {
+        "name": "Frontier",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/af/Pl_frontier.jpg/150px-Pl_frontier.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/a/af/Pl_frontier.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2011-02-24"
+    },
+    {
+        "name": "Frostcliff",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8e/Pl_frostcliff.png/150px-Pl_frostcliff.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8e/Pl_frostcliff.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2022-12-05"
+    },
+    {
+        "name": "Gold Rush",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/cb/Goldrush.jpg/150px-Goldrush.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/c/cb/Goldrush.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2008-04-29"
+    },
+    {
+        "name": "Gravestone",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/bf/Pl_rumble_event.png/150px-Pl_rumble_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/bf/Pl_rumble_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2018-10-19"
+    },
+    {
+        "name": "Ghoulpit",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6c/Pl_sludgepit_event.png/150px-Pl_sludgepit_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/6c/Pl_sludgepit_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2022-10-05"
+    },
+    {
+        "name": "Hassle Castle",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d8/Pl_hasslecastle.png/150px-Pl_hasslecastle.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d8/Pl_hasslecastle.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2020-10-01"
+    },
+    {
+        "name": "Hellstone",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b5/Pl_millstone_event.jpg/150px-Pl_millstone_event.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/b/b5/Pl_millstone_event.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2015-10-28"
+    },
+    {
+        "name": "Hoodoo",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/87/Plhoodoo.png/150px-Plhoodoo.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/87/Plhoodoo.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2009-05-21"
+    },
+    {
+        "name": "Phoenix",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1d/Pl_phoenix.png/150px-Pl_phoenix.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/1d/Pl_phoenix.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Pier",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6e/Pl_pier.png/150px-Pl_pier.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/6e/Pl_pier.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2020-12-03"
+    },
+    {
+        "name": "Polar",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8a/Pl_coal_event.png/150px-Pl_coal_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8a/Pl_coal_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2021-12-02"
+    },
+    {
+        "name": "Precipice",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1c/Precipice_main.jpg/150px-Precipice_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/1/1c/Precipice_main.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2019-10-10"
+    },
+    {
+        "name": "Rumford",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/37/Pl_rumford_event.png/150px-Pl_rumford_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/37/Pl_rumford_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2022-12-05"
+    },
+    {
+        "name": "Snowycoast",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1e/Pl_snowycoast.jpg/150px-Pl_snowycoast.jpg.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/1e/Pl_snowycoast.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2015-12-17"
+    },
+    {
+        "name": "Spineyard",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fa/Pl_spineyard.png/150px-Pl_spineyard.png",
+        "image": "https://wiki.teamfortress.com/w/images/f/fa/Pl_spineyard.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Swiftwater",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c3/Pl_swiftwater.jpg/150px-Pl_swiftwater.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/c/c3/Pl_swiftwater.jpg",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2016-07-07"
+    },
+    {
+        "name": "Terror",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/9f/Pl_terror_event.png/150px-Pl_terror_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/9f/Pl_terror_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2021-10-05"
+    },
+    {
+        "name": "Thunder Mountain",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/f0/PL_Thunder_Mountain.png/150px-PL_Thunder_Mountain.png",
+        "image": "https://wiki.teamfortress.com/w/images/f/f0/PL_Thunder_Mountain.png",
+        "gameModes": [
+            "Payload",
+            "Mannpower"
+        ],
+        "releaseDate": "2010-07-08"
+    },
+    {
+        "name": "Upward",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/92/Engineer_Update_Upward.png/150px-Engineer_Update_Upward.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/92/Engineer_Update_Upward.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2010-07-08"
+    },
+    {
+        "name": "Venice",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d2/Pl_venice.png/150px-Pl_venice.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d2/Pl_venice.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Wutville",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/70/Pl_wutville_event.png/150px-Pl_wutville_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/70/Pl_wutville_event.png",
+        "gameModes": [
+            "Payload"
+        ],
+        "releaseDate": "2020-12-03"
+    },
+    {
+        "name": "Banana Bay",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/87/Bananabay_main.jpg/150px-Bananabay_main.jpg.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/87/Bananabay_main.jpg",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2017-10-20"
+    },
+    {
+        "name": "Bonesaw",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/21/Plr_hacksaw_event.png/150px-Plr_hacksaw_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/21/Plr_hacksaw_event.png",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2022-10-05"
+    },
+    {
+        "name": "Hacksaw",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/5c/Plr_hacksaw.png/150px-Plr_hacksaw.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/5c/Plr_hacksaw.png",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Helltower",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7f/Plr_hightower_event3.png/150px-Plr_hightower_event3.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/7f/Plr_hightower_event3.png",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2013-10-29"
+    },
+    {
+        "name": "Hightower",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d9/Hightower.png/150px-Hightower.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d9/Hightower.png",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2010-07-08"
+    },
+    {
+        "name": "Nightfall",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/18/Nightfall_stage2.png/150px-Nightfall_stage2.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/18/Nightfall_stage2.png",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2011-02-24"
+    },
+    {
+        "name": "Pipeline",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7e/Pipeline.jpg/150px-Pipeline.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/7/7e/Pipeline.jpg",
+        "gameModes": [
+            "Payload Race"
+        ],
+        "releaseDate": "2009-05-21"
+    },
+    {
+        "name": "Byre",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/da/Arena_byre_b40007.jpg/150px-Arena_byre_b40007.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/d/da/Arena_byre_b40007.jpg",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2015-10-06"
+    },
+    {
+        "name": "Graveyard",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/dc/Arena_lumberyard_event.png/150px-Arena_lumberyard_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/dc/Arena_lumberyard_event.png",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2021-10-05"
+    },
+    {
+        "name": "Lumberyard",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/df/Arenalumberyard.jpg/150px-Arenalumberyard.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/d/df/Arenalumberyard.jpg",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2008-08-19"
+    },
+    {
+        "name": "Nucleus",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/54/Arenanucleus.png/150px-Arenanucleus.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/54/Arenanucleus.png",
+        "gameModes": [
+            "Arena",
+            "King of the Hill"
+        ],
+        "releaseDate": "2009-05-21"
+    },
+    {
+        "name": "Offblast",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d9/Offblast_01.jpg/150px-Offblast_01.jpg.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d9/Offblast_01.jpg",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2009-08-13"
+    },
+    {
+        "name": "Perks",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/2e/Arena_perks.png/150px-Arena_perks.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/2e/Arena_perks.png",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Ravine",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/3c/Arenaravine.jpg/150px-Arenaravine.jpg.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/3c/Arenaravine.jpg",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2008-08-19"
+    },
+    {
+        "name": "Watchtower",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/86/Watch_01.jpg/150px-Watch_01.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/8/86/Watch_01.jpg",
+        "gameModes": [
+            "Arena"
+        ],
+        "releaseDate": "2009-02-24"
+    },
+    {
+        "name": "Brazil",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/ee/Brazil_main.jpg/150px-Brazil_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/e/ee/Brazil_main.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2017-10-20"
+    },
+    {
+        "name": "Cascade",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/62/Koth_cascade.png/150px-Koth_cascade.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/62/Koth_cascade.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2021-12-02"
+    },
+    {
+        "name": "Cauldron",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/2e/Koth_bagel_event.png/150px-Koth_bagel_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/2e/Koth_bagel_event.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2018-10-19"
+    },
+    {
+        "name": "Eyeaduct",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7c/Eyeaduct_1.png/150px-Eyeaduct_1.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/7c/Eyeaduct_1.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2011-10-27"
+    },
+    {
+        "name": "Ghost Fort",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/f9/Ghost_Fort.png/150px-Ghost_Fort.png",
+        "image": "https://wiki.teamfortress.com/w/images/f/f9/Ghost_Fort.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2012-10-26"
+    },
+    {
+        "name": "Harvest",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b3/KOTH_Harvest_Farmhouse.png/150px-KOTH_Harvest_Farmhouse.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/b3/KOTH_Harvest_Farmhouse.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2009-10-29"
+    },
+    {
+        "name": "Harvest Event",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/02/Koth_harvest_event_mid.png/150px-Koth_harvest_event_mid.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/02/Koth_harvest_event_mid.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2009-10-29"
+    },
+    {
+        "name": "Highpass",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/31/KOTH_Highpass.jpg/150px-KOTH_Highpass.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/3/31/KOTH_Highpass.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2015-12-17"
+    },
+    {
+        "name": "Kong King",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b4/Kong_King.png/150px-Kong_King.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/b4/Kong_King.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2012-08-10"
+    },
+    {
+        "name": "Krampus",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/3b/Koth_Krampus.png/150px-Koth_Krampus.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/3b/Koth_Krampus.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Lakeside",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fc/Koth_lakeside.jpg/150px-Koth_lakeside.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/f/fc/Koth_lakeside.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2011-02-24"
+    },
+    {
+        "name": "Laughter",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/85/Laughter_main.jpg/150px-Laughter_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/8/85/Laughter_main.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2019-10-10"
+    },
+    {
+        "name": "Lazarus",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/19/Lazarus_main.jpg/150px-Lazarus_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/1/19/Lazarus_main.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2017-10-20"
+    },
+    {
+        "name": "Los Muertos",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e0/Koth_los_muertos.jpg/150px-Koth_los_muertos.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/e/e0/Koth_los_muertos.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2021-10-05"
+    },
+    {
+        "name": "Maple Ridge Event",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/31/Koth_maple_ridge_event.png/150px-Koth_maple_ridge_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/31/Koth_maple_ridge_event.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2016-10-21"
+    },
+    {
+        "name": "Megalo",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/02/Koth_megalo.png/150px-Koth_megalo.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/02/Koth_megalo.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2020-10-01"
+    },
+    {
+        "name": "Moldergrove",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a0/Koth_moldergrove.png/150px-Koth_moldergrove.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/a0/Koth_moldergrove.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2020-10-01"
+    },
+    {
+        "name": "Moonshine Event",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8d/Koth_moonshine_event.png/150px-Koth_moonshine_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8d/Koth_moonshine_event.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2015-10-28"
+    },
+    {
+        "name": "Probed",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/f3/Koth_probed.jpg/150px-Koth_probed.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/f/f3/Koth_probed.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2015-10-06"
+    },
+    {
+        "name": "Rotunda",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7a/Koth_rotunda.png/150px-Koth_rotunda.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/7a/Koth_rotunda.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Sharkbay",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/71/Koth_sharkbay.png/150px-Koth_sharkbay.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/71/Koth_sharkbay.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Sinthetic",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/18/Koth_synthetic_event.png/150px-Koth_synthetic_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/1/18/Koth_synthetic_event.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2021-10-05"
+    },
+    {
+        "name": "Slasher",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a1/Koth_slasher.png/150px-Koth_slasher.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/a1/Koth_slasher.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2018-10-19"
+    },
+    {
+        "name": "Slime",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/Koth_slime.png/150px-Koth_slime.png.jpeg",
+        "image": "https://wiki.teamfortress.com/w/images/7/7d/Koth_slime.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Snowtower",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/47/Koth_snowtower.png/150px-Koth_snowtower.png",
+        "image": "https://wiki.teamfortress.com/w/images/4/47/Koth_snowtower.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Soul-Mill",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b6/Koth_sawmill_event.png/150px-Koth_sawmill_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/b6/Koth_sawmill_event.png",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2022-10-05"
+    },
+    {
+        "name": "Suijin",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/be/Suijin_main.jpg/150px-Suijin_main.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/b/be/Suijin_main.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2015-07-02"
+    },
+    {
+        "name": "Viaduct",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c9/Viaduct_01.jpg/150px-Viaduct_01.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/c/c9/Viaduct_01.jpg",
+        "gameModes": [
+            "King of the Hill"
+        ],
+        "releaseDate": "2009-08-13"
+    },
+    {
+        "name": "Carnival of Carnage",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/5b/Carnival_of_Carnage.png/150px-Carnival_of_Carnage.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/5b/Carnival_of_Carnage.png",
+        "gameModes": [
+            "Special Delivery"
+        ],
+        "releaseDate": "2014-10-29"
+    },
+    {
+        "name": "Doomsday",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7c/Sd_doomsday_ingame_1.jpg/150px-Sd_doomsday_ingame_1.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/7/7c/Sd_doomsday_ingame_1.jpg",
+        "gameModes": [
+            "Special Delivery"
+        ],
+        "releaseDate": "2012-06-27"
+    },
+    {
+        "name": "Target",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e8/Map_TR_Training.png/150px-Map_TR_Training.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e8/Map_TR_Training.png",
+        "gameModes": [
+            "Training Mode"
+        ],
+        "releaseDate": "2010-06-10"
+    },
+    {
+        "name": "Itemtest",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/73/Item_test.jpg/150px-Item_test.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/7/73/Item_test.jpg",
+        "gameModes": [
+            "Developer aidTest"
+        ],
+        "releaseDate": "2010-12-17"
+    },
+    {
+        "name": "Cloak",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fa/Cp_cloak1.jpg/150px-Cp_cloak1.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/f/fa/Cp_cloak1.jpg",
+        "gameModes": [
+            "Developer aidControl Point"
+        ],
+        "releaseDate": "unknown"
+    },
+    {
+        "name": "Bigrock",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6b/Mvm_bigrock.png/150px-Mvm_bigrock.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/6b/Mvm_bigrock.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2012-12-20"
+    },
+    {
+        "name": "Coal Town",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c2/Coal_Town_base.png/150px-Coal_Town_base.png",
+        "image": "https://wiki.teamfortress.com/w/images/c/c2/Coal_Town_base.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2012-08-15"
+    },
+    {
+        "name": "Decoy",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e1/Decoy_base.png/150px-Decoy_base.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e1/Decoy_base.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2012-08-15"
+    },
+    {
+        "name": "Example",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/95/Example5.png/150px-Example5.png",
+        "image": "https://wiki.teamfortress.com/w/images/9/95/Example5.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2012-08-15"
+    },
+    {
+        "name": "Ghost Town",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Mvm_coaltown_event.jpg/150px-Mvm_coaltown_event.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/d/d0/Mvm_coaltown_event.jpg",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2012-10-26"
+    },
+    {
+        "name": "Mannhattan",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d4/Mannhattan_preview.png/150px-Mannhattan_preview.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/d4/Mannhattan_preview.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2013-11-21"
+    },
+    {
+        "name": "Mannworks",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e6/Mannworks_base.png/150px-Mannworks_base.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e6/Mannworks_base.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2012-08-15"
+    },
+    {
+        "name": "Rottenburg",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a9/Rottenburg.png/150px-Rottenburg.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/a9/Rottenburg.png",
+        "gameModes": [
+            "Mann vs. Machine"
+        ],
+        "releaseDate": "2013-11-21"
+    },
+    {
+        "name": "Asteroid",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/26/Rdasteroid.jpg/150px-Rdasteroid.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/2/26/Rdasteroid.jpg",
+        "gameModes": [
+            "Robot Destruction"
+        ],
+        "releaseDate": "2014-07-08"
+    },
+    {
+        "name": "Hellfire",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/09/Ctf_hellfire.jpg/150px-Ctf_hellfire.jpg.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/09/Ctf_hellfire.jpg",
+        "gameModes": [
+            "Mannpower"
+        ],
+        "releaseDate": "2015-10-28"
+    },
+    {
+        "name": "Brickyard",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e2/Pass_brickyard.png/150px-Pass_brickyard.png",
+        "image": "https://wiki.teamfortress.com/w/images/e/e2/Pass_brickyard.png",
+        "gameModes": [
+            "PASS Time"
+        ],
+        "releaseDate": "2015-08-18"
+    },
+    {
+        "name": "District",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/48/Pass_district.jpg/150px-Pass_district.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/4/48/Pass_district.jpg",
+        "gameModes": [
+            "PASS Time"
+        ],
+        "releaseDate": "2016-07-07"
+    },
+    {
+        "name": "Timbertown",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/9b/Pass_timberlodge_center.jpeg/150px-Pass_timberlodge_center.jpeg",
+        "image": "https://wiki.teamfortress.com/w/images/9/9b/Pass_timberlodge_center.jpeg",
+        "gameModes": [
+            "PASS Time"
+        ],
+        "releaseDate": "2015-11-25"
+    },
+    {
+        "name": "Cursed Cove",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/db/Pd_cursed_cove_event.png/150px-Pd_cursed_cove_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/d/db/Pd_cursed_cove_event.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2018-10-19"
+    },
+    {
+        "name": "Farmageddon",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/25/Pd_farmageddon.png/150px-Pd_farmageddon.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/25/Pd_farmageddon.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2021-10-05"
+    },
+    {
+        "name": "Galleria",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/0c/Pd_galleria.png/150px-Pd_galleria.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/0c/Pd_galleria.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2023-12-07"
+    },
+    {
+        "name": "Mannsylvania",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/09/Pd_mannsylvania.png/150px-Pd_mannsylvania.png.jpeg",
+        "image": "https://wiki.teamfortress.com/w/images/0/09/Pd_mannsylvania.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Monster Bash",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8b/Pd_monster_bash.png/150px-Pd_monster_bash.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/8b/Pd_monster_bash.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2018-10-19"
+    },
+    {
+        "name": "Pit of Death",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/05/Pd_pit_of_death_event.png/150px-Pd_pit_of_death_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/05/Pd_pit_of_death_event.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2016-10-21"
+    },
+    {
+        "name": "Selbyen",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/82/Pd_selbyen.png/150px-Pd_selbyen.png",
+        "image": "https://wiki.teamfortress.com/w/images/8/82/Pd_selbyen.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "SnowVille",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/2b/Pd_snowville_event.png/150px-Pd_snowville_event.png",
+        "image": "https://wiki.teamfortress.com/w/images/2/2b/Pd_snowville_event.png",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2020-12-03"
+    },
+    {
+        "name": "Watergate",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Pd_watergate_1.jpg/150px-Pd_watergate_1.jpg",
+        "image": "https://wiki.teamfortress.com/w/images/d/d0/Pd_watergate_1.jpg",
+        "gameModes": [
+            "Player Destruction"
+        ],
+        "releaseDate": "2015-10-06"
+    },
+    {
+        "name": "Distillery",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a2/Vsh_distillery.png/150px-Vsh_distillery.png",
+        "image": "https://wiki.teamfortress.com/w/images/a/a2/Vsh_distillery.png",
+        "gameModes": [
+            "Versus Saxton Hale"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Nucleus VSH",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/72/Vsh_nucleus.png/150px-Vsh_nucleus.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/72/Vsh_nucleus.png",
+        "gameModes": [
+            "Versus Saxton Hale"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Skirmish",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/01/Vsh_skirmish.png/150px-Vsh_skirmish.png",
+        "image": "https://wiki.teamfortress.com/w/images/0/01/Vsh_skirmish.png",
+        "gameModes": [
+            "Versus Saxton Hale"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Tiny Rock",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/61/Vsh_tinyrock.png/150px-Vsh_tinyrock.png",
+        "image": "https://wiki.teamfortress.com/w/images/6/61/Vsh_tinyrock.png",
+        "gameModes": [
+            "Versus Saxton Hale"
+        ],
+        "releaseDate": "2023-07-12"
+    },
+    {
+        "name": "Atoll",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/39/Zi_atoll.png/150px-Zi_atoll.png",
+        "image": "https://wiki.teamfortress.com/w/images/3/39/Zi_atoll.png",
+        "gameModes": [
+            "Zombie Infection"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Devastation",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c7/Zi_devastation_final1.png/150px-Zi_devastation_final1.png",
+        "image": "https://wiki.teamfortress.com/w/images/c/c7/Zi_devastation_final1.png",
+        "gameModes": [
+            "Zombie Infection"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Murky",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/ba/Zi_murky.png/150px-Zi_murky.png",
+        "image": "https://wiki.teamfortress.com/w/images/b/ba/Zi_murky.png",
+        "gameModes": [
+            "Zombie Infection"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Sanitarium",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/Zi_sanitarium.png/150px-Zi_sanitarium.png",
+        "image": "https://wiki.teamfortress.com/w/images/7/7d/Zi_sanitarium.png",
+        "gameModes": [
+            "Zombie Infection"
+        ],
+        "releaseDate": "2023-10-09"
+    },
+    {
+        "name": "Woods",
+        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/59/Zi_woods.png/150px-Zi_woods.png",
+        "image": "https://wiki.teamfortress.com/w/images/5/59/Zi_woods.png",
+        "gameModes": [
+            "Zombie Infection"
+        ],
+        "releaseDate": "2023-10-09"
+    }
 ]
