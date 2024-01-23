@@ -9,7 +9,9 @@
 
 	$: query = [
 		`text=${encodeURIComponent(
-			`I guessed todays tf2dle map in ${tries} tries. My streak is now ${streak}!`
+			`I guessed today's tf2dle map in ${tries} ${
+				tries === 1 ? 'try' : 'tries'
+			}. My streak is now ${streak}!`
 		)}`,
 		`url=https://tf2dle.vercel.app`,
 		`hashtags=TF2DLE`
