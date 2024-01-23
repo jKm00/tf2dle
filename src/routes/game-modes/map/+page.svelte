@@ -2,18 +2,14 @@
 	import { useLocalStorage } from '$lib/composables/useLocalStorage';
 	import { onMount } from 'svelte';
 	import * as Card from '$lib/components/ui/card';
-	import * as Dialog from '$lib/components/ui/dialog';
-	import { Button } from '$lib/components/ui/button';
 	import Input from '$lib/features/gameModes/map/Input.svelte';
 	import ImageShowcase from '$lib/features/gameModes/map/ImageShowcase.svelte';
 	import dayjs from 'dayjs';
-	import TwitterShare from '$lib/features/gameModes/map/TwitterShare.svelte';
 	import type { MapGuessResponse } from '$lib/dtos.js';
-	import { ChevronDown, ChevronUp } from 'lucide-svelte';
-	import { fade } from 'svelte/transition';
 	import ColorExplanation from '$lib/components/ColorExplanation.svelte';
 	import GuessesList from '$lib/features/gameModes/map/GuessesList.svelte';
 	import VictoryDialog from '$lib/features/gameModes/map/VictoryDialog.svelte';
+	import { Flame } from 'lucide-svelte';
 
 	export let data;
 
@@ -21,11 +17,11 @@
 
 	let gameState: 'guessing' | 'won';
 	let lastEvent = useLocalStorage<{ event: 'won' | 'guessed'; date: string } | null>(
-		'map-last-event',
+		'map_last_event',
 		null
 	);
-	let guesses = useLocalStorage<MapGuessResponse[]>('map-guesses', []);
-	let streak = useLocalStorage<number>('map-streak', 0);
+	let guesses = useLocalStorage<MapGuessResponse[]>('map_guesses', []);
+	let streak = useLocalStorage<number>('map_streak', 0);
 
 	let todaysMapName: string = '';
 	let openDialog = false;
@@ -86,8 +82,6 @@
 			});
 			const data = (await res.json()) as MapGuessResponse;
 
-			console.log(data);
-
 			return data;
 		} catch (err) {
 			console.error(err);
@@ -109,8 +103,13 @@
 <div class="grid gap-4">
 	<Card.Root>
 		<Card.Header>
-			<Card.Title>Map</Card.Title>
-			<Card.Description>Guess today's map</Card.Description>
+			<div class="flex justify-between">
+				<div>
+					<Card.Title>Map</Card.Title>
+					<Card.Description>Guess today's map</Card.Description>
+				</div>
+				<p class="flex items-center"><Flame aria-label="streak" /> {$streak}</p>
+			</div>
 		</Card.Header>
 		<Card.Content>
 			<div class="grid gap-4">
