@@ -1,5 +1,5 @@
 <script>
-	import GameModes from '$lib/components/sections/GameModes.svelte';
+	import GameModes from '$lib/components/features/landingPage/GameModes.svelte';
 </script>
 
 <GameModes />

@@ -29,8 +29,11 @@ class MapService {
 		};
 
 		this.current = {
-			map,
-			startingPos
+			image: {
+				url: map.imgUrl,
+				startingPos
+			},
+			hints: [map.releaseDate, map.gameMode]
 		};
 	}
 
@@ -39,13 +42,11 @@ class MapService {
 			this.selectRandomMap();
 		}
 
-		return {
-			image: {
-				url: this.current!.map.imgUrl,
-				startingPos: this.current!.startingPos
-			},
-			hints: [this.current!.map.releaseDate, this.current!.map.gameMode]
-		};
+		return this.current;
+	}
+
+	public getMaps() {
+		return this.maps.map((map) => ({ thumbnail: map.imgUrl, name: map.name }));
 	}
 }
 

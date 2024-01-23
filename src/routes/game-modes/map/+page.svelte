@@ -2,66 +2,60 @@
 	import { useLocalStorage } from '$lib/composables/useLocalStorage';
 	import { onMount } from 'svelte';
 	import * as Card from '$lib/components/ui/card';
-	import Input from './Input.svelte';
-
-	const steps = 20;
+	import Input from '../../../lib/components/features/gameModes/map/Input.svelte';
+	import ImageShowcase from '$lib/components/features/gameModes/map/ImageShowcase.svelte';
 
 	export let data;
 
-	let gameState: 'guessing' | 'finished';
-	let lastFinish = useLocalStorage<string>('map-last-finish', '');
+	$: ({ todaysMap, maps } = data);
+
+	let gameState: 'guessing' | 'won';
+	let lastEvent = useLocalStorage<{ event: 'won' | 'guessed'; date: string } | null>(
+		'map-last-event',
+		null
+	);
 	let guesses = useLocalStorage<string[]>('map-guesses', []);
 
-	let currentStep = steps;
-
-	$: ({ map } = data);
-
-	$: pos = map.image.startingPos;
-
-	$: diffX = 50 - map.image.startingPos.x;
-	$: diffY = 50 - map.image.startingPos.y;
-
-	$: stepCounterX = diffX / (steps - 1);
-	$: stepCounterY = diffY / (steps - 1);
-
-	$: zoom = currentStep;
-
 	onMount(() => {
-		if ($lastFinish === new Date().toDateString()) {
-			gameState = 'finished';
-		} else {
+		if ($lastEvent === null) {
 			gameState = 'guessing';
+			return;
+		}
+
+		switch ($lastEvent.event) {
+			case 'won':
+				if ($lastEvent.date === new Date().toDateString()) {
+					gameState = 'won';
+				} else {
+					gameState = 'guessing';
+					guesses.set([]);
+				}
+				break;
+			case 'guessed':
+				gameState = 'guessing';
+				if ($lastEvent.date !== new Date().toDateString()) {
+					guesses.set([]);
+				}
+				break;
 		}
 	});
 
 	function handleSelect(name: string) {
 		guesses.update((guesses) => [...guesses, name]);
+		lastEvent.set({ event: 'guessed', date: new Date().toDateString() });
 
 		if (checkGuess(name)) {
 			won();
-		} else {
-			updateImagePos();
 		}
 	}
 
-	function updateImagePos() {
-		if (currentStep === 1) return;
-
-		currentStep = currentStep - 1;
-
-		pos = {
-			x: pos.x + stepCounterX,
-			y: pos.y + stepCounterY
-		};
-	}
-
 	function checkGuess(value: string) {
-		return value.toLowerCase() === '2fort';
+		return value.toLowerCase() === 'frosty';
 	}
 
 	function won() {
-		gameState = 'finished';
-		lastFinish.set(new Date().toDateString());
+		gameState = 'won';
+		lastEvent.set({ event: 'won', date: new Date().toDateString() });
 	}
 </script>
 
@@ -72,25 +66,28 @@
 			<Card.Description>Guess today's map</Card.Description>
 		</Card.Header>
 		<Card.Content>
-			<div>
-				<div class="relative overflow-hidden aspect-video rounded mb-4">
-					<img
-						src={map.image.url}
-						alt=""
-						class="absolute"
-						style={`--zoom: ${zoom}; --x: ${pos.x}%; --y: ${pos.x}%;`}
+			<div class="grid gap-4">
+				{#if todaysMap}
+					<ImageShowcase
+						url={todaysMap.image.url}
+						startingPos={todaysMap.image.startingPos}
+						numberOfGuesses={$guesses.length}
+						hasWon={gameState === 'won'}
 					/>
-				</div>
-				<Input on:select={(event) => handleSelect(event.detail)} />
+					{#if gameState !== 'won'}
+						<Input
+							on:select={(event) => handleSelect(event.detail)}
+							{maps}
+							guessedMaps={$guesses}
+						/>
+					{/if}
+					<ul>
+						{#each $guesses as guess}
+							<li>{guess}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
 		</Card.Content>
 	</Card.Root>
 </div>
-
-<style scoped>
-	img {
-		top: var(--y);
-		left: var(--x);
-		transform: translate(-50%, -50%) scale(var(--zoom));
-	}
-</style>

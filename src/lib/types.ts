@@ -6,9 +6,12 @@ export type Map = {
 };
 
 export type SelectedMap = {
-	map: Map;
-	startingPos: {
-		x: number;
-		y: number;
+	image: {
+		url: string;
+		startingPos: {
+			x: number;
+			y: number;
+		};
 	};
+	hints: string[];
 };

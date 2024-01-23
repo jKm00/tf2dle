@@ -1,36 +1,33 @@
 <script lang="ts">
-	import { Input } from '$lib/components/ui/input';
 	import { createEventDispatcher } from 'svelte';
 
-	// TODO: Should be passed as prop
-	const maps = [
-		{
-			name: '2Fort',
-			thumbnail:
-				'https://wiki.teamfortress.com/w/images/thumb/a/a1/Ctf_2fort_bridge_ss.png/150px-Ctf_2fort_bridge_ss.png'
-		},
-		{
-			name: 'Frosty',
-			thumbnail:
-				'https://wiki.teamfortress.com/w/images/thumb/a/ac/Ctf_frosty.png/150px-Ctf_frosty.png'
-		}
-	];
+	export let maps: { name: string; thumbnail: string }[];
+	export let guessedMaps: string[];
 
 	const dispatch = createEventDispatcher<{ select: string }>();
 
 	let value = '';
+	let inputElement: HTMLInputElement;
 
-	$: filteredMaps = maps.filter((m) => m.name.toLowerCase().includes(value.toLowerCase()));
+	$: filteredMaps = maps.filter(
+		(m) => !guessedMaps.includes(m.name) && m.name.toLowerCase().includes(value.toLowerCase())
+	);
 	$: open = value.length > 0 && filteredMaps.length > 0;
 
 	function handleSelect(name: string) {
 		dispatch('select', name);
 		value = '';
+		inputElement.focus();
 	}
 </script>
 
 <div class="relative">
-	<Input bind:value placeholder="Enter map name..." />
+	<input
+		class="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:rind-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+		bind:value
+		placeholder="Enter map name..."
+		bind:this={inputElement}
+	/>
 	{#if open}
 		<ul
 			class="absolute bg-background w-full border border-input ring-offset-background rounded-md max-h-64 overflow-y-auto"
