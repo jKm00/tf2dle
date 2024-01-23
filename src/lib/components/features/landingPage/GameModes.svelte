@@ -6,12 +6,14 @@
 		{
 			name: 'Classic',
 			description: 'Guess the correct weapon',
-			icon: Axe
+			icon: Axe,
+			disabled: true
 		},
 		{
 			name: 'Map',
 			description: 'Guess the correct map',
-			icon: Map
+			icon: Map,
+			disabled: false
 		}
 	];
 </script>
@@ -23,7 +25,7 @@
 	</Card.Header>
 	<Card.Content>
 		<ul class="grid gap-2">
-			{#each gameModes as gameMode}
+			{#each gameModes.filter((g) => !g.disabled) as gameMode}
 				<a href={`/game-modes/${gameMode.name.toLowerCase()}`}>
 					<li class="flex items-center gap-4 bg-secondary rounded px-4 py-2">
 						<svelte:component this={gameMode.icon} />
@@ -35,5 +37,6 @@
 				</a>
 			{/each}
 		</ul>
+		<p class="text-center text-muted-foreground text-sm mt-4">More game modes comming soon!</p>
 	</Card.Content>
 </Card.Root>

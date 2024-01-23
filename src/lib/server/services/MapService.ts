@@ -1,7 +1,12 @@
+import type { MapGuessResponse } from '$lib/dtos';
 import maps from '$lib/server/data/maps.json';
 import type { Map, SelectedMap } from '$lib/types';
+import dayjs from 'dayjs';
+import schedule from 'node-schedule';
+import type { Job } from 'node-schedule';
 
 class MapService {
+	private scheduler: Job;
 	private maps: Map[];
 	private current: SelectedMap | null = null;
 
@@ -9,6 +14,10 @@ class MapService {
 
 	private constructor() {
 		this.maps = maps;
+		// Select new map every day at midnight
+		this.scheduler = schedule.scheduleJob('0 0 * * *', () => {
+			this.selectRandomMap();
+		});
 	}
 
 	/**
@@ -38,10 +47,11 @@ class MapService {
 		this.current = {
 			name: map.name,
 			image: {
-				url: map.imgUrl,
+				url: map.image,
 				startingPos
 			},
-			hints: [map.releaseDate, map.gameMode]
+			gameModes: map.gameModes,
+			releaseDate: map.releaseDate
 		};
 	}
 
@@ -55,8 +65,7 @@ class MapService {
 		}
 
 		return {
-			image: this.current!.image,
-			hints: this.current!.hints
+			image: this.current!.image
 		};
 	}
 
@@ -64,12 +73,35 @@ class MapService {
 	 * Returns todays map name if the guess was correct, null otherwise
 	 * @param name of the map to check
 	 */
-	public checkMap(name: string) {
+	public checkMap(name: string): MapGuessResponse {
 		if (this.current === null) {
-			return null;
+			this.selectRandomMap();
 		}
 
-		return this.current.name.toLowerCase() === name.toLowerCase() ? this.current.name : null;
+		const guessedMap = this.maps.find((map) => map.name.toLowerCase() === name.toLowerCase());
+		const correct = guessedMap?.name === this.current!.name;
+
+		return {
+			correct,
+			name: guessedMap?.name ?? '',
+			gameModes: {
+				correct: correct
+					? 'correct'
+					: this.current!.gameModes.find((mode) => guessedMap?.gameModes.includes(mode)) !== null
+						? 'partial'
+						: 'incorrect',
+				value: guessedMap?.gameModes ?? []
+			},
+			releaseDate: {
+				correct: correct
+					? 'correct'
+					: dayjs(guessedMap?.releaseDate).isBefore(dayjs(this.current!.releaseDate))
+						? 'later'
+						: 'earlier',
+				value: guessedMap?.releaseDate ?? ''
+			},
+			thumbnail: guessedMap?.thumbnail ?? ''
+		};
 	}
 
 	/**
@@ -77,7 +109,7 @@ class MapService {
 	 * @returns list of all maps
 	 */
 	public getMaps() {
-		return this.maps.map((map) => ({ thumbnail: map.imgUrl, name: map.name }));
+		return this.maps.map((map) => ({ thumbnail: map.thumbnail, name: map.name }));
 	}
 }
 

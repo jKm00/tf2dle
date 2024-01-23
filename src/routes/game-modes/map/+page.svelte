@@ -8,6 +8,10 @@
 	import ImageShowcase from '$lib/components/features/gameModes/map/ImageShowcase.svelte';
 	import dayjs from 'dayjs';
 	import TwitterShare from '$lib/components/features/gameModes/map/TwitterShare.svelte';
+	import type { MapGuessResponse } from '$lib/dtos.js';
+	import { ChevronDown, ChevronUp } from 'lucide-svelte';
+	import { fade } from 'svelte/transition';
+	import ColorExplanation from '$lib/components/ColorExplanation.svelte';
 
 	export let data;
 
@@ -18,14 +22,11 @@
 		'map-last-event',
 		null
 	);
-	let guesses = useLocalStorage<{ mapName: string; thumbnail: string; correct: boolean }[]>(
-		'map-guesses',
-		[]
-	);
+	let guesses = useLocalStorage<MapGuessResponse[]>('map-guesses', []);
 	let streak = useLocalStorage<number>('map-streak', 0);
 
-	let todaysMapName: string = '2Fort';
-	let openDialog = true;
+	let todaysMapName: string = '';
+	let openDialog = false;
 
 	onMount(() => {
 		if ($lastEvent === null) {
@@ -62,14 +63,13 @@
 		lastEvent.set({ event: 'guessed', date: new Date().toDateString() });
 
 		const result = await checkGuess(map.name);
-		const correct = result !== null;
-		guesses.update((guesses) => [
-			...guesses,
-			{ mapName: map.name, thumbnail: map.thumbnail, correct }
-		]);
 
-		if (correct) {
-			won(result);
+		if (result) {
+			guesses.update((guesses) => [...guesses, result]);
+		}
+
+		if (result?.correct) {
+			won(result.name);
 		}
 	}
 
@@ -82,7 +82,9 @@
 				},
 				body: JSON.stringify({ guess: value })
 			});
-			const data = await res.json();
+			const data = (await res.json()) as MapGuessResponse;
+
+			console.log(data);
 
 			return data;
 		} catch (err) {
@@ -91,11 +93,14 @@
 	}
 
 	function won(mapName: string) {
-		gameState = 'won';
-		lastEvent.set({ event: 'won', date: new Date().toDateString() });
-		streak.update((streak) => streak + 1);
-		todaysMapName = mapName;
-		openDialog = true;
+		// Wait for reveal animation to finish
+		setTimeout(() => {
+			lastEvent.set({ event: 'won', date: new Date().toDateString() });
+			streak.update((streak) => streak + 1);
+			todaysMapName = mapName;
+			gameState = 'won';
+			openDialog = true;
+		}, 2000);
 	}
 </script>
 
@@ -118,26 +123,68 @@
 						<Input
 							on:select={(event) => handleSelect(event.detail)}
 							{maps}
-							guessedMaps={$guesses.map((guess) => guess.mapName)}
+							guessedMaps={$guesses.map((guess) => guess.name)}
 						/>
 					{/if}
 					{#if $guesses.length > 0}
-						<ul class="grid gap-4">
+						<div class="grid gap-4">
 							<h4 class="font-semibold">Your guesses:</h4>
-							{#each $guesses as guess (guess.mapName)}
-								<li
-									class={`flex items-center gap-4 rounded ${guess.correct ? 'bg-green-800' : ''}`}
-								>
-									<img class="w-20 rounded" src={guess.thumbnail} alt={guess.mapName} />
-									{guess.mapName}
-								</li>
-							{/each}
-						</ul>
+							<div class="custom-grid gap-4 font-semibold">
+								<p>Image</p>
+								<p>Name</p>
+								<p>Game Mode</p>
+								<p>Release Date</p>
+							</div>
+							<div class="custom-grid gap-4">
+								{#each $guesses.reverse() as guess (guess.name)}
+									{@const fadeDuration = 500}
+									<img
+										in:fade={{ duration: fadeDuration }}
+										class="w-full rounded"
+										src={guess.thumbnail}
+										alt={guess.name}
+									/>
+									<p
+										in:fade={{ duration: fadeDuration, delay: fadeDuration }}
+										class={`${
+											guess.correct ? 'bg-green-500' : 'bg-red-500'
+										} flex items-center justify-center gap-2 rounded-sm`}
+									>
+										{guess.name}
+									</p>
+									<p
+										in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
+										class={`${
+											guess.gameModes.correct === 'correct'
+												? 'bg-green-500'
+												: guess.gameModes.correct === 'partial'
+													? 'bg-orange-500'
+													: 'bg-red-500'
+										} flex items-center justify-center text-center gap-2 rounded-sm`}
+									>
+										{guess.gameModes.value.join(', ')}
+									</p>
+									<p
+										in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
+										class={`${
+											guess.releaseDate.correct === 'correct' ? 'bg-green-500' : 'bg-red-500'
+										} flex items-center justify-center gap-2 rounded-sm`}
+									>
+										{guess.releaseDate.value}
+										<ChevronDown class={guess.releaseDate.correct === 'later' ? '' : 'hidden'} />
+										<ChevronUp class={guess.releaseDate.correct === 'earlier' ? '' : 'hidden'} />
+									</p>
+								{/each}
+							</div>
+						</div>
 					{/if}
 				{/if}
 			</div>
 		</Card.Content>
 	</Card.Root>
+
+	<ColorExplanation />
+
 	<Dialog.Root bind:open={openDialog}>
 		<Dialog.Content>
 			<Dialog.Header>
@@ -167,3 +214,10 @@
 		</Dialog.Content>
 	</Dialog.Root>
 </div>
+
+<style scoped>
+	.custom-grid {
+		display: grid;
+		grid-template-columns: 5rem repeat(3, 1fr);
+	}
+</style>

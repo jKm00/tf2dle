@@ -1,14 +1,30 @@
 [
 	{
 		"name": "2Fort",
-		"gameMode": "Capture the Flag",
-		"releaseDate": "launch",
-		"imgUrl": "https://wiki.teamfortress.com/w/images/a/a1/Ctf_2fort_bridge_ss.png"
+		"gameModes": ["Capture the Flag"],
+		"releaseDate": "10.10.2007",
+		"image": "https://wiki.teamfortress.com/w/images/a/a1/Ctf_2fort_bridge_ss.png",
+		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a1/Ctf_2fort_bridge_ss.png/150px-Ctf_2fort_bridge_ss.png"
 	},
 	{
-		"name": "Frosty",
-		"gameMode": "Capture the Flag",
-		"releaseDate": "5. December 2022",
-		"imgUrl": "https://wiki.teamfortress.com/w/images/thumb/a/ac/Ctf_frosty.png/600px-Ctf_frosty.png"
+		"name": "Sawmill",
+		"gameModes": ["Capture the Flag", "King of the Hill"],
+		"releaseDate": "13.08.2009",
+		"image": "https://wiki.teamfortress.com/w/images/b/bd/CTF_Sawmill_Center.png",
+		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/bd/CTF_Sawmill_Center.png/150px-CTF_Sawmill_Center.png"
+	},
+	{
+		"name": "Badlands",
+		"gameModes": ["Control Point", "King of the Hill", "Arena"],
+		"releaseDate": "14.02.2008",
+		"image": "https://wiki.teamfortress.com/w/images/7/79/Badlands2.png",
+		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/CP_Badlands_Central_point.PNG/150px-CP_Badlands_Central_point.PNG"
+	},
+	{
+		"name": "Egypt",
+		"gameModes": ["Attack/Defend"],
+		"releaseDate": "24.02.2009",
+		"image": "https://wiki.teamfortress.com/w/images/thumb/4/45/Egypt_01.jpg/300px-Egypt_01.jpg",
+		"thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/45/Egypt_01.jpg/150px-Egypt_01.jpg"
 	}
 ]

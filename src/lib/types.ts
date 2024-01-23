@@ -1,8 +1,9 @@
 export type Map = {
 	name: string;
-	gameMode: string;
+	gameModes: string[];
 	releaseDate: string;
-	imgUrl: string;
+	image: string;
+	thumbnail: string;
 };
 
 export type SelectedMap = {
@@ -14,5 +15,6 @@ export type SelectedMap = {
 			y: number;
 		};
 	};
-	hints: string[];
+	gameModes: string[];
+	releaseDate: string;
 };

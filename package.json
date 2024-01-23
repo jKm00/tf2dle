@@ -33,11 +33,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/node-schedule": "^2.1.5",
 		"bits-ui": "^0.15.1",
 		"clsx": "^2.1.0",
 		"cmdk-sv": "^0.0.13",
 		"dayjs": "^1.11.10",
 		"lucide-svelte": "^0.314.0",
+		"node-schedule": "^2.1.1",
 		"tailwind-merge": "^2.2.1",
 		"tailwind-variants": "^0.1.20"
 	}

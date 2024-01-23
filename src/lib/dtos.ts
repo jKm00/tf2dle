@@ -6,10 +6,23 @@ export type SelectedMapDto = {
 			y: number;
 		};
 	};
-	hints: string[];
 };
 
 export type MapDto = {
 	name: string;
+	thumbnail: string;
+};
+
+export type MapGuessResponse = {
+	correct: boolean;
+	name: string;
+	gameModes: {
+		correct: 'correct' | 'incorrect' | 'partial';
+		value: string[];
+	};
+	releaseDate: {
+		correct: 'correct' | 'earlier' | 'later';
+		value: string;
+	};
 	thumbnail: string;
 };
