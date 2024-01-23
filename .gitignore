@@ -4,11 +4,9 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Virtual Environment
-pyvenv.cfg
 Include/
 Lib/
 Lib/site-packages/
-Scripts/
 bin/
 
 # Python Bytecode
