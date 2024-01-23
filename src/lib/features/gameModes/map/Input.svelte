@@ -20,9 +20,19 @@
 		value = '';
 		inputElement.focus();
 	}
+
+	function handleKeyPress(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			open = false;
+		}
+		if (event.key === 'Enter') {
+			handleSelect(filteredMaps[0]);
+		}
+	}
 </script>
 
-<div class="relative">
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="relative" on:keyup={handleKeyPress}>
 	<input
 		class="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:rind-2 focus-visible:ring-ring focus-visible:ring-offset-2"
 		bind:value
@@ -31,7 +41,7 @@
 	/>
 	{#if open}
 		<ul
-			class="absolute bg-background w-full border border-input ring-offset-background rounded-md max-h-64 overflow-y-auto"
+			class="absolute bg-background w-full border border-input ring-offset-background rounded-md max-h-64 overflow-y-auto z-50"
 		>
 			{#each filteredMaps as map}
 				<li class="p-1">
