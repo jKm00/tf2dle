@@ -6,6 +6,7 @@ export type Map = {
 };
 
 export type SelectedMap = {
+	name: string;
 	image: {
 		url: string;
 		startingPos: {

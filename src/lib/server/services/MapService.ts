@@ -11,6 +11,10 @@ class MapService {
 		this.maps = maps;
 	}
 
+	/**
+	 * Returns an instance of the MapService
+	 * @returns an instance of the MapService
+	 */
 	public static getInstance(): MapService {
 		if (!MapService.instance) {
 			MapService.instance = new MapService();
@@ -19,6 +23,9 @@ class MapService {
 		return MapService.instance;
 	}
 
+	/**
+	 * Selects a random map
+	 */
 	public selectRandomMap() {
 		const map = this.maps[Math.floor(Math.random() * this.maps.length)];
 
@@ -29,6 +36,7 @@ class MapService {
 		};
 
 		this.current = {
+			name: map.name,
 			image: {
 				url: map.imgUrl,
 				startingPos
@@ -37,14 +45,37 @@ class MapService {
 		};
 	}
 
+	/**
+	 * Returns info of todays map
+	 * @returns info of todays map
+	 */
 	public getTodaysMap() {
 		if (this.current === null) {
 			this.selectRandomMap();
 		}
 
-		return this.current;
+		return {
+			image: this.current!.image,
+			hints: this.current!.hints
+		};
 	}
 
+	/**
+	 * Returns todays map name if the guess was correct, null otherwise
+	 * @param name of the map to check
+	 */
+	public checkMap(name: string) {
+		if (this.current === null) {
+			return null;
+		}
+
+		return this.current.name.toLowerCase() === name.toLowerCase() ? this.current.name : null;
+	}
+
+	/**
+	 * Returns a list of all maps
+	 * @returns list of all maps
+	 */
 	public getMaps() {
 		return this.maps.map((map) => ({ thumbnail: map.imgUrl, name: map.name }));
 	}

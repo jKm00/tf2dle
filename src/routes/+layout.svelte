@@ -4,6 +4,7 @@
 	import '../app.css';
 </script>
 
+<p class="absolute bg-destructive py-2 px-12 -rotate-45 -left-10 top-2">Beta</p>
 <div class="flex flex-col gap-10 width m-auto py-10 min-h-screen">
 	<Header />
 	<div class="flex-grow">
