@@ -18,3 +18,10 @@ model DailyMaps {
   releaseDate  DateTime @db.Date
   hasWon       Int      @default(0)
 }
+
+model Logs {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  event     String
+  message   String
+}
