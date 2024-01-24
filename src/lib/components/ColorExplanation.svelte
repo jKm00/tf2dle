@@ -2,15 +2,15 @@
 	const items = [
 		{
 			name: 'Correct',
-			color: 'bg-green-500'
+			color: 'bg-correct'
 		},
 		{
 			name: 'Partially correct',
-			color: 'bg-orange-500'
+			color: 'bg-partial'
 		},
 		{
 			name: 'Incorrect',
-			color: 'bg-red-500'
+			color: 'bg-incorrect'
 		}
 	];
 </script>

@@ -20,6 +20,9 @@
 		--accent-foreground: 24 9.8% 10%;
 		--destructive: 0 72.22% 50.59%;
 		--destructive-foreground: 60 9.1% 97.8%;
+		--correct: 142 71% 45%;
+		--partial: 25 95% 53%;
+		--incorrect: 0 84% 60%;
 		--border: 20 5.9% 90%;
 		--input: 20 5.9% 90%;
 		--ring: 24.6 95% 53.1%;

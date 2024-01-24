@@ -37,7 +37,11 @@
 	}
 
 	function updateTime() {
-		timeTilReset = timeTilReset.subtract(1, 'second');
+		if (timeTilReset.asSeconds() <= 0) {
+			timeTilReset = initializeResetTime();
+		} else {
+			timeTilReset = timeTilReset.subtract(1, 'second');
+		}
 	}
 </script>
 

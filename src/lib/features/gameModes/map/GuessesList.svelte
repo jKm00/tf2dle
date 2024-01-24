@@ -8,7 +8,6 @@
 
 <div class="grid gap-4">
 	{#if guesses.length > 0}
-		<h4 class="font-semibold">Your guesses:</h4>
 		<div class="custom-grid gap-4 font-semibold">
 			<p>Image</p>
 			<p>Name</p>
@@ -28,8 +27,8 @@
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration }}
 				class={`${
-					guess.correct ? 'bg-green-500' : 'bg-red-500'
-				} flex items-center justify-center gap-2 rounded-sm`}
+					guess.correct ? 'border-correct' : 'border-incorrect'
+				} flex items-center justify-center gap-2 rounded-sm border`}
 			>
 				{guess.name}
 			</p>
@@ -37,19 +36,19 @@
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 				class={`${
 					guess.gameModes.correct === 'correct'
-						? 'bg-green-500'
+						? 'border-correct'
 						: guess.gameModes.correct === 'partial'
-							? 'bg-orange-500'
-							: 'bg-red-500'
-				} flex items-center justify-center text-center gap-2 rounded-sm`}
+							? 'border-partial'
+							: 'border-incorrect'
+				} flex items-center justify-center text-center gap-2 rounded-sm border`}
 			>
 				{guess.gameModes.value.join(', ')}
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
 				class={`${
-					guess.releaseDate.correct === 'correct' ? 'bg-green-500' : 'bg-red-500'
-				} flex items-center justify-center gap-1 rounded-sm`}
+					guess.releaseDate.correct === 'correct' ? 'border-correct' : 'border-incorrect'
+				} flex items-center justify-center gap-1 rounded-sm border`}
 			>
 				{guess.releaseDate.value}
 				<ArrowBigDown class={guess.releaseDate.correct === 'earlier' ? '' : 'hidden'} />

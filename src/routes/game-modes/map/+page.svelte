@@ -5,11 +5,14 @@
 	import Input from '$lib/features/gameModes/map/Input.svelte';
 	import ImageShowcase from '$lib/features/gameModes/map/ImageShowcase.svelte';
 	import dayjs from 'dayjs';
+	import utc from 'dayjs/plugin/utc';
 	import type { MapGuessResponse } from '$lib/dtos.js';
 	import ColorExplanation from '$lib/components/ColorExplanation.svelte';
 	import GuessesList from '$lib/features/gameModes/map/GuessesList.svelte';
 	import VictoryDialog from '$lib/features/gameModes/map/VictoryDialog.svelte';
-	import { Flame } from 'lucide-svelte';
+	import { Dices, Flame } from 'lucide-svelte';
+
+	dayjs.extend(utc);
 
 	export let data;
 
@@ -34,14 +37,17 @@
 		}
 
 		// Reset streak if last event was more than 1 days ago
-		if (dayjs($lastEvent.date).isBefore(dayjs().subtract(2, 'day')) || $lastEvent.event !== 'won') {
+		if (
+			dayjs($lastEvent.date).isBefore(dayjs().utc().subtract(2, 'day')) ||
+			$lastEvent.event !== 'won'
+		) {
 			streak.set(0);
 		}
 
 		// Initialize game state
 		switch ($lastEvent.event) {
 			case 'won':
-				if ($lastEvent.date === new Date().toDateString()) {
+				if ($lastEvent.date === dayjs().utc().toDate().toDateString()) {
 					gameState = 'won';
 				} else {
 					gameState = 'guessing';
@@ -50,7 +56,7 @@
 				break;
 			case 'guessed':
 				gameState = 'guessing';
-				if ($lastEvent.date !== new Date().toDateString()) {
+				if ($lastEvent.date !== dayjs().utc().toDate().toDateString()) {
 					guesses.set([]);
 				}
 				break;
@@ -58,7 +64,9 @@
 	});
 
 	async function handleSelect(map: { name: string; thumbnail: string }) {
-		lastEvent.set({ event: 'guessed', date: new Date().toDateString() });
+		if (gameState === 'won') return;
+
+		lastEvent.set({ event: 'guessed', date: dayjs().utc().toDate().toDateString() });
 
 		const result = await checkGuess(map.name);
 
@@ -91,7 +99,7 @@
 	function won(mapName: string) {
 		// Wait for reveal animation to finish
 		setTimeout(() => {
-			lastEvent.set({ event: 'won', date: new Date().toDateString() });
+			lastEvent.set({ event: 'won', date: dayjs().utc().toDate().toDateString() });
 			streak.update((streak) => streak + 1);
 			todaysMapName = mapName;
 			gameState = 'won';
@@ -108,7 +116,13 @@
 					<Card.Title>Map</Card.Title>
 					<Card.Description>Guess today's map</Card.Description>
 				</div>
-				<p class="flex items-center"><Flame aria-label="streak" /> {$streak}</p>
+				<div class="flex gap-4">
+					<p class="flex items-center">
+						<Dices aria-label="Number of guesses" />
+						{$guesses.length}
+					</p>
+					<p class="flex items-center"><Flame aria-label="streak" /> {$streak}</p>
+				</div>
 			</div>
 		</Card.Header>
 		<Card.Content>
