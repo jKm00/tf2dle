@@ -1,0 +1,8 @@
+{
+	"crons": [
+		{
+			"path": "/api/v1/game-modes/map/refresh",
+			"schedule": "0 0 * * *"
+		}
+	]
+}
