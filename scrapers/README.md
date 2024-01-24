@@ -1,4 +1,12 @@
-# TF2 maps scraper
+# Scraper
+
+This folder contains python file that scrapes for different thing. Belove is a list of all the files and what the scrape:
+
+## List of scrapers
+
+- [Maps.py](#maps)
+
+<h3 id="maps">Maps</h3>
 
 Scrapes the web for all official tf2 maps. This is what it collects for each map:
 
@@ -25,10 +33,8 @@ Scrapes the web for all official tf2 maps. This is what it collects for each map
 pip install -r requirements.txt
 ```
 
-4. Run main.py
+4. Run a python file
 
 ```
-python ./main.py
+python <filename>
 ```
-
-A file called `maps.json` should be generated with all the maps found!
