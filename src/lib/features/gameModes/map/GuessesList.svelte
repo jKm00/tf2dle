@@ -22,22 +22,22 @@
 				in:fade={{ duration: fadeDuration }}
 				class="w-full rounded"
 				src={guess.thumbnail}
-				alt={guess.name}
+				alt={guess.name.value}
 			/>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration }}
 				class={`${
-					guess.correct ? 'border-correct' : 'border-incorrect'
+					guess.name.status === 'correct' ? 'border-correct' : 'border-incorrect'
 				} flex items-center justify-center gap-2 rounded-sm border`}
 			>
-				{guess.name}
+				{guess.name.value}
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 				class={`${
-					guess.gameModes.correct === 'correct'
+					guess.gameModes.status === 'correct'
 						? 'border-correct'
-						: guess.gameModes.correct === 'partial'
+						: guess.gameModes.status === 'partial'
 							? 'border-partial'
 							: 'border-incorrect'
 				} flex items-center justify-center text-center gap-2 rounded-sm border`}
@@ -47,12 +47,12 @@
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
 				class={`${
-					guess.releaseDate.correct === 'correct' ? 'border-correct' : 'border-incorrect'
+					guess.releaseDate.status === 'correct' ? 'border-correct' : 'border-incorrect'
 				} flex items-center justify-center gap-1 rounded-sm border`}
 			>
 				{guess.releaseDate.value}
-				<ArrowBigDown class={guess.releaseDate.correct === 'earlier' ? '' : 'hidden'} />
-				<ArrowBigUp class={guess.releaseDate.correct === 'later' ? '' : 'hidden'} />
+				<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
+				<ArrowBigUp class={guess.releaseDate.status === 'later' ? '' : 'hidden'} />
 			</p>
 		{/each}
 	</div>

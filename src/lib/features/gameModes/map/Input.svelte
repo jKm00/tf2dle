@@ -5,7 +5,7 @@
 	export let maps: MapDto[] = [];
 	export let guessedMaps: string[];
 
-	const dispatch = createEventDispatcher<{ select: { name: string; thumbnail: string } }>();
+	const dispatch = createEventDispatcher<{ select: string }>();
 
 	let value = '';
 	let inputElement: HTMLInputElement;
@@ -15,8 +15,8 @@
 	);
 	$: open = value.length > 0 && filteredMaps.length > 0;
 
-	function handleSelect(map: { name: string; thumbnail: string }) {
-		dispatch('select', map);
+	function handleSelect(name: string) {
+		dispatch('select', name);
 		value = '';
 		inputElement.focus();
 	}
@@ -43,7 +43,10 @@
 		>
 			{#each filteredMaps as map}
 				<li class="p-1">
-					<button on:click={() => handleSelect(map)} class="flex items-center gap-4 p-2 w-full">
+					<button
+						on:click={() => handleSelect(map.name)}
+						class="flex items-center gap-4 p-2 w-full"
+					>
 						<img src={map.thumbnail} alt={map.name} class="aspect-video w-20" />{map.name}
 					</button>
 				</li>

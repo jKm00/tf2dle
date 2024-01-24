@@ -63,19 +63,19 @@
 		}
 	});
 
-	async function handleSelect(map: { name: string; thumbnail: string }) {
+	async function handleSelect(name: string) {
 		if (gameState === 'won') return;
 
 		lastEvent.set({ event: 'guessed', date: dayjs().utc().toDate().toDateString() });
 
-		const result = await checkGuess(map.name);
+		const result = await checkGuess(name);
 
 		if (result) {
 			guesses.update((guesses) => [...guesses, result]);
 		}
 
 		if (result?.correct) {
-			won(result.name);
+			won(result.name.value);
 		}
 	}
 
@@ -138,7 +138,7 @@
 						<Input
 							on:select={(event) => handleSelect(event.detail)}
 							{maps}
-							guessedMaps={$guesses.map((guess) => guess.name)}
+							guessedMaps={$guesses.map((guess) => guess.name.value)}
 						/>
 					{/if}
 					<GuessesList guesses={[...$guesses].reverse()} />

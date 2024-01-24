@@ -14,9 +14,10 @@ class MapService {
 
 	private constructor() {
 		this.maps = maps;
+		this.current = this.selectRandomMap();
 		// Select new map every day at midnight
 		this.scheduler = schedule.scheduleJob('0 0 * * *', () => {
-			this.selectRandomMap();
+			this.current = this.selectRandomMap();
 		});
 	}
 
@@ -44,7 +45,7 @@ class MapService {
 			y: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER
 		};
 
-		this.current = {
+		return {
 			name: map.name,
 			image: {
 				url: map.image,
@@ -60,10 +61,6 @@ class MapService {
 	 * @returns info of todays map
 	 */
 	public getTodaysMap() {
-		if (this.current === null) {
-			this.selectRandomMap();
-		}
-
 		return {
 			image: this.current!.image
 		};
@@ -74,38 +71,54 @@ class MapService {
 	 * @param name of the map to check
 	 */
 	public checkMap(name: string): MapGuessResponse {
-		if (this.current === null) {
-			this.selectRandomMap();
-		}
-
 		const guessedMap = this.maps.find((map) => map.name.toLowerCase() === name.toLowerCase());
+
 		const correct = guessedMap?.name === this.current!.name;
+
+		const nameStatus = correct ? 'correct' : 'incorrect';
+		const nameValue = guessedMap?.name ?? '';
+
+		const guessedGameModes = guessedMap?.gameModes.join(',');
+		const correctGameModes = this.current!.gameModes.join(',');
+
+		const gameModesStatus =
+			guessedGameModes === correctGameModes
+				? 'correct'
+				: guessedGameModes?.includes(correctGameModes)
+					? 'partial'
+					: 'incorrect';
+		const gameModesValue = guessedMap?.gameModes ?? [];
+
+		const guessedReleaseYear = dayjs(guessedMap?.releaseDate).year();
+		const correctReleaseYear = dayjs(this.current!.releaseDate).year();
+		const releaseDateStatus =
+			guessedReleaseYear === correctReleaseYear
+				? 'correct'
+				: guessedReleaseYear < correctReleaseYear
+					? 'later'
+					: 'earlier';
+		const releaseDateValue = dayjs(guessedMap?.releaseDate).year() ?? '';
 
 		return {
 			correct,
-			name: guessedMap?.name ?? '',
+			name: {
+				status: nameStatus,
+				value: nameValue
+			},
 			gameModes: {
-				correct: correct
-					? 'correct'
-					: this.current!.gameModes.find((mode) => guessedMap?.gameModes.includes(mode)) !== null
-						? 'partial'
-						: 'incorrect',
-				value: guessedMap?.gameModes ?? []
+				status: gameModesStatus,
+				value: gameModesValue
 			},
 			releaseDate: {
-				correct: correct
-					? 'correct'
-					: dayjs(guessedMap?.releaseDate).isBefore(dayjs(this.current!.releaseDate))
-						? 'later'
-						: 'earlier',
-				value: dayjs(guessedMap?.releaseDate).year() ?? ''
+				status: releaseDateStatus,
+				value: releaseDateValue
 			},
 			thumbnail: guessedMap?.thumbnail ?? ''
 		};
 	}
 
 	/**
-	 * Returns a list of all maps
+	 * Returns a list of all maps containing their name and thumbnail
 	 * @returns list of all maps
 	 */
 	public getMaps() {

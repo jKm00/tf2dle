@@ -15,13 +15,16 @@ export type MapDto = {
 
 export type MapGuessResponse = {
 	correct: boolean;
-	name: string;
+	name: {
+		status: 'correct' | 'incorrect';
+		value: string;
+	};
 	gameModes: {
-		correct: 'correct' | 'incorrect' | 'partial';
+		status: 'correct' | 'incorrect' | 'partial';
 		value: string[];
 	};
 	releaseDate: {
-		correct: 'correct' | 'earlier' | 'later';
+		status: 'correct' | 'earlier' | 'later';
 		value: number;
 	};
 	thumbnail: string;
