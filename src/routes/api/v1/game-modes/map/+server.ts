@@ -4,10 +4,18 @@ import MapService from '$lib/server/services/MapService';
 /**
  * Returns the info of todays map
  */
-export function GET() {
-	const map = MapService.getInstance().getTodaysMap();
+export async function GET() {
+	const map = await MapService.getInstance().getTodaysMap();
 
-	return json(map);
+	return json({
+		image: {
+			url: map.image,
+			startingPos: {
+				x: map.startingPosX,
+				y: map.startingPosY
+			}
+		}
+	});
 }
 
 /**
@@ -19,7 +27,7 @@ export function GET() {
 export async function POST({ request }) {
 	const { guess } = await request.json();
 
-	const result = MapService.getInstance().checkMap(guess);
+	const result = await MapService.getInstance().checkMap(guess);
 
 	return json(result);
 }

@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "npx prisma generate && npx prisma migrate deploy && vite build",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@prisma/client": "^5.8.1",
 		"@types/node-schedule": "^2.1.5",
 		"bits-ui": "^0.15.1",
 		"clsx": "^2.1.0",

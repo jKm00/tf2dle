@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model DailyMaps {
+  id           Int      @id @default(autoincrement())
+  selectedAt   DateTime @default(now()) @db.Date
+  name         String
+  image        String
+  startingPosX Float
+  startingPosY Float
+  gameModes    String
+  releaseDate  DateTime @db.Date
+  hasWon       Int      @default(0)
+}
