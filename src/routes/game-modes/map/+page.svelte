@@ -24,7 +24,7 @@
 	let streak = useLocalStorage<number>('map_streak', 0);
 
 	let todaysMapName: string = '';
-	let openDialog = true;
+	let openDialog = false;
 
 	onMount(() => {
 		if ($lastEvent === null) {
