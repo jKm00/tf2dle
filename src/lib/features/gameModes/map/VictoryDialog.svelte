@@ -17,7 +17,7 @@
 		<Dialog.Header>
 			<Dialog.Title>Won!</Dialog.Title>
 			<Dialog.Description
-				>You are gamer number {correctGuesses} to guess the correct map!</Dialog.Description
+				>You are gamer number {correctGuesses + 1} to guess the correct map!</Dialog.Description
 			>
 		</Dialog.Header>
 		<div class="grid">
