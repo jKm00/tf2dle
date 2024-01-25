@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = 'C:\Users\Joaki\dev\projects\tf2dle\scrapers\tf2maps'
+    let virtual_env = 'C:\Users\Joaki\dev\projects\tf2dle\scrapers'
     let bin = 'Scripts'
 
     let is_windows = ($nu.os-info.family) == 'windows'

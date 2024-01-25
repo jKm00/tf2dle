@@ -1,4 +1,4 @@
-@set "VIRTUAL_ENV=C:\Users\Joaki\dev\projects\tf2dle\scrapers\tf2maps"
+@set "VIRTUAL_ENV=C:\Users\Joaki\dev\projects\tf2dle\scrapers"
 
 @set "VIRTUAL_ENV_PROMPT="
 @if NOT DEFINED VIRTUAL_ENV_PROMPT (
