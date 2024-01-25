@@ -10,21 +10,50 @@
 	let value = '';
 	let inputElement: HTMLInputElement;
 
+	let validating = false;
+	let buttonIsFocused = false;
+
 	$: filteredMaps = maps.filter(
-		(m) => !guessedMaps.includes(m.name) && m.name.toLowerCase().includes(value.toLowerCase())
+		(m) => !guessedMaps.includes(m.name) && m.name.toLowerCase().startsWith(value.toLowerCase())
 	);
 	$: open = value.length > 0 && filteredMaps.length > 0;
 
 	function handleSelect(name: string) {
+		if (validating) return;
+
+		validating = true;
 		dispatch('select', name);
 		value = '';
 		inputElement.focus();
+
+		setTimeout(() => {
+			validating = false;
+		}, 1500);
 	}
 
 	function handleKeyPress(event: KeyboardEvent) {
 		if (event.key === 'Escape') {
 			open = false;
 		}
+
+		if (event.key === 'Enter' && !buttonIsFocused) {
+			const map = filteredMaps[0];
+			if (map) {
+				handleSelect(filteredMaps[0].name);
+			}
+		}
+	}
+
+	function handleButtonFocus() {
+		setTimeout(() => {
+			buttonIsFocused = true;
+		}, 100);
+	}
+
+	function handleButtonUnfocus() {
+		setTimeout(() => {
+			buttonIsFocused = false;
+		}, 100);
 	}
 </script>
 
@@ -44,6 +73,8 @@
 			{#each filteredMaps as map}
 				<li class="p-1">
 					<button
+						on:focusin={handleButtonFocus}
+						on:focusout={handleButtonUnfocus}
 						on:click={() => handleSelect(map.name)}
 						class="flex items-center gap-4 p-2 w-full"
 					>

@@ -106,6 +106,10 @@ class MapService {
 					: 'earlier';
 		const releaseDateValue = dayjs(guessedMap?.releaseDate).year() ?? '';
 
+		if (correct) {
+			this.incrementTodaysCorrectGuesses();
+		}
+
 		return {
 			correct,
 			name: {
@@ -122,6 +126,19 @@ class MapService {
 			},
 			thumbnail: guessedMap?.thumbnail ?? ''
 		};
+	}
+
+	private async incrementTodaysCorrectGuesses() {
+		const todaysMap = await this.getTodaysMap();
+
+		await db.dailyMaps.update({
+			where: {
+				id: todaysMap.id
+			},
+			data: {
+				hasWon: todaysMap.hasWon + 1
+			}
+		});
 	}
 
 	/**

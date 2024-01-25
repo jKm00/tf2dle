@@ -24,7 +24,7 @@
 	let streak = useLocalStorage<number>('map_streak', 0);
 
 	let todaysMapName: string = '';
-	let openDialog = false;
+	let openDialog = true;
 
 	onMount(() => {
 		if ($lastEvent === null) {
@@ -147,10 +147,17 @@
 
 	<ColorExplanation />
 
+	<p class="text-center text-sm">
+		{todaysMap?.correctGuesses ?? 0}
+		{todaysMap ? (todaysMap.correctGuesses > 1 ? 'gamers' : 'gamer') : 'gamers'} has already guessed
+		todays map
+	</p>
+
 	<VictoryDialog
 		bind:open={openDialog}
 		imageUrl={todaysMap?.image.url ?? ''}
 		mapName={todaysMapName}
+		correctGuesses={todaysMap?.correctGuesses ?? 0}
 		tries={$guesses.length}
 		streak={$streak}
 	/>

@@ -1,4 +1,4 @@
-# TF2DL
+# TF2DLE
 
 A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/wordle/index.html), [loldle](https://loldle.net/), and [smidle](https://smidle.net/).
 
@@ -8,6 +8,8 @@ A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/w
 - docs/             # Documentation and command cheat-sheats
 
 - prisma/           # Schema and migrations
+
+- scrapers/         # Python scripts for collecting tf2 data
 
 - src/              # Sveltekit related filed
   - lib/

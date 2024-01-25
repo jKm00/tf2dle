@@ -5,6 +5,7 @@
 
 	export let imageUrl: string;
 	export let mapName: string;
+	export let correctGuesses: number;
 	export let tries: number;
 	export let streak: number;
 
@@ -15,7 +16,9 @@
 	<Dialog.Content>
 		<Dialog.Header>
 			<Dialog.Title>Won!</Dialog.Title>
-			<Dialog.Description>You guessed the correct map!</Dialog.Description>
+			<Dialog.Description
+				>You are gamer number {correctGuesses} to guess the correct map!</Dialog.Description
+			>
 		</Dialog.Header>
 		<div class="grid">
 			<img src={imageUrl} alt={mapName} class="w-full rounded-sm mb-4" />

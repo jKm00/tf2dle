@@ -14,7 +14,8 @@ export async function GET() {
 				x: map.startingPosX,
 				y: map.startingPosY
 			}
-		}
+		},
+		correctGuesses: map.hasWon
 	});
 }
 

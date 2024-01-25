@@ -6,6 +6,7 @@ export type SelectedMapDto = {
 			y: number;
 		};
 	};
+	correctGuesses: number;
 };
 
 export type MapDto = {
