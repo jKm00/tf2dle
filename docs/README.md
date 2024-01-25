@@ -27,7 +27,7 @@ A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/w
 
 ## Getting started
 
-### Prerequisit
+Prerequisites
 
 - Docker
 - Node
@@ -35,25 +35,31 @@ A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/w
 ### Step by step
 
 1. Add `.env` file. Look at `.env.example` for all the variables needed.
-2. Run local postgres with docker:
+2. Install dependencies
+
+```
+pnpm install
+```
+
+3. Run local postgres with docker:
 
 ```
 docker compose up -d
 ```
 
-3. Generate prisma client
+4. Generate prisma client
 
 ```
 npx prisma generate
 ```
 
-4. Apply prisma migration
+5. Apply prisma migration to your local database
 
 ```
 npx prisma migrate deploy
 ```
 
-4. Run application
+6. Run application
 
 ```
 pnpm dev
@@ -62,5 +68,5 @@ pnpm dev
 ## Workflow
 
 1. Create a new branch from main where you can develop your feature in piece. Remember to commit regularly!
-2. Create a merge request to main when done. Make sure all workflows passes and wait for approval.
-3. When approved, merge and delete branch.
+2. Create a merge request to main when done. Make sure all workflows pass and wait for approval.
+3. When approved, merge and delete the branch.
