@@ -27,7 +27,7 @@ A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/w
 
 ## Getting started
 
-### Prerequisit
+Prerequisites
 
 - Docker
 - Node
@@ -62,5 +62,5 @@ pnpm dev
 ## Workflow
 
 1. Create a new branch from main where you can develop your feature in piece. Remember to commit regularly!
-2. Create a merge request to main when done. Make sure all workflows passes and wait for approval.
-3. When approved, merge and delete branch.
+2. Create a merge request to main when done. Make sure all workflows pass and wait for approval.
+3. When approved, merge and delete the branch.
