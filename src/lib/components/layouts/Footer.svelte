@@ -1,15 +1,7 @@
 <script lang="ts">
-	import dayjs from 'dayjs';
-	import utc from 'dayjs/plugin/utc';
-	import relativeTime from 'dayjs/plugin/relativeTime';
-	import duration from 'dayjs/plugin/duration';
+	import dayjs from '$lib/configs/dayjsConfig';
+	import { getGameModeResetTime } from '$lib/utils/reset';
 	import { onDestroy } from 'svelte';
-
-	dayjs.extend(utc);
-	dayjs.extend(relativeTime);
-	dayjs.extend(duration);
-
-	export let nextReset: string = dayjs().toISOString();
 
 	let interval: number;
 	let timeTilReset = initializeResetTime();
@@ -23,25 +15,28 @@
 	});
 
 	function initializeResetTime() {
-		const now = dayjs();
-		const resetTime = dayjs(nextReset);
+		if (interval) {
+			clearInterval(interval);
+		}
+
+		const now = dayjs().local();
+		const resetTime = getGameModeResetTime();
+
 		const diff = resetTime.diff(now);
 
-		const duration = dayjs.duration(diff);
-
 		interval = setInterval(() => {
-			updateTime();
+			updateTimer();
 		}, 1000) as unknown as number;
 
-		return duration;
+		return dayjs.duration(diff);
 	}
 
-	function updateTime() {
+	function updateTimer() {
 		if (timeTilReset.asSeconds() <= 0) {
-			timeTilReset = initializeResetTime();
-		} else {
-			timeTilReset = timeTilReset.subtract(1, 'second');
+			console.log('1');
+			initializeResetTime();
 		}
+		timeTilReset = timeTilReset.subtract(1, 'second');
 	}
 </script>
 

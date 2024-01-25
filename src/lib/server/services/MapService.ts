@@ -1,10 +1,7 @@
 import maps from '$lib/server/data/maps.json';
 import type { Map } from '$lib/types';
-import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
+import dayjs from '$lib/configs/dayjsConfig';
 import { db } from '../prisma';
-
-dayjs.extend(utc);
 
 class MapService {
 	private maps: Map[];
@@ -44,7 +41,7 @@ class MapService {
 		// Save the selected map to the database
 		const selectedMap = await db.dailyMaps.create({
 			data: {
-				selectedAt: dayjs().utc().toDate(),
+				selectedAt: dayjs.utc().toDate(),
 				name: map.name,
 				image: map.image,
 				startingPosX: startingPos.x,
@@ -64,7 +61,7 @@ class MapService {
 	public async getTodaysMap() {
 		const todaysMap = await db.dailyMaps.findFirst({
 			where: {
-				selectedAt: dayjs().utc().toDate()
+				selectedAt: dayjs.utc().toDate()
 			}
 		});
 

@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "DailyMaps" ALTER COLUMN "selectedAt" SET DATA TYPE TIMESTAMP(3);

@@ -2,10 +2,6 @@
 	import Footer from '$lib/components/layouts/Footer.svelte';
 	import Header from '$lib/components/layouts/Header.svelte';
 	import '../app.css';
-
-	export let data;
-
-	$: ({ nextReset } = data);
 </script>
 
 <svelte:head>
@@ -18,7 +14,7 @@
 	<div class="flex-grow">
 		<slot />
 	</div>
-	<Footer {nextReset} />
+	<Footer />
 </div>
 
 <style scoped>
