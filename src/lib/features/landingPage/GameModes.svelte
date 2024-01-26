@@ -4,10 +4,10 @@
 
 	const gameModes = [
 		{
-			name: 'Classic',
+			name: 'Weapon',
 			description: 'Guess the correct weapon',
 			icon: Axe,
-			disabled: true
+			disabled: false
 		},
 		{
 			name: 'Map',
