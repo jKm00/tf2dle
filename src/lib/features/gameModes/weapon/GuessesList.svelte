@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { WeaponGuessResponse } from '$lib/dtos';
+	import { ArrowBigDown, ArrowBigUp } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 
 	export let guesses: WeaponGuessResponse[];
@@ -16,9 +17,9 @@
 			<p>Qualitites</p>
 		</div>
 	{/if}
-	{#each guesses as guess}
-		{@const fadeDuration = 500}
-		<div class="grid grid-cols-6 gap-2 items-center">
+	<div class="grid grid-cols-6 gap-2 items-center">
+		{#each guesses as guess (guess.name)}
+			{@const fadeDuration = 500}
 			<img
 				in:fade={{ duration: fadeDuration }}
 				src={`/images/weapons/thumbnails/${guess.name}.png`}
@@ -30,6 +31,8 @@
 				class={`border h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
 			>
 				{guess.releaseDate.value}
+				<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
+				<ArrowBigUp class={guess.releaseDate.status === 'later' ? '' : 'hidden'} />
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
@@ -55,8 +58,8 @@
 			>
 				{guess.qualities.value.join(', ')}
 			</p>
-		</div>
-	{/each}
+		{/each}
+	</div>
 </div>
 
 <style scoped>

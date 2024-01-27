@@ -57,7 +57,7 @@
 		const result = await checkGuess(guess);
 
 		if (result) {
-			guesses.set([result, ...$guesses]);
+			guesses.update((guesses) => [result, ...guesses]);
 		}
 
 		if (result?.correct) {
@@ -122,6 +122,7 @@
 								value: weapon
 							}))}
 							guessed={$guesses.map((guess) => guess.name)}
+							validationTime={500 * 6}
 							on:select={(e) => handleGuess(e.detail)}
 						/>
 					{:else}
