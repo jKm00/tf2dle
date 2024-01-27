@@ -21,7 +21,7 @@
 			<img
 				in:fade={{ duration: fadeDuration }}
 				class="h-full object-cover rounded"
-				src={guess.thumbnail}
+				src={`/images/maps/thumbnails/${guess.thumbnail}.png`}
 				alt={guess.name.value}
 			/>
 			<p

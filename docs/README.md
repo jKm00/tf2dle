@@ -9,7 +9,7 @@ A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/w
 
 - prisma/           # Schema and migrations
 
-- scrapers/         # Python scripts for collecting tf2 data
+- scripts/          # Python scripts for collecting tf2 data
 
 - src/              # Sveltekit related filed
   - lib/
