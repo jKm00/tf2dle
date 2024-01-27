@@ -159,7 +159,7 @@
 	<VictoryDialog
 		bind:open={openDialog}
 		img={{
-			src: todaysMap?.image.url ?? '',
+			src: `/images/maps/originals/${todaysMap?.image.url}.png`,
 			alt: todaysMapName
 		}}
 		label="Map"
