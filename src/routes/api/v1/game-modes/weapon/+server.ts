@@ -1,6 +1,12 @@
 import { weaponService } from '$lib/server/services/WeaponService';
 import { json } from '@sveltejs/kit';
 
+export async function GET() {
+	const numberOfCorrectGuesses = await weaponService.getNumberOfCorrectGuesses();
+
+	return json(numberOfCorrectGuesses, { status: 200 });
+}
+
 export async function POST({ request }) {
 	const { guess } = await request.json();
 

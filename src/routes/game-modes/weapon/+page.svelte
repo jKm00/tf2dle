@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card';
-	import { Loader2, RotateCw } from 'lucide-svelte';
+	import { Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
 	import Input from '$lib/components/games/Input.svelte';
 	import { onMount } from 'svelte';
 	import dayjs from '$lib/configs/dayjsConfig.js';
@@ -22,6 +22,7 @@
 	let streak = useLocalStorage('weapon__streak', 0);
 
 	let openDialog = false;
+	let numberOfCorrectGuesses = async () => await data.numberOfCorrectGuesses;
 
 	onMount(() => {
 		if ($lastEvent === null) {
@@ -61,7 +62,7 @@
 		}
 
 		if (result?.correct) {
-			won();
+			won(result.numberOfCorrectGuesses);
 		}
 	}
 
@@ -78,8 +79,6 @@
 			});
 			const data = (await res.json()) as WeaponGuessResponse;
 
-			console.log(data);
-
 			if (!res.ok) {
 				error = true;
 			} else {
@@ -91,12 +90,13 @@
 		toast.error('Could not validate your guess, please try again.');
 	}
 
-	function won() {
+	function won(updatedNumberOfCorrectGuesses: number) {
 		// Wait for reveal animation to finish
 		setTimeout(() => {
 			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
 			streak.update((streak) => streak + 1);
 			gameState = 'won';
+			numberOfCorrectGuesses = async () => updatedNumberOfCorrectGuesses;
 			openDialog = true;
 		}, 500 * 6);
 	}
@@ -105,8 +105,22 @@
 <div class="grid gap-4">
 	<Card.Root>
 		<Card.Header>
-			<Card.Title data-testId="title">Weapon</Card.Title>
-			<Card.Description>Guess today's weapon</Card.Description>
+			<div class="flex items-center justify-between">
+				<div>
+					<Card.Title data-testId="title">Weapon</Card.Title>
+					<Card.Description>Guess today's weapon</Card.Description>
+				</div>
+				<div class="flex gap-4">
+					<p class="flex items-center gap-1">
+						<Dices aria-label="Number of guesses" />
+						{$guesses.length}
+					</p>
+					<p class="flex items-center gap-1">
+						<Flame aria-label="Streak" />
+						{$streak}
+					</p>
+				</div>
+			</div>
 		</Card.Header>
 		<Card.Content>
 			{#await data.weapons}
@@ -115,19 +129,30 @@
 				</div>
 			{:then weapons}
 				<div class="grid gap-4">
-					{#if gameState === 'guessing'}
-						<Input
-							data={weapons?.map((weapon) => ({
-								img: `/images/weapons/thumbnails/${weapon}.png`,
-								value: weapon
-							}))}
-							guessed={$guesses.map((guess) => guess.name)}
-							validationTime={500 * 6}
-							on:select={(e) => handleGuess(e.detail)}
-						/>
-					{:else}
-						<p class="text-center text-muted-foreground my-10">You have guessed todays weapon!</p>
-					{/if}
+					{#await numberOfCorrectGuesses() then number}
+						{#if gameState === 'guessing'}
+							<p
+								class="text-center text-sm text-muted-foreground"
+								data-testId="number-of-correct-guesses"
+							>
+								{number}
+								{number === 1 ? 'gamer' : 'gamers'} have already guessed todays map
+							</p>
+							<Input
+								data={weapons?.map((weapon) => ({
+									img: `/images/weapons/thumbnails/${weapon}.png`,
+									value: weapon
+								}))}
+								guessed={$guesses.map((guess) => guess.name)}
+								validationTime={500 * 6}
+								on:select={(e) => handleGuess(e.detail)}
+							/>
+						{:else}
+							<p class="text-center text-muted-foreground my-10" data-testId="completed-message">
+								You are 1 of {number} that have guessed todays weapon!
+							</p>
+						{/if}
+					{/await}
 					<GuessesList guesses={$guesses} />
 				</div>
 			{:catch error}

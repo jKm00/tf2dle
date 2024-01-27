@@ -4,6 +4,29 @@ import { db } from '../prisma';
 import type { WeaponRepository } from './WeaponRepository';
 
 class WeaponRepositoryPrisma implements WeaponRepository {
+	async incrementNumberOfCorrectGuesses(): Promise<void> {
+		await db.dailyWeapons.updateMany({
+			where: {
+				selectedAt: dayjs.utc().toDate()
+			},
+			data: {
+				hasWon: {
+					increment: 1
+				}
+			}
+		});
+	}
+
+	async getNumberOfCorrectGuesses(): Promise<number> {
+		return await db.dailyWeapons
+			.findFirst({
+				where: {
+					selectedAt: dayjs.utc().toDate()
+				}
+			})
+			.then((weapon) => weapon?.hasWon ?? 0);
+	}
+
 	async getTodaysWeapon(): Promise<string | null> {
 		const weapon = await db.dailyWeapons.findFirst({
 			where: {
