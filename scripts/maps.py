@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import sys
 
 class Map:
   """Class representing a TF2 map"""
@@ -37,6 +38,9 @@ def convert_to_full_image_url(thumbnail_url):
 
   return full_image_url
 
+# If the script should download images (map thumbnails an original images)
+enable_img_download = '--img-download' in sys.argv
+
 # Go to the wiki page
 URL = "https://wiki.teamfortress.com/wiki/List_of_maps"
 page = requests.get(URL)
@@ -72,6 +76,20 @@ for tr in trs:
     # Else, create new game
     map_thumbnail = "https://wiki.teamfortress.com" + tds[0].find("img")["src"]
     map_image = convert_to_full_image_url(map_thumbnail)
+
+    # Hashed map name
+    hahsed_map_name = str(hash(map_name))
+    if enable_img_download:
+      # Download map thumbnail
+      img_data = requests.get(map_thumbnail).content
+      with open(f"images/maps/thumbnails/{hahsed_map_name}.png", "wb") as file:
+        file.write(img_data)
+
+      # Download map image
+      img_data = requests.get(map_image).content
+      with open(f"images/maps/{hahsed_map_name}.png", "wb") as file:
+        file.write(img_data)
+
     map_release_date = tds[4].find("span")
 
     # Not all maps have a release date
@@ -80,7 +98,7 @@ for tr in trs:
     else:
       map_release_date = "unknown"
 
-    hashmap[map_name] = Map(map_name, map_thumbnail, map_image, map_game_mode, map_release_date)
+    hashmap[map_name] = Map(map_name, hahsed_map_name, hahsed_map_name, map_game_mode, map_release_date)
 
 # Convert hashmap to json
 maps_json = json.dumps([map_instance.to_dict() for map_instance in hashmap.values()], indent=4)

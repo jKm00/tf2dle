@@ -1,8 +1,8 @@
 [
     {
         "name": "2Fort",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a1/Ctf_2fort_bridge_ss.png/150px-Ctf_2fort_bridge_ss.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/a1/Ctf_2fort_bridge_ss.png",
+        "thumbnail": "5023672746157192709",
+        "image": "5023672746157192709",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -10,8 +10,8 @@
     },
     {
         "name": "2Fort Invasion",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/dd/Ctf_2fort_invasion.png/150px-Ctf_2fort_invasion.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/dd/Ctf_2fort_invasion.png",
+        "thumbnail": "-6164852732764641728",
+        "image": "-6164852732764641728",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -19,8 +19,8 @@
     },
     {
         "name": "Crasher",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/83/Ctf_crasher.png/150px-Ctf_crasher.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/83/Ctf_crasher.png",
+        "thumbnail": "-6151532580427118318",
+        "image": "-6151532580427118318",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -28,8 +28,8 @@
     },
     {
         "name": "Double Cross",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/ae/CTF_DoubleCross_RedBase.png/150px-CTF_DoubleCross_RedBase.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/ae/CTF_DoubleCross_RedBase.png",
+        "thumbnail": "-4940935785093008984",
+        "image": "-4940935785093008984",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -37,8 +37,8 @@
     },
     {
         "name": "Doublefrost",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/65/Ctf_doublecross_snowy.png/150px-Ctf_doublecross_snowy.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/65/Ctf_doublecross_snowy.png",
+        "thumbnail": "6762336813701073042",
+        "image": "6762336813701073042",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -46,8 +46,8 @@
     },
     {
         "name": "Frosty",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/ac/Ctf_frosty.png/150px-Ctf_frosty.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/ac/Ctf_frosty.png",
+        "thumbnail": "-1872005779084952053",
+        "image": "-1872005779084952053",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -55,8 +55,8 @@
     },
     {
         "name": "Haarp",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/42/Ctf_haarp.png/150px-Ctf_haarp.png",
-        "image": "https://wiki.teamfortress.com/w/images/4/42/Ctf_haarp.png",
+        "thumbnail": "6315803694931562899",
+        "image": "6315803694931562899",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -64,8 +64,8 @@
     },
     {
         "name": "Helltrain",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/24/Ctf_helltrain_event.png/150px-Ctf_helltrain_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/24/Ctf_helltrain_event.png",
+        "thumbnail": "9155841703268639682",
+        "image": "9155841703268639682",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -73,8 +73,8 @@
     },
     {
         "name": "Landfall",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/ca/Ctf_landfall_rc0005.jpg/150px-Ctf_landfall_rc0005.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/c/ca/Ctf_landfall_rc0005.jpg",
+        "thumbnail": "6226330742349397895",
+        "image": "6226330742349397895",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -82,8 +82,8 @@
     },
     {
         "name": "Pelican Peak",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/96/Ctf_pelican_peak.png/150px-Ctf_pelican_peak.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/96/Ctf_pelican_peak.png",
+        "thumbnail": "-8307645567653246007",
+        "image": "-8307645567653246007",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -91,8 +91,8 @@
     },
     {
         "name": "Sawmill",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/bd/CTF_Sawmill_Center.png/150px-CTF_Sawmill_Center.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/bd/CTF_Sawmill_Center.png",
+        "thumbnail": "-5873389527683737186",
+        "image": "-5873389527683737186",
         "gameModes": [
             "Capture the Flag",
             "Arena",
@@ -102,8 +102,8 @@
     },
     {
         "name": "Snowfall",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Ctf_snowfall_final.png/150px-Ctf_snowfall_final.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d0/Ctf_snowfall_final.png",
+        "thumbnail": "-3944413111252120193",
+        "image": "-3944413111252120193",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -111,8 +111,8 @@
     },
     {
         "name": "Turbine",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/dc/CTF_Turbine_Center.png/150px-CTF_Turbine_Center.png.jpeg",
-        "image": "https://wiki.teamfortress.com/w/images/d/dc/CTF_Turbine_Center.png",
+        "thumbnail": "-7238154871097118318",
+        "image": "-7238154871097118318",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -120,8 +120,8 @@
     },
     {
         "name": "Turbine Center",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/ba/Ctf_turbine_winter.png/150px-Ctf_turbine_winter.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/ba/Ctf_turbine_winter.png",
+        "thumbnail": "-4017946881225537678",
+        "image": "-4017946881225537678",
         "gameModes": [
             "Capture the Flag"
         ],
@@ -129,8 +129,8 @@
     },
     {
         "name": "Well",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e1/Ctfwell04.png/150px-Ctfwell04.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e1/Ctfwell04.png",
+        "thumbnail": "-4253268857866775042",
+        "image": "-4253268857866775042",
         "gameModes": [
             "Capture the Flag",
             "Control Point",
@@ -140,8 +140,8 @@
     },
     {
         "name": "5Gorge",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/81/5gorge1.png/150px-5gorge1.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/81/5gorge1.png",
+        "thumbnail": "-5458434653798541091",
+        "image": "-5458434653798541091",
         "gameModes": [
             "Control Point"
         ],
@@ -149,8 +149,8 @@
     },
     {
         "name": "Badlands",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/CP_Badlands_Central_point.PNG/150px-CP_Badlands_Central_point.PNG",
-        "image": "https://wiki.teamfortress.com/w/images/7/7d/CP_Badlands_Central_point.PNG",
+        "thumbnail": "288419489662704656",
+        "image": "288419489662704656",
         "gameModes": [
             "Control Point",
             "Arena",
@@ -160,8 +160,8 @@
     },
     {
         "name": "Coldfront",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/13/Coldfront5.png/150px-Coldfront5.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/13/Coldfront5.png",
+        "thumbnail": "3282082089399153338",
+        "image": "3282082089399153338",
         "gameModes": [
             "Control Point"
         ],
@@ -169,8 +169,8 @@
     },
     {
         "name": "Fastlane",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/ee/Fastlane1.png/150px-Fastlane1.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/ee/Fastlane1.png",
+        "thumbnail": "2171068012816597119",
+        "image": "2171068012816597119",
         "gameModes": [
             "Control Point"
         ],
@@ -178,8 +178,8 @@
     },
     {
         "name": "Foundry",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/24/Cp_foundry_mid.png/150px-Cp_foundry_mid.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/24/Cp_foundry_mid.png",
+        "thumbnail": "-8260017331236270630",
+        "image": "-8260017331236270630",
         "gameModes": [
             "Control Point",
             "Mannpower"
@@ -188,8 +188,8 @@
     },
     {
         "name": "Freight",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/da/Freight1.png/150px-Freight1.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/da/Freight1.png",
+        "thumbnail": "-1699194108329065938",
+        "image": "-1699194108329065938",
         "gameModes": [
             "Control Point"
         ],
@@ -197,8 +197,8 @@
     },
     {
         "name": "Granary",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/TF2_Granary_Map.jpg/150px-TF2_Granary_Map.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/d/d0/TF2_Granary_Map.jpg",
+        "thumbnail": "-3528365070456167375",
+        "image": "-3528365070456167375",
         "gameModes": [
             "Control Point",
             "Arena"
@@ -207,8 +207,8 @@
     },
     {
         "name": "Gullywash",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/17/CP_Gullywash_3.png/150px-CP_Gullywash_3.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/17/CP_Gullywash_3.png",
+        "thumbnail": "-6313639146344351565",
+        "image": "-6313639146344351565",
         "gameModes": [
             "Control Point"
         ],
@@ -216,8 +216,8 @@
     },
     {
         "name": "Metalworks",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fa/Cp_metalworks_b22_5.jpg/150px-Cp_metalworks_b22_5.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/f/fa/Cp_metalworks_b22_5.jpg",
+        "thumbnail": "3943943260799645810",
+        "image": "3943943260799645810",
         "gameModes": [
             "Control Point"
         ],
@@ -225,8 +225,8 @@
     },
     {
         "name": "Powerhouse",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d1/Cp_powerhouse.png/150px-Cp_powerhouse.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d1/Cp_powerhouse.png",
+        "thumbnail": "-4460689624697234946",
+        "image": "-4460689624697234946",
         "gameModes": [
             "Control Point"
         ],
@@ -234,8 +234,8 @@
     },
     {
         "name": "Process",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/56/Cp_process_middle_point.png/150px-Cp_process_middle_point.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/56/Cp_process_middle_point.png",
+        "thumbnail": "-5581558870872257616",
+        "image": "-5581558870872257616",
         "gameModes": [
             "Control Point"
         ],
@@ -243,8 +243,8 @@
     },
     {
         "name": "Reckoner",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e1/Cp_reckoner.png/150px-Cp_reckoner.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e1/Cp_reckoner.png",
+        "thumbnail": "1359667952384441846",
+        "image": "1359667952384441846",
         "gameModes": [
             "Control Point"
         ],
@@ -252,8 +252,8 @@
     },
     {
         "name": "Sinshine",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/48/Cp_sunshine_event.jpg/150px-Cp_sunshine_event.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/4/48/Cp_sunshine_event.jpg",
+        "thumbnail": "9095131414064204168",
+        "image": "9095131414064204168",
         "gameModes": [
             "Control Point"
         ],
@@ -261,8 +261,8 @@
     },
     {
         "name": "Snakewater",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/84/Snakewater_mid.png/150px-Snakewater_mid.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/84/Snakewater_mid.png",
+        "thumbnail": "-8340104157603195946",
+        "image": "-8340104157603195946",
         "gameModes": [
             "Control Point"
         ],
@@ -270,8 +270,8 @@
     },
     {
         "name": "Sunshine",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e9/Sunshine_main.png/150px-Sunshine_main.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e9/Sunshine_main.png",
+        "thumbnail": "5521632821385610652",
+        "image": "5521632821385610652",
         "gameModes": [
             "Control Point"
         ],
@@ -279,8 +279,8 @@
     },
     {
         "name": "Vanguard",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b2/Cp_vanguard.png/150px-Cp_vanguard.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/b2/Cp_vanguard.png",
+        "thumbnail": "2027399451798496787",
+        "image": "2027399451798496787",
         "gameModes": [
             "Control Point"
         ],
@@ -288,8 +288,8 @@
     },
     {
         "name": "Yukon",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8a/CP_Yukon_overview.png/150px-CP_Yukon_overview.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8a/CP_Yukon_overview.png",
+        "thumbnail": "1726252208623604803",
+        "image": "1726252208623604803",
         "gameModes": [
             "Control Point"
         ],
@@ -297,8 +297,8 @@
     },
     {
         "name": "Altitude",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/68/Cp_altitude.png/150px-Cp_altitude.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/68/Cp_altitude.png",
+        "thumbnail": "-2879095193058175113",
+        "image": "-2879095193058175113",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -306,8 +306,8 @@
     },
     {
         "name": "Brew",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/32/Cp_brew.png/150px-Cp_brew.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/32/Cp_brew.png",
+        "thumbnail": "3466762414357017158",
+        "image": "3466762414357017158",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -315,8 +315,8 @@
     },
     {
         "name": "Carrier",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/69/Cp_carrier.png/150px-Cp_carrier.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/69/Cp_carrier.png",
+        "thumbnail": "811466845020035316",
+        "image": "811466845020035316",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -324,8 +324,8 @@
     },
     {
         "name": "Coal Pit",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/18/Cp_gravelpit_snowy.png/150px-Cp_gravelpit_snowy.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/18/Cp_gravelpit_snowy.png",
+        "thumbnail": "-1296068820492134811",
+        "image": "-1296068820492134811",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -333,8 +333,8 @@
     },
     {
         "name": "Dustbowl",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/31/TF2_Dustbowl_Map.jpg/150px-TF2_Dustbowl_Map.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/3/31/TF2_Dustbowl_Map.jpg",
+        "thumbnail": "6175387843084796003",
+        "image": "6175387843084796003",
         "gameModes": [
             "Attack/Defend",
             "Training Mode"
@@ -343,8 +343,8 @@
     },
     {
         "name": "Erebus",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/35/Cp_ambush_event.png/150px-Cp_ambush_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/35/Cp_ambush_event.png",
+        "thumbnail": "1221350254624707334",
+        "image": "1221350254624707334",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -352,8 +352,8 @@
     },
     {
         "name": "Egypt",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/45/Egypt_01.jpg/150px-Egypt_01.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/4/45/Egypt_01.jpg",
+        "thumbnail": "-4365427506356079884",
+        "image": "-4365427506356079884",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -361,8 +361,8 @@
     },
     {
         "name": "Frostwatch",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/91/Cp_frostwatch.png/150px-Cp_frostwatch.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/91/Cp_frostwatch.png",
+        "thumbnail": "1744513547479147357",
+        "image": "1744513547479147357",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -370,8 +370,8 @@
     },
     {
         "name": "Gorge",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/25/Cp_gorge.jpg/150px-Cp_gorge.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/2/25/Cp_gorge.jpg",
+        "thumbnail": "-1709954461941584496",
+        "image": "-1709954461941584496",
         "gameModes": [
             "Attack/Defend",
             "Mannpower"
@@ -380,8 +380,8 @@
     },
     {
         "name": "Gorge Event",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/70/Cp_gorge_event.png/150px-Cp_gorge_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/70/Cp_gorge_event.png",
+        "thumbnail": "-6125287072166898387",
+        "image": "-6125287072166898387",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -389,8 +389,8 @@
     },
     {
         "name": "Gravel Pit",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e4/Tf2_gravelpit.jpg/150px-Tf2_gravelpit.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/e/e4/Tf2_gravelpit.jpg",
+        "thumbnail": "-4618307685140192169",
+        "image": "-4618307685140192169",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -398,8 +398,8 @@
     },
     {
         "name": "Hardwood",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1e/Cp_hardwood.png/150px-Cp_hardwood.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/1e/Cp_hardwood.png",
+        "thumbnail": "1998901820928761815",
+        "image": "1998901820928761815",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -407,8 +407,8 @@
     },
     {
         "name": "Junction",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/23/Junct_01.jpg/150px-Junct_01.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/2/23/Junct_01.jpg",
+        "thumbnail": "-3127790671032725498",
+        "image": "-3127790671032725498",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -416,8 +416,8 @@
     },
     {
         "name": "Lava Pit",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/96/Cp_lavapit_final.png/150px-Cp_lavapit_final.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/96/Cp_lavapit_final.png",
+        "thumbnail": "-3275018354239287508",
+        "image": "-3275018354239287508",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -425,8 +425,8 @@
     },
     {
         "name": "Mann Manor",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/4d/Mann_manor_event.jpg/150px-Mann_manor_event.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/4/4d/Mann_manor_event.jpg",
+        "thumbnail": "6975134471066163242",
+        "image": "6975134471066163242",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -434,8 +434,8 @@
     },
     {
         "name": "Mercenary Park",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/53/Yetipark_5.png/150px-Yetipark_5.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/53/Yetipark_5.png",
+        "thumbnail": "934533565839758722",
+        "image": "934533565839758722",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -443,8 +443,8 @@
     },
     {
         "name": "Mossrock",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/92/Mossrock_main.jpg/150px-Mossrock_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/9/92/Mossrock_main.jpg",
+        "thumbnail": "3830477639257353456",
+        "image": "3830477639257353456",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -452,8 +452,8 @@
     },
     {
         "name": "Mountain Lab",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c2/Art_Pass_Winner_3DNJ.jpg/150px-Art_Pass_Winner_3DNJ.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/c/c2/Art_Pass_Winner_3DNJ.jpg",
+        "thumbnail": "1274956831490089446",
+        "image": "1274956831490089446",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -461,8 +461,8 @@
     },
     {
         "name": "Snowplow",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a7/Cp_snowplow.jpg/150px-Cp_snowplow.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/a/a7/Cp_snowplow.jpg",
+        "thumbnail": "5855603748594540371",
+        "image": "5855603748594540371",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -470,8 +470,8 @@
     },
     {
         "name": "Spookeyridge",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8f/Cp_spookeyridge.png/150px-Cp_spookeyridge.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8f/Cp_spookeyridge.png",
+        "thumbnail": "5599260245562245085",
+        "image": "5599260245562245085",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -479,8 +479,8 @@
     },
     {
         "name": "Steel",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/39/Steel_Main.png/150px-Steel_Main.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/39/Steel_Main.png",
+        "thumbnail": "-5551603274536188603",
+        "image": "-5551603274536188603",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -488,8 +488,8 @@
     },
     {
         "name": "Sulfur",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/72/Cp_sulfur.png/150px-Cp_sulfur.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/72/Cp_sulfur.png",
+        "thumbnail": "4142155534632710650",
+        "image": "4142155534632710650",
         "gameModes": [
             "Attack/Defend"
         ],
@@ -497,8 +497,8 @@
     },
     {
         "name": "DeGroot Keep",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/0e/Degroot_Keep_Castle.png/150px-Degroot_Keep_Castle.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/0e/Degroot_Keep_Castle.png",
+        "thumbnail": "-8135173880571739934",
+        "image": "-8135173880571739934",
         "gameModes": [
             "Attack/Defend(Medieval Mode)"
         ],
@@ -506,8 +506,8 @@
     },
     {
         "name": "Sandcastle",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8a/Cp_degrootkeep_rats.png/150px-Cp_degrootkeep_rats.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8a/Cp_degrootkeep_rats.png",
+        "thumbnail": "-268877750699006260",
+        "image": "-268877750699006260",
         "gameModes": [
             "Attack/Defend(Medieval Mode)"
         ],
@@ -515,8 +515,8 @@
     },
     {
         "name": "Standin",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/73/Cp_standin_B.jpg/150px-Cp_standin_B.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/7/73/Cp_standin_B.jpg",
+        "thumbnail": "6657224646120201267",
+        "image": "6657224646120201267",
         "gameModes": [
             "Control Point(Domination)"
         ],
@@ -524,8 +524,8 @@
     },
     {
         "name": "Hydro",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e8/TF2_Hydro_Map.jpg/150px-TF2_Hydro_Map.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/e/e8/TF2_Hydro_Map.jpg",
+        "thumbnail": "5287291981162274137",
+        "image": "5287291981162274137",
         "gameModes": [
             "Territorial Control"
         ],
@@ -533,8 +533,8 @@
     },
     {
         "name": "Badwater Basin",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/3a/Plbadwater.png/150px-Plbadwater.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/3a/Plbadwater.png",
+        "thumbnail": "1948584827315654105",
+        "image": "1948584827315654105",
         "gameModes": [
             "Payload"
         ],
@@ -542,8 +542,8 @@
     },
     {
         "name": "Barnblitz",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7b/Barnblitz.PNG/150px-Barnblitz.PNG",
-        "image": "https://wiki.teamfortress.com/w/images/7/7b/Barnblitz.PNG",
+        "thumbnail": "-6411639140337067985",
+        "image": "-6411639140337067985",
         "gameModes": [
             "Payload"
         ],
@@ -551,8 +551,8 @@
     },
     {
         "name": "Bloodwater",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/64/Pl_bloodwater.png/150px-Pl_bloodwater.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/64/Pl_bloodwater.png",
+        "thumbnail": "8894840179580512843",
+        "image": "8894840179580512843",
         "gameModes": [
             "Payload"
         ],
@@ -560,8 +560,8 @@
     },
     {
         "name": "Borneo",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d3/Pl_Borneo.jpg/150px-Pl_Borneo.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/d/d3/Pl_Borneo.jpg",
+        "thumbnail": "3866599698957724090",
+        "image": "3866599698957724090",
         "gameModes": [
             "Payload"
         ],
@@ -569,8 +569,8 @@
     },
     {
         "name": "Bread Space",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/91/Pl_breadspace.png/150px-Pl_breadspace.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/91/Pl_breadspace.png",
+        "thumbnail": "-5213248515968101902",
+        "image": "-5213248515968101902",
         "gameModes": [
             "Payload"
         ],
@@ -578,8 +578,8 @@
     },
     {
         "name": "Brimstone",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6d/Pl_fifthcurve_event.png/150px-Pl_fifthcurve_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/6d/Pl_fifthcurve_event.png",
+        "thumbnail": "8457522572224813761",
+        "image": "8457522572224813761",
         "gameModes": [
             "Payload"
         ],
@@ -587,8 +587,8 @@
     },
     {
         "name": "Cactus Canyon",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/13/Cactus_Canyon.jpg/150px-Cactus_Canyon.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/1/13/Cactus_Canyon.jpg",
+        "thumbnail": "5269453518267542439",
+        "image": "5269453518267542439",
         "gameModes": [
             "Payload"
         ],
@@ -596,8 +596,8 @@
     },
     {
         "name": "Camber",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/53/Pl_camber.png/150px-Pl_camber.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/53/Pl_camber.png",
+        "thumbnail": "4284764914792353233",
+        "image": "4284764914792353233",
         "gameModes": [
             "Payload"
         ],
@@ -605,8 +605,8 @@
     },
     {
         "name": "Cashworks",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/32/Pl_cashworks.png/150px-Pl_cashworks.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/32/Pl_cashworks.png",
+        "thumbnail": "4218277614310490546",
+        "image": "4218277614310490546",
         "gameModes": [
             "Payload"
         ],
@@ -614,8 +614,8 @@
     },
     {
         "name": "Chilly",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d5/Pl_chilly.png/150px-Pl_chilly.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d5/Pl_chilly.png",
+        "thumbnail": "-4577317274843818187",
+        "image": "-4577317274843818187",
         "gameModes": [
             "Payload"
         ],
@@ -623,8 +623,8 @@
     },
     {
         "name": "Corruption",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Pl_corruption.png/150px-Pl_corruption.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d0/Pl_corruption.png",
+        "thumbnail": "-409195069117281566",
+        "image": "-409195069117281566",
         "gameModes": [
             "Payload"
         ],
@@ -632,8 +632,8 @@
     },
     {
         "name": "Emerge",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/67/Pl_emerge.png/150px-Pl_emerge.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/67/Pl_emerge.png",
+        "thumbnail": "-8814350969399862707",
+        "image": "-8814350969399862707",
         "gameModes": [
             "Payload"
         ],
@@ -641,8 +641,8 @@
     },
     {
         "name": "Enclosure",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e9/Enclosure_main.jpg/150px-Enclosure_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/e/e9/Enclosure_main.jpg",
+        "thumbnail": "-4662683996508586478",
+        "image": "-4662683996508586478",
         "gameModes": [
             "Payload"
         ],
@@ -650,8 +650,8 @@
     },
     {
         "name": "Frontier",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/af/Pl_frontier.jpg/150px-Pl_frontier.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/a/af/Pl_frontier.jpg",
+        "thumbnail": "7970477404110424299",
+        "image": "7970477404110424299",
         "gameModes": [
             "Payload"
         ],
@@ -659,8 +659,8 @@
     },
     {
         "name": "Frostcliff",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8e/Pl_frostcliff.png/150px-Pl_frostcliff.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8e/Pl_frostcliff.png",
+        "thumbnail": "-490234297194856266",
+        "image": "-490234297194856266",
         "gameModes": [
             "Payload"
         ],
@@ -668,8 +668,8 @@
     },
     {
         "name": "Gold Rush",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/cb/Goldrush.jpg/150px-Goldrush.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/c/cb/Goldrush.jpg",
+        "thumbnail": "-5122163875809550055",
+        "image": "-5122163875809550055",
         "gameModes": [
             "Payload"
         ],
@@ -677,8 +677,8 @@
     },
     {
         "name": "Gravestone",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/bf/Pl_rumble_event.png/150px-Pl_rumble_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/bf/Pl_rumble_event.png",
+        "thumbnail": "-4612844331396893685",
+        "image": "-4612844331396893685",
         "gameModes": [
             "Payload"
         ],
@@ -686,8 +686,8 @@
     },
     {
         "name": "Ghoulpit",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6c/Pl_sludgepit_event.png/150px-Pl_sludgepit_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/6c/Pl_sludgepit_event.png",
+        "thumbnail": "-289827663064143801",
+        "image": "-289827663064143801",
         "gameModes": [
             "Payload"
         ],
@@ -695,8 +695,8 @@
     },
     {
         "name": "Hassle Castle",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d8/Pl_hasslecastle.png/150px-Pl_hasslecastle.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d8/Pl_hasslecastle.png",
+        "thumbnail": "-7634403282792706575",
+        "image": "-7634403282792706575",
         "gameModes": [
             "Payload"
         ],
@@ -704,8 +704,8 @@
     },
     {
         "name": "Hellstone",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b5/Pl_millstone_event.jpg/150px-Pl_millstone_event.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/b/b5/Pl_millstone_event.jpg",
+        "thumbnail": "-3254100352327679609",
+        "image": "-3254100352327679609",
         "gameModes": [
             "Payload"
         ],
@@ -713,8 +713,8 @@
     },
     {
         "name": "Hoodoo",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/87/Plhoodoo.png/150px-Plhoodoo.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/87/Plhoodoo.png",
+        "thumbnail": "5731666745686269715",
+        "image": "5731666745686269715",
         "gameModes": [
             "Payload"
         ],
@@ -722,8 +722,8 @@
     },
     {
         "name": "Phoenix",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1d/Pl_phoenix.png/150px-Pl_phoenix.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/1d/Pl_phoenix.png",
+        "thumbnail": "8516647284851398004",
+        "image": "8516647284851398004",
         "gameModes": [
             "Payload"
         ],
@@ -731,8 +731,8 @@
     },
     {
         "name": "Pier",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6e/Pl_pier.png/150px-Pl_pier.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/6e/Pl_pier.png",
+        "thumbnail": "2836653457417638522",
+        "image": "2836653457417638522",
         "gameModes": [
             "Payload"
         ],
@@ -740,8 +740,8 @@
     },
     {
         "name": "Polar",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8a/Pl_coal_event.png/150px-Pl_coal_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8a/Pl_coal_event.png",
+        "thumbnail": "2976532599965810564",
+        "image": "2976532599965810564",
         "gameModes": [
             "Payload"
         ],
@@ -749,8 +749,8 @@
     },
     {
         "name": "Precipice",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1c/Precipice_main.jpg/150px-Precipice_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/1/1c/Precipice_main.jpg",
+        "thumbnail": "6540850617673125892",
+        "image": "6540850617673125892",
         "gameModes": [
             "Payload"
         ],
@@ -758,8 +758,8 @@
     },
     {
         "name": "Rumford",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/37/Pl_rumford_event.png/150px-Pl_rumford_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/37/Pl_rumford_event.png",
+        "thumbnail": "-959025002265305812",
+        "image": "-959025002265305812",
         "gameModes": [
             "Payload"
         ],
@@ -767,8 +767,8 @@
     },
     {
         "name": "Snowycoast",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/1e/Pl_snowycoast.jpg/150px-Pl_snowycoast.jpg.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/1e/Pl_snowycoast.jpg",
+        "thumbnail": "3428554957996091494",
+        "image": "3428554957996091494",
         "gameModes": [
             "Payload"
         ],
@@ -776,8 +776,8 @@
     },
     {
         "name": "Spineyard",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fa/Pl_spineyard.png/150px-Pl_spineyard.png",
-        "image": "https://wiki.teamfortress.com/w/images/f/fa/Pl_spineyard.png",
+        "thumbnail": "1466549501088115157",
+        "image": "1466549501088115157",
         "gameModes": [
             "Payload"
         ],
@@ -785,8 +785,8 @@
     },
     {
         "name": "Swiftwater",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c3/Pl_swiftwater.jpg/150px-Pl_swiftwater.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/c/c3/Pl_swiftwater.jpg",
+        "thumbnail": "-1401937810754499136",
+        "image": "-1401937810754499136",
         "gameModes": [
             "Payload"
         ],
@@ -794,8 +794,8 @@
     },
     {
         "name": "Terror",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/9f/Pl_terror_event.png/150px-Pl_terror_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/9f/Pl_terror_event.png",
+        "thumbnail": "6593416180727115177",
+        "image": "6593416180727115177",
         "gameModes": [
             "Payload"
         ],
@@ -803,8 +803,8 @@
     },
     {
         "name": "Thunder Mountain",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/f0/PL_Thunder_Mountain.png/150px-PL_Thunder_Mountain.png",
-        "image": "https://wiki.teamfortress.com/w/images/f/f0/PL_Thunder_Mountain.png",
+        "thumbnail": "2655932058951898100",
+        "image": "2655932058951898100",
         "gameModes": [
             "Payload",
             "Mannpower"
@@ -813,8 +813,8 @@
     },
     {
         "name": "Upward",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/92/Engineer_Update_Upward.png/150px-Engineer_Update_Upward.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/92/Engineer_Update_Upward.png",
+        "thumbnail": "7851406848823844326",
+        "image": "7851406848823844326",
         "gameModes": [
             "Payload"
         ],
@@ -822,8 +822,8 @@
     },
     {
         "name": "Venice",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d2/Pl_venice.png/150px-Pl_venice.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d2/Pl_venice.png",
+        "thumbnail": "-6946001098345226485",
+        "image": "-6946001098345226485",
         "gameModes": [
             "Payload"
         ],
@@ -831,8 +831,8 @@
     },
     {
         "name": "Wutville",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/70/Pl_wutville_event.png/150px-Pl_wutville_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/70/Pl_wutville_event.png",
+        "thumbnail": "4991665592311528955",
+        "image": "4991665592311528955",
         "gameModes": [
             "Payload"
         ],
@@ -840,8 +840,8 @@
     },
     {
         "name": "Banana Bay",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/87/Bananabay_main.jpg/150px-Bananabay_main.jpg.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/87/Bananabay_main.jpg",
+        "thumbnail": "7576279642344271901",
+        "image": "7576279642344271901",
         "gameModes": [
             "Payload Race"
         ],
@@ -849,8 +849,8 @@
     },
     {
         "name": "Bonesaw",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/21/Plr_hacksaw_event.png/150px-Plr_hacksaw_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/21/Plr_hacksaw_event.png",
+        "thumbnail": "5966800661734855302",
+        "image": "5966800661734855302",
         "gameModes": [
             "Payload Race"
         ],
@@ -858,8 +858,8 @@
     },
     {
         "name": "Hacksaw",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/5c/Plr_hacksaw.png/150px-Plr_hacksaw.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/5c/Plr_hacksaw.png",
+        "thumbnail": "4513588748976031565",
+        "image": "4513588748976031565",
         "gameModes": [
             "Payload Race"
         ],
@@ -867,8 +867,8 @@
     },
     {
         "name": "Helltower",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7f/Plr_hightower_event3.png/150px-Plr_hightower_event3.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/7f/Plr_hightower_event3.png",
+        "thumbnail": "-3540487387534251416",
+        "image": "-3540487387534251416",
         "gameModes": [
             "Payload Race"
         ],
@@ -876,8 +876,8 @@
     },
     {
         "name": "Hightower",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d9/Hightower.png/150px-Hightower.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d9/Hightower.png",
+        "thumbnail": "7564444267696284539",
+        "image": "7564444267696284539",
         "gameModes": [
             "Payload Race"
         ],
@@ -885,8 +885,8 @@
     },
     {
         "name": "Nightfall",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/18/Nightfall_stage2.png/150px-Nightfall_stage2.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/18/Nightfall_stage2.png",
+        "thumbnail": "6723578921526314730",
+        "image": "6723578921526314730",
         "gameModes": [
             "Payload Race"
         ],
@@ -894,8 +894,8 @@
     },
     {
         "name": "Pipeline",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7e/Pipeline.jpg/150px-Pipeline.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/7/7e/Pipeline.jpg",
+        "thumbnail": "8479452800216355489",
+        "image": "8479452800216355489",
         "gameModes": [
             "Payload Race"
         ],
@@ -903,8 +903,8 @@
     },
     {
         "name": "Byre",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/da/Arena_byre_b40007.jpg/150px-Arena_byre_b40007.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/d/da/Arena_byre_b40007.jpg",
+        "thumbnail": "7636753657330942338",
+        "image": "7636753657330942338",
         "gameModes": [
             "Arena"
         ],
@@ -912,8 +912,8 @@
     },
     {
         "name": "Graveyard",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/dc/Arena_lumberyard_event.png/150px-Arena_lumberyard_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/dc/Arena_lumberyard_event.png",
+        "thumbnail": "647774913623548130",
+        "image": "647774913623548130",
         "gameModes": [
             "Arena"
         ],
@@ -921,8 +921,8 @@
     },
     {
         "name": "Lumberyard",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/df/Arenalumberyard.jpg/150px-Arenalumberyard.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/d/df/Arenalumberyard.jpg",
+        "thumbnail": "6943361466954908196",
+        "image": "6943361466954908196",
         "gameModes": [
             "Arena"
         ],
@@ -930,8 +930,8 @@
     },
     {
         "name": "Nucleus",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/54/Arenanucleus.png/150px-Arenanucleus.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/54/Arenanucleus.png",
+        "thumbnail": "2028739907814173912",
+        "image": "2028739907814173912",
         "gameModes": [
             "Arena",
             "King of the Hill"
@@ -940,8 +940,8 @@
     },
     {
         "name": "Offblast",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d9/Offblast_01.jpg/150px-Offblast_01.jpg.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d9/Offblast_01.jpg",
+        "thumbnail": "4721492655121858533",
+        "image": "4721492655121858533",
         "gameModes": [
             "Arena"
         ],
@@ -949,8 +949,8 @@
     },
     {
         "name": "Perks",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/2e/Arena_perks.png/150px-Arena_perks.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/2e/Arena_perks.png",
+        "thumbnail": "-288865401109688003",
+        "image": "-288865401109688003",
         "gameModes": [
             "Arena"
         ],
@@ -958,8 +958,8 @@
     },
     {
         "name": "Ravine",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/3c/Arenaravine.jpg/150px-Arenaravine.jpg.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/3c/Arenaravine.jpg",
+        "thumbnail": "-6009081744464562747",
+        "image": "-6009081744464562747",
         "gameModes": [
             "Arena"
         ],
@@ -967,8 +967,8 @@
     },
     {
         "name": "Watchtower",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/86/Watch_01.jpg/150px-Watch_01.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/8/86/Watch_01.jpg",
+        "thumbnail": "-8297810779779484143",
+        "image": "-8297810779779484143",
         "gameModes": [
             "Arena"
         ],
@@ -976,8 +976,8 @@
     },
     {
         "name": "Brazil",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/ee/Brazil_main.jpg/150px-Brazil_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/e/ee/Brazil_main.jpg",
+        "thumbnail": "-6713548671321497463",
+        "image": "-6713548671321497463",
         "gameModes": [
             "King of the Hill"
         ],
@@ -985,8 +985,8 @@
     },
     {
         "name": "Cascade",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/62/Koth_cascade.png/150px-Koth_cascade.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/62/Koth_cascade.png",
+        "thumbnail": "-6426306416644593797",
+        "image": "-6426306416644593797",
         "gameModes": [
             "King of the Hill"
         ],
@@ -994,8 +994,8 @@
     },
     {
         "name": "Cauldron",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/2e/Koth_bagel_event.png/150px-Koth_bagel_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/2e/Koth_bagel_event.png",
+        "thumbnail": "1340543030804683342",
+        "image": "1340543030804683342",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1003,8 +1003,8 @@
     },
     {
         "name": "Eyeaduct",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7c/Eyeaduct_1.png/150px-Eyeaduct_1.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/7c/Eyeaduct_1.png",
+        "thumbnail": "-4197761804732621872",
+        "image": "-4197761804732621872",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1012,8 +1012,8 @@
     },
     {
         "name": "Ghost Fort",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/f9/Ghost_Fort.png/150px-Ghost_Fort.png",
-        "image": "https://wiki.teamfortress.com/w/images/f/f9/Ghost_Fort.png",
+        "thumbnail": "-4183455163997128382",
+        "image": "-4183455163997128382",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1021,8 +1021,8 @@
     },
     {
         "name": "Harvest",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b3/KOTH_Harvest_Farmhouse.png/150px-KOTH_Harvest_Farmhouse.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/b3/KOTH_Harvest_Farmhouse.png",
+        "thumbnail": "1383748992564745203",
+        "image": "1383748992564745203",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1030,8 +1030,8 @@
     },
     {
         "name": "Harvest Event",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/02/Koth_harvest_event_mid.png/150px-Koth_harvest_event_mid.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/02/Koth_harvest_event_mid.png",
+        "thumbnail": "6779283185868212806",
+        "image": "6779283185868212806",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1039,8 +1039,8 @@
     },
     {
         "name": "Highpass",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/31/KOTH_Highpass.jpg/150px-KOTH_Highpass.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/3/31/KOTH_Highpass.jpg",
+        "thumbnail": "-254074836349757231",
+        "image": "-254074836349757231",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1048,8 +1048,8 @@
     },
     {
         "name": "Kong King",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b4/Kong_King.png/150px-Kong_King.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/b4/Kong_King.png",
+        "thumbnail": "-1615972641881157746",
+        "image": "-1615972641881157746",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1057,8 +1057,8 @@
     },
     {
         "name": "Krampus",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/3b/Koth_Krampus.png/150px-Koth_Krampus.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/3b/Koth_Krampus.png",
+        "thumbnail": "7961205584980955118",
+        "image": "7961205584980955118",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1066,8 +1066,8 @@
     },
     {
         "name": "Lakeside",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fc/Koth_lakeside.jpg/150px-Koth_lakeside.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/f/fc/Koth_lakeside.jpg",
+        "thumbnail": "368283465885165854",
+        "image": "368283465885165854",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1075,8 +1075,8 @@
     },
     {
         "name": "Laughter",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/85/Laughter_main.jpg/150px-Laughter_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/8/85/Laughter_main.jpg",
+        "thumbnail": "-4123891799968000241",
+        "image": "-4123891799968000241",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1084,8 +1084,8 @@
     },
     {
         "name": "Lazarus",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/19/Lazarus_main.jpg/150px-Lazarus_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/1/19/Lazarus_main.jpg",
+        "thumbnail": "5885498662192979396",
+        "image": "5885498662192979396",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1093,8 +1093,8 @@
     },
     {
         "name": "Los Muertos",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e0/Koth_los_muertos.jpg/150px-Koth_los_muertos.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/e/e0/Koth_los_muertos.jpg",
+        "thumbnail": "-262101468061931774",
+        "image": "-262101468061931774",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1102,8 +1102,8 @@
     },
     {
         "name": "Maple Ridge Event",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/31/Koth_maple_ridge_event.png/150px-Koth_maple_ridge_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/31/Koth_maple_ridge_event.png",
+        "thumbnail": "-583353697949238220",
+        "image": "-583353697949238220",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1111,8 +1111,8 @@
     },
     {
         "name": "Megalo",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/02/Koth_megalo.png/150px-Koth_megalo.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/02/Koth_megalo.png",
+        "thumbnail": "-6625674006842065245",
+        "image": "-6625674006842065245",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1120,8 +1120,8 @@
     },
     {
         "name": "Moldergrove",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a0/Koth_moldergrove.png/150px-Koth_moldergrove.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/a0/Koth_moldergrove.png",
+        "thumbnail": "-2533354050328789759",
+        "image": "-2533354050328789759",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1129,8 +1129,8 @@
     },
     {
         "name": "Moonshine Event",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8d/Koth_moonshine_event.png/150px-Koth_moonshine_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8d/Koth_moonshine_event.png",
+        "thumbnail": "4011093103297470178",
+        "image": "4011093103297470178",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1138,8 +1138,8 @@
     },
     {
         "name": "Probed",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/f3/Koth_probed.jpg/150px-Koth_probed.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/f/f3/Koth_probed.jpg",
+        "thumbnail": "-5047499377278672322",
+        "image": "-5047499377278672322",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1147,8 +1147,8 @@
     },
     {
         "name": "Rotunda",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7a/Koth_rotunda.png/150px-Koth_rotunda.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/7a/Koth_rotunda.png",
+        "thumbnail": "2106053295683179640",
+        "image": "2106053295683179640",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1156,8 +1156,8 @@
     },
     {
         "name": "Sharkbay",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/71/Koth_sharkbay.png/150px-Koth_sharkbay.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/71/Koth_sharkbay.png",
+        "thumbnail": "5950399364748247134",
+        "image": "5950399364748247134",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1165,8 +1165,8 @@
     },
     {
         "name": "Sinthetic",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/1/18/Koth_synthetic_event.png/150px-Koth_synthetic_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/1/18/Koth_synthetic_event.png",
+        "thumbnail": "3185203447626868693",
+        "image": "3185203447626868693",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1174,8 +1174,8 @@
     },
     {
         "name": "Slasher",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a1/Koth_slasher.png/150px-Koth_slasher.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/a1/Koth_slasher.png",
+        "thumbnail": "-566998604176431506",
+        "image": "-566998604176431506",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1183,8 +1183,8 @@
     },
     {
         "name": "Slime",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/Koth_slime.png/150px-Koth_slime.png.jpeg",
-        "image": "https://wiki.teamfortress.com/w/images/7/7d/Koth_slime.png",
+        "thumbnail": "8161557705827855519",
+        "image": "8161557705827855519",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1192,8 +1192,8 @@
     },
     {
         "name": "Snowtower",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/47/Koth_snowtower.png/150px-Koth_snowtower.png",
-        "image": "https://wiki.teamfortress.com/w/images/4/47/Koth_snowtower.png",
+        "thumbnail": "2391635985443757220",
+        "image": "2391635985443757220",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1201,8 +1201,8 @@
     },
     {
         "name": "Soul-Mill",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/b6/Koth_sawmill_event.png/150px-Koth_sawmill_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/b6/Koth_sawmill_event.png",
+        "thumbnail": "6890300747713724533",
+        "image": "6890300747713724533",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1210,8 +1210,8 @@
     },
     {
         "name": "Suijin",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/be/Suijin_main.jpg/150px-Suijin_main.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/b/be/Suijin_main.jpg",
+        "thumbnail": "-5147855235730299861",
+        "image": "-5147855235730299861",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1219,8 +1219,8 @@
     },
     {
         "name": "Viaduct",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c9/Viaduct_01.jpg/150px-Viaduct_01.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/c/c9/Viaduct_01.jpg",
+        "thumbnail": "6453665708979499144",
+        "image": "6453665708979499144",
         "gameModes": [
             "King of the Hill"
         ],
@@ -1228,8 +1228,8 @@
     },
     {
         "name": "Carnival of Carnage",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/5b/Carnival_of_Carnage.png/150px-Carnival_of_Carnage.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/5b/Carnival_of_Carnage.png",
+        "thumbnail": "6299998964643081221",
+        "image": "6299998964643081221",
         "gameModes": [
             "Special Delivery"
         ],
@@ -1237,8 +1237,8 @@
     },
     {
         "name": "Doomsday",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7c/Sd_doomsday_ingame_1.jpg/150px-Sd_doomsday_ingame_1.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/7/7c/Sd_doomsday_ingame_1.jpg",
+        "thumbnail": "-4648712463855772780",
+        "image": "-4648712463855772780",
         "gameModes": [
             "Special Delivery"
         ],
@@ -1246,8 +1246,8 @@
     },
     {
         "name": "Target",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e8/Map_TR_Training.png/150px-Map_TR_Training.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e8/Map_TR_Training.png",
+        "thumbnail": "-4610520917528363432",
+        "image": "-4610520917528363432",
         "gameModes": [
             "Training Mode"
         ],
@@ -1255,8 +1255,8 @@
     },
     {
         "name": "Itemtest",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/73/Item_test.jpg/150px-Item_test.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/7/73/Item_test.jpg",
+        "thumbnail": "-1487253616662698959",
+        "image": "-1487253616662698959",
         "gameModes": [
             "Developer aidTest"
         ],
@@ -1264,8 +1264,8 @@
     },
     {
         "name": "Cloak",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/f/fa/Cp_cloak1.jpg/150px-Cp_cloak1.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/f/fa/Cp_cloak1.jpg",
+        "thumbnail": "6313457905559694551",
+        "image": "6313457905559694551",
         "gameModes": [
             "Developer aidControl Point"
         ],
@@ -1273,8 +1273,8 @@
     },
     {
         "name": "Bigrock",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/6b/Mvm_bigrock.png/150px-Mvm_bigrock.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/6b/Mvm_bigrock.png",
+        "thumbnail": "-622875480993091713",
+        "image": "-622875480993091713",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1282,8 +1282,8 @@
     },
     {
         "name": "Coal Town",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c2/Coal_Town_base.png/150px-Coal_Town_base.png",
-        "image": "https://wiki.teamfortress.com/w/images/c/c2/Coal_Town_base.png",
+        "thumbnail": "-8528176086505862779",
+        "image": "-8528176086505862779",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1291,8 +1291,8 @@
     },
     {
         "name": "Decoy",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e1/Decoy_base.png/150px-Decoy_base.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e1/Decoy_base.png",
+        "thumbnail": "3416108437170783694",
+        "image": "3416108437170783694",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1300,8 +1300,8 @@
     },
     {
         "name": "Example",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/95/Example5.png/150px-Example5.png",
-        "image": "https://wiki.teamfortress.com/w/images/9/95/Example5.png",
+        "thumbnail": "1287304684270675452",
+        "image": "1287304684270675452",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1309,8 +1309,8 @@
     },
     {
         "name": "Ghost Town",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Mvm_coaltown_event.jpg/150px-Mvm_coaltown_event.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/d/d0/Mvm_coaltown_event.jpg",
+        "thumbnail": "-4844909902811266361",
+        "image": "-4844909902811266361",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1318,8 +1318,8 @@
     },
     {
         "name": "Mannhattan",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d4/Mannhattan_preview.png/150px-Mannhattan_preview.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/d4/Mannhattan_preview.png",
+        "thumbnail": "-5172948169199560418",
+        "image": "-5172948169199560418",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1327,8 +1327,8 @@
     },
     {
         "name": "Mannworks",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e6/Mannworks_base.png/150px-Mannworks_base.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e6/Mannworks_base.png",
+        "thumbnail": "-7192084905203598542",
+        "image": "-7192084905203598542",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1336,8 +1336,8 @@
     },
     {
         "name": "Rottenburg",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a9/Rottenburg.png/150px-Rottenburg.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/a9/Rottenburg.png",
+        "thumbnail": "-7931332927879642471",
+        "image": "-7931332927879642471",
         "gameModes": [
             "Mann vs. Machine"
         ],
@@ -1345,8 +1345,8 @@
     },
     {
         "name": "Asteroid",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/26/Rdasteroid.jpg/150px-Rdasteroid.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/2/26/Rdasteroid.jpg",
+        "thumbnail": "-2954383651135543271",
+        "image": "-2954383651135543271",
         "gameModes": [
             "Robot Destruction"
         ],
@@ -1354,8 +1354,8 @@
     },
     {
         "name": "Hellfire",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/09/Ctf_hellfire.jpg/150px-Ctf_hellfire.jpg.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/09/Ctf_hellfire.jpg",
+        "thumbnail": "589160875363369368",
+        "image": "589160875363369368",
         "gameModes": [
             "Mannpower"
         ],
@@ -1363,8 +1363,8 @@
     },
     {
         "name": "Brickyard",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/e/e2/Pass_brickyard.png/150px-Pass_brickyard.png",
-        "image": "https://wiki.teamfortress.com/w/images/e/e2/Pass_brickyard.png",
+        "thumbnail": "7639323106772783328",
+        "image": "7639323106772783328",
         "gameModes": [
             "PASS Time"
         ],
@@ -1372,8 +1372,8 @@
     },
     {
         "name": "District",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/4/48/Pass_district.jpg/150px-Pass_district.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/4/48/Pass_district.jpg",
+        "thumbnail": "-5867442640304788432",
+        "image": "-5867442640304788432",
         "gameModes": [
             "PASS Time"
         ],
@@ -1381,8 +1381,8 @@
     },
     {
         "name": "Timbertown",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/9/9b/Pass_timberlodge_center.jpeg/150px-Pass_timberlodge_center.jpeg",
-        "image": "https://wiki.teamfortress.com/w/images/9/9b/Pass_timberlodge_center.jpeg",
+        "thumbnail": "8372643551546456863",
+        "image": "8372643551546456863",
         "gameModes": [
             "PASS Time"
         ],
@@ -1390,8 +1390,8 @@
     },
     {
         "name": "Cursed Cove",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/db/Pd_cursed_cove_event.png/150px-Pd_cursed_cove_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/d/db/Pd_cursed_cove_event.png",
+        "thumbnail": "-5903794722923925264",
+        "image": "-5903794722923925264",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1399,8 +1399,8 @@
     },
     {
         "name": "Farmageddon",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/25/Pd_farmageddon.png/150px-Pd_farmageddon.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/25/Pd_farmageddon.png",
+        "thumbnail": "5925721293363498514",
+        "image": "5925721293363498514",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1408,8 +1408,8 @@
     },
     {
         "name": "Galleria",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/0c/Pd_galleria.png/150px-Pd_galleria.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/0c/Pd_galleria.png",
+        "thumbnail": "-2395143695714767555",
+        "image": "-2395143695714767555",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1417,8 +1417,8 @@
     },
     {
         "name": "Mannsylvania",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/09/Pd_mannsylvania.png/150px-Pd_mannsylvania.png.jpeg",
-        "image": "https://wiki.teamfortress.com/w/images/0/09/Pd_mannsylvania.png",
+        "thumbnail": "-5659815229960800433",
+        "image": "-5659815229960800433",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1426,8 +1426,8 @@
     },
     {
         "name": "Monster Bash",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/8b/Pd_monster_bash.png/150px-Pd_monster_bash.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/8b/Pd_monster_bash.png",
+        "thumbnail": "-6828694549243998465",
+        "image": "-6828694549243998465",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1435,8 +1435,8 @@
     },
     {
         "name": "Pit of Death",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/05/Pd_pit_of_death_event.png/150px-Pd_pit_of_death_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/05/Pd_pit_of_death_event.png",
+        "thumbnail": "-3640286423053684618",
+        "image": "-3640286423053684618",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1444,8 +1444,8 @@
     },
     {
         "name": "Selbyen",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/8/82/Pd_selbyen.png/150px-Pd_selbyen.png",
-        "image": "https://wiki.teamfortress.com/w/images/8/82/Pd_selbyen.png",
+        "thumbnail": "-2103347891087573238",
+        "image": "-2103347891087573238",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1453,8 +1453,8 @@
     },
     {
         "name": "SnowVille",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/2/2b/Pd_snowville_event.png/150px-Pd_snowville_event.png",
-        "image": "https://wiki.teamfortress.com/w/images/2/2b/Pd_snowville_event.png",
+        "thumbnail": "6199365373474881282",
+        "image": "6199365373474881282",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1462,8 +1462,8 @@
     },
     {
         "name": "Watergate",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/d/d0/Pd_watergate_1.jpg/150px-Pd_watergate_1.jpg",
-        "image": "https://wiki.teamfortress.com/w/images/d/d0/Pd_watergate_1.jpg",
+        "thumbnail": "-7273528757835879916",
+        "image": "-7273528757835879916",
         "gameModes": [
             "Player Destruction"
         ],
@@ -1471,8 +1471,8 @@
     },
     {
         "name": "Distillery",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/a/a2/Vsh_distillery.png/150px-Vsh_distillery.png",
-        "image": "https://wiki.teamfortress.com/w/images/a/a2/Vsh_distillery.png",
+        "thumbnail": "8147387457753662587",
+        "image": "8147387457753662587",
         "gameModes": [
             "Versus Saxton Hale"
         ],
@@ -1480,8 +1480,8 @@
     },
     {
         "name": "Nucleus VSH",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/72/Vsh_nucleus.png/150px-Vsh_nucleus.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/72/Vsh_nucleus.png",
+        "thumbnail": "-2882970948226107608",
+        "image": "-2882970948226107608",
         "gameModes": [
             "Versus Saxton Hale"
         ],
@@ -1489,8 +1489,8 @@
     },
     {
         "name": "Skirmish",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/0/01/Vsh_skirmish.png/150px-Vsh_skirmish.png",
-        "image": "https://wiki.teamfortress.com/w/images/0/01/Vsh_skirmish.png",
+        "thumbnail": "3524358525142614844",
+        "image": "3524358525142614844",
         "gameModes": [
             "Versus Saxton Hale"
         ],
@@ -1498,8 +1498,8 @@
     },
     {
         "name": "Tiny Rock",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/6/61/Vsh_tinyrock.png/150px-Vsh_tinyrock.png",
-        "image": "https://wiki.teamfortress.com/w/images/6/61/Vsh_tinyrock.png",
+        "thumbnail": "436910520030115436",
+        "image": "436910520030115436",
         "gameModes": [
             "Versus Saxton Hale"
         ],
@@ -1507,8 +1507,8 @@
     },
     {
         "name": "Atoll",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/3/39/Zi_atoll.png/150px-Zi_atoll.png",
-        "image": "https://wiki.teamfortress.com/w/images/3/39/Zi_atoll.png",
+        "thumbnail": "5749878551555331754",
+        "image": "5749878551555331754",
         "gameModes": [
             "Zombie Infection"
         ],
@@ -1516,8 +1516,8 @@
     },
     {
         "name": "Devastation",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/c/c7/Zi_devastation_final1.png/150px-Zi_devastation_final1.png",
-        "image": "https://wiki.teamfortress.com/w/images/c/c7/Zi_devastation_final1.png",
+        "thumbnail": "5075725548087182514",
+        "image": "5075725548087182514",
         "gameModes": [
             "Zombie Infection"
         ],
@@ -1525,8 +1525,8 @@
     },
     {
         "name": "Murky",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/b/ba/Zi_murky.png/150px-Zi_murky.png",
-        "image": "https://wiki.teamfortress.com/w/images/b/ba/Zi_murky.png",
+        "thumbnail": "-3247947256494795804",
+        "image": "-3247947256494795804",
         "gameModes": [
             "Zombie Infection"
         ],
@@ -1534,8 +1534,8 @@
     },
     {
         "name": "Sanitarium",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/7/7d/Zi_sanitarium.png/150px-Zi_sanitarium.png",
-        "image": "https://wiki.teamfortress.com/w/images/7/7d/Zi_sanitarium.png",
+        "thumbnail": "-969701377794973734",
+        "image": "-969701377794973734",
         "gameModes": [
             "Zombie Infection"
         ],
@@ -1543,8 +1543,8 @@
     },
     {
         "name": "Woods",
-        "thumbnail": "https://wiki.teamfortress.com/w/images/thumb/5/59/Zi_woods.png/150px-Zi_woods.png",
-        "image": "https://wiki.teamfortress.com/w/images/5/59/Zi_woods.png",
+        "thumbnail": "5044468526193245052",
+        "image": "5044468526193245052",
         "gameModes": [
             "Zombie Infection"
         ],

@@ -127,7 +127,7 @@
 			<div class="grid gap-4">
 				{#if todaysMap}
 					<ImageShowcase
-						url={todaysMap.image.url}
+						url={`/images/maps/originals/${todaysMap.image.url}.png`}
 						startingPos={todaysMap.image.startingPos}
 						numberOfGuesses={$guesses.length}
 						hasWon={gameState === 'won'}
@@ -136,7 +136,7 @@
 						<Input
 							on:select={(event) => handleSelect(event.detail)}
 							data={maps?.map((map) => ({
-								img: map.thumbnail,
+								img: `/images/maps/thumbnails/${map.thumbnail}.png`,
 								value: map.name
 							}))}
 							guessed={$guesses.map((guess) => guess.name.value)}
