@@ -132,6 +132,11 @@
 						numberOfGuesses={$guesses.length}
 						hasWon={gameState === 'won'}
 					/>
+					<p class="text-center text-sm text-muted-foreground">
+						{todaysMap?.correctGuesses ?? 0}
+						{todaysMap ? (todaysMap.correctGuesses > 1 ? 'gamers' : 'gamer') : 'gamers'} has already
+						guessed todays map
+					</p>
 					{#if gameState !== 'won'}
 						<Input
 							on:select={(event) => handleSelect(event.detail)}
@@ -149,12 +154,6 @@
 	</Card.Root>
 
 	<ColorExplanation />
-
-	<p class="text-center text-sm">
-		{todaysMap?.correctGuesses ?? 0}
-		{todaysMap ? (todaysMap.correctGuesses > 1 ? 'gamers' : 'gamer') : 'gamers'} has already guessed
-		todays map
-	</p>
 
 	<VictoryDialog
 		bind:open={openDialog}
