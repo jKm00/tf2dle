@@ -41,7 +41,9 @@
 		"cmdk-sv": "^0.0.13",
 		"dayjs": "^1.11.10",
 		"lucide-svelte": "^0.314.0",
+		"mode-watcher": "^0.1.2",
 		"node-schedule": "^2.1.1",
+		"svelte-sonner": "^0.3.11",
 		"tailwind-merge": "^2.2.1",
 		"tailwind-variants": "^0.1.20"
 	}

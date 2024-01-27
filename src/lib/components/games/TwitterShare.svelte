@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 
+	export let challenge: string;
 	export let tries: number;
 	export let streak: number;
 
@@ -9,7 +10,7 @@
 
 	$: query = [
 		`text=${encodeURIComponent(
-			`I guessed today's tf2dle map in ${tries} ${
+			`I guessed today's tf2dle ${challenge} in ${tries} ${
 				tries === 1 ? 'try' : 'tries'
 			}. My streak is now ${streak}!`
 		)}`,

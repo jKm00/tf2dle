@@ -1,14 +1,14 @@
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ fetch }) => {
-	async function fetchTodaysWeapon() {
+	async function fetchWeapons() {
 		let res;
 		let data;
 		let errorMessage: string | null = null;
 
 		try {
-			res = await fetch('/api/v1/game-modes/weapon');
-			data = (await res.json()) as string;
+			res = await fetch('/api/v1/weapons');
+			data = (await res.json()) as string[];
 
 			if (!res.ok) {
 				errorMessage = 'Something went wrong. Please refresh the page.';
@@ -25,6 +25,6 @@ export const load = async ({ fetch }) => {
 	}
 
 	return {
-		todaysWeapon: fetchTodaysWeapon()
+		weapons: fetchWeapons()
 	};
 };

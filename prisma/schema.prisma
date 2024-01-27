@@ -25,3 +25,10 @@ model Logs {
   event     String
   message   String
 }
+
+model DailyWeapons {
+  id         Int      @id @default(autoincrement())
+  selectedAt DateTime @default(now()) @db.Date
+  name       String
+  hasWon     Int      @default(0)
+}

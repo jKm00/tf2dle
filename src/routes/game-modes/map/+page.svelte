@@ -2,13 +2,13 @@
 	import { useLocalStorage } from '$lib/composables/useLocalStorage';
 	import { onMount } from 'svelte';
 	import * as Card from '$lib/components/ui/card';
-	import Input from '$lib/features/gameModes/map/Input.svelte';
+	import Input from '$lib/components/games/Input.svelte';
 	import ImageShowcase from '$lib/features/gameModes/map/ImageShowcase.svelte';
 	import dayjs from '$lib/configs/dayjsConfig';
 	import type { MapGuessResponse } from '$lib/dtos.js';
-	import ColorExplanation from '$lib/components/ColorExplanation.svelte';
+	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 	import GuessesList from '$lib/features/gameModes/map/GuessesList.svelte';
-	import VictoryDialog from '$lib/features/gameModes/map/VictoryDialog.svelte';
+	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import { Dices, Flame } from 'lucide-svelte';
 
 	export let data;
@@ -69,7 +69,7 @@
 		const result = await checkGuess(name);
 
 		if (result) {
-			guesses.update((guesses) => [...guesses, result]);
+			guesses.update((guesses) => [result, ...guesses]);
 		}
 
 		if (result?.correct) {
@@ -135,11 +135,14 @@
 					{#if gameState !== 'won'}
 						<Input
 							on:select={(event) => handleSelect(event.detail)}
-							{maps}
-							guessedMaps={$guesses.map((guess) => guess.name.value)}
+							data={maps?.map((map) => ({
+								img: map.thumbnail,
+								value: map.name
+							}))}
+							guessed={$guesses.map((guess) => guess.name.value)}
 						/>
 					{/if}
-					<GuessesList guesses={[...$guesses].reverse()} />
+					<GuessesList guesses={$guesses} />
 				{/if}
 			</div>
 		</Card.Content>
@@ -155,10 +158,15 @@
 
 	<VictoryDialog
 		bind:open={openDialog}
-		imageUrl={todaysMap?.image.url ?? ''}
-		mapName={todaysMapName}
-		correctGuesses={todaysMap?.correctGuesses ?? 0}
+		img={{
+			src: todaysMap?.image.url ?? '',
+			alt: todaysMapName
+		}}
+		label="Map"
+		value={todaysMapName}
 		tries={$guesses.length}
 		streak={$streak}
+		correctGuesses={todaysMap?.correctGuesses ?? 0}
+		challenge="map"
 	/>
 </div>

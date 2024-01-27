@@ -1,13 +1,16 @@
 <script lang="ts">
+	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Dialog from '$lib/components/ui/dialog';
-	import TwitterShare from './TwitterShare.svelte';
-	import { Button } from '$lib/components/ui/button';
+	import TwitterShare from '$lib/components/games/TwitterShare.svelte';
 
-	export let imageUrl: string;
-	export let mapName: string;
-	export let correctGuesses: number;
+	export let img: { src: string; alt: string };
+	export let imgSize: string = '100%';
+	export let label: string;
+	export let value: string;
 	export let tries: number;
 	export let streak: number;
+	export let correctGuesses: number;
+	export let challenge: string;
 
 	export let open: boolean;
 </script>
@@ -20,12 +23,12 @@
 				>You are gamer number {correctGuesses + 1} to guess the correct map!</Dialog.Description
 			>
 		</Dialog.Header>
-		<div class="grid">
-			<img src={imageUrl} alt={mapName} class="w-full rounded-sm mb-4" />
+		<div class="grid" data-testId="dialog">
+			<img src={img.src} alt={img.alt} class="rounded-sm my-4" style={`--width: ${imgSize}`} />
 			<div class="grid gap-2 border p-4 rounded-sm mb-4">
 				<p class="flex justify-between">
-					<span class="font-semibold">Name:</span>
-					{mapName}
+					<span class="font-semibold">{label}:</span>
+					{value}
 				</p>
 				<p class="flex justify-between">
 					<span class="font-semibold">Tries:</span>
@@ -36,8 +39,15 @@
 					{streak}
 				</p>
 			</div>
-			<TwitterShare {tries} {streak} class="mb-2">Share</TwitterShare>
+			<TwitterShare {challenge} {tries} {streak} class="mb-2">Share</TwitterShare>
 			<Button on:click={() => (open = false)} variant="secondary">Close</Button>
 		</div>
 	</Dialog.Content>
 </Dialog.Root>
+
+<style scoped>
+	img {
+		width: var(--width, 100%);
+		margin-inline: auto;
+	}
+</style>
