@@ -20,7 +20,7 @@
 			{@const fadeDuration = 500}
 			<img
 				in:fade={{ duration: fadeDuration }}
-				class="w-full rounded"
+				class="h-full object-cover rounded"
 				src={guess.thumbnail}
 				alt={guess.name.value}
 			/>
@@ -28,7 +28,7 @@
 				in:fade={{ duration: fadeDuration, delay: fadeDuration }}
 				class={`${
 					guess.name.status === 'correct' ? 'border-correct' : 'border-incorrect'
-				} flex items-center justify-center gap-2 rounded-sm border`}
+				} flex items-center justify-center gap-2 rounded-sm border p-1`}
 			>
 				{guess.name.value}
 			</p>
@@ -40,7 +40,7 @@
 						: guess.gameModes.status === 'partial'
 							? 'border-partial'
 							: 'border-incorrect'
-				} flex items-center justify-center text-center gap-2 rounded-sm border`}
+				} flex items-center justify-center text-center gap-2 rounded-sm border p-1`}
 			>
 				{guess.gameModes.value.join(', ')}
 			</p>
@@ -48,7 +48,7 @@
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
 				class={`${
 					guess.releaseDate.status === 'correct' ? 'border-correct' : 'border-incorrect'
-				} flex items-center justify-center gap-1 rounded-sm border`}
+				} flex items-center justify-center gap-1 rounded-sm border p-1`}
 			>
 				{guess.releaseDate.value}
 				<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
@@ -61,6 +61,6 @@
 <style scoped>
 	.custom-grid {
 		display: grid;
-		grid-template-columns: 5rem repeat(3, 1fr);
+		grid-template-columns: 7rem 1fr 2fr 1fr;
 	}
 </style>
