@@ -2,7 +2,6 @@ import weapons from '$lib/server/data/weapons.json';
 import type { Weapon } from '$lib/types';
 import { weaponRepository } from '$lib/server/repositories/WeaponRepositoryPrisma';
 import type { WeaponRepository } from '$lib/server/repositories/WeaponRepository';
-import dayjs from '$lib/configs/dayjsConfig';
 
 class WeaponService {
 	private weapons: Weapon[];
@@ -64,6 +63,11 @@ class WeaponService {
 		return match ? parseInt(match[0]) : 2007;
 	}
 
+	/**
+	 * Checks if the guess matches today's weapon
+	 * @param guess name of the weapon to check
+	 * @returns a WeaponGuessResponse object
+	 */
 	public async validateGuess(guess: string) {
 		const todaysWeapon = await this.getTodaysWeapon();
 		const guessedWeapon = this.weapons.find((w) => w.name === guess);
@@ -74,6 +78,10 @@ class WeaponService {
 
 		// Validate guess
 		const correct = todaysWeapon.name === guess;
+
+		if (correct) {
+			await this.repo.incrementNumberOfCorrectGuesses();
+		}
 
 		// Validate release year
 		const guessedReleseYear = this.extractYear(guessedWeapon.releaseDate);
@@ -138,6 +146,7 @@ class WeaponService {
 		return {
 			correct,
 			name: guess,
+			numberOfCorrectGuesses: await this.repo.getNumberOfCorrectGuesses(),
 			releaseDate: {
 				status: releaseDateStatus,
 				value: guessedReleseYear
@@ -161,6 +170,10 @@ class WeaponService {
 		};
 	}
 
+	/**
+	 * Returns todays weapon
+	 * @returns name of todays weapon
+	 */
 	private async getTodaysWeapon() {
 		let weapon = await this.repo.getTodaysWeapon();
 
@@ -171,12 +184,23 @@ class WeaponService {
 		return this.weapons.find((w) => w.name === weapon);
 	}
 
+	/**
+	 * Selects a new random weapon
+	 * @returns the name of the selected weapon
+	 */
 	public async selectNewRandomWeapon() {
 		const weapon = this.weapons[Math.floor(Math.random() * this.weapons.length)];
 
 		await this.repo.save(weapon);
 
 		return weapon.name;
+	}
+
+	/**
+	 * Returns the number of correct guesses for todays weapon
+	 */
+	public async getNumberOfCorrectGuesses() {
+		return await this.repo.getNumberOfCorrectGuesses();
 	}
 }
 

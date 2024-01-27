@@ -83,7 +83,7 @@ test('Won state is persisted on page navigation', async ({ page }) => {
 
 	await page.goto('/game-modes/weapon');
 
-	await expect(page.getByText('You have already guessed todays weapon!')).toBeVisible();
+	await expect(page.getByTestId('completed-message')).toBeVisible();
 });
 
 test('Toast is shown when guess fetch fails', async ({ page }) => {
@@ -137,6 +137,19 @@ test('Guesses are reset when new day starts', async ({ page }) => {
 	await page.goto('/game-modes/weapon');
 
 	await expect(page.getByTestId('guess-row-title')).not.toBeVisible();
+});
+
+test('Can see how many have guessed correct', async ({ page }) => {
+	await page.route('/api/v1/game-modes/weapon', async (route) => {
+		return route.fulfill({
+			status: 200,
+			body: JSON.stringify(1337)
+		});
+	});
+
+	await page.goto('/game-modes/weapon');
+
+	await expect(page.getByTestId('number-of-correct-guesses')).toBeVisible();
 });
 
 async function updateDate(page: Page, daysToAdd: number) {
