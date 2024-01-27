@@ -1,6 +1,7 @@
 import { CRON_SECRET } from '$env/static/private';
 import LogService from '$lib/server/services/LogService';
 import MapService from '$lib/server/services/MapService';
+import { weaponService } from '$lib/server/services/WeaponService.js';
 import { json } from '@sveltejs/kit';
 
 export async function GET({ request }) {
@@ -15,6 +16,12 @@ export async function GET({ request }) {
 		LogService.getInstance().log(
 			'map-refresh',
 			`Cron job successfully refreshed the map to: ${map.name}`
+		);
+
+		const weapon = await weaponService.selectNewRandomWeapon();
+		LogService.getInstance().log(
+			'weapon-refresh',
+			`Cron job successfully refreshed the weapon to: ${weapon}`
 		);
 
 		return json('ok');
