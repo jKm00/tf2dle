@@ -28,7 +28,7 @@
 			/>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration }}
-				class={`border py-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
+				class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
 			>
 				{guess.releaseDate.value}
 				<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
@@ -36,25 +36,25 @@
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
-				class={`border py-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
+				class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
 			>
 				{guess.usedBy.value.join(', ')}
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
-				class={`border py-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
+				class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
 			>
 				{guess.slot.value.join(', ')}
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 4 }}
-				class={`border py-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
+				class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
 			>
 				{guess.magazineSize.value}
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 5 }}
-				class={`border py-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.qualities.status}`}
+				class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.qualities.status}`}
 			>
 				{guess.qualities.value.join(', ')}
 			</p>
