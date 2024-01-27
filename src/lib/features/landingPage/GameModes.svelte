@@ -4,10 +4,10 @@
 
 	const gameModes = [
 		{
-			name: 'Classic',
+			name: 'Weapon',
 			description: 'Guess the correct weapon',
 			icon: Axe,
-			disabled: true
+			disabled: false
 		},
 		{
 			name: 'Map',
@@ -26,7 +26,8 @@
 	<Card.Content>
 		<ul class="grid gap-2">
 			{#each gameModes.filter((g) => !g.disabled) as gameMode}
-				<a href={`/game-modes/${gameMode.name.toLowerCase()}`}>
+				{@const name = gameMode.name.toLowerCase()}
+				<a href={`/game-modes/${name}`} data-testId={name}>
 					<li class="flex items-center gap-4 bg-secondary rounded px-4 py-2">
 						<svelte:component this={gameMode.icon} />
 						<div>

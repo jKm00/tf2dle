@@ -30,3 +30,28 @@ export type MapGuessResponse = {
 	};
 	thumbnail: string;
 };
+
+export type WeaponGuessResponse = {
+	correct: boolean;
+	name: string;
+	releaseDate: {
+		status: 'correct' | 'earlier' | 'later';
+		value: string;
+	};
+	usedBy: {
+		status: 'correct' | 'incorrect' | 'partial';
+		value: string[];
+	};
+	slot: {
+		status: 'correct' | 'incorrect' | 'partial';
+		value: string[];
+	};
+	magazineSize: {
+		status: 'correct' | 'incorrect';
+		value: string;
+	};
+	qualities: {
+		status: 'correct' | 'incorrect' | 'partial';
+		value: string[];
+	};
+};

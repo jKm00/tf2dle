@@ -18,3 +18,16 @@ export type SelectedMap = {
 	gameModes: string[];
 	releaseDate: string;
 };
+
+export type Weapon = {
+	name: string;
+	link: string;
+	image: string;
+	killIcon: string | null;
+	releaseDate: string;
+	usedBy: string[];
+	slot: string[];
+	ammoLoaded: string | null;
+	ammoCarried: string | null;
+	qualities: string[];
+};
