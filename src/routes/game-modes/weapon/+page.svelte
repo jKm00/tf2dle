@@ -126,7 +126,7 @@
 							on:select={(e) => handleGuess(e.detail)}
 						/>
 					{:else}
-						<p class="text-center my-10">You have already guessed todays weapon!</p>
+						<p class="text-center text-muted-foreground my-10">You have guessed todays weapon!</p>
 					{/if}
 					<GuessesList guesses={$guesses} />
 				</div>
