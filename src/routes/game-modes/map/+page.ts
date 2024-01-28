@@ -1,15 +1,28 @@
 import type { MapDto, SelectedMapDto } from '$lib/dtos';
+import { error } from '@sveltejs/kit';
 
 export const load = async ({ fetch }) => {
 	async function fetchTodaysMap() {
-		try {
-			const res = await fetch('/api/v1/game-modes/map');
-			const data = (await res.json()) as SelectedMapDto;
+		let res;
+		let data;
+		let errorMessage: string | null = null;
 
-			return data;
+		try {
+			res = await fetch('/api/v1/game-modes/map');
+			data = (await res.json()) as SelectedMapDto;
+
+			if (!res.ok) {
+				errorMessage = 'Something went wrong. Please refresh the page.';
+			}
 		} catch (err) {
-			console.error(err);
+			errorMessage = 'Something went wrong. Please refresh the page.';
 		}
+
+		if (errorMessage) {
+			error(500, errorMessage);
+		}
+
+		return data;
 	}
 
 	async function fetchMaps() {
@@ -24,7 +37,7 @@ export const load = async ({ fetch }) => {
 	}
 
 	return {
-		todaysMap: await fetchTodaysMap(),
-		maps: await fetchMaps()
+		todaysMap: fetchTodaysMap(),
+		maps: fetchMaps()
 	};
 };

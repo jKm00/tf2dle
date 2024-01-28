@@ -61,7 +61,7 @@
 			data-testId="input"
 		/>
 		{#if validating}
-			<Loader2 class="animate-spin absolute right-3 top-2" />
+			<Loader2 class="animate-spin absolute right-3 top-2 text-muted-foreground" />
 		{/if}
 	</div>
 	{#if showDropdown}
