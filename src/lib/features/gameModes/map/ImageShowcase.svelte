@@ -36,6 +36,7 @@
 </script>
 
 <div class="relative overflow-hidden aspect-video rounded">
+	<div class="absolute inset-0 bg-muted animate-pulse"></div>
 	<!-- svelte-ignore a11y-img-redundant-alt -->
 	<img
 		src={url}

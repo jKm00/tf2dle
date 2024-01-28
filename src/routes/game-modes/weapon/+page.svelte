@@ -21,6 +21,7 @@
 	);
 	let streak = useLocalStorage('weapon__streak', 0);
 
+	let validating = false;
 	let openDialog = false;
 	let numberOfCorrectGuesses = async () => await data.numberOfCorrectGuesses;
 
@@ -68,6 +69,7 @@
 
 	async function checkGuess(guess: string) {
 		let error = false;
+		validating = true;
 
 		try {
 			const res = await fetch('/api/v1/game-modes/weapon', {
@@ -86,6 +88,8 @@
 			}
 		} catch (err) {
 			error = true;
+		} finally {
+			validating = false;
 		}
 		toast.error('Could not validate your guess, please try again.');
 	}
@@ -144,8 +148,8 @@
 									value: weapon
 								}))}
 								guessed={$guesses.map((guess) => guess.name)}
-								validationTime={500 * 6}
 								on:select={(e) => handleGuess(e.detail)}
+								bind:validating
 							/>
 						{:else}
 							<p class="text-center text-muted-foreground my-10" data-testId="completed-message">

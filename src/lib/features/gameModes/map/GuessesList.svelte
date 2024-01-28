@@ -9,13 +9,12 @@
 <div class="grid gap-4">
 	{#if guesses.length > 0}
 		<div class="custom-grid gap-4 font-semibold">
-			<p>Image</p>
 			<p>Name</p>
 			<p>Game Mode</p>
 			<p>Release Year</p>
 		</div>
 	{/if}
-	<div class="custom-grid gap-4">
+	<div class="custom-grid gap-4 text-sm">
 		{#each guesses as guess (guess.name)}
 			{@const fadeDuration = 500}
 			<img
@@ -24,14 +23,6 @@
 				src={`/images/maps/thumbnails/${guess.thumbnail}.png`}
 				alt={guess.name.value}
 			/>
-			<p
-				in:fade={{ duration: fadeDuration, delay: fadeDuration }}
-				class={`${
-					guess.name.status === 'correct' ? 'border-correct' : 'border-incorrect'
-				} flex items-center justify-center gap-2 rounded-sm border p-1`}
-			>
-				{guess.name.value}
-			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 				class={`${
@@ -61,6 +52,6 @@
 <style scoped>
 	.custom-grid {
 		display: grid;
-		grid-template-columns: 7rem 1fr 2fr 1fr;
+		grid-template-columns: 7rem 2fr 1fr;
 	}
 </style>

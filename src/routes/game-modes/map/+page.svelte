@@ -9,7 +9,7 @@
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 	import GuessesList from '$lib/features/gameModes/map/GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
-	import { Dices, Flame } from 'lucide-svelte';
+	import { Dices, Flame, RotateCw } from 'lucide-svelte';
 
 	export let data;
 
@@ -23,6 +23,7 @@
 	let guesses = useLocalStorage<MapGuessResponse[]>('map_guesses', []);
 	let streak = useLocalStorage<number>('map_streak', 0);
 
+	let validating = false;
 	let todaysMapName: string = '';
 	let openDialog = false;
 
@@ -78,6 +79,8 @@
 	}
 
 	async function checkGuess(value: string) {
+		validating = true;
+
 		try {
 			const res = await fetch('/api/v1/game-modes/map', {
 				method: 'POST',
@@ -91,6 +94,8 @@
 			return data;
 		} catch (err) {
 			console.error(err);
+		} finally {
+			validating = false;
 		}
 	}
 
@@ -125,47 +130,65 @@
 		</Card.Header>
 		<Card.Content>
 			<div class="grid gap-4">
-				{#if todaysMap}
-					<ImageShowcase
-						url={`/images/maps/originals/${todaysMap.image.url}.png`}
-						startingPos={todaysMap.image.startingPos}
-						numberOfGuesses={$guesses.length}
-						hasWon={gameState === 'won'}
-					/>
-					<p class="text-center text-sm text-muted-foreground">
-						{todaysMap?.correctGuesses ?? 0}
-						{todaysMap ? (todaysMap.correctGuesses > 1 ? 'gamers' : 'gamer') : 'gamers'} has already
-						guessed todays map
-					</p>
-					{#if gameState !== 'won'}
-						<Input
-							on:select={(event) => handleSelect(event.detail)}
-							data={maps?.map((map) => ({
-								img: `/images/maps/thumbnails/${map.thumbnail}.png`,
-								value: map.name
-							}))}
-							guessed={$guesses.map((guess) => guess.name.value)}
+				{#await data.todaysMap}
+					<div class="aspect-video bg-muted animate-pulse"></div>
+				{:then todaysMap}
+					{#if todaysMap}
+						<ImageShowcase
+							url={`/images/maps/originals/${todaysMap.image.url}.png`}
+							startingPos={todaysMap.image.startingPos}
+							numberOfGuesses={$guesses.length}
+							hasWon={gameState === 'won'}
 						/>
+						<p class="text-center text-sm text-muted-foreground">
+							{todaysMap?.correctGuesses ?? 0}
+							{todaysMap ? (todaysMap.correctGuesses > 1 ? 'gamers' : 'gamer') : 'gamers'} has already
+							guessed todays map
+						</p>
+						{#await data.maps then maps}
+							{#if gameState !== 'won'}
+								<Input
+									on:select={(event) => handleSelect(event.detail)}
+									data={maps?.map((map) => ({
+										img: `/images/maps/thumbnails/${map.thumbnail}.png`,
+										value: map.name
+									}))}
+									guessed={$guesses.map((guess) => guess.name.value)}
+									bind:validating
+								/>
+							{/if}
+						{/await}
+						<GuessesList guesses={$guesses} />
 					{/if}
-					<GuessesList guesses={$guesses} />
-				{/if}
+				{:catch error}
+					<a
+						href="/game-modes/map"
+						class="grid justify-items-center gap-4 p-4"
+						data-testId="refresh"
+					>
+						{error.body.message}
+						<RotateCw class="w-4 h-4" />
+					</a>
+				{/await}
 			</div>
 		</Card.Content>
 	</Card.Root>
 
 	<ColorExplanation />
 
-	<VictoryDialog
-		bind:open={openDialog}
-		img={{
-			src: `/images/maps/originals/${todaysMap?.image.url}.png`,
-			alt: todaysMapName
-		}}
-		label="Map"
-		value={todaysMapName}
-		tries={$guesses.length}
-		streak={$streak}
-		correctGuesses={todaysMap?.correctGuesses ?? 0}
-		challenge="map"
-	/>
+	{#await data.todaysMap then todaysMap}
+		<VictoryDialog
+			bind:open={openDialog}
+			img={{
+				src: `/images/maps/originals/${todaysMap?.image.url}.png`,
+				alt: todaysMapName
+			}}
+			label="Map"
+			value={todaysMapName}
+			tries={$guesses.length}
+			streak={$streak}
+			correctGuesses={todaysMap?.correctGuesses ?? 0}
+			challenge="map"
+		/>
+	{/await}
 </div>

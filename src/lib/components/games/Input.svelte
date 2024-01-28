@@ -1,17 +1,18 @@
 <script lang="ts">
+	import { Loader2 } from 'lucide-svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	export let data: { img: string; value: string }[] = [];
 	export let guessed: string[];
 	export let placeholder = 'Enter your guess';
-	export let validationTime = 1500;
+	export let validating: boolean;
 	export let imageSize = 3;
 
 	const dispatch = createEventDispatcher<{ select: string }>();
 
 	let value = '';
 	let inputElement: HTMLInputElement;
-	let validating = false;
+	let selectTimeout = false;
 
 	$: filteredData = data.filter(
 		(d) => !guessed.includes(d.value) && d.value.toLowerCase().startsWith(value.toLowerCase())
@@ -19,17 +20,19 @@
 
 	$: showDropdown = value.length > 0 && filteredData.length > 0;
 
-	function handleSelect(selected: string) {
-		if (validating) return;
+	$: console.log(validating);
 
-		validating = true;
+	function handleSelect(selected: string) {
+		if (validating || selectTimeout) return;
+
+		selectTimeout = true;
 		dispatch('select', selected);
 		value = '';
 		inputElement.focus();
 
 		setTimeout(() => {
-			validating = false;
-		}, validationTime);
+			selectTimeout = false;
+		}, 100);
 	}
 
 	function handleKeyPress(event: KeyboardEvent) {
@@ -47,15 +50,20 @@
 </script>
 
 <div class="relative">
-	<input
-		bind:value
-		bind:this={inputElement}
-		on:keyup={handleKeyPress}
-		class="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:rind-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-		type="text"
-		{placeholder}
-		data-testId="input"
-	/>
+	<div class="relative">
+		<input
+			bind:value
+			bind:this={inputElement}
+			on:keyup={handleKeyPress}
+			class="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:rind-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+			type="text"
+			{placeholder}
+			data-testId="input"
+		/>
+		{#if validating}
+			<Loader2 class="animate-spin absolute right-3 top-2 text-muted-foreground" />
+		{/if}
+	</div>
 	{#if showDropdown}
 		<ul
 			data-testId="dropdown"
