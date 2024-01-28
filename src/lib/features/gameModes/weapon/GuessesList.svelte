@@ -17,7 +17,7 @@
 			<p>Qualitites</p>
 		</div>
 	{/if}
-	<div class="grid grid-cols-6 gap-2 items-center">
+	<div class="grid grid-cols-6 gap-2 items-center text-sm">
 		{#each guesses as guess (guess.name)}
 			{@const fadeDuration = 500}
 			<img
