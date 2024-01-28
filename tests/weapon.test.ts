@@ -88,8 +88,13 @@ test('Won state is persisted on page navigation', async ({ page }) => {
 
 test('Toast is shown when guess fetch fails', async ({ page }) => {
 	// Mock the API response
-	await page.route('/api/v1/game-modes/weapon', async (route) => {
-		route.fulfill({ status: 500 });
+	await page.route('/api/v1/game-modes/weapon', async (route, request) => {
+		// Only want to mock POST requests
+		if (request.method() === 'POST') {
+			route.fulfill({ status: 500 });
+		} else {
+			await route.continue();
+		}
 	});
 
 	await page.goto('/game-modes/weapon');
