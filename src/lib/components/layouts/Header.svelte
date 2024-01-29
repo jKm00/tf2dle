@@ -1,9 +1,3 @@
-<header class="text-center">
-	<h1 class="text-white text-outline font-black text-5xl"><a href="/">TF2DLE</a></h1>
+<header class="flex justify-center">
+	<a href="/"><img class="w-80" src="/images/logo.png" alt="logo" /></a>
 </header>
-
-<style scoped>
-	.text-outline {
-		text-shadow: 5px 5px 5px hsl(var(--primary));
-	}
-</style>
