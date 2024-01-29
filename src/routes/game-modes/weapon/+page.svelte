@@ -154,7 +154,10 @@
 							bind:validating
 						/>
 					{:else}
-						<p class="text-center text-muted-foreground my-10" data-testId="completed-message">
+						<p
+							class="text-center text-sm text-muted-foreground my-10"
+							data-testId="completed-message"
+						>
 							You are 1 of {numberOfCorrectGuesses} that have guessed todays weapon!
 						</p>
 					{/if}
@@ -183,7 +186,7 @@
 			value={$guesses[0].name}
 			tries={$guesses.length}
 			streak={$streak}
-			correctGuesses={0}
+			correctGuesses={numberOfCorrectGuesses}
 			challenge="weapon"
 			bind:open={openDialog}
 		/>
