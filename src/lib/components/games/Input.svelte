@@ -20,8 +20,6 @@
 
 	$: showDropdown = value.length > 0 && filteredData.length > 0;
 
-	$: console.log(validating);
-
 	function handleSelect(selected: string) {
 		if (validating || selectTimeout) return;
 

@@ -13,7 +13,7 @@
 
 	export let data;
 
-	$: ({ todaysMap, maps } = data);
+	$: ({ todaysMap } = data);
 
 	let gameState: 'guessing' | 'won';
 	let lastEvent = useLocalStorage<{ event: 'won' | 'guessed'; date: string } | null>(
@@ -27,7 +27,11 @@
 	let todaysMapName: string = '';
 	let openDialog = false;
 
-	onMount(() => {
+	let numberOfCorrectGuesses: number;
+
+	onMount(async () => {
+		numberOfCorrectGuesses = (await todaysMap)?.correctGuesses ?? 0;
+
 		if ($lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
@@ -105,6 +109,7 @@
 			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
 			streak.update((streak) => streak + 1);
 			todaysMapName = mapName;
+			numberOfCorrectGuesses++;
 			gameState = 'won';
 			openDialog = true;
 		}, 2000);
@@ -141,9 +146,8 @@
 							hasWon={gameState === 'won'}
 						/>
 						<p class="text-center text-sm text-muted-foreground">
-							{todaysMap?.correctGuesses ?? 0}
-							{todaysMap ? (todaysMap.correctGuesses > 1 ? 'gamers' : 'gamer') : 'gamers'} has already
-							guessed todays map
+							{numberOfCorrectGuesses ?? 0}
+							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} has already guessed todays map
 						</p>
 						{#await data.maps then maps}
 							{#if gameState !== 'won'}

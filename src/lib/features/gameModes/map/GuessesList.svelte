@@ -9,7 +9,7 @@
 <div class="grid gap-4">
 	{#if guesses.length > 0}
 		<div class="custom-grid gap-4 font-semibold">
-			<p>Name</p>
+			<p>Image</p>
 			<p>Game Mode</p>
 			<p>Release Year</p>
 		</div>
@@ -24,7 +24,7 @@
 				alt={guess.name.value}
 			/>
 			<p
-				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
+				in:fade={{ duration: fadeDuration, delay: fadeDuration * 1 }}
 				class={`${
 					guess.gameModes.status === 'correct'
 						? 'border-correct'
@@ -36,7 +36,7 @@
 				{guess.gameModes.value.join(', ')}
 			</p>
 			<p
-				in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
+				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 				class={`${
 					guess.releaseDate.status === 'correct' ? 'border-correct' : 'border-incorrect'
 				} flex items-center justify-center gap-1 rounded-sm border p-1`}
