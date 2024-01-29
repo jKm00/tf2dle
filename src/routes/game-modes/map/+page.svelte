@@ -145,12 +145,16 @@
 							numberOfGuesses={$guesses.length}
 							hasWon={gameState === 'won'}
 						/>
-						<p class="text-center text-sm text-muted-foreground">
-							{numberOfCorrectGuesses ?? 0}
-							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} has already guessed todays map
-						</p>
 						{#await data.maps then maps}
-							{#if gameState !== 'won'}
+							{#if gameState === 'won'}
+								<p class="text-center text-sm text-muted-foreground">
+									You are 1 of {numberOfCorrectGuesses} that have guessed todays map!
+								</p>
+							{:else}
+								<p class="text-center text-sm text-muted-foreground">
+									{numberOfCorrectGuesses ?? 0}
+									{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} has already guessed todays map
+								</p>
 								<Input
 									on:select={(event) => handleSelect(event.detail)}
 									data={maps?.map((map) => ({
@@ -191,7 +195,7 @@
 			value={todaysMapName}
 			tries={$guesses.length}
 			streak={$streak}
-			correctGuesses={todaysMap?.correctGuesses ?? 0}
+			correctGuesses={numberOfCorrectGuesses}
 			challenge="map"
 		/>
 	{/await}
