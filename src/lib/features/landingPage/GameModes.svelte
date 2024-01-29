@@ -38,6 +38,13 @@
 				</a>
 			{/each}
 		</ul>
-		<p class="text-center text-muted-foreground text-sm mt-4">More game modes comming soon!</p>
 	</Card.Content>
+	<Card.Footer>
+		<p class="text-muted-foreground text-sm">
+			Have a suggestions for other game modes? <a
+				href="https://www.reddit.com/user/jaakim"
+				class="underline">Send me a DM on reddit!</a
+			>
+		</p>
+	</Card.Footer>
 </Card.Root>
