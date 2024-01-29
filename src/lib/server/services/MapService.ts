@@ -4,6 +4,7 @@ import dayjs from '$lib/configs/dayjsConfig';
 import { db } from '../prisma';
 import type { MapRepository } from '../repositories/MapRepository';
 import { mapRepository } from '../repositories/MapRepositoryPrisma';
+import LogService from './LogService';
 
 class MapService {
 	private maps: Map[];
@@ -27,6 +28,8 @@ class MapService {
 			x: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER,
 			y: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER
 		};
+
+		LogService.log('map', `Selected map: ${map.name}`);
 
 		return await this.repo.save(map.name, startingPos);
 	}

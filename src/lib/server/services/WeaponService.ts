@@ -2,6 +2,7 @@ import weapons from '$lib/server/data/weapons.json';
 import type { Weapon } from '$lib/types';
 import { weaponRepository } from '$lib/server/repositories/WeaponRepositoryPrisma';
 import type { WeaponRepository } from '$lib/server/repositories/WeaponRepository';
+import LogService from './LogService';
 
 class WeaponService {
 	private weapons: Weapon[];
@@ -192,6 +193,8 @@ class WeaponService {
 		const weapon = this.weapons[Math.floor(Math.random() * this.weapons.length)];
 
 		await this.repo.save(weapon);
+
+		LogService.log('weapon', `Selected weapon: ${weapon.name}`);
 
 		return weapon.name;
 	}

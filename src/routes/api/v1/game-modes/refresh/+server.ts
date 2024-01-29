@@ -11,21 +11,17 @@ export async function GET({ request }) {
 		return json('Unauthorized', { status: 401 });
 	}
 
+	LogService.log('cron-job', 'Cron job started...');
+
 	try {
-		const map = await mapService.selectRandomMap();
-		LogService.getInstance().log(
-			'map-refresh',
-			`Cron job successfully refreshed the map to: ${map.name}`
-		);
-
-		const weapon = await weaponService.selectNewRandomWeapon();
-		LogService.getInstance().log(
-			'weapon-refresh',
-			`Cron job successfully refreshed the weapon to: ${weapon}`
-		);
-
-		return json('ok');
+		await mapService.selectRandomMap();
+		await weaponService.selectNewRandomWeapon();
 	} catch (err) {
+		LogService.log('cron-job', `Cron job failed: ${err}`);
 		return json(err, { status: 500 });
 	}
+
+	LogService.log('cron-job', 'Cron job finished!');
+
+	return json('ok');
 }
