@@ -23,9 +23,12 @@
 
 	let validating = false;
 	let openDialog = false;
-	let numberOfCorrectGuesses = async () => await data.numberOfCorrectGuesses;
 
-	onMount(() => {
+	let numberOfCorrectGuesses: number;
+
+	onMount(async () => {
+		numberOfCorrectGuesses = (await data.numberOfCorrectGuesses) ?? 0;
+
 		if ($lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
@@ -63,7 +66,7 @@
 		}
 
 		if (result?.correct) {
-			won(result.numberOfCorrectGuesses);
+			won();
 		}
 	}
 
@@ -94,13 +97,13 @@
 		toast.error('Could not validate your guess, please try again.');
 	}
 
-	function won(updatedNumberOfCorrectGuesses: number) {
+	function won() {
 		// Wait for reveal animation to finish
 		setTimeout(() => {
 			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
 			streak.update((streak) => streak + 1);
 			gameState = 'won';
-			numberOfCorrectGuesses = async () => updatedNumberOfCorrectGuesses;
+			numberOfCorrectGuesses++;
 			openDialog = true;
 		}, 500 * 6);
 	}
@@ -133,30 +136,28 @@
 				</div>
 			{:then weapons}
 				<div class="grid gap-4">
-					{#await numberOfCorrectGuesses() then number}
-						{#if gameState === 'guessing'}
-							<p
-								class="text-center text-sm text-muted-foreground"
-								data-testId="number-of-correct-guesses"
-							>
-								{number}
-								{number === 1 ? 'gamer' : 'gamers'} have already guessed todays map
-							</p>
-							<Input
-								data={weapons?.map((weapon) => ({
-									img: `/images/weapons/thumbnails/${weapon}.png`,
-									value: weapon
-								}))}
-								guessed={$guesses.map((guess) => guess.name)}
-								on:select={(e) => handleGuess(e.detail)}
-								bind:validating
-							/>
-						{:else}
-							<p class="text-center text-muted-foreground my-10" data-testId="completed-message">
-								You are 1 of {number} that have guessed todays weapon!
-							</p>
-						{/if}
-					{/await}
+					{#if gameState === 'guessing'}
+						<p
+							class="text-center text-sm text-muted-foreground"
+							data-testId="number-of-correct-guesses"
+						>
+							{numberOfCorrectGuesses}
+							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have already guessed todays weapon
+						</p>
+						<Input
+							data={weapons?.map((weapon) => ({
+								img: `/images/weapons/thumbnails/${weapon}.png`,
+								value: weapon
+							}))}
+							guessed={$guesses.map((guess) => guess.name)}
+							on:select={(e) => handleGuess(e.detail)}
+							bind:validating
+						/>
+					{:else}
+						<p class="text-center text-muted-foreground my-10" data-testId="completed-message">
+							You are 1 of {numberOfCorrectGuesses} that have guessed todays weapon!
+						</p>
+					{/if}
 					<GuessesList guesses={$guesses} />
 				</div>
 			{:catch error}
