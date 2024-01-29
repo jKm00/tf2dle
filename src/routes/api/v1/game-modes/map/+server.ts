@@ -1,18 +1,18 @@
+import { mapService } from '$lib/server/services/MapService.js';
 import { json } from '@sveltejs/kit';
-import MapService from '$lib/server/services/MapService';
 
 /**
  * Returns the info of todays map
  */
 export async function GET() {
-	const map = await MapService.getInstance().getTodaysMap();
+	const map = await mapService.getTodaysMap();
 
 	return json({
 		image: {
-			url: map.image,
+			url: map?.image,
 			startingPos: {
-				x: map.startingPosX,
-				y: map.startingPosY
+				x: map?.startingPos.x,
+				y: map?.startingPos.y
 			}
 		},
 		correctGuesses: map.hasWon
@@ -28,7 +28,7 @@ export async function GET() {
 export async function POST({ request }) {
 	const { guess } = await request.json();
 
-	const result = await MapService.getInstance().checkMap(guess);
+	const result = await mapService.validateGuess(guess);
 
 	return json(result);
 }

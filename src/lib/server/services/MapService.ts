@@ -2,26 +2,17 @@ import maps from '$lib/server/data/maps.json';
 import type { Map } from '$lib/types';
 import dayjs from '$lib/configs/dayjsConfig';
 import { db } from '../prisma';
+import type { MapRepository } from '../repositories/MapRepository';
+import { mapRepository } from '../repositories/MapRepositoryPrisma';
+import LogService from './LogService';
 
 class MapService {
 	private maps: Map[];
+	private repo: MapRepository;
 
-	private static instance: MapService;
-
-	private constructor() {
+	public constructor(repository: MapRepository) {
 		this.maps = maps;
-	}
-
-	/**
-	 * Returns an instance of the MapService
-	 * @returns an instance of the MapService
-	 */
-	public static getInstance(): MapService {
-		if (!MapService.instance) {
-			MapService.instance = new MapService();
-		}
-
-		return MapService.instance;
+		this.repo = repository;
 	}
 
 	/**
@@ -38,20 +29,9 @@ class MapService {
 			y: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER
 		};
 
-		// Save the selected map to the database
-		const selectedMap = await db.dailyMaps.create({
-			data: {
-				selectedAt: dayjs.utc().toDate(),
-				name: map.name,
-				image: map.image,
-				startingPosX: startingPos.x,
-				startingPosY: startingPos.y,
-				gameModes: map.gameModes.join(','),
-				releaseDate: dayjs(map.releaseDate).toDate()
-			}
-		});
+		LogService.log('map', `Selected map: ${map.name}`);
 
-		return selectedMap;
+		return await this.repo.save(map.name, startingPos);
 	}
 
 	/**
@@ -59,45 +39,50 @@ class MapService {
 	 * @returns info of todays map
 	 */
 	public async getTodaysMap() {
-		const todaysMap = await db.dailyMaps.findFirst({
-			where: {
-				selectedAt: dayjs.utc().toDate()
-			}
-		});
+		let map = await this.repo.getTodaysMap();
 
-		if (todaysMap === null) {
-			return await this.selectRandomMap();
+		if (!map) {
+			map = await this.selectRandomMap();
 		}
 
-		return todaysMap;
+		return {
+			name: map.name,
+			image: this.maps.find((m) => m.name === map!.name)?.image ?? '',
+			startingPos: {
+				x: map.startingPosX,
+				y: map.startingPosY
+			},
+			hasWon: map.hasWon
+		};
 	}
 
 	/**
 	 * Returns todays map name if the guess was correct, null otherwise
-	 * @param name of the map to check
+	 * @param guess of the map to check
 	 */
-	public async checkMap(name: string) {
-		const todaysMap = await this.getTodaysMap();
-		const guessedMap = this.maps.find((map) => map.name.toLowerCase() === name.toLowerCase());
+	public async validateGuess(guess: string) {
+		const todaysSavedMap = await this.getTodaysMap();
+		const todaysMap = this.maps.find((map) => map.name === todaysSavedMap.name);
+		const guessedMap = this.maps.find((map) => map.name.toLowerCase() === guess.toLowerCase());
 
-		const correct = guessedMap?.name === todaysMap.name;
+		const correct = guessedMap?.name === todaysMap?.name;
 
 		const nameStatus = correct ? 'correct' : 'incorrect';
 		const nameValue = guessedMap?.name ?? '';
 
 		const guessedGameModes = guessedMap?.gameModes;
-		const correctGameModes = todaysMap.gameModes;
+		const correctGameModes = todaysMap?.gameModes;
 
 		const gameModesStatus =
-			guessedGameModes?.join(',') === correctGameModes
+			guessedGameModes?.join(',') === correctGameModes?.join(',')
 				? 'correct'
-				: guessedGameModes?.some((gameMode) => correctGameModes.split(',').includes(gameMode))
+				: guessedGameModes?.some((gameMode) => correctGameModes?.includes(gameMode))
 					? 'partial'
 					: 'incorrect';
 		const gameModesValue = guessedMap?.gameModes ?? [];
 
 		const guessedReleaseYear = dayjs(guessedMap?.releaseDate).year();
-		const correctReleaseYear = dayjs(todaysMap.releaseDate).year();
+		const correctReleaseYear = dayjs(todaysMap?.releaseDate).year();
 		const releaseDateStatus =
 			guessedReleaseYear === correctReleaseYear
 				? 'correct'
@@ -107,7 +92,7 @@ class MapService {
 		const releaseDateValue = dayjs(guessedMap?.releaseDate).year() ?? '';
 
 		if (correct) {
-			this.incrementTodaysCorrectGuesses();
+			await this.repo.incrementTodaysNumberOfCorrectGuesses();
 		}
 
 		return {
@@ -128,19 +113,6 @@ class MapService {
 		};
 	}
 
-	private async incrementTodaysCorrectGuesses() {
-		const todaysMap = await this.getTodaysMap();
-
-		await db.dailyMaps.update({
-			where: {
-				id: todaysMap.id
-			},
-			data: {
-				hasWon: todaysMap.hasWon + 1
-			}
-		});
-	}
-
 	/**
 	 * Returns a list of all maps containing their name and thumbnail
 	 * @returns list of all maps
@@ -150,4 +122,4 @@ class MapService {
 	}
 }
 
-export default MapService;
+export const mapService = new MapService(mapRepository);
