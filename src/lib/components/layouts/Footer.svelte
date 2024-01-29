@@ -47,11 +47,16 @@
 </div>
 
 <footer class="text-muted-foreground text-sm">
-	<p>Made by <a href="https://edvardsen.dev" class="underline">Joakim Edvardsen</a></p>
+	<p>
+		Made by <a href="https://edvardsen.dev" target="_blank" class="underline">Joakim Edvardsen</a>
+	</p>
 	<p>
 		Like the product? Support me <a
 			href="https://www.buymeacoffee.com/joakimedvam"
+			target="_blank"
 			class="underline">here</a
 		>
+		| Found a bug? Report it to me
+		<a href="https://www.reddit.com/user/jaakim" target="_blank" class="underline">here!</a>
 	</p>
 </footer>

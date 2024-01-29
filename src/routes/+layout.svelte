@@ -9,13 +9,19 @@
 </script>
 
 <svelte:head>
+	<link rel="icon" href="/favicon/favicon.ico" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+
 	<title>TF2DLE</title>
+	<meta name="description" content="A wordle like game for TF2" />
+	<meta name="keywords" content="tf2, wordle, tf2dle, tf2 wordle, tf2 wordle game, tf2 wordle" />
+	<meta name="author" content="Joakim Edvardsen" />
 </svelte:head>
 
 <ModeWatcher />
 <Toaster />
 
-<p class="fixed bg-primary py-2 px-12 -rotate-45 -left-10 top-2">Beta</p>
+<p class="fixed bg-primary py-2 px-40 -rotate-45 -left-36 top-4">BETA</p>
 <div class="flex flex-col gap-10 width px-2 m-auto py-10 min-h-screen">
 	<Header />
 	<div class="flex-grow">
