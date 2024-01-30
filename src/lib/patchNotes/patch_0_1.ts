@@ -8,6 +8,11 @@ export default {
 			title: 'Patch notes',
 			description: 'Added this page for patch notes.',
 			gameMode: 'all'
+		},
+		{
+			title: 'Jungle Inferno Weapons',
+			description: 'Added Jungle Inferno weapons to the weapon game mode.',
+			gameMode: 'weapon'
 		}
 	],
 	improvements: [
