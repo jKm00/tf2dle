@@ -27,7 +27,7 @@
 	let todaysMapName: string = '';
 	let openDialog = false;
 
-	let numberOfCorrectGuesses: number;
+	let numberOfCorrectGuesses = 0;
 
 	onMount(async () => {
 		numberOfCorrectGuesses = (await todaysMap)?.correctGuesses ?? 0;
@@ -146,14 +146,10 @@
 							hasWon={gameState === 'won'}
 						/>
 						{#await data.maps then maps}
-							{#if gameState === 'won'}
-								<p class="text-center text-sm text-muted-foreground">
-									You are 1 of {numberOfCorrectGuesses} that have guessed todays map!
-								</p>
-							{:else}
+							{#if gameState === 'guessing'}
 								<p class="text-center text-sm text-muted-foreground">
 									{numberOfCorrectGuesses ?? 0}
-									{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} has already guessed todays map
+									{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} has guessed todays map
 								</p>
 								<Input
 									on:select={(event) => handleSelect(event.detail)}
@@ -164,6 +160,10 @@
 									guessed={$guesses.map((guess) => guess.name.value)}
 									bind:validating
 								/>
+							{:else}
+								<p class="text-center text-sm text-muted-foreground">
+									You are 1 out of {numberOfCorrectGuesses} that have guessed todays map!
+								</p>
 							{/if}
 						{/await}
 						<GuessesList guesses={$guesses} />

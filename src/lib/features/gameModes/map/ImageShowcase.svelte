@@ -4,7 +4,7 @@
 	export let numberOfGuesses: number;
 	export let hasWon: boolean;
 
-	const STEPS = 20;
+	const STEPS = 10;
 
 	$: diffX = 50 - startingPos.x;
 	$: diffY = 50 - startingPos.y;
