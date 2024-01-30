@@ -42,5 +42,6 @@ Thumbs.db
 !.env.example
 .flaskenv
 
-# Playwright
+# Testing
 playwright-report/
+test-results/
