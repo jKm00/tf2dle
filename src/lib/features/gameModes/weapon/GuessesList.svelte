@@ -10,7 +10,7 @@
 	{#if guesses.length > 0}
 		<div class="grid grid-cols-6 gap-2 items-center font-semibold" data-testId="guess-row-title">
 			<p>Image</p>
-			<p>Release Date</p>
+			<p>Release Year</p>
 			<p>Used By</p>
 			<p>Slot</p>
 			<p>Magazine size</p>
