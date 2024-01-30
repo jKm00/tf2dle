@@ -24,7 +24,7 @@
 	let validating = false;
 	let openDialog = false;
 
-	let numberOfCorrectGuesses: number;
+	let numberOfCorrectGuesses = 0;
 
 	onMount(async () => {
 		numberOfCorrectGuesses = (await data.numberOfCorrectGuesses) ?? 0;
@@ -142,7 +142,7 @@
 							data-testId="number-of-correct-guesses"
 						>
 							{numberOfCorrectGuesses}
-							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have already guessed todays weapon
+							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
 						</p>
 						<Input
 							data={weapons?.map((weapon) => ({
@@ -158,7 +158,7 @@
 							class="text-center text-sm text-muted-foreground my-10"
 							data-testId="completed-message"
 						>
-							You are 1 of {numberOfCorrectGuesses} that have guessed todays weapon!
+							You are 1 out of {numberOfCorrectGuesses} that have guessed todays weapon!
 						</p>
 					{/if}
 					<GuessesList guesses={$guesses} />

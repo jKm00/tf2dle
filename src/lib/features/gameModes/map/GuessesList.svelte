@@ -19,7 +19,7 @@
 			{@const fadeDuration = 500}
 			<img
 				in:fade={{ duration: fadeDuration }}
-				class="h-full object-cover rounded"
+				class="w-full aspect-video object-cover rounded"
 				src={`/images/maps/thumbnails/${guess.thumbnail}.png`}
 				alt={guess.name.value}
 			/>

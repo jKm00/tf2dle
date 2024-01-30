@@ -15,13 +15,13 @@
 	let selectTimeout = false;
 
 	$: filteredData = data.filter(
-		(d) => !guessed.includes(d.value) && d.value.toLowerCase().startsWith(value.toLowerCase())
+		(d) => !guessed.includes(d.value) && d.value.toLowerCase().includes(value.toLowerCase())
 	);
 
 	$: showDropdown = value.length > 0 && filteredData.length > 0;
 
 	function handleSelect(selected: string) {
-		if (validating || selectTimeout) return;
+		if (validating || selectTimeout || value === '') return;
 
 		selectTimeout = true;
 		dispatch('select', selected);
