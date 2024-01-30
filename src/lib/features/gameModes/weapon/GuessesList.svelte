@@ -13,8 +13,8 @@
 			<p>Release Date</p>
 			<p>Used By</p>
 			<p>Slot</p>
-			<p>Magasin size</p>
-			<p>Qualitites</p>
+			<p>Magazine size</p>
+			<p>Qualities</p>
 		</div>
 	{/if}
 	<div class="grid grid-cols-6 gap-2 items-center text-sm">
