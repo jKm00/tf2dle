@@ -41,9 +41,9 @@
 	</Card.Content>
 	<Card.Footer>
 		<p class="text-muted-foreground text-sm">
-			Have a suggestions for other game modes? <a
+			Have suggestions for other game modes? <a
 				href="https://www.reddit.com/user/jaakim"
-				class="underline">Send me a DM on reddit!</a
+				class="underline">Send me a DM!</a
 			>
 		</p>
 	</Card.Footer>

@@ -33,8 +33,7 @@
 
 	function updateTimer() {
 		if (timeTilReset.asSeconds() <= 0) {
-			console.log('1');
-			initializeResetTime();
+			timeTilReset = initializeResetTime();
 		}
 		timeTilReset = timeTilReset.subtract(1, 'second');
 	}
@@ -42,7 +41,9 @@
 
 <div class="text-center">
 	<p class="grid">
-		Games will reset in: <span class="text-3xl">{hours}:{minutes}:{seconds}</span>
+		Games will reset in: <span class="text-3xl" data-testId="timer"
+			>{hours}:{minutes}:{seconds}</span
+		>
 	</p>
 </div>
 
