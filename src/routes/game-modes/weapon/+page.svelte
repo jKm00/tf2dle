@@ -13,7 +13,7 @@
 
 	export let data;
 
-	let gameState: 'guessing' | 'won';
+	let gameState: 'guessing' | 'won' = 'guessing';
 	let guesses = useLocalStorage<WeaponGuessResponse[]>('weapon_guesses', []);
 	let lastEvent = useLocalStorage<{ event: string; date: string } | null>(
 		'weapon_last_event',
