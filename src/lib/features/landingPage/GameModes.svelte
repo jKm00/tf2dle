@@ -29,10 +29,10 @@
 				{@const name = gameMode.name.toLowerCase()}
 				<a href={`/game-modes/${name}`} data-testId={name}>
 					<li class="flex items-center gap-4 bg-secondary rounded px-4 py-2">
-						<svelte:component this={gameMode.icon} />
+						<svelte:component this={gameMode.icon} class="text-primary" />
 						<div>
-							<h2>{gameMode.name}</h2>
-							<p>{gameMode.description}</p>
+							<h2 class="font-semibold">{gameMode.name}</h2>
+							<p class="text-sm">{gameMode.description}</p>
 						</div>
 					</li>
 				</a>
