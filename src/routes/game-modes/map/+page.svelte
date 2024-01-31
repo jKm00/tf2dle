@@ -27,7 +27,7 @@
 	let todaysMapName: string = '';
 	let openDialog = false;
 
-	let numberOfCorrectGuesses: number;
+	let numberOfCorrectGuesses: number | undefined = undefined;
 
 	onMount(async () => {
 		numberOfCorrectGuesses = (await todaysMap)?.correctGuesses ?? 0;
@@ -109,7 +109,7 @@
 			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
 			streak.update((streak) => streak + 1);
 			todaysMapName = mapName;
-			numberOfCorrectGuesses++;
+			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			gameState = 'won';
 			openDialog = true;
 		}, 2000);
@@ -147,8 +147,9 @@
 						/>
 						{#await data.maps then maps}
 							{#if gameState === 'guessing'}
-								{#if numberOfCorrectGuesses}
+								{#if numberOfCorrectGuesses !== undefined}
 									<p class="text-center text-sm text-muted-foreground">
+										{numberOfCorrectGuesses}
 										{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} has guessed todays map
 									</p>
 								{/if}
@@ -161,7 +162,7 @@
 									guessed={$guesses.map((guess) => guess.name.value)}
 									bind:validating
 								/>
-							{:else if numberOfCorrectGuesses}
+							{:else if numberOfCorrectGuesses !== undefined}
 								<p class="text-center text-sm text-muted-foreground">
 									You are 1 out of {numberOfCorrectGuesses} that have guessed todays map!
 								</p>
@@ -196,7 +197,7 @@
 			value={todaysMapName}
 			tries={$guesses.length}
 			streak={$streak}
-			correctGuesses={numberOfCorrectGuesses}
+			correctGuesses={numberOfCorrectGuesses ?? 1}
 			challenge="map"
 		/>
 	{/await}

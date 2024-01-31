@@ -24,7 +24,7 @@
 	let validating = false;
 	let openDialog = false;
 
-	let numberOfCorrectGuesses: number;
+	let numberOfCorrectGuesses: number | undefined = undefined;
 
 	onMount(async () => {
 		numberOfCorrectGuesses = (await data.numberOfCorrectGuesses) ?? 0;
@@ -103,7 +103,7 @@
 			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
 			streak.update((streak) => streak + 1);
 			gameState = 'won';
-			numberOfCorrectGuesses++;
+			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			openDialog = true;
 		}, 500 * 6);
 	}
@@ -137,11 +137,12 @@
 			{:then weapons}
 				<div class="grid gap-4">
 					{#if gameState === 'guessing'}
-						{#if numberOfCorrectGuesses}
+						{#if numberOfCorrectGuesses !== undefined}
 							<p
 								class="text-center text-sm text-muted-foreground"
 								data-testId="number-of-correct-guesses"
 							>
+								{numberOfCorrectGuesses}
 								{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
 							</p>
 						{/if}
@@ -154,7 +155,7 @@
 							on:select={(e) => handleGuess(e.detail)}
 							bind:validating
 						/>
-					{:else if numberOfCorrectGuesses === 1}
+					{:else if numberOfCorrectGuesses !== undefined}
 						<p
 							class="text-center text-sm text-muted-foreground my-10"
 							data-testId="completed-message"
@@ -187,7 +188,7 @@
 			value={$guesses[0].name}
 			tries={$guesses.length}
 			streak={$streak}
-			correctGuesses={numberOfCorrectGuesses}
+			correctGuesses={numberOfCorrectGuesses ?? 1}
 			challenge="weapon"
 			bind:open={openDialog}
 		/>
