@@ -15,7 +15,7 @@
 
 	$: ({ todaysMap } = data);
 
-	let gameState: 'guessing' | 'won';
+	let gameState: 'guessing' | 'won' = 'guessing';
 	let lastEvent = useLocalStorage<{ event: 'won' | 'guessed'; date: string } | null>(
 		'map_last_event',
 		null
