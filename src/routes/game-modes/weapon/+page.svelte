@@ -24,7 +24,7 @@
 	let validating = false;
 	let openDialog = false;
 
-	let numberOfCorrectGuesses = 0;
+	let numberOfCorrectGuesses: number;
 
 	onMount(async () => {
 		numberOfCorrectGuesses = (await data.numberOfCorrectGuesses) ?? 0;
@@ -137,13 +137,14 @@
 			{:then weapons}
 				<div class="grid gap-4">
 					{#if gameState === 'guessing'}
-						<p
-							class="text-center text-sm text-muted-foreground"
-							data-testId="number-of-correct-guesses"
-						>
-							{numberOfCorrectGuesses}
-							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
-						</p>
+						{#if numberOfCorrectGuesses}
+							<p
+								class="text-center text-sm text-muted-foreground"
+								data-testId="number-of-correct-guesses"
+							>
+								{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
+							</p>
+						{/if}
 						<Input
 							data={weapons?.map((weapon) => ({
 								img: `/images/weapons/thumbnails/${weapon}.png`,
@@ -153,7 +154,7 @@
 							on:select={(e) => handleGuess(e.detail)}
 							bind:validating
 						/>
-					{:else}
+					{:else if numberOfCorrectGuesses === 1}
 						<p
 							class="text-center text-sm text-muted-foreground my-10"
 							data-testId="completed-message"
