@@ -2,7 +2,14 @@ export default {
 	version: '0.2.0',
 	date: '',
 	newFeatures: [],
-	improvements: [],
+	improvements: [
+		{
+			title: 'Clear map hints',
+			description:
+				'As maps only have two hints (game mode and release year) some maps have the same hints, meaning the UI would tell you that you had everything correct when in fact it was the wrong map. Now, the image also has a colored border to indicate whether you have the correct map or not.',
+			gameMode: 'map'
+		}
+	],
 	bugFixes: [
 		{
 			title: 'Typos in table headers',
