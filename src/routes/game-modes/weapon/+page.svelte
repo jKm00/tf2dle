@@ -13,6 +13,8 @@
 
 	export let data;
 
+	let loadingState: 'loading' | 'error' | 'success' = 'loading';
+
 	let gameState: 'guessing' | 'won' = 'guessing';
 	let guesses = useLocalStorage<WeaponGuessResponse[]>('weapon_guesses', []);
 	let lastEvent = useLocalStorage<{ event: string; date: string } | null>(
@@ -25,33 +27,44 @@
 	let openDialog = false;
 
 	let numberOfCorrectGuesses: number | undefined = undefined;
+	let weapons: string[] = [];
 
 	onMount(async () => {
-		numberOfCorrectGuesses = (await data.numberOfCorrectGuesses) ?? 0;
+		// Wait for data
+		try {
+			const [res1, res2] = await Promise.all([data.numberOfCorrectGuesses, data.weapons]);
+			numberOfCorrectGuesses = res1 ?? 0;
+			weapons = res2 ?? [];
+		} catch (err) {
+			loadingState = 'error';
+			return;
+		}
 
+		// Init game state
 		if ($lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
 			gameState = 'guessing';
-			return;
+		} else {
+			switch ($lastEvent.event) {
+				case 'won':
+					if (dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
+						gameState = 'won';
+					} else {
+						gameState = 'guessing';
+						guesses.set([]);
+					}
+					break;
+				case 'guessed':
+					gameState = 'guessing';
+					if (!dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
+						guesses.set([]);
+					}
+					break;
+			}
 		}
 
-		switch ($lastEvent.event) {
-			case 'won':
-				if (dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
-					gameState = 'won';
-				} else {
-					gameState = 'guessing';
-					guesses.set([]);
-				}
-				break;
-			case 'guessed':
-				gameState = 'guessing';
-				if (!dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
-					guesses.set([]);
-				}
-				break;
-		}
+		loadingState = 'success';
 	});
 
 	async function handleGuess(guess: string) {
@@ -130,22 +143,29 @@
 			</div>
 		</Card.Header>
 		<Card.Content>
-			{#await data.weapons}
+			{#if loadingState === 'loading'}
 				<div class="flex justify-center p-4">
 					<Loader2 class="h-4 w-4 animate-spin" />
 				</div>
-			{:then weapons}
+			{:else if loadingState === 'error'}
+				<a
+					href="/game-modes/weapon"
+					class="grid justify-items-center gap-4 p-4"
+					data-testId="refresh"
+				>
+					Something went wrong. Please try to refresh.
+					<RotateCw class="w-4 h-4" />
+				</a>
+			{:else}
 				<div class="grid gap-4">
 					{#if gameState === 'guessing'}
-						{#if numberOfCorrectGuesses !== undefined}
-							<p
-								class="text-center text-sm text-muted-foreground"
-								data-testId="number-of-correct-guesses"
-							>
-								{numberOfCorrectGuesses}
-								{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
-							</p>
-						{/if}
+						<p
+							class="text-center text-sm text-muted-foreground"
+							data-testId="number-of-correct-guesses"
+						>
+							{numberOfCorrectGuesses}
+							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
+						</p>
 						<Input
 							data={weapons?.map((weapon) => ({
 								img: `/images/weapons/thumbnails/${weapon}.png`,
@@ -155,7 +175,7 @@
 							on:select={(e) => handleGuess(e.detail)}
 							bind:validating
 						/>
-					{:else if numberOfCorrectGuesses !== undefined}
+					{:else}
 						<p
 							class="text-center text-sm text-muted-foreground my-10"
 							data-testId="completed-message"
@@ -165,16 +185,7 @@
 					{/if}
 					<GuessesList guesses={$guesses} />
 				</div>
-			{:catch error}
-				<a
-					href="/game-modes/weapon"
-					class="grid justify-items-center gap-4 p-4"
-					data-testId="refresh"
-				>
-					{error.body.message}
-					<RotateCw class="w-4 h-4" />
-				</a>
-			{/await}
+			{/if}
 		</Card.Content>
 	</Card.Root>
 
