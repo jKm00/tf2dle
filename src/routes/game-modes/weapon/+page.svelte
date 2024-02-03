@@ -7,7 +7,7 @@
 	import { useLocalStorage } from '$lib/composables/useLocalStorage';
 	import type { WeaponGuessResponse } from '$lib/dtos.js';
 	import { toast } from 'svelte-sonner';
-	import GuessesList from '$lib/features/gameModes/weapon/GuessesList.svelte';
+	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 
