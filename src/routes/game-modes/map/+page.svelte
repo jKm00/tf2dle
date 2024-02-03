@@ -3,11 +3,11 @@
 	import { onMount } from 'svelte';
 	import * as Card from '$lib/components/ui/card';
 	import Input from '$lib/components/games/Input.svelte';
-	import ImageShowcase from '$lib/features/gameModes/map/ImageShowcase.svelte';
+	import ImageShowcase from './ImageShowcase.svelte';
 	import dayjs from '$lib/configs/dayjsConfig';
 	import type { MapGuessResponse } from '$lib/dtos.js';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
-	import GuessesList from '$lib/features/gameModes/map/GuessesList.svelte';
+	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import { Dices, Flame, RotateCw } from 'lucide-svelte';
 

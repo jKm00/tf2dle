@@ -1,7 +1,6 @@
 import maps from '$lib/server/data/maps.json';
 import type { Map } from '$lib/types';
 import dayjs from '$lib/configs/dayjsConfig';
-import { db } from '../prisma';
 import type { MapRepository } from '../repositories/MapRepository';
 import { mapRepository } from '../repositories/MapRepositoryPrisma';
 import LogService from './LogService';
@@ -23,10 +22,9 @@ class MapService {
 		const map = this.maps[Math.floor(Math.random() * this.maps.length)];
 
 		// Select a random starting position for the image
-		const MULTIPLIER = 5;
 		const startingPos = {
-			x: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER,
-			y: Math.floor(Math.random() * (2 + MULTIPLIER) * 100) - 50 * MULTIPLIER
+			x: Math.floor(Math.random() * 1921),
+			y: Math.floor(Math.random() * 1081)
 		};
 
 		LogService.log('map', `Selected map: ${map.name}`);
