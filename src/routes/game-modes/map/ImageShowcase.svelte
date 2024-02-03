@@ -1,58 +1,67 @@
 <script lang="ts">
+	import { onMount, tick } from 'svelte';
+
 	export let url: string;
 	export let startingPos: { x: number; y: number };
 	export let numberOfGuesses: number;
 	export let hasWon: boolean;
 
-	const STEPS = 10;
+	const STEPS = 11;
 
-	$: diffX = 50 - startingPos.x;
-	$: diffY = 50 - startingPos.y;
+	let container: HTMLDivElement;
+	let canvas: HTMLCanvasElement;
+	let img: HTMLImageElement;
 
-	$: stepCounterX = diffX / (STEPS - 1);
-	$: stepCounterY = diffY / (STEPS - 1);
+	$: drawImage(img, numberOfGuesses, hasWon);
 
-	let currentPos =
-		numberOfGuesses < STEPS
-			? {
-					x: startingPos.x + stepCounterX * numberOfGuesses,
-					y: startingPos.y + stepCounterY * numberOfGuesses
-				}
-			: {
-					x: 50,
-					y: 50
-				};
+	onMount(async () => {
+		img = new Image();
+		img.src = url;
+		img.onload = async () => {
+			handleWindowResize();
+			drawImage(img, numberOfGuesses, hasWon);
+		};
+	});
 
-	$: if (numberOfGuesses < STEPS) {
-		currentPos = hasWon
-			? { x: 50, y: 50 }
-			: {
-					x: startingPos.x + stepCounterX * numberOfGuesses,
-					y: startingPos.y + stepCounterY * numberOfGuesses
-				};
+	function handleWindowResize() {
+		const { width, height } = container.getBoundingClientRect();
+		canvas.width = width;
+		canvas.height = height;
+
+		drawImage(img, numberOfGuesses, hasWon);
 	}
 
-	$: zoom = !hasWon && numberOfGuesses < STEPS ? STEPS - numberOfGuesses : 1;
+	function drawImage(img: HTMLImageElement, guesses: number, hasWon: boolean) {
+		if (!canvas || !img) return;
+
+		if (guesses >= STEPS) guesses = STEPS - 1;
+
+		const ctx = canvas.getContext('2d');
+
+		if (hasWon) {
+			ctx?.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+			return;
+		}
+
+		const cropWidth = img.width / (STEPS - guesses);
+		const cropHeight = img.height / (STEPS - guesses);
+
+		let sX = startingPos.x - startingPos.x / (STEPS - guesses);
+		if (sX < 0) sX = 0;
+		if (sX + cropWidth > img.width) sX = img.width - cropWidth;
+
+		let sY = startingPos.y - startingPos.y / (STEPS - guesses);
+		if (sY < 0) sY = 0;
+		if (sY + cropHeight > img.height) sY = img.height - cropHeight;
+
+		ctx?.drawImage(img, sX, sY, cropWidth, cropHeight, 0, 0, canvas.width, canvas.height);
+	}
 </script>
 
-<div class="relative overflow-hidden aspect-video rounded">
+<svelte:window on:resize={handleWindowResize} />
+
+<div class="relative overflow-hidden aspect-video rounded" bind:this={container}>
 	<div class="absolute inset-0 bg-muted animate-pulse"></div>
 	<!-- svelte-ignore a11y-img-redundant-alt -->
-	<img
-		src={url}
-		alt="Image of today's map"
-		class="absolute"
-		style={`--zoom: ${zoom}; --x: ${currentPos.x}%; --y: ${currentPos.y}%;`}
-	/>
+	<canvas bind:this={canvas} class="absolute w-full h-full"></canvas>
 </div>
-
-<style scoped>
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		top: var(--y);
-		left: var(--x);
-		transform: translate(-50%, -50%) scale(var(--zoom));
-	}
-</style>

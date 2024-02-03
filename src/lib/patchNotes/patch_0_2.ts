@@ -12,6 +12,12 @@ export default {
 	],
 	bugFixes: [
 		{
+			title: 'Fix map cheat',
+			description:
+				'You can no longer drage the map image to see the full image when it is zoomed in.',
+			gameMode: 'map'
+		},
+		{
 			title: 'Typos in table headers',
 			description: 'Fixed typos in table headers.',
 			gameMode: 'weapon'
