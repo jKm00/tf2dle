@@ -1,6 +1,6 @@
 export default {
 	version: '0.2.0',
-	date: '',
+	date: '03.02.2024',
 	newFeatures: [],
 	improvements: [
 		{
@@ -14,7 +14,7 @@ export default {
 		{
 			title: 'Fix map cheat',
 			description:
-				'You can no longer drage the map image to see the full image when it is zoomed in.',
+				'You can no longer drag the map image to see the full image when it is zoomed in.',
 			gameMode: 'map'
 		},
 		{
