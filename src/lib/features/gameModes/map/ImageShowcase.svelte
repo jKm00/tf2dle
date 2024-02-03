@@ -1,78 +1,60 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 
 	export let url: string;
 	export let startingPos: { x: number; y: number };
 	export let numberOfGuesses: number;
 	export let hasWon: boolean;
 
-	const STEPS = 10;
+	const STEPS = 11;
 
 	let container: HTMLDivElement;
 	let canvas: HTMLCanvasElement;
-	let canvasWidth: number;
-	let canvasHeight: number;
 	let img: HTMLImageElement;
 
-	$: diffX = 50 - startingPos.x;
-	$: diffY = 50 - startingPos.y;
+	$: drawImage(img, numberOfGuesses, hasWon);
 
-	$: stepCounterX = diffX / (STEPS - 1);
-	$: stepCounterY = diffY / (STEPS - 1);
-
-	let currentPos =
-		numberOfGuesses < STEPS
-			? {
-					x: startingPos.x + stepCounterX * numberOfGuesses,
-					y: startingPos.y + stepCounterY * numberOfGuesses
-				}
-			: {
-					x: 50,
-					y: 50
-				};
-
-	$: if (numberOfGuesses < STEPS) {
-		currentPos = hasWon
-			? { x: 50, y: 50 }
-			: {
-					x: startingPos.x + stepCounterX * numberOfGuesses,
-					y: startingPos.y + stepCounterY * numberOfGuesses
-				};
-	}
-
-	$: zoom = !hasWon && numberOfGuesses < STEPS ? STEPS - numberOfGuesses : 1;
-
-	$: if (img && zoom) {
-		drawImage(img, zoom);
-	}
-
-	onMount(() => {
-		handleWindowResize();
-
+	onMount(async () => {
 		img = new Image();
 		img.src = url;
-		img.onload = () => drawImage(img, zoom);
+		img.onload = async () => {
+			handleWindowResize();
+			drawImage(img, numberOfGuesses, hasWon);
+		};
 	});
 
 	function handleWindowResize() {
 		const { width, height } = container.getBoundingClientRect();
-		canvasWidth = width;
-		canvasHeight = height;
+		canvas.width = width;
+		canvas.height = height;
+
+		drawImage(img, numberOfGuesses, hasWon);
 	}
 
-	function drawImage(img: HTMLImageElement, zoom: number) {
+	function drawImage(img: HTMLImageElement, guesses: number, hasWon: boolean) {
+		if (!canvas || !img) return;
+
+		if (guesses >= STEPS) guesses = STEPS - 1;
+
 		const ctx = canvas.getContext('2d');
-		if (!ctx) return;
 
-		ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+		if (hasWon) {
+			ctx?.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+			return;
+		}
 
-		const scaledWidth = canvasWidth * zoom;
-		const scaledHeight = canvasHeight * zoom;
+		const cropWidth = img.width / (STEPS - guesses);
+		const cropHeight = img.height / (STEPS - guesses);
 
-		const dx = (canvasWidth - scaledWidth) / 2;
-		const dy = (canvasHeight - scaledHeight) / 2;
+		let sX = startingPos.x - startingPos.x / (STEPS - guesses);
+		if (sX < 0) sX = 0;
+		if (sX + cropWidth > img.width) sX = img.width - cropWidth;
 
-		ctx.drawImage(img, dx, dy, scaledWidth, scaledHeight);
+		let sY = startingPos.y - startingPos.y / (STEPS - guesses);
+		if (sY < 0) sY = 0;
+		if (sY + cropHeight > img.height) sY = img.height - cropHeight;
+
+		ctx?.drawImage(img, sX, sY, cropWidth, cropHeight, 0, 0, canvas.width, canvas.height);
 	}
 </script>
 
@@ -81,27 +63,5 @@
 <div class="relative overflow-hidden aspect-video rounded" bind:this={container}>
 	<div class="absolute inset-0 bg-muted animate-pulse"></div>
 	<!-- svelte-ignore a11y-img-redundant-alt -->
-	<canvas
-		class="w-full h-full absolute"
-		width={canvasWidth}
-		height={canvasHeight}
-		bind:this={canvas}
-	></canvas>
-	<!-- <img
-		src={url}
-		alt="Image of today's map"
-		class="absolute"
-		style={`--zoom: ${zoom}; --x: ${currentPos.x}%; --y: ${currentPos.y}%;`}
-	/> -->
+	<canvas bind:this={canvas} class="absolute w-full h-full"></canvas>
 </div>
-
-<style scoped>
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		top: var(--y);
-		left: var(--x);
-		transform: translate(-50%, -50%) scale(var(--zoom));
-	}
-</style>
