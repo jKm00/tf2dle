@@ -15,7 +15,6 @@ A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/w
   - lib/
     - components/   # Global components
     - composables/  # Global composables
-    - features/     # Features wrapped all in one palce
     - server/       # All server code
     - dtos.ts       # Types used between server and client
     - types.ts      # General types
