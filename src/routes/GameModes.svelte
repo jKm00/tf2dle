@@ -28,7 +28,9 @@
 			{#each gameModes.filter((g) => !g.disabled) as gameMode}
 				{@const name = gameMode.name.toLowerCase()}
 				<a href={`/game-modes/${name}`} data-testId={name}>
-					<li class="flex items-center gap-4 bg-secondary rounded px-4 py-2">
+					<li
+						class="flex items-center gap-4 bg-secondary rounded px-4 py-2 hover:scale-[1.02] transition-transform"
+					>
 						<svelte:component this={gameMode.icon} class="text-primary" />
 						<div>
 							<h2 class="font-semibold">{gameMode.name}</h2>
