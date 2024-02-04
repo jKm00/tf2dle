@@ -4,7 +4,9 @@ This folder contains python file that scrapes for different thing. Belove is a l
 
 ## List of scrapers
 
-- [Maps.py](#maps)
+- [maps.py](#maps)
+- [weapons.py](#weapons)
+- [cosmetics.py](#cosmetics)
 
 <h3 id="maps">Maps</h3>
 
@@ -17,6 +19,12 @@ Scrapes the web for all official tf2 maps. This is what it collects for each map
 - game modes    # A list of all available game mode for the map
 - release date  # The release date of the map
 ```
+
+<h3 id="weapons">Weapons</h3>
+
+TODO
+
+<h3 id="cosmetics">Cosmetics</h3>
 
 ## Instructions
 

@@ -1,0 +1,8462 @@
+[
+	{
+		"name": "Batter's Helmet",
+		"image": "4000515949799151224",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Baseball Bill's Sports Shine",
+		"image": "-2012025203272909780",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bonk Helm",
+		"image": "-324884396104323234",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Ye Olde Baker Boy",
+		"image": "4365282317372518261",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Troublemaker's Tossle Cap",
+		"image": "-7252207795422404915",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Whoopee Cap",
+		"image": "-5699724968144124634",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bombing Run",
+		"image": "1786526850811079977",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Milkman",
+		"image": "4115879623292011912",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Flipped Trilby",
+		"image": "1349512145302623875",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Essential Accessories",
+		"image": "-307198057856284067",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Superfan",
+		"image": "-2889338521787650692",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Hero's Tail",
+		"image": "-6747998962100824997",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Sign of the Wolf's School",
+		"image": "-4484261782291217954",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Planeswalker Goggles",
+		"image": "165699146944276506",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bonk Boy",
+		"image": "3620665436148408885",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Flip-Flops",
+		"image": "1830019553306650219",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Lucky No. 42",
+		"image": "7314396153431214626",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "El Jefe",
+		"image": "3235128500874107596",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Backwards Ballcap",
+		"image": "7433973057157282911",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Ball-Kicking Boots",
+		"image": "-1734864965673523890",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Hermes",
+		"image": "-1444491020491701295",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Stereoscopic Shades",
+		"image": "6313341731064405511",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "B-ankh!",
+		"image": "1047136506966195559",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Futankhamun",
+		"image": "-2566126201551921249",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Wrap Battler",
+		"image": "-3690433102513133090",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Big Elfin Deal",
+		"image": "4963147286374069187",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bootie Time",
+		"image": "4624848661935722152",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Boston Boom-Bringer",
+		"image": "8049440791919932463",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Fast Learner",
+		"image": "6892376125373877187",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Teufort Tooth Kicker",
+		"image": "-2263081832632863596",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Front Runner",
+		"image": "-6948083892385238501",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Cross-Comm Express",
+		"image": "3451009043398112150",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Dillinger's Duffel",
+		"image": "3927827769327842823",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Fed-Fightin' Fedora",
+		"image": "-4891312188489959619",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Champ Stamp",
+		"image": "5862090356738722796",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Triad Trinket",
+		"image": "3580701445433568582",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Void Monk Hair",
+		"image": "-2440168494418591245",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Robot Running Man",
+		"image": "8528063395871358756",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Crafty Hair",
+		"image": "4341092156781460861",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Track Terrorizer",
+		"image": "-3294219916599295219",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Spooky Shoes",
+		"image": "-3319351262947323173",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Spooky Sleeves",
+		"image": "982312867123185724",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Voodoo-Cursed Scout Soul",
+		"image": "-3156108429017049201",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Digit Divulger",
+		"image": "-5874616074334487957",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Flight of the Monarch",
+		"image": "3873261653093913330",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Flunkyware",
+		"image": "-6956445050552417673",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Hanger-On Hood",
+		"image": "-3082649286158651300",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Mutton Mann",
+		"image": "-8898606999524111941",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Buck Turner All-Stars",
+		"image": "6869120869568532151",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tomb Wrapper",
+		"image": "3608583212586469744",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Long Fall Loafers",
+		"image": "5667091333250657834",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Wilson Weave",
+		"image": "6531903596984619625",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Bolt Boy",
+		"image": "9049480252661715163",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bonk Leadwear",
+		"image": "-7150212861808929245",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Ye Oiled Baker Boy",
+		"image": "3546236597592521267",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bacteria Blocker",
+		"image": "-3086462660946503695",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Beastly Bonnet",
+		"image": "-8033628740634471957",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Cheet Sheet",
+		"image": "-4420280103331931237",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bigg Mann on Campus",
+		"image": "-3706187152967481980",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Caffeine Cooler",
+		"image": "3140155069476166194",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Cool Cat Cardigan",
+		"image": "-7694283704737895266",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Delinquent's Down Vest",
+		"image": "-4496432719560277669",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Greased Lightning",
+		"image": "4225109927897978442",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Half-Pipe Hurdler",
+		"image": "7787892404273916752",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Macho Mann",
+		"image": "8128561228350751691",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Beep Boy",
+		"image": "5157084251646347235",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Flapjack",
+		"image": "-7555664364290127198",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Frenchman's Formals",
+		"image": "6708629355904227839",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Weight Room Warmer",
+		"image": "4340978459386071179",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Baphomet Trotters",
+		"image": "-1615757888194196561",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Face Plante",
+		"image": "-3273134227707742673",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Faun Feet",
+		"image": "1665432000018810254",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Halloweiner",
+		"image": "4789695912556558629",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Horrific Head of Hare",
+		"image": "-3970500032036685863",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Hound's Hood",
+		"image": "7631795975268526478",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Sprinting Cephalopod",
+		"image": "-7157501602966186262",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Terrier Trousers",
+		"image": "7291673977565530705",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Sack Fulla Smissmas",
+		"image": "-6128467948939731752",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Chucklenuts",
+		"image": "7837729326605135392",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Little Drummer Mann",
+		"image": "6440677734079262248",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Runner's Warm-Up",
+		"image": "6000451374458746144",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Scout Shako",
+		"image": "-8683409364682511701",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Sole Saviors",
+		"image": "-2851086468635263478",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Ticket Boy",
+		"image": "-7409889930165091782",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Argyle Ace",
+		"image": "3544059395944126101",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Frickin' Sweet Ninja Hood",
+		"image": "-2183512006199591699",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Paisley Pro",
+		"image": "2994273643084801071",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Pomade Prince",
+		"image": "1656799539944957407",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Red Socks",
+		"image": "-9095768399036955228",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Southie Shinobi",
+		"image": "7398587244264979318",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Alien Cranium",
+		"image": "528425638621323056",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Biomech Backpack",
+		"image": "1268496162105999092",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Xeno Suit",
+		"image": "-8960883359633491676",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Thirst Blood",
+		"image": "-5435970653118176325",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Claws And Infect",
+		"image": "3399816922121605967",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Crazy Legs",
+		"image": "-8322069784708136510",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Fowl Fists",
+		"image": "5644305775403315611",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Head Hunter",
+		"image": "-8308752781061220916",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Nugget Noggin",
+		"image": "1913605852310835371",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Talon Trotters",
+		"image": "9220012937952242604",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Brooklyn Booties",
+		"image": "4054116601437023587",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Thermal Tracker",
+		"image": "-3799396240651421087",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Courtier's Collar",
+		"image": "-4001456034321939419",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Harlequin's Hooves",
+		"image": "7032649546937267283",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Mountebank's Masque",
+		"image": "-7729847728966175125",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bootenkhamuns",
+		"image": "7842329369232792028",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Orion's Belt",
+		"image": "-6360320635048110274",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Flak Jack",
+		"image": "658222251557194761",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Fortunate Son",
+		"image": "7910608582496955806",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Cadet Visor",
+		"image": "-6993907343276101950",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "B'aaarrgh-n-Bicorne",
+		"image": "8551315795748197037",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "B'aaarrgh-n-Britches",
+		"image": "5547985554047133279",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Death Racer's Helmet",
+		"image": "-3955064123492829760",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Thrilling Tracksuit",
+		"image": "6513288422074902164",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bat Backup",
+		"image": "6882459916737429830",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Buttler",
+		"image": "-6431516079918932174",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Crook Combatant",
+		"image": "-2224227222222976321",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Sidekick's Side Slick",
+		"image": "-6837139084499435555",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Teufort Knight",
+		"image": "-2669255222798101654",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Bonk Batter's Backup",
+		"image": "-61569542297040237",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Hot Heels",
+		"image": "-439075366130147244",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Airdog",
+		"image": "3601612967239476368",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Courtly Cuirass",
+		"image": "-3639089255068424851",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Herald's Helm",
+		"image": "5537613610504588914",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Squire's Sabatons",
+		"image": "2028450208265612355",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Pestering Jester",
+		"image": "2338267291771814027",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Wing Mann",
+		"image": "-919771995315408792",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Electric Twanger",
+		"image": "-2908780068273355545",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Reader's Choice",
+		"image": "-7030733118221501033",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Snowwing",
+		"image": "1054699183544763477",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Airborne Attire",
+		"image": "3461047789608510944",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Lightning Lid",
+		"image": "2513165811137806008",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Messenger's Mail Bag",
+		"image": "8627219723951718918",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Pocket Pauling",
+		"image": "4189892824676124209",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Speedster's Spandex",
+		"image": "829740877744085479",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Aloha Apparel",
+		"image": "-7014779169383477510",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Forest Footwear",
+		"image": "-319337125918757882",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Jungle Jersey",
+		"image": "7528668795461256182",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Transparent Trousers",
+		"image": "5347782719856940964",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Trucker's Topper",
+		"image": "-682884620031123062",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Antarctic Eyewear",
+		"image": "-639602391952718711",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Blizzard Britches",
+		"image": "-5081858920878029552",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Punk's Pomp",
+		"image": "-3770838749044674000",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Wipe Out Wraps",
+		"image": "1266707166306866445",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Athenian Attire",
+		"image": "9063198531789242518",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Hephaistos' Handcraft",
+		"image": "-4249611318735869531",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Olympic Leapers",
+		"image": "-6290384700368787116",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Catcher's Companion",
+		"image": "-1189294355370994006",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Juvenile's Jumper",
+		"image": "-41422557312538374",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Millennial Mercenary",
+		"image": "7873682761362879866",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bottle Cap",
+		"image": "-3311618084013426820",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Pompous Privateer",
+		"image": "505008400021644984",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Speedy Scoundrel",
+		"image": "-5099962669234004382",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Fuel Injector",
+		"image": "-5799634578796902426",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Remorseless Raptor",
+		"image": "6465901181445027385",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Wild Whip",
+		"image": "-7689527846367195718",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "California Cap",
+		"image": "1313621070263627161",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Poolside Polo",
+		"image": "1787879190045562017",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Soda Specs",
+		"image": "-5139414362188316067",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Tools of the Tourist",
+		"image": "-8465504041162999035",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Boom Boxers",
+		"image": "-1447364419690106503",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Grounded Flyboy",
+		"image": "843601803628885178",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Particulate Protector",
+		"image": "3176180604951286303",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Fast Food",
+		"image": "-8128495818459673380",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Fried Batter",
+		"image": "3993015853792972886",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Meal Dealer",
+		"image": "-1686514905422533966",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Batter's Beak",
+		"image": "7023392932843657130",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Computron 5000",
+		"image": "8395232612029464616",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Corpse Carrier",
+		"image": "6517421859010194019",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Seasonal Employee",
+		"image": "-1127917316507022666",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Boston Brain Bucket",
+		"image": "-4473240544152252143",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Pest's Pads",
+		"image": "-1901752509472232019",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Ripped Rider",
+		"image": "5174233626996523195",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Team Player",
+		"image": "-6427236763719782876",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Throttlehead",
+		"image": "8480664824924928311",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Imp's Imprint",
+		"image": "5407365081457341",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Masked Fiend",
+		"image": "-5391189047014406487",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Motley Sleeves",
+		"image": "7258358066225483555",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Brimmed Bootlegger",
+		"image": "1702875854559861582",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Prohibition Opposition",
+		"image": "-7028722102156629209",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Jumping Jester",
+		"image": "4627271416921088851",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Last Laugh",
+		"image": "2934494033065695703",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Bonk Beanie",
+		"image": "3658518460941712232",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Isotopic Insulator",
+		"image": "-3219101459255550442",
+		"usedBy": "Scout"
+	},
+	{
+		"name": "Soldier's Stash",
+		"image": "1066258661338058195",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Gentle Manne's Service Medal",
+		"image": "-1548658835020383907",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Stainless Pot",
+		"image": "3266011854302226581",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Tyrant's Helm",
+		"image": "-774256489712656138",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Killer's Kabuto",
+		"image": "-1788508993155151342",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Sergeant's Drill Hat",
+		"image": "8041892227221230981",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Lumbricus Lid",
+		"image": "-6456378136044263337",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Chieftain's Challenge",
+		"image": "-8291961870630576552",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Grenadier's Softcap",
+		"image": "6271384996917645758",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Stout Shako",
+		"image": "-533443004589275606",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Defiant Spartan",
+		"image": "-5593640699600706132",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Exquisite Rack",
+		"image": "-7602042268330494615",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hero's Hachimaki",
+		"image": "-7760287541595045076",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Honcho's Headgear",
+		"image": "318463378118684502",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Brain Bucket",
+		"image": "-5433580108740560477",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Furious Fukaamigasa",
+		"image": "6704932673936792520",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Team Captain",
+		"image": "4690914026281320869",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Armored Authority",
+		"image": "1706953701210135204",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Fancy Dress Uniform",
+		"image": "-5434707868540696815",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Jumper's Jeepcap",
+		"image": "-3358308125145977620",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Pocket Medic",
+		"image": "-2573377241667246876",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Lord Cockswain's Novelty Mutton Chops and Pipe",
+		"image": "-5160279621142629496",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Lord Cockswain's Pith Helmet",
+		"image": "-1888007875092515241",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Stahlhelm",
+		"image": "-1809834922183636298",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hat With No Name",
+		"image": "-2614272150066424008",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Idiot Box",
+		"image": "5448928212827453384",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Infernal Impaler",
+		"image": "-6566546402022380601",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Shoestring Budget",
+		"image": "5580969292110640320",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Steel Pipes",
+		"image": "-9067763513288963848",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "All-Father",
+		"image": "-2931085611314032913",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Kringle Collection",
+		"image": "782785185924639441",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Ornament Armament",
+		"image": "5167572163245719604",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Lucky Shot",
+		"image": "-8943309877663250670",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Battle Bob",
+		"image": "4748806272078066652",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Conquistador",
+		"image": "-6352601017410001032",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Cross-Comm Crash Helmet",
+		"image": "-485039078993816573",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Professor's Pineapple",
+		"image": "8624759432982106595",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Captain's Cocktails",
+		"image": "3393946185856857169",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Helmet Without a Home",
+		"image": "6033822151028238623",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Soldier's Stogie",
+		"image": "-3160506957520029244",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Tin Pot",
+		"image": "5163939942567902201",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "War Pig",
+		"image": "-701198511775197244",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Menpo",
+		"image": "-7194948868926155858",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bonedolier",
+		"image": "974243402989172440",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Exorcizor",
+		"image": "-5357050032987038456",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Voodoo-Cursed Soldier Soul",
+		"image": "229045724486159783",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Zipperface",
+		"image": "-5886034767733920",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Chief Constable",
+		"image": "-6082095211846380057",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Deadliest Duckling",
+		"image": "-444930309596234349",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Soldier's Slope Scopers",
+		"image": "2696507355388709566",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Doe-Boy",
+		"image": "1201773610533935043",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Full Metal Drill Hat",
+		"image": "5047023789328696335",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Soldier's Sparkplug",
+		"image": "-8860509149683864158",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Steel Shako",
+		"image": "5901237400984344864",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Tyrantium Helmet",
+		"image": "-4553061380852321952",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Cloud Crasher",
+		"image": "-5514264831781182007",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Powdered Practitioner",
+		"image": "-7081812294329391059",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Brawling Buccaneer",
+		"image": "-3221244302610649508",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Caribbean Conqueror",
+		"image": "4446238297616311978",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Colonial Clogs",
+		"image": "1621498016514836496",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Compatriot",
+		"image": "58157146072277707",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Founding Father",
+		"image": "5834683600822919275",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hornblower",
+		"image": "-5139812503270242911",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Lieutenant Bites",
+		"image": "6465183529925221503",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Rebel Rouser",
+		"image": "799997867655218474",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Shogun's Shoulder Guard",
+		"image": "9198582873766694449",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Valley Forge",
+		"image": "8361191190641752173",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Whirly Warrior",
+		"image": "5634305677731192114",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Cuban Bristle Crisis",
+		"image": "4469287244008688341",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Viking Braider",
+		"image": "3447133626552745158",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cadaver's Capper",
+		"image": "-7061134739363507800",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Candleer",
+		"image": "3030522330349319286",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Faux Manchu",
+		"image": "-3535262553625761317",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Freedom Feathers",
+		"image": "3577956207270560637",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Grub Grenades",
+		"image": "5011856863237083786",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hardium Helm",
+		"image": "4012451735153724246",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hidden Dragon",
+		"image": "-1955676414885301394",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Jupiter Jumpers",
+		"image": "-928255468646240355",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Larval Lid",
+		"image": "413377472427841044",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Lieutenant Bites the Dust",
+		"image": "7392602311367404468",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Pin Pals",
+		"image": "1288610599123049197",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Shaolin Sash",
+		"image": "7520411780507475407",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Space Bracers",
+		"image": "1355323666241588605",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Spellbinder's Bonnet",
+		"image": "4654679717964643247",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "War on Smissmas Battle Hood",
+		"image": "-1309826220838915994",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "War on Smissmas Battle Socks",
+		"image": "6245379275478349012",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Antarctic Parka",
+		"image": "-3612471807002986494",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Marshall's Mutton Chops",
+		"image": "8117828098232334616",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Slo-Poke",
+		"image": "3355176082174742377",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Toy Soldier",
+		"image": "3880730988242135851",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Big Daddy",
+		"image": "2103843289892902663",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "First American",
+		"image": "3562530279722281228",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Ground Control",
+		"image": "-131411451399870031",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Killer's Kit",
+		"image": "707456037374973345",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Gilded Guard",
+		"image": "5992668435525459094",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Classified Coif",
+		"image": "7271412031673818189",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Man in Slacks",
+		"image": "-5396916307503694173",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Spook Specs",
+		"image": "-2854161723678280302",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Lone Survivor",
+		"image": "-9006256762757134086",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Battle Bird",
+		"image": "-7310685825382326866",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Ghoul Gibbin' Gear",
+		"image": "8120215836783151136",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hellhunter's Headpiece",
+		"image": "-953136952791520674",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Supernatural Stalker",
+		"image": "4341796353320135155",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Coldfront Curbstompers",
+		"image": "-5294584837178711242",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Condor Cap",
+		"image": "3150466110054554900",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Mistaken Movember",
+		"image": "4029792563623951530",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Screamin' Eagle",
+		"image": "-2505054951353316739",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Cold Snap Coat",
+		"image": "-4927855571347643452",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Skullcap",
+		"image": "5527997521858034215",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hellmet",
+		"image": "4322134542517744482",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Caped Crusader",
+		"image": "-1464472405583615628",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Diplomat",
+		"image": "4392128940355486800",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Gift Bringer",
+		"image": "-8563127757085209839",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Patriot's Pouches",
+		"image": "-9089542241668616966",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Handy Canes",
+		"image": "8445628852694894151",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Socked and Loaded",
+		"image": "6680897234343448554",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Flakcatcher",
+		"image": "-8424065120735871213",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Attack Packs",
+		"image": "1810022803976377359",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Bananades",
+		"image": "5931705930214592029",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Crit Cloak",
+		"image": "-2051784852167303109",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Nuke",
+		"image": "-1747186576628706520",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Sharp Chest Pain",
+		"image": "-7018252235302806794",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Shellmet",
+		"image": "2648047421977109572",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "War Eagle",
+		"image": "8352562528486592675",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Brass Bucket",
+		"image": "-8696445714539812342",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Head Hedge",
+		"image": "-7520237695326248390",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Private Maggot Muncher",
+		"image": "-128443246253578166",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Sky High Fly Guy",
+		"image": "8939840507200754437",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Veteran's Attire",
+		"image": "-8127816851881747110",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Tank Top",
+		"image": "7118723935612300269",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Vampire Vanquisher",
+		"image": "2389063169229067216",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Climbing Commander",
+		"image": "2701964912256919407",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Crack Pot",
+		"image": "-3806965175126519200",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Dumb Bell",
+		"image": "1600516526004347504",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Bobby Bonnet",
+		"image": "-7029806635896128768",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Dancing Doe",
+		"image": "-8490740335979349130",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Peacebreaker",
+		"image": "7075227365098585788",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "El Zapateador",
+		"image": "5857395035393840272",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Party Poncho",
+		"image": "226284170975132870",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Racc Mann",
+		"image": "-2010961780877739362",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Public Speaker",
+		"image": "-6474382826998863481",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Bazaar Bauble",
+		"image": "6896972126241669001",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Breach and Bomb",
+		"image": "-7513921495539973823",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Hawk Warrior",
+		"image": "5646127876266531497",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Sophisticated Smoker",
+		"image": "-2834488238952952847",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Calamitous Cauldron",
+		"image": "2279140573433897907",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Semi-Tame Trapper's Hat",
+		"image": "-676531697938881768",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "War Blunder",
+		"image": "385970810869360315",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Panisher",
+		"image": "6903140186646388589",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Roaming Roman",
+		"image": "3117328368821478772",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Thousand-Yard Stare",
+		"image": "-8657877289915565895",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Poopy Doe",
+		"image": "5964621547359187839",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Trickster's Treats",
+		"image": "6729305272083332989",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "War Dog",
+		"image": "7883351466049161557",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Elf Defense",
+		"image": "3398492953135538608",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Chaser",
+		"image": "-7186390685471416338",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Detective",
+		"image": "4814019249922955659",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Cranial Cowl",
+		"image": "-5701166443064248653",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Firearm Protector",
+		"image": "7858134811351231350",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Safety Stripes",
+		"image": "5828870291165568316",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Bulb Bonnet",
+		"image": "4456794081539813553",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Close Quarters Cover",
+		"image": "7136162559135159593",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Stealth Bomber",
+		"image": "-1863542061100184205",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Shortness Of Breath",
+		"image": "-374271973659079623",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Warlock's Warcloak",
+		"image": "271002205348642940",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Trench Warfarer",
+		"image": "-5724124509671309454",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Wanderer's Wool",
+		"image": "175299328930594022",
+		"usedBy": "Soldier"
+	},
+	{
+		"name": "Pyro's Beanie",
+		"image": "-2388389314637549698",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Brigade Helm",
+		"image": "-8460558862019725427",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Respectless Rubber Glove",
+		"image": "-6544668735799384059",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Triboniophorus Tyrannus",
+		"image": "-1590993463013572625",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Vintage Merryweather",
+		"image": "4418833894013728276",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Whiskered Gentleman",
+		"image": "1371783220108161440",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Attendant",
+		"image": "-4043230611905510138",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Handyman's Handle",
+		"image": "4123064415846267355",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Napper's Respite",
+		"image": "-1499158189819398977",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Old Guadalajara",
+		"image": "3486934388054836550",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Foster's Facade",
+		"image": "-6953404952485163861",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Stockbroker's Scarf",
+		"image": "-6220166019475156153",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Madame Dixie",
+		"image": "-2020422628813657741",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Prancer's Pride",
+		"image": "8703584928981679545",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyromancer's Mask",
+		"image": "4377911229779953428",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Sight for Sore Eyes",
+		"image": "2938122757243842786",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Dead Cone",
+		"image": "-5718497119734684312",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Connoisseur's Cap",
+		"image": "-5072174824126714702",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hottie's Hoodie",
+		"image": "-8457569293115128097",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Stately Steel Toe",
+		"image": "-8602028356089141087",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Birdcage",
+		"image": "5761230956551882446",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Cremator's Conscience",
+		"image": "5429524485516405713",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Flamboyant Flamenco",
+		"image": "3592947971630191089",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Little Buddy",
+		"image": "-847285070546458251",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Apparition's Aspect",
+		"image": "-9081030229865561987",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Blazing Bull",
+		"image": "298706954796234576",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fallen Angel",
+		"image": "-4663090544597676011",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Last Breath",
+		"image": "-7922146264320752871",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Tail from the Crypt",
+		"image": "-6022726490556723376",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Bubble Pipe",
+		"image": "3717011305111598123",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Head Warmer",
+		"image": "2905498218815688511",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Jingle Belt",
+		"image": "8930345244474566005",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Moonman Backpack",
+		"image": "3630989886371760595",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Scrap Pack",
+		"image": "-3817788388519980585",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Waxy Wayfinder",
+		"image": "-5075828501770526226",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Triclops",
+		"image": "1521118821564067547",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Burning Bongos",
+		"image": "-8509235623015764313",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "HazMat Headcase",
+		"image": "-8807097505516084777",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Infernal Orchestrina",
+		"image": "1310062474848120152",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Russian Rocketeer",
+		"image": "8862074721813011071",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Tribal Bones",
+		"image": "-3236276181687015440",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyrobotics Pack",
+		"image": "4302373983168101780",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Area 451",
+		"image": "-5770675546921274394",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyrotechnic Tote",
+		"image": "7825861882695368103",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Coffin Kit",
+		"image": "4461887410730537169",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Plutonidome",
+		"image": "5644979952189901667",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Voodoo-Cursed Pyro Soul",
+		"image": "-3733959292240819120",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Wraith Wrap",
+		"image": "6247584254177942682",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "DethKapp",
+		"image": "6859466950593033474",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Nose Candy",
+		"image": "8684256510358726621",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Rail Spikes",
+		"image": "4439544204258614984",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Winter Wonderland Wrap",
+		"image": "339672749653778391",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Person in the Iron Mask",
+		"image": "3092638463902055855",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Necronomicrown",
+		"image": "-6829178791849934622",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Bolted Birdcage",
+		"image": "8589936089722009294",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Electric Escorter",
+		"image": "8659692800947115530",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Filamental",
+		"image": "7326989662367173332",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Firewall Helmet",
+		"image": "-8088956717644017479",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Googol Glass Eyes",
+		"image": "-7652760090548920825",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Metal Slug",
+		"image": "8010749547435971758",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Plumber's Pipe",
+		"image": "6483849405356887161",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyro's Boron Beanie",
+		"image": "-2237904960671458150",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Respectless Robo-Glove",
+		"image": "-3663158163244311643",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Rusty Reaper",
+		"image": "-212332752752784493",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Scrap Sack",
+		"image": "-5033143773870270743",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Breather Bag",
+		"image": "-2623670654074729139",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Centurion",
+		"image": "8915878991143337587",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Steel Sixpack",
+		"image": "-1697449570846131164",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Mair Mask",
+		"image": "2531406066667460111",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Backpack Broiler",
+		"image": "3216448755301997625",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Burning Bandana",
+		"image": "-4631452116850580617",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "El Muchacho",
+		"image": "5457801170365609151",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hive Minder",
+		"image": "-9166071698456219616",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pampered Pyro",
+		"image": "-6330785787250516936",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Soot Suit",
+		"image": "-5942019174071308147",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Air Raider",
+		"image": "1642525788839113688",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Bone Dome",
+		"image": "-2618342318846027950",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pop-Eyes",
+		"image": "677407662639191962",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Special Eyes",
+		"image": "8054860224919122177",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Trickster's Turnout Gear",
+		"image": "-4951038578088599711",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Abhorrent Appendages",
+		"image": "-4142982992960685265",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Beast from Below",
+		"image": "-3964696156435391474",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Bozo's Bouffant",
+		"image": "-5996672787503253177",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Burny's Boney Bonnet",
+		"image": "-8115358625894633929",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Carrion Companion",
+		"image": "-5536773737287048855",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Cauterizer's Caudal Appendage",
+		"image": "-8234180837328867880",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Corpsemopolitan",
+		"image": "-7889628336307788416",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Creature from the Heap",
+		"image": "1593180519518927505",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Crispy Golden Locks",
+		"image": "8519073677295791083",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Death Support Pack",
+		"image": "-5883711090381655432",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "External Organ",
+		"image": "4515263644826978218",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Glob",
+		"image": "-5684174955089115001",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Gothic Guise",
+		"image": "8885220472534287651",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Grisly Gumbo",
+		"image": "6555131565325954956",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Handhunter",
+		"image": "-8426992427043264145",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hard-Headed Hardware",
+		"image": "-8846941797817247918",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hollowhead",
+		"image": "116278572079827132",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Macabre Mask",
+		"image": "-6913404649158201518",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Maniac's Manacles",
+		"image": "85628849660770348",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Monster's Stompers",
+		"image": "-149575242797796787",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Mucous Membrain",
+		"image": "-8080871821949829125",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "PY-40 Incinibot",
+		"image": "-4332360235171357133",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Raven's Visage",
+		"image": "6961688274729816224",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Rugged Respirator",
+		"image": "-695988852774094006",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Scorched Skirt",
+		"image": "-2417767323575897153",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Snaggletoothed Stetson",
+		"image": "3463984083174038531",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Spectralnaut",
+		"image": "8091119129052835271",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Up Pyroscopes",
+		"image": "8420782702926654537",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Vicious Visage",
+		"image": "-8719376520830641294",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Portable Smissmas Spirit Dispenser",
+		"image": "-8113781633364392236",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Blizzard Breather",
+		"image": "-3429987749282445230",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Sub Zero Suit",
+		"image": "611398546556932424",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tiny Timber",
+		"image": "-3385579399299394979",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Toy Tailor",
+		"image": "4336107600060806423",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Trail-Blazer",
+		"image": "7577597444717463183",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Cute Suit",
+		"image": "1243710068070646185",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Sole Mate",
+		"image": "-2368435104319239127",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Combustible Kabuto",
+		"image": "1161796306135063858",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Employee of the Mmmph",
+		"image": "-3659569025523532814",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Frymaster",
+		"image": "3932112214958996424",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Gas Guzzler",
+		"image": "940374929928383454",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Lunatic's Leathers",
+		"image": "-4093814526422644510",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Sengoku Scorcher",
+		"image": "5527906269071169149",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Smoking Skid Lid",
+		"image": "-5670573290525928795",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Mishap Mercenary",
+		"image": "5169512266623452876",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Arsonist Apparatus",
+		"image": "-5459533472161408333",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Creature's Grin",
+		"image": "-6399327553114565162",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Lollichop Licker",
+		"image": "4136472550098868738",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Moccasin Machinery",
+		"image": "3020994777040476017",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Mr. Juice",
+		"image": "8665807042921120501",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Vampyro",
+		"image": "-6968715808201069178",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Nabler",
+		"image": "1885623654379738874",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "North Polar Fleece",
+		"image": "5796045004287560627",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Wartime Warmth",
+		"image": "4107435964958541463",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Black Knight's Bascinet",
+		"image": "5095215228375908956",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Charred Chainmail",
+		"image": "-2517933455562733071",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyromancer's Hood",
+		"image": "1509038991791263577",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyromancer's Raiments",
+		"image": "809293497024282602",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Torcher's Tabard",
+		"image": "3021259083444478942",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "A Head Full of Hot Air",
+		"image": "-1378775976729428869",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Jupiter Jetpack",
+		"image": "2615672079256020624",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Phobos Filter",
+		"image": "-8331661260368712788",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Space Diver",
+		"image": "-4552975521322701908",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Arthropod's Aspect",
+		"image": "8283978491918121481",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Crusader's Getup",
+		"image": "7268573224897870749",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Face of Mercy",
+		"image": "-5849815017331330041",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Neptune's Nightmare",
+		"image": "-7641075398831372575",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fear Monger",
+		"image": "-6026370040244813389",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Firefly",
+		"image": "-843216369043175688",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Combustible Cutie",
+		"image": "-2762393408892367573",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Cranial Carcharodon",
+		"image": "-6883702918394714104",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hovering Hotshot",
+		"image": "1443988077809940996",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Flammable Favor",
+		"image": "-2524523862529948807",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyro the Flamedeer",
+		"image": "5992921938336478481",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Sweet Smissmas Sweater",
+		"image": "-7879682261998978920",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Airtight Arsonist",
+		"image": "-7401386206427183039",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "D-eye-monds",
+		"image": "-4473237071312503315",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Deity's Dress",
+		"image": "2226047545570234528",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Feathered Fiend",
+		"image": "-283471055483497865",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fireman's Essentials",
+		"image": "8306580808591291422",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hot Huaraches",
+		"image": "-4797805959882261503",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Sacrificial Stone",
+		"image": "-4845930901817885758",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Burning Beanie",
+		"image": "5192052026604338233",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Cat's Pajamas",
+		"image": "-7340405833760729947",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Burning Question",
+		"image": "-8088521193164177511",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hot Case",
+		"image": "-123425608727100418",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Arachno-Arsonist",
+		"image": "4768941192939383979",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Mr. Quackers",
+		"image": "-7217431302328951720",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyro in Chinatown",
+		"image": "365747031654457333",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pocket Pardner",
+		"image": "-5671703244735636574",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fiery Phoenix",
+		"image": "-2483311572090990189",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Melted Mop",
+		"image": "-2177996012611833741",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Spawn Camper",
+		"image": "5612889645047579901",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Wanderer's Wear",
+		"image": "1632362535332184245",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Candy Cranium",
+		"image": "-5739244132167347668",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Head of the Dead",
+		"image": "-6936536379850997220",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyr'o Lantern",
+		"image": "1125201701398931841",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Pyro Shark",
+		"image": "-4754728284624869645",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Skullbrero",
+		"image": "6218023172852508561",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Trick Stabber",
+		"image": "-8845487209654748269",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Discovision",
+		"image": "8731313579678438020",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Winter Wrap Up",
+		"image": "-2533474729562371758",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Fire Fighter",
+		"image": "-6783690773205609117",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Flamehawk",
+		"image": "2239443969212482511",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fire Tooth",
+		"image": "6032985262309496424",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Flavorful Baggies",
+		"image": "1797679333762387215",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Seared Sorcerer",
+		"image": "-8889276456358142885",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Treehugger",
+		"image": "7100017871295431522",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Round-A-Bout",
+		"image": "7283128830691026953",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Brim of Fire",
+		"image": "-2073112682079119896",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Hook, Line, and Cinder",
+		"image": "-7924551853108975877",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Reel Fly Hat",
+		"image": "-6965605958152378838",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Water Waders",
+		"image": "729464260251435438",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Miami Rooster",
+		"image": "-5622490309115155328",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Smiling Somen",
+		"image": "5480985204119163680",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Wandering Wraith",
+		"image": "-2759998928253059359",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Elf Ignition",
+		"image": "-7226444377410400001",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Kazan Karategi",
+		"image": "-5091611556165380622",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fire Breather",
+		"image": "-2946284976694325498",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Magical Mount",
+		"image": "-601902346791577025",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Propaniac",
+		"image": "1933405087930254025",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Firebrand",
+		"image": "7333719505404173896",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Partizan",
+		"image": "9201795017678423965",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Firestalker",
+		"image": "4759437831355172246",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Flame Warrior",
+		"image": "-3397770207992996538",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Soho Sleuth",
+		"image": "2839592731835720292",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Dead Heat",
+		"image": "7976582512526834640",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Fiercesome Fluorescence",
+		"image": "-385606248038239149",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Splitting Headache",
+		"image": "-6151813285439467825",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Impact Impaler",
+		"image": "-4287016678925303056",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Masked Loyalty",
+		"image": "-4586081709511719168",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Torcher's Trench Coat",
+		"image": "6974610519526552901",
+		"usedBy": "Pyro"
+	},
+	{
+		"name": "Demoman's Fro",
+		"image": "-153591897002926022",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Glengarry Bonnet",
+		"image": "3385576243261258177",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Scotsman's Stove Pipe",
+		"image": "-6471463791941272236",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hustler's Hallmark",
+		"image": "-9039129063316064979",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tippler's Tricorne",
+		"image": "3931201605623109032",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Carouser's Capotain",
+		"image": "4493711259900216865",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Rimmed Raincatcher",
+		"image": "4187814448925735443",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Sober Stuntman",
+		"image": "-211117857110751726",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Dangeresque, Too?",
+		"image": "-2277979312993751293",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Prince Tavish's Crown",
+		"image": "-3501024230742888284",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Scotch Bonnet",
+		"image": "5798489780960457602",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Samur-Eye",
+		"image": "-1776245876661190613",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Private Eye",
+		"image": "5615951926701519759",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Reggaelator",
+		"image": "8503825908571832706",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Conjurer's Cowl",
+		"image": "2629826806092404177",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Sultan's Ceremonial",
+		"image": "4616175898454507898",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tam O' Shanter",
+		"image": "2180458885542963404",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Mask of the Shaman",
+		"image": "2723195878855285979",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "A Whiff of the Old Brimstone",
+		"image": "-8503357567497709428",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Buccaneer's Bicorne",
+		"image": "-7956804136279631361",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tavish DeGroot Experience",
+		"image": "-3967179121424137652",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hair of the Dog",
+		"image": "-6712402172183708382",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Pickled Paws",
+		"image": "-1352383622440163259",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Scottish Snarl",
+		"image": "4443692939485458347",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bolgan",
+		"image": "6703083396276266414",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Aladdin's Private Reserve",
+		"image": "-1569168302289546096",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Snapped Pupil",
+		"image": "5161595021090624315",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Liquor Locker",
+		"image": "-3558989443322338928",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bird-Man of Aberdeen",
+		"image": "-2597848503647734762",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Grenadier Helm",
+		"image": "9183271225879633373",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Battery Bandolier",
+		"image": "3204659975968505125",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bearded Bombardier",
+		"image": "-3928436488161225627",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "K-9 Mane",
+		"image": "191958244443626210",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "King of Scotland Cape",
+		"image": "8419392660118068256",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Voodoo-Cursed Demoman Soul",
+		"image": "-5100935765060819683",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Voodoo JuJu (Slight Return)",
+		"image": "-2451545605654235980",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Cool Breeze",
+		"image": "7407881947891309275",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Blind Justice",
+		"image": "-4069428251617489437",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bolted Bicorne",
+		"image": "5617475062667495715",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bolted Bombardier",
+		"image": "-9075991664480478258",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Broadband Bonnet",
+		"image": "1212444908868301550",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Cyborg Stunt Helmet",
+		"image": "-1367567827027666476",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "FR-0",
+		"image": "7024171755379396499",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "HDMI Patch",
+		"image": "-6694615172866167831",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Pure Tin Capotain",
+		"image": "-7001098761603446232",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Scrumpy Strongbox",
+		"image": "-7343217185356675927",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Strontium Stove Pipe",
+		"image": "2501480062333636495",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tartan Shade",
+		"image": "1823011244755658992",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tartantaloons",
+		"image": "-6607772294485368353",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Dark Age Defender",
+		"image": "8074484996163971723",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Black Watch",
+		"image": "7584159104176977498",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Gaelic Garb",
+		"image": "-7188629993763344661",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Gaelic Golf Bag",
+		"image": "7243961360359937990",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Glasgow Great Helm",
+		"image": "-6927321326955313778",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Stormin' Norman",
+		"image": "-2688284755341867862",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tartan Spartan",
+		"image": "-14976415481409211",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Whiskey Bib",
+		"image": "4696984409632216728",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hurt Locher",
+		"image": "-4008051367783235249",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Pirate Bandana",
+		"image": "6255036262162253328",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Cap'n Calamari",
+		"image": "-8389948131009803483",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Ethereal Hood",
+		"image": "3017657181509082022",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Headtaker's Hood",
+		"image": "-1931752275120542040",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Horsemann's Hand-Me-Down",
+		"image": "7343569606371703715",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Lordly Lapels",
+		"image": "-4587939255658437811",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Mann-Bird of Aberdeen",
+		"image": "-6307671244451496967",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Parasight",
+		"image": "153760758909387433",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Polly Putrid",
+		"image": "-2363173375195850305",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Squid's Lid",
+		"image": "-1294814998729888853",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Transylvania Top",
+		"image": "-2514614490315197698",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Highland High Heels",
+		"image": "-319836362321769587",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Tartan Tyrolean",
+		"image": "-2892316303705607714",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bushi-Dou",
+		"image": "-5528183348614230870",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Juggernaut Jacket",
+		"image": "-6369758038688659449",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Sangu Sleeves",
+		"image": "-7196455705537551763",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Stylish DeGroot",
+		"image": "-260561750631987142",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Toowoomba Tunic",
+		"image": "-5987399317291560028",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Allbrero",
+		"image": "853521407353181491",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Frontier Djustice",
+		"image": "3306896084685476272",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Razor Cut",
+		"image": "-4197346801550522229",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Seeing Double",
+		"image": "-7439648654296135618",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Six Pack Abs",
+		"image": "2192023213855553775",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Mann of the Seven Sees",
+		"image": "5763448078883312495",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Eyeborg",
+		"image": "-1912298482742171502",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Forgotten King's Pauldrons",
+		"image": "-1968680835370431481",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Forgotten King's Restless Head",
+		"image": "-8348516456164945414",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Mannhattan Project",
+		"image": "7753276162577671937",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bomber's Bucket Hat",
+		"image": "-2277704097909867783",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Double Dog Dare Demo Pants",
+		"image": "6220338979292186405",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Double Dynamite",
+		"image": "-2774530473539704508",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Snow Sleeves",
+		"image": "-7128986045607390664",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Scot Bonnet",
+		"image": "-3366243200752616051",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Storm Stompers",
+		"image": "-3154940949833490319",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Valhalla Helm",
+		"image": "2688272933954238789",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bruce's Bonnet",
+		"image": "-3651765838964913128",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Outta Sight",
+		"image": "-7857255919665440164",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hood of Sorrows",
+		"image": "-4122443109130317034",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Shin Shredders",
+		"image": "8387538801796357919",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Dayjogger",
+		"image": "8685491791264115566",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Demo's Dustcatcher",
+		"image": "-6217080636889233803",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Aerobatics Demonstrator",
+		"image": "-3501435198002030327",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Spirit of the Bombing Past",
+		"image": "-5532854392803228944",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bomb Beanie",
+		"image": "1471179210053649328",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bomber Knight",
+		"image": "4480066629073565698",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Elf Esteem",
+		"image": "382408746861857496",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Blast Defense",
+		"image": "-998820817101383235",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Blast Blocker",
+		"image": "-4765182857888310004",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hungover Hero",
+		"image": "4748017518023389707",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Melody of Misery",
+		"image": "5118965286521585495",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Frag Proof Fragger",
+		"image": "-2970819696071416566",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Gaelic Glutton",
+		"image": "2094191407760445877",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Backbreaker's Guards",
+		"image": "5052921027040751535",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Backbreaker's Skullcracker",
+		"image": "5975140083912829219",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Dynamite Abs",
+		"image": "6048422878930106097",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Unforgiven Glory",
+		"image": "2007728694227916181",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Spiky Viking",
+		"image": "605892318810738190",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hazard Headgear",
+		"image": "3861716074133609800",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Helm Helm",
+		"image": "7468157223240470386",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Death Stare",
+		"image": "2549374910816409694",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Barefoot Brawler",
+		"image": "8306609953542294661",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Hawaiian Hangover",
+		"image": "2608484122995680882",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Head Banger",
+		"image": "-7790503532180112287",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Alcoholic Automaton",
+		"image": "-2287876581951706681",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Bombard Brigadier",
+		"image": "1718188836184429968",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Nightbane Brim",
+		"image": "-2426733540037703634",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Glasgow Bankroll",
+		"image": "-2871912549068297676",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Plaid Lad",
+		"image": "-2882854899791412190",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Blast Bowl",
+		"image": "4085721941659902679",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Shrapnel Shell",
+		"image": "1446304461960162307",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Blastphomet",
+		"image": "4762804330514719517",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Mad Lad",
+		"image": "6891692115642904545",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Stunt Suit",
+		"image": "-9005186025220581268",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Thunder Dome",
+		"image": "2282176734014950366",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Lazy Lounger",
+		"image": "-1477770533777622853",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Nightcap",
+		"image": "2377692202329421140",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Slumber Slacks",
+		"image": "-3493130843079551795",
+		"usedBy": "Demoman"
+	},
+	{
+		"name": "Football Helmet",
+		"image": "-2002439930288910551",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Officer's Ushanka",
+		"image": "7057115002481569588",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Tough Guy's Toque",
+		"image": "-7596547747521567259",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Hound Dog",
+		"image": "5601475204486005233",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Duty Rag",
+		"image": "7990239820022103454",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Hard Counter",
+		"image": "2564010132457447845",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Pugilist's Protector",
+		"image": "6329810561129066190",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Cadaver's Cranium",
+		"image": "1770992340241516547",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Dealer's Visor",
+		"image": "-5602040817345246213",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Big Chief",
+		"image": "8089099187978934903",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Coupe D'isaster",
+		"image": "-1805450916140143842",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Magnificent Mongolian",
+		"image": "-1690594709163690382",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Dread Knot",
+		"image": "-3233951315434021376",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Large Luchadore",
+		"image": "-67263356764697808",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Capo's Capper",
+		"image": "26230256000230936",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Big Steel Jaw of Summer Fun",
+		"image": "-5947608883682948792",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Copper's Hard Top",
+		"image": "7498564145049353091",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Security Shades",
+		"image": "-3870713682810162762",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Pilotka",
+		"image": "3236925475342310162",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Dragonborn Helmet",
+		"image": "-7594194882997264013",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Storm Spirit's Jolly Hat",
+		"image": "-1989484509973224429",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Purity Fist",
+		"image": "3609128142912488052",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Gym Rat",
+		"image": "-7846248814919692001",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "One-Man Army",
+		"image": "-8945673598131830715",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Outdoorsman",
+		"image": "7376876598983193951",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Can Opener",
+		"image": "-3884550816233724033",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Soviet Stitch-Up",
+		"image": "-6952839845726094994",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Steel-Toed Stompers",
+		"image": "3716391161712394706",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Cold War Luchador",
+		"image": "5758389381418724984",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "War Head",
+		"image": "-4609310264750699466",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Sandvich Safe",
+		"image": "8250752287655819943",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Toss-Proof Towel",
+		"image": "-1074087545172763578",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Apparatchik's Apparel",
+		"image": "-7113240258212327808",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "U-clank-a",
+		"image": "1601032987946388312",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Soviet Gentleman",
+		"image": "460840939970384894",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Artillery Officer's Cap",
+		"image": "-7879608547913914307",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Grand Duchess Fairy Wings",
+		"image": "-9216778145299232687",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Grand Duchess Tiara",
+		"image": "5878010801431790245",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Grand Duchess Tutu",
+		"image": "3411044124768097661",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Voodoo-Cursed Heavy Soul",
+		"image": "5737231980244888206",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Siberian Sophisticate",
+		"image": "-6988108923036598106",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Aqua Flops",
+		"image": "2758132160623667721",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Brock's Locks",
+		"image": "5835836617553219797",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Carl",
+		"image": "-8195646173940688102",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy's Hockey Hair",
+		"image": "9136070727844065407",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Hunger Force",
+		"image": "6742452170383542477",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Pounding Father",
+		"image": "8386298006060498899",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Samson Skewer",
+		"image": "7771782543883865677",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bunsen Brave",
+		"image": "-4863244128612250845",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Gridiron Guardian",
+		"image": "6156175407620221637",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Titanium Towel",
+		"image": "-3035388738650092323",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Tungsten Toque",
+		"image": "-8117467898914579348",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Tyurtlenek",
+		"image": "-3361741581077367356",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bear Necessities",
+		"image": "5263027848345098441",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bolshevik Biker",
+		"image": "-5234550986880899767",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Borscht Belt",
+		"image": "-602554983126592999",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Gabe Glasses",
+		"image": "-2077669794917207987",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy-Weight Champ",
+		"image": "-1065034265233854766",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Katyusha",
+		"image": "-8223558629593406049",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Red Army Robin",
+		"image": "-1027387188712055924",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Tsarboosh",
+		"image": "1570636899646968414",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Chicken Kiev",
+		"image": "8695688458007159081",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Horned Honcho",
+		"image": "-6933846865785824856",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Ivan the Inedible",
+		"image": "-13794621163541077",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Last Bite",
+		"image": "-1667620829625139615",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Monstrous Mandible",
+		"image": "2672265034567093838",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mann of the House",
+		"image": "-2726865459111708037",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Minnesota Slick",
+		"image": "5831449401569917750",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bullet Buzz",
+		"image": "851658183962520091",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Combat Slacks",
+		"image": "126920351524802232",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Eliminator's Safeguard",
+		"image": "-6699226394121487561",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Gone Commando",
+		"image": "4393671152284267448",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Lifter",
+		"image": "-9155268523767806564",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Leftover Trap",
+		"image": "-3798314553871876129",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Rat Stompers",
+		"image": "1423170621783212779",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Sammy Cap",
+		"image": "-2551952127323952556",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Trash Man",
+		"image": "8829097355417397648",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "War Goggles",
+		"image": "-6744707377186966837",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Warmth Preserver",
+		"image": "-1941627371460413193",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Little Bear",
+		"image": "-1390095060052005161",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Der Maschinensoldaten-Helm",
+		"image": "4298391369027898187",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Die Regime-Panzerung",
+		"image": "-5774970765513965703",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Yuri's Revenge",
+		"image": "5020662254310936497",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Unshaved Bear",
+		"image": "-4730187160915995280",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bone-Cut Belt",
+		"image": "-5760418936543829045",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bull Locks",
+		"image": "-4902835432175746203",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Immobile Suit",
+		"image": "7685208648669701775",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Minsk Beef",
+		"image": "1059203660281130254",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Jungle Booty",
+		"image": "-3195538392962209956",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Fur-Lined Fighter",
+		"image": "6457057091128182902",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Hunter Heavy",
+		"image": "-4200646970729122886",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Sleeveless in Siberia",
+		"image": "8116510469926974184",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Old Man Frost",
+		"image": "-6623827485987615585",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Siberian Facehugger",
+		"image": "2726257475603218297",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Commissar's Coat",
+		"image": "1303998238703743398",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "El Duderino",
+		"image": "8856660974686614283",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "White Russian",
+		"image": "7309773279055417413",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Sucker Slug",
+		"image": "2635289522994971623",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Siberian Sweater",
+		"image": "3910645039998615044",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Tourism",
+		"image": "4941972919913639822",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mad Mask",
+		"image": "-5700282849604191715",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mo'Horn",
+		"image": "-8217939289573130546",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Warhood",
+		"image": "2930447736115803638",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Abominable Snow Pants",
+		"image": "-7674933590128571411",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Aztec Aggressor",
+		"image": "-4190592884809930938",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Commando Elite",
+		"image": "772048603171931028",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Fat Man's Field Cap",
+		"image": "-5577868952869975864",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Harness",
+		"image": "-7252758416111675566",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Himalayan Hair Shirt",
+		"image": "78529099985175139",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Kathman-Hairdo",
+		"image": "-489542700616219513",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Siberian Tigerstripe",
+		"image": "-3502196213358882002",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Polar Bear",
+		"image": "8954203225154151843",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Sinner's Shade",
+		"image": "-2479217868334740899",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Wild West Whiskers",
+		"image": "-7382804305162428697",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Starboard Crusader",
+		"image": "-834371185998697725",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Tsar Platinum",
+		"image": "-6191875674029329010",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mann-O-War",
+		"image": "-5910123470987776889",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Cool Capuchon",
+		"image": "-1027260495472814706",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Paka Parka",
+		"image": "1052181273205055989",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Kapitan's Kaftan",
+		"image": "7270966422670205574",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mediterranean Mercenary",
+		"image": "4203990676580041517",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Convict Cap",
+		"image": "-8296981160158507989",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Soviet Strongmann",
+		"image": "3961123663672071154",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Momma Kiev",
+		"image": "3836555231544898182",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mannvich",
+		"image": "-8722315621652737501",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bear Walker",
+		"image": "-2528798752914367492",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "BedBug Protection",
+		"image": "-6952750366518008774",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "SandMann's Brush",
+		"image": "-3663210342369828544",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Snack Stack",
+		"image": "-9188520734129946200",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Two Punch Mann",
+		"image": "-3716172721214700501",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mooshanka",
+		"image": "-5914666930423195671",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Combat Casual",
+		"image": "-316983943004593898",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Squatter's Right",
+		"image": "2140034833929012048",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Horror Shawl",
+		"image": "1764626144558742732",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Misha's Maw",
+		"image": "5446429417338342694",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Road Block",
+		"image": "-5029388621157841367",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Road Rage",
+		"image": "6413821324430029825",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Heating",
+		"image": "-7448802030439866903",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Ol' Reliable",
+		"image": "3980529757900779253",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Brother Mann",
+		"image": "2377442550895782602",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Heavy Metal",
+		"image": "3054189507073790294",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Hog Heels",
+		"image": "-1151424944167711328",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bare Bear Bones",
+		"image": "8258370695910849976",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Make Ogre",
+		"image": "4359316884681049993",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Balkan's Brute",
+		"image": "6662931339453134565",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Bigger Mann on Campus",
+		"image": "-2080351010465653403",
+		"usedBy": "Heavy"
+	},
+	{
+		"name": "Mining Light",
+		"image": "4306428638577902904",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Engineer's Cap",
+		"image": "6171668611176830330",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Texas Slim's Dome Shine",
+		"image": "-4550173316216420505",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Texas Ten Gallon",
+		"image": "-8102332329975971720",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Hotrod",
+		"image": "448618418048184958",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Safe'n'Sound",
+		"image": "-7680512203793008426",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Buckaroo's Hat",
+		"image": "-1539948897182650665",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Industrial Festivizer",
+		"image": "7326666196246660734",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Big Country",
+		"image": "-7615505505651133749",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Googly Gazer",
+		"image": "-8429868430518120454",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Professor's Peculiarity",
+		"image": "-2846301338485209648",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Teddy Roosebelt",
+		"image": "-627293621617553493",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Hetman's Headpiece",
+		"image": "3256538345103192681",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Ol' Geezer",
+		"image": "2188926139274877365",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Western Wear",
+		"image": "-3787969233511500735",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Prairie Heel Biters",
+		"image": "1690135369843555283",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pip-Boy",
+		"image": "8655910026315287167",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Wingstick",
+		"image": "1030650978380683603",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Clockwerk's Helm",
+		"image": "3420446870650936683",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Builder's Blueprints",
+		"image": "-1677984554527054800",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pencil Pusher",
+		"image": "7934207185224274612",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Virtual Reality Headset",
+		"image": "144210231846357328",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Buzz Killer",
+		"image": "4022215598964835324",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Frontier Flyboy",
+		"image": "4344097420692517513",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Legend of Bugfoot",
+		"image": "1911948658938116495",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Itsy Bitsy Spyer",
+		"image": "6549665123642069509",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Brainiac Goggles",
+		"image": "3340128829424155416",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Brainiac Hairpiece",
+		"image": "6496152472781950063",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Stocking Stuffer",
+		"image": "5646953453406420470",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Texas Half-Pants",
+		"image": "-5032435271561392004",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Idea Tube",
+		"image": "-3469744048360166792",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Tin-1000",
+		"image": "9143213205133890620",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pocket Purrer",
+		"image": "1198056160626088143",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Master Mind",
+		"image": "1452153394192635664",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Voodoo-Cursed Engineer Soul",
+		"image": "-1017020598752028814",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Barnstormer",
+		"image": "-6794188300756551170",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Grizzled Growth",
+		"image": "4211935807580113848",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Last Straw",
+		"image": "-1199232112884480649",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Prize Plushy",
+		"image": "-4103416085296849157",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Vox Diabolus",
+		"image": "2046143643687858619",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Data Mining Light",
+		"image": "-9026150333080882023",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dual-Core Devil Doll",
+		"image": "3567461279338636723",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Plug-In Prospector",
+		"image": "-8171994919567372289",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Teddy Robobelt",
+		"image": "-8851638062679726306",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Texas Tin-Gallon",
+		"image": "5590630017131632401",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Timeless Topper",
+		"image": "-70460107027660397",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pocket Pyro",
+		"image": "7358243864004822566",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dry Gulch Gulp",
+		"image": "2935392316479830122",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Flared Frontiersman",
+		"image": "-4310017861293358541",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pardner's Pompadour",
+		"image": "-1492716989807011345",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Trash Toter",
+		"image": "8405168918964020685",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Gold Digger",
+		"image": "5207578585491666374",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Grease Monkey",
+		"image": "-3053913726213674429",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dogfighter",
+		"image": "668443698904047778",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Face Full of Festive",
+		"image": "5814621745152654171",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Mister Bubbles",
+		"image": "-1891608877109194883",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Antarctic Researcher",
+		"image": "-8218501140547470428",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Ein",
+		"image": "-2650196889369225759",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Scotch Saver",
+		"image": "-2297457956909760241",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Trencher's Topper",
+		"image": "-632009437447630395",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Trencher's Tunic",
+		"image": "9169136745284435844",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Danger",
+		"image": "2752139365128135748",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Egghead's Overalls",
+		"image": "2037615915957826455",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Endothermic Exowear",
+		"image": "9161494139021243684",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Joe-on-the-Go",
+		"image": "8310745288417078754",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Level Three Chin",
+		"image": "8477262675855881498",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Lonesome Loafers",
+		"image": "-3725028781035704231",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Peacenik's Ponytail",
+		"image": "-5301416205634033454",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Tools of the Trade",
+		"image": "-7453925402250793614",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Hillbilly Speed Bump",
+		"image": "4094092872853322789",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Beep Man",
+		"image": "-5436335473879645153",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Garden Bristles",
+		"image": "-8932177299259708632",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Iron Fist",
+		"image": "3659793456770088758",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Soul of 'Spensers Past",
+		"image": "5991747276342169184",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Tiny Texan",
+		"image": "7944809129566578685",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Insulated Inventor",
+		"image": "-4903646558162030865",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Snow Stompers",
+		"image": "-3168736138559304561",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Clubsy The Seal",
+		"image": "1628847843007525660",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Conagher's Combover",
+		"image": "-575169319273141228",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cop Caller",
+		"image": "-1513834065700687867",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Holstered Heaters",
+		"image": "656697160032433857",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Thermal Insulation Layer",
+		"image": "4815732559512389873",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Sheriff's Stetson",
+		"image": "298884853372781198",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Support Spurs",
+		"image": "-4096458856845290084",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Wild West Waistcoat",
+		"image": "-6034623253482881048",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Life Support System",
+		"image": "7235877640218003876",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Rocket Operator",
+		"image": "-6762340090360347635",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dead'er Alive",
+		"image": "4574625258631327917",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "El Caballero",
+		"image": "-359781740531527830",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "El Patron",
+		"image": "1735209441133943541",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Iron Lung",
+		"image": "533804392885600566",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Roboot",
+		"image": "-4285249715775116897",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Smokey Sombrero",
+		"image": "765339232890529024",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Winter Backup",
+		"image": "-3578254786276794381",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dad Duds",
+		"image": "-2806501872138382085",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Corpus Christi Cranium",
+		"image": "3780950017688502057",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "El Paso Poncho",
+		"image": "-5184524912787096013",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Final Frontier Freighter",
+		"image": "5731128331806248627",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Wide-Brimmed Bandito",
+		"image": "8010825269808197339",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Packable Provisions",
+		"image": "7028129794834158349",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Flash of Inspiration",
+		"image": "-230952511435169952",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Head Mounted Double Observatory",
+		"image": "-5477181067620625249",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Plumber's Cap",
+		"image": "5769477316074325878",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Conaghers' Utility Idol",
+		"image": "-3921284598598811120",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Tropical Toad",
+		"image": "7544084020288995122",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cold Case",
+		"image": "2086878812774267216",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "A Shell of a Mann",
+		"image": "-7289013568665845293",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Aim Assistant",
+		"image": "1640261326937489183",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Defragmenting Hard Hat 17%",
+		"image": "-6737318127175447190",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dell in the Shell",
+		"image": "-8428832114234292982",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Mini-Engy",
+		"image": "3350556283783846386",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Puggyback",
+		"image": "-8981110188473251218",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Wise Whiskers",
+		"image": "-5021087919101320849",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Brain Interface",
+		"image": "5311239634698063185",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Texas Toast",
+		"image": "-2371683416749424384",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Eingineer",
+		"image": "6423497700291176574",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "El Mostacho",
+		"image": "-443035164746994342",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Provisions Cap",
+		"image": "302723092789104153",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Telefragger Toque",
+		"image": "5348343368641057410",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Head of Defense",
+		"image": "2169333990136317040",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Ghoul Box",
+		"image": "1086902233350066095",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Goblineer",
+		"image": "7068113191103858156",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pug Mug",
+		"image": "3929782525654626188",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Wavefinder",
+		"image": "8149244833735812653",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Blitzen Bowl",
+		"image": "-604824543546266386",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Sightliner",
+		"image": "-7148551823905375085",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Hook, Line, and Thinker",
+		"image": "4564600233159045905",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Train of Thought",
+		"image": "-8881698310176909667",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Lawnmaker",
+		"image": "1213998111266683821",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Western Wraps",
+		"image": "8427165004894617251",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cabinet Mann",
+		"image": "4515038887579369770",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dustbowl Devil",
+		"image": "29221276772622848",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "More Gun Marshal",
+		"image": "-4064232706454780697",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Pony Express",
+		"image": "3915783823741442627",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Arctic Mole",
+		"image": "-1468259795575947032",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cool Warm Sweater",
+		"image": "-3686203398240861049",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Soft Hard Hat",
+		"image": "1953002572635844034",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Underminer's Overcoat",
+		"image": "-269692987159265140",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cargo Constructor",
+		"image": "-3575375744187088173",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Cranium Cooler",
+		"image": "-4208557125144193018",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Hazard Handler",
+		"image": "8501884055771333808",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Constructor's Cover",
+		"image": "-1728803076846693607",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Dell Dynamic",
+		"image": "151349716661680317",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Clue Hairdo",
+		"image": "-4520871529310919769",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Sleuth Suit",
+		"image": "3437301382195986403",
+		"usedBy": "Engineer"
+	},
+	{
+		"name": "Prussian Pickelhaube",
+		"image": "1861498810005480762",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Otolaryngologist's Mirror",
+		"image": "-1908818336548612853",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Vintage Tyrolean",
+		"image": "4411529363466512932",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Physician's Procedure Mask",
+		"image": "-9173396443238935291",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Gentleman's Gatsby",
+		"image": "7474774053678820882",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Ze Goggles",
+		"image": "8910086982752132674",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Berliner's Bucket Helm",
+		"image": "-1849448136606450752",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Blighted Beak",
+		"image": "-2668971129436856494",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "German Gonzila",
+		"image": "792144806777748087",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Geisha Boy",
+		"image": "8553388511596870609",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Grimm Hatte",
+		"image": "9222730314151645150",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medic's Mountain Cap",
+		"image": "1256590359521662679",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Doctor's Sack",
+		"image": "3369027679831434702",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Planeswalker Helm",
+		"image": "-5427255376505997388",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Couvre Corner",
+		"image": "7132730069609185261",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgeon's Stahlhelm",
+		"image": "2821982577359937675",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgeon's Stethoscope",
+		"image": "4857331057886516248",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Dr. Gogglestache",
+		"image": "-3317477797535919146",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Einstein",
+		"image": "-3278075988196015355",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Emerald Jarate",
+		"image": "152508508962779484",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Dr. Whoa",
+		"image": "5830964920612062023",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Nine-Pipe Problem",
+		"image": "340349348356876319",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Quadwrangler",
+		"image": "-3275125982555777257",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgeon's Side Satchel",
+		"image": "-4556925596673454948",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Gentleman's Ushanka",
+		"image": "-8168787186586681723",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Archimedes",
+		"image": "-7626274872055214179",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medic Mech-Bag",
+		"image": "7670465417161779938",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medi-Mask",
+		"image": "-5351327685044070974",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Combat Medic's Crusher Cap",
+		"image": "-6658915636313366615",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Foppish Physician",
+		"image": "6642971055742640471",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Voodoo-Cursed Medic Soul",
+		"image": "-7148268304057486220",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Der Wintermantel",
+		"image": "-8659093579848781512",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Doc's Holiday",
+		"image": "2278801598150789122",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Byte'd Beak",
+		"image": "-6967785179981781053",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Halogen Head Lamp",
+		"image": "4905339958587934191",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Mecha-Medes",
+		"image": "-1236076582417573216",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Platinum Pickelhaube",
+		"image": "1266733210895492146",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Practitioner's Processing Mask",
+		"image": "4264220810213254885",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Steam Pipe",
+		"image": "-5201061909170018239",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Titanium Tyrolean",
+		"image": "8751086133595520629",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Virus Doctor",
+		"image": "1858460491279418076",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Weather Master",
+		"image": "-5545502138231533327",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Baron von Havenaplane",
+		"image": "5501804469557214937",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Fantzipantzen",
+		"image": "8034637717677976138",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Feelinbeterbager",
+		"image": "2295925058700796350",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Gutenkutteharen",
+		"image": "4247868611970221264",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Hazmattenhatten",
+		"image": "-5698623309150598334",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Maddendoktor",
+		"image": "2859517032672135465",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Metalmeatencasen",
+		"image": "-2701891514902647040",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Naggenvatcher",
+		"image": "385661267243206845",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Ubersternmann",
+		"image": "4536204797526608550",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "A Brush with Death",
+		"image": "-5268250850506926704",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medical Mystery",
+		"image": "2783111042904198340",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Slick Cut",
+		"image": "8967014201365191499",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Ward",
+		"image": "-7144194007053238203",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Alternative Medicine Mann",
+		"image": "3754093350394570406",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Archimedes the Undying",
+		"image": "-2786161782461025623",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Das Blutliebhaber",
+		"image": "1055682270712680575",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Lo-Grav Loafers",
+		"image": "-8044672499048354943",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medimedes",
+		"image": "-7635174296947341260",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Ramses' Regalia",
+		"image": "-1603417247267646650",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Second Opinion",
+		"image": "4085672244388013306",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Shaman's Skull",
+		"image": "-3341547011350671494",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgeon's Space Suit",
+		"image": "5481352526667711056",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Teutonkahmun",
+		"image": "2222161755723253960",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Trepanabotomizer",
+		"image": "2000786254058332229",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Vicar's Vestments",
+		"image": "7447231733294065113",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Angel of Death",
+		"image": "-7365044508279435611",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Mann of Reason",
+		"image": "-3651845573302445320",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Nunhood",
+		"image": "-7521525988319457274",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Ruffled Ruprecht",
+		"image": "648606292154473137",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Colonel's Coat",
+		"image": "4551325444238217940",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Dough Puncher",
+		"image": "-237663147548724075",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Fashionable Megalomaniac",
+		"image": "3258840492429283148",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Gaiter Guards",
+		"image": "5373597301547003673",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Heat of Winter",
+		"image": "2627562833447248092",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Heer's Helmet",
+		"image": "4846092380867077665",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Smock Surgeon",
+		"image": "210207962657641512",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Teutonic Toque",
+		"image": "-8718716952574938155",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Chronoscarf",
+		"image": "-5568661200072637463",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medicine Manpurse",
+		"image": "-469441431995732588",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Ze \u00dcbermensch",
+		"image": "-5130417510607681333",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Pocket Heavy",
+		"image": "2848416537142852611",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Herzensbrecher",
+		"image": "3099453178006582479",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Hundkopf",
+		"image": "2890863105846231742",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Kriegsmaschine-9000",
+		"image": "-8448160536853983856",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Templar's Spirit",
+		"image": "117438537327357780",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Vampire Makeover",
+		"image": "-845526860006476635",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Vampiric Vesture",
+		"image": "9167240248446852039",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Wings of Purity",
+		"image": "5910029405117149395",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgeon's Shako",
+		"image": "7672265766645433839",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Unknown Mann",
+		"image": "-2285636930500613575",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Physician's Protector",
+		"image": "1555546534590434303",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Vascular Vestment",
+		"image": "-2380328525697904387",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Berlin Brain Bowl",
+		"image": "1226839749694965999",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Bunnyhopper's Ballistics Vest",
+		"image": "6819393976619194735",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medical Monarch",
+		"image": "-7766686000306322401",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Gauzed Gaze",
+		"image": "8346029776824590709",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgical Survivalist",
+		"image": "-3863398059275252725",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Burly Beast",
+		"image": "9168003128190829943",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Colossal Cranium",
+		"image": "4707427843087988405",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Surgeon's Sidearms",
+		"image": "2533554313838089962",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Santarchimedes",
+		"image": "-5479278611618425724",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Field Practice",
+		"image": "6846265540628494094",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Battle Boonie",
+		"image": "5447427727392050673",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Vitals Vest",
+		"image": "-2662906910416404599",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Coldfront Carapace",
+		"image": "-9098523568239886769",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Coldfront Commander",
+		"image": "3642502910673529194",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Scourge of the Sky",
+		"image": "9220295084007592520",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Harry",
+		"image": "-7682356191892813105",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Mighty Mitre",
+		"image": "7552613560419367922",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Miser's Muttonchops",
+		"image": "-8098559252004974789",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Snowcapped",
+		"image": "-8816292011105967167",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Derangement Garment",
+		"image": "-1243117744589503402",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Madmann's Muzzle",
+		"image": "-4704856408330216298",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Pocket-Medes",
+		"image": "176027357507572635",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Flatliner",
+		"image": "-8278828843684942212",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Self-Care",
+		"image": "-8488296710477757491",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Rolfe Copter",
+		"image": "1478855612012180656",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Elf Care Provider",
+		"image": "-1830468570894893855",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Night Ward",
+		"image": "-7504178265612018008",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Optic Nerve",
+		"image": "-356652983101840044",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Fizzy Pharmacist",
+		"image": "-7194271458745304085",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Soda Cap",
+		"image": "5639367124927069186",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Lavish Labwear",
+		"image": "5628345546367046377",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Victorian Villainy",
+		"image": "8648867104351432581",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Oktoberfester",
+		"image": "-5506392044245152301",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Wooly Pulli",
+		"image": "5911096198341885034",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medical Emergency",
+		"image": "7199385792279021189",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "\u00dcber-Wear",
+		"image": "6551537799732871765",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Main Cast",
+		"image": "8710313846228626396",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Medical Mummy",
+		"image": "5112939085871312973",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Power Spike",
+		"image": "3531570028329645344",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Frigid Fashion",
+		"image": "2247622107385727646",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Puffed Practitioner",
+		"image": "800113306846816947",
+		"usedBy": "Medic"
+	},
+	{
+		"name": "Trophy Belt",
+		"image": "7127263306562855879",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Master's Yellow Belt",
+		"image": "7699513939731595933",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Professional's Panama",
+		"image": "3043085941106500456",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Ritzy Rick's Hair Fixative",
+		"image": "-1896550553765424663",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Shooter's Sola Topi",
+		"image": "2485622952785178957",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bloke's Bucket Hat",
+		"image": "-4830328724803180762",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Ol' Snaggletooth",
+		"image": "2501481922232281288",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Larrikin Robin",
+		"image": "-6240102518556562970",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Crocleather Slouch",
+		"image": "-1768739410945116220",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Villain's Veil",
+		"image": "8691359724797188544",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Desert Marauder",
+		"image": "-683214329712482790",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Anger",
+		"image": "-4198919682951513353",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Sniper's Snipin' Glass",
+		"image": "-688195871285973005",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Crocodile Smile",
+		"image": "-2645518913520810325",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Swagman's Swatter",
+		"image": "3674925786258779548",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Your Worst Nightmare",
+		"image": "8108006523190091803",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Garlic Flank Stake",
+		"image": "-2394824563912941654",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Holy Hunter",
+		"image": "-504261312047974379",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Silver Bullets",
+		"image": "3456159675538419623",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Outback Intellectual",
+		"image": "-3509840413366890110",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bushman's Boonie",
+		"image": "67550639096001041",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Fruit Shoot",
+		"image": "2077057572960547922",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Flamingo Kid",
+		"image": "-4322560111180396782",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Doublecross-Comm",
+		"image": "-842662525862387253",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Liquidator's Lid",
+		"image": "-7558672203869439666",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Lone Star",
+		"image": "5840124272235584129",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bolted Bushman",
+		"image": "-4831952433095078669",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Koala Compact",
+		"image": "136209579751977704",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Stovepipe Sniper Shako",
+		"image": "3519674992756197982",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Sir Hootsalot",
+		"image": "6796749751786968350",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Voodoo-Cursed Sniper Soul",
+		"image": "-629653517848294420",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Cold Killer",
+		"image": "-3037236033223643271",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Steel Songbird",
+		"image": "8238634882247299208",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Sydney Straw Boat",
+		"image": "-8200983287146084676",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bloodhound",
+		"image": "7621340455373153801",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Letch's LED",
+		"image": "1557460909797086470",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Shooter's Tin Topi",
+		"image": "-5502875313548643922",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Soldered Sensei",
+		"image": "-5031616017976000158",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Birdman of Australiacatraz",
+		"image": "-4556203561739037337",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Cobber Chameleon",
+		"image": "6919786358092441121",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Falconer",
+		"image": "-7757688804014924321",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Wet Works",
+		"image": "-316108005911708045",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Brim-Full of Bullets",
+		"image": "4292254723035708685",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Chronomancer",
+		"image": "-432489060194777803",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Li'l Snaggletooth",
+		"image": "5464120836437322904",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Carious Chameleon",
+		"image": "-3394489934070236471",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Hallowed Headcase",
+		"image": "6827526839193169930",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Sir Shootsalot",
+		"image": "4523729858635637771",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Randolph the Blood-Nosed Caribou",
+		"image": "-2769194443534550749",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Smissmas Caribou",
+		"image": "2066788726524613357",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Extra Layer",
+		"image": "-5071255723415286397",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Five-Month Shadow",
+		"image": "3232089641822443956",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Golden Garment",
+		"image": "6153509364879774808",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Snow Scoper",
+		"image": "-2147897471353063540",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Archer's Groundings",
+		"image": "-1582960850125585228",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Deep Cover Operator",
+		"image": "-8222889071619518711",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Huntsman's Essentials",
+		"image": "-2944660195985666875",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Criminal Cloak",
+		"image": "-73927078535692993",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Dread Hiding Hood",
+		"image": "5990839114469740587",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Scoper's Smoke",
+		"image": "5680480592971028681",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Triggerman's Tacticals",
+		"image": "-7834699832481336404",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Poacher's Safari Jacket",
+		"image": "-7477413528896501872",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Cranial Conspiracy",
+		"image": "365476000958172839",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Kanga Kickers",
+		"image": "4936764327119339737",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Marsupial Man",
+		"image": "8051987891340001786",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Marsupial Muzzle",
+		"image": "8967222740106552083",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Mr. Mundee's Wild Ride",
+		"image": "-1677274465423272973",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Roo Rippers",
+		"image": "-5731733106691432629",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Scaly Scrapers",
+		"image": "-4817554758778901127",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bushman's Bristles",
+		"image": "2743544052457257316",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Marksman's Mohair",
+		"image": "8174409172427506148",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Professional's Ushanka",
+		"image": "3045887452695859043",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Wally Pocket",
+		"image": "4222657403297590093",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Corona Australis",
+		"image": "-8883786039065851282",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Final Frontiersman",
+		"image": "4561375280675013634",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Starduster",
+		"image": "-4034843127679004431",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Scoped Spartan",
+		"image": "5826786595508535961",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Archer's Sterling",
+		"image": "-7857586698069772201",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Down Under Duster",
+		"image": "-8403630316953624533",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Guilden Guardian",
+		"image": "-258149313074123869",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Hawk-Eyed Hunter",
+		"image": "-5586282081952985240",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bait and Bite",
+		"image": "4620953779088884905",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Cammy Jammies",
+		"image": "-1012546533294964374",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Classy Capper",
+		"image": "8948078991673978876",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Conspicuous Camouflage",
+		"image": "8670378308539633981",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Most Dangerous Mane",
+		"image": "-5121883797814515356",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Rifleman's Regalia",
+		"image": "-6524557236980808524",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Down Tundra Coat",
+		"image": "-8797497782192694409",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Handsome Hitman",
+		"image": "-6397579232876165204",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Puffy Polar Cap",
+		"image": "-881060737159153199",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Crocodile Mun-Dee",
+		"image": "-7547963697744003418",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Highway Star",
+		"image": "-8036594231465389829",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Scoper's Scales",
+		"image": "-3579946071888438200",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bare Necessities",
+		"image": "-7066042375151964669",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Wagga Wagga Wear",
+		"image": "-6905191599048663889",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Elizabeth the Third",
+		"image": "-2047283370865374353",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Mislaid Sweater",
+		"image": "-8135730458318456175",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Missing Piece",
+		"image": "8417691446462209958",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Jarmaments",
+		"image": "-5750124719202005948",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Glow from Below",
+		"image": "-5667515720182271949",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Killing Tree",
+		"image": "5869864798018803014",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Crocodile Dandy",
+		"image": "7017487737434629208",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Wild Brim Slouch",
+		"image": "6586064788609618065",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Hawaiian Hunter",
+		"image": "7369986300221614956",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Rocko",
+		"image": "-5970962701334000217",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Tropical Camo",
+		"image": "-1255517171350758188",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Headhunter's Brim",
+		"image": "2356018401152446574",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Hunting Cloak",
+		"image": "1416521246990875137",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Crosshair Cardigan",
+		"image": "-2710746682069235883",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Bushman",
+		"image": "8809358631396225003",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Cranium Cover",
+		"image": "5933323489541591057",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Glorious Gambeson",
+		"image": "1076330401665609404",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Preventative Measure",
+		"image": "1755307508233703068",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Carry-Van",
+		"image": "-2540799952598003502",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Sharpshooter's Shroud",
+		"image": "-3829765541239096210",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Sightseer",
+		"image": "-4999467864833069322",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Rugged Rags",
+		"image": "457299016444725724",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Scruffed 'n Stitched",
+		"image": "1513714195817475493",
+		"usedBy": "Sniper"
+	},
+	{
+		"name": "Fancy Fedora",
+		"image": "-9121503381599399095",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Backbiter's Billycock",
+		"image": "-8014683447669183548",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Camera Beard",
+		"image": "-1443048001103872707",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Magistrate's Mullet",
+		"image": "2384376866723804976",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Frenchman's Beret",
+		"image": "-3143377034258325304",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Familiar Fez",
+		"image": "9066736491331981240",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "D\u00e9tective Noir",
+		"image": "-1603172633021377859",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Le Party Phantom",
+		"image": "1435552054492624898",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Noh Mercy",
+		"image": "6033664068354764296",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Charmer's Chapeau",
+		"image": "8437455940921625112",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Janissary Ketche",
+		"image": "-1005463272640532087",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Cosa Nostra Cap",
+		"image": "-8189143702657437953",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Made Man",
+		"image": "4798272873828613294",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Rogue's Col Roule",
+		"image": "-1163770378818359105",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Nanobalaclava",
+		"image": "4707908234688018818",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Counterfeit Billycock",
+		"image": "4854541779900159186",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "L'Inspecteur",
+		"image": "-2753887521328473650",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Spectre's Spectacles",
+		"image": "8945192732002141453",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Griffin's Gog",
+		"image": "8768368637678202697",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Intangible Ascot",
+		"image": "-2430648953724670428",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Under Cover",
+		"image": "-914799914109108440",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Dashin' Hashshashin",
+		"image": "-6540712779702241076",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Sneaky Spats of Sneaking",
+		"image": "7252640543771879946",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Business Casual",
+		"image": "8455430061893957021",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Ninja Cowl",
+		"image": "285038067258667040",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Stealth Steeler",
+		"image": "-638047168849098915",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Hat of Cards",
+		"image": "-6913600602350810612",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Distinguished Rogue",
+		"image": "3100711803788005349",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Lacking Moral Fiber Mask",
+		"image": "-1353196862628780553",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Scarecrow",
+		"image": "1664326692206565607",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Voodoo-Cursed Spy Soul",
+		"image": "-3471952141020554730",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Cut Throat Concierge",
+		"image": "-8400060471930681522",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Dapper Disguise",
+		"image": "7651093129479183570",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Base Metal Billycock",
+		"image": "3520728170723603814",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Bootleg Base Metal Billycock",
+		"image": "4802626021574670024",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Megapixel Beard",
+		"image": "1361838428261746036",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Pom-Pommed Provocateur",
+		"image": "-2216920678676199143",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "After Dark",
+		"image": "-3146056895223175518",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Belgian Detective",
+		"image": "5713515809584772536",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Blood Banker",
+		"image": "7984131032795362844",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Harmburg",
+		"image": "978904481071180172",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Rogue's Brogues",
+		"image": "3814802455614010710",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Escapist",
+		"image": "8551793928106555783",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "L'homme Burglerre",
+		"image": "-2250663203414900859",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Bountiful Bow",
+		"image": "-3349401234117760558",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Bozo's Brogues",
+		"image": "-5275481793175286374",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Candyman's Cap",
+		"image": "-7248263275011543785",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Foul Cowl",
+		"image": "5840459494126333755",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Hyperbaric Bowler",
+		"image": "8682351876245754374",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Backstabber's Boomslang",
+		"image": "-7718584969723022857",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Napoleon Complex",
+		"image": "7426902464380835232",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Au Courant Assassin",
+		"image": "3728988650235243907",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Aviator Assassin",
+		"image": "7652652536217981100",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Rogue's Robe",
+		"image": "-7010632294034244520",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Sky Captain",
+		"image": "1327698564757311747",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Spycrab",
+		"image": "2493134949406703339",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Lady Killer",
+		"image": "-1019837313814448418",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Facepeeler",
+		"image": "-7888492350908747893",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Nightmare Hunter",
+		"image": "820674935214023267",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Rogue's Rabbit",
+		"image": "3984397435739908836",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Shadowman's Shade",
+		"image": "-46959190232951687",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Pocket Momma",
+		"image": "1080992720212162598",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Puffy Provocateur",
+		"image": "3277777875625530799",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Stealthy Scarf",
+		"image": "4973781333422222375",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Lurker's Leathers",
+		"image": "3540182591337026925",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Graylien",
+		"image": "5334074110555976487",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "A Hat to Kill For",
+		"image": "1305940503280138223",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Chicago Overcoat",
+		"image": "-8268401200654740683",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Dead Head",
+		"image": "-7877743829666698912",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Lurking Legionnaire",
+		"image": "-2382694379339140160",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Big Topper",
+		"image": "5613945963770914394",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Showstopper",
+		"image": "4087841990474310419",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Brain-Warming Wear",
+		"image": "2724129097416969415",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Upgrade",
+		"image": "5193892047641803034",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Aristotle",
+		"image": "-4842122508555490138",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Assassin's Attire",
+		"image": "-5830064462562220585",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Bandit's Boots",
+		"image": "1727097533624873972",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Dressperado",
+		"image": "7252823961233680790",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Murderer's Motif",
+		"image": "-8855271026035475400",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Shutterbug",
+		"image": "328788654428275975",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Avian Amante",
+		"image": "2830818381383428847",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Voodoo Vizier",
+		"image": "-8080272554711541338",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Bird's Eye Viewer",
+		"image": "-6486895349790442394",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Crabe de Chapeau",
+		"image": "8888232838991307490",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Smoking Jacket",
+		"image": "814919028816545418",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Crustaceous Cowl",
+		"image": "-7261534205642279617",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Gruesome Gourd",
+		"image": "7010110167544406161",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Festive Cover-Up",
+		"image": "-1097922442127870232",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Monsieur Grenouille",
+		"image": "-1213076321989811525",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Night Vision Gawkers",
+		"image": "-2134975530918775473",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Tactical Turtleneck",
+		"image": "5917004165835459328",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Turncoat",
+		"image": "3353064898068121034",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Cold Blooded Coat",
+		"image": "4005770049457812866",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Frostbite Bonnet",
+		"image": "5898860540094169630",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Infiltrator's Insulation",
+		"image": "6895688406756387406",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Cleaner's Cap",
+		"image": "-3566973842031904204",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Le Professionnel",
+		"image": "7937419379513523925",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Classic Criminal",
+		"image": "-9145946058794082355",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Concealed Convict",
+		"image": "-7181033015255670542",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Six-Eyed Specs",
+		"image": "-3352998165809149102",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Spyder",
+		"image": "5594653548665725280",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Covert Covers",
+		"image": "4583350369363170849",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Strasbourg Scholar",
+		"image": "2152704057918370594",
+		"usedBy": "Spy"
+	},
+	{
+		"name": "Cheater's Lament",
+		"image": "4749551561452691627",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ghastly Gibus",
+		"image": "5641730011592730666",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mildly Disturbing Halloween Mask",
+		"image": "-8519218698763917694",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bill's Hat",
+		"image": "-923996671841989731",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Uncle Sam",
+		"image": "-8968153807978696322",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Amber's Rad As All Hell Hat",
+		"image": "3161710959859875361",
+		"usedBy": "All class"
+	},
+	{
+		"name": "J.Axer's Dapper Topper",
+		"image": "-5817137364245799148",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Modest Pile of Hat",
+		"image": "8007525709175549846",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Noble Amassment of Hats",
+		"image": "-5740642505211131283",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Towering Pillar of Hats",
+		"image": "-3111159223902551873",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Max's Severed Head",
+		"image": "4624818121483247246",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mercenary",
+		"image": "-7293374655223342623",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Soldier of Fortune",
+		"image": "763260570075992804",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Grizzled Veteran",
+		"image": "5957655019116585457",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Primeval Warrior",
+		"image": "6061996136057944359",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Earbuds",
+		"image": "7276384785863659828",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Alien Swarm Parasite",
+		"image": "4602844542136662748",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bronze Dueling Badge",
+		"image": "6101368869235540044",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Silver Dueling Badge",
+		"image": "-8202254653905706082",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Gold Dueling Badge",
+		"image": "695088577872336462",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Platinum Dueling Badge",
+		"image": "-5660425665377582325",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dr's Dapper Topper",
+		"image": "-198564044459589988",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ellis' Cap",
+		"image": "3947828110802550536",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mann Co. Cap",
+		"image": "3327644689397586547",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Polycount Pin",
+		"image": "4467116942976259449",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Wiki Cap",
+		"image": "5318386990807658833",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ghastlier Gibus",
+		"image": "2820765758858059501",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Halloween Masks",
+		"image": "-4354763015099991500",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Horrific Headsplitter",
+		"image": "912261989438514840",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Horseless Headless Horsemann's Head",
+		"image": "592803106598467936",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Saxton Hale Mask",
+		"image": "-6506425661514465996",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Spine-Chilling Skull",
+		"image": "-6912114722467535211",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Voodoo Juju",
+		"image": "7205631060121224253",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Companion Cube Pin",
+		"image": "1525137454795542027",
+		"usedBy": "All class"
+	},
+	{
+		"name": "License to Maim",
+		"image": "-654438610827081422",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bounty Hat",
+		"image": "-3533550667248743588",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Treasure Hat",
+		"image": "-1790134442921927074",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hat of Undeniable Wealth And Respect",
+		"image": "3609121462319635211",
+		"usedBy": "All class"
+	},
+	{
+		"name": "A Rather Festive Tree",
+		"image": "-5519053960636415076",
+		"usedBy": "All class"
+	},
+	{
+		"name": "World Traveler's Hat",
+		"image": "-8989920133690870843",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Athletic Supporter",
+		"image": "-7441997190193826917",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Humanitarian's Hachimaki",
+		"image": "-3663092473388932568",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Benefactor's Kanmuri",
+		"image": "5656225850937805200",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Magnanimous Monarch",
+		"image": "716349153029689444",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Aperture Labs Hard Hat",
+		"image": "8402792751335787961",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Resurrection Associate Pin",
+		"image": "-3688755140223318627",
+		"usedBy": "All class"
+	},
+	{
+		"name": "SpaceChem Pin",
+		"image": "6053212921815348001",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Frontline Field Recorder",
+		"image": "-1677760304766880041",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Lo-Fi Longwave",
+		"image": "2427203633530080148",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Spiral Sallet",
+		"image": "-578086382075975008",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Professor Speks",
+		"image": "8363470034956791068",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Proof of Purchase",
+		"image": "-6096687286061402561",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Summer Hat",
+		"image": "652431141209710767",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Summer Shades",
+		"image": "-6523989041151195662",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dr. Grordbort's Crest",
+		"image": "6871438629275973970",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Company Man",
+		"image": "6678356205509871582",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Deus Specs",
+		"image": "4407283545604818360",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Party Hat",
+		"image": "8083040309083180183",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Killer Exclusive",
+		"image": "5406016362096501451",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Clan Pride",
+		"image": "-2963591525136434811",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Flair!",
+		"image": "-8500665977337718792",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hot Dogger",
+		"image": "4120367692716894409",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Manniversary Paper Hat",
+		"image": "-7415541017552217316",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Merc's Pride Scarf",
+		"image": "2051165824745595141",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Photo Badge",
+		"image": "-7764541070335653563",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Salty Dog",
+		"image": "-3131674366460204478",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bombinomicon",
+		"image": "-8186310838625454003",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ghastlierest Gibus",
+		"image": "7349717676085778497",
+		"usedBy": "All class"
+	},
+	{
+		"name": "MONOCULUS!",
+		"image": "-6716068339675383895",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Seal Mask",
+		"image": "7078204003337867836",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Spine-Chilling Skull 2011",
+		"image": "613605696602289154",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mark of the Saint",
+		"image": "-4087484615226961990",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Point and Shoot",
+		"image": "-1788436016216830292",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Top Notch",
+		"image": "-3175140121978473693",
+		"usedBy": "All class"
+	},
+	{
+		"name": "B.M.O.C.",
+		"image": "72870970636411143",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Brown Bomber",
+		"image": "-2850341988192652241",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dr. Grordbort's Copper Crest",
+		"image": "7994657515950523320",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dr. Grordbort's Silver Crest",
+		"image": "-2889185388267323286",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ebenezer",
+		"image": "6191785131090904428",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Full Head of Steam",
+		"image": "1338090382586261308",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Holiday Headcase",
+		"image": "-976454204002580315",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Spirit of Giving",
+		"image": "8631944908031960966",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bolgan Family Crest",
+		"image": "711911483905664566",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Map Maker's Medallion",
+		"image": "-1644353679426855849",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Warsworn Helmet",
+		"image": "-3618908551139433331",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Merc Medal",
+		"image": "3185025071833576299",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Something Special For Someone Special",
+		"image": "2100991325302561132",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dueler",
+		"image": "-2654020158446039953",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Gifting Man From Gifting Land",
+		"image": "569165633373441091",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Philateler",
+		"image": "8154200184789780845",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bolt Action Blitzer",
+		"image": "-3742339519661081264",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Atomic Accolade",
+		"image": "581203222450183391",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Barely-Melted Capacitor",
+		"image": "-8144062125875976019",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Balloonicorn",
+		"image": "-4442385529956098839",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Gentle Munitionne of Leisure",
+		"image": "5374583950632545421",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pyrovision Goggles",
+		"image": "459226024286394149",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Robot Chicken Hat",
+		"image": "-6480963221823280633",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Awesomenauts Badge",
+		"image": "-4095608749945592847",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Human Cannonball",
+		"image": "-5426529441453532720",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Marxman",
+		"image": "-3472443695466213885",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Operation Steel Trap Badge",
+		"image": "-2209597678241503000",
+		"usedBy": "All class"
+	},
+	{
+		"name": "RoBro 3000",
+		"image": "4539780676169274350",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Vigilant Pin",
+		"image": "8549283084954017081",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Friends Forever Companion Square Badge",
+		"image": "-1032338197607684585",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Heroic Companion Badge",
+		"image": "8951662370621104343",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Triple A Badge",
+		"image": "-8997187488698912256",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Whale Bone Charm",
+		"image": "-4301391062394697052",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Operation Gear Grinder Badge",
+		"image": "-6638296048526148795",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Operation Oil Spill Badge",
+		"image": "6822122851999584270",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Boo Balloon",
+		"image": "-8351912860922540908",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Crone's Dome",
+		"image": "-195485849645116139",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dead Little Buddy",
+		"image": "8346416663096759802",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Executioner",
+		"image": "6820605641420942358",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ghostly Gibus",
+		"image": "6713152625109179121",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Rump-o'-Lantern",
+		"image": "9049213368362790078",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Skull Island Topper",
+		"image": "5135266656460467902",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Unknown Monkeynaut",
+		"image": "-1650890279504390547",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Cockfighter",
+		"image": "-3537040596674563845",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hitt Mann Badge",
+		"image": "7910093239411423024",
+		"usedBy": "All class"
+	},
+	{
+		"name": "That '70s Chapeau",
+		"image": "6306743313027651897",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Faerie Solitaire Pin",
+		"image": "1139090048203722547",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Saxxy Clapper Badge",
+		"image": "4889305864843121439",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tuxxy",
+		"image": "5551034709035805888",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Antlers",
+		"image": "-5589851886200128901",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mann Co. Online Cap",
+		"image": "3376016046946691071",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Merc's Muffler",
+		"image": "-7744498759561217979",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Operation Mecha Engine Badge",
+		"image": "-2297584757897074925",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Reindoonicorn",
+		"image": "3173582097657953384",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Smissmas Wreath",
+		"image": "-2290068694771679822",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tough Stuff Muffs",
+		"image": "2648230948249387916",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tux",
+		"image": "4021608570619898858",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Br\u00fctal Bouffant",
+		"image": "-8569077666019894848",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Croft's Crest",
+		"image": "8070045643616555508",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Fortune Hunter",
+		"image": "8413372978956682511",
+		"usedBy": "All class"
+	},
+	{
+		"name": "TF2VRH",
+		"image": "6888197862274295142",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Conspiracy Cap",
+		"image": "4898949984859012423",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Public Accessor",
+		"image": "-5432394757781756114",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bot Dogger",
+		"image": "5960646340659006433",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Galvanized Gibus",
+		"image": "3902160842736365646",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Modest Metal Pile of Scrap",
+		"image": "2958409468320954423",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Noble Nickel Amassment of Hats",
+		"image": "-4244859322214621579",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Towering Titanium Pillar of Hats",
+		"image": "-4601823963405936513",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Crosslinker's Coil",
+		"image": "-1670315994608295458",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Breakneck Baggies",
+		"image": "7698878005976121491",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Brotherhood of Arms",
+		"image": "6237175478195881426",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Well-Rounded Rifleman",
+		"image": "6760789682380070669",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hardy Laurel",
+		"image": "-7105607854063757908",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Graybanns",
+		"image": "6188091187185219258",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Federal Casemaker",
+		"image": "-1304886300597543853",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Virtual Viewfinder",
+		"image": "-3854539762275149089",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Grandmaster",
+		"image": "6487301966287315911",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Cotton Head",
+		"image": "-4464614690456183968",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hong Kong Cone",
+		"image": "808003676703439082",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Accursed Apparition",
+		"image": "-8503166633290061043",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Beacon from Beyond",
+		"image": "5056089091005709467",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Birdie Bonnet",
+		"image": "8337392783631769270",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Cryptic Keepsake",
+		"image": "-8762387379143305706",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dark Helm",
+		"image": "-110230868896778671",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Guano",
+		"image": "-8305374827175038979",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Haunted Hat",
+		"image": "7609938021360691007",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Magical Mercenary",
+		"image": "-5197489139891321623",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Manneater",
+		"image": "-6123892250644210401",
+		"usedBy": "All class"
+	},
+	{
+		"name": "One-Way Ticket",
+		"image": "-448397905629602961",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Horsemann",
+		"image": "254362172800507917",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Quoth",
+		"image": "-4052128199301194428",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Sackcloth Spook",
+		"image": "-7075026231772403651",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tuque or Treat",
+		"image": "-6368696794030102268",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Unidentified Following Object",
+		"image": "-4361463292282584084",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Operation Two Cities Badge",
+		"image": "-5843297976108687832",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Glitched Circuit Board",
+		"image": "1447641373731768229",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dictator",
+		"image": "-4387532558104748428",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dead of Night",
+		"image": "2160364314422541377",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Kiss King",
+		"image": "3915520040414085423",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Neckwear Headwear",
+		"image": "6274147242343419755",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Polar Pullover",
+		"image": "4471582021186637419",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dark Falkirk Helm",
+		"image": "7764730641773354368",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Law",
+		"image": "-2462183693098690881",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mustachioed Mann",
+		"image": "-8362132136002996206",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Baronial Badge",
+		"image": "-5375610209665605757",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bruiser's Bandanna",
+		"image": "-3251592287005325679",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Eye-Catcher",
+		"image": "8310533805540350670",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Merc's Mohawk",
+		"image": "-5260989036643563801",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tipped Lid",
+		"image": "9044390793470724146",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Towering Pillar of Summer Shades",
+		"image": "-2717653925153380788",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Vive La France",
+		"image": "-379433902463211865",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Horace",
+		"image": "7988173363941358620",
+		"usedBy": "All class"
+	},
+	{
+		"name": "MK 50",
+		"image": "-4001476648076383331",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dadliest Catch",
+		"image": "1681866207815486112",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ghost of Spies Checked Past",
+		"image": "-6752916557165602318",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hooded Haunter",
+		"image": "6413535095760619002",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Li'l Dutchman",
+		"image": "2588505454365393465",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Brimstone",
+		"image": "489148853616442937",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Crown of the Old Kingdom",
+		"image": "2263452268559297939",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tomb Readers",
+		"image": "1079157857972827213",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Boxcar Bomber",
+		"image": "-8656736219188037460",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Coldsnap Cap",
+		"image": "6853981720963353064",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Flashdance Footies",
+		"image": "3311585939432488837",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Winter Woodsman",
+		"image": "-3783191749151232673",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Co-Pilot",
+		"image": "-2953851081351384589",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Raiders",
+		"image": "-4724206867322691303",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Finder's Fee",
+		"image": "5873435761068448276",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Captain Cardbeard Cutthroat",
+		"image": "5906876663269593476",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Potassium Bonnet",
+		"image": "-306835342916075636",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Rotation Sensation",
+		"image": "2705255049343025150",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Captain Space Mann",
+		"image": "3275200322664652247",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Phononaut",
+		"image": "-6357552027452552176",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Space Hamster Hammy",
+		"image": "-3404685326577333224",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Universal Translator",
+		"image": "-7902802563428870293",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Catastrophic Companions",
+		"image": "-3822460152426005555",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Duck Billed Hatypus",
+		"image": "-1805100891264343751",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Grim Tweeter",
+		"image": "-8073459074209851527",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Prehistoric Pullover",
+		"image": "7593419568413186830",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Arkham Cowl",
+		"image": "1730130861239665459",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Batbelt",
+		"image": "-1699630729924764558",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Batter's Bracers",
+		"image": "4098381613315205049",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Villains",
+		"image": "367217814740300003",
+		"usedBy": "All class"
+	},
+	{
+		"name": "A Well Wrapped Hat",
+		"image": "1431534323142914985",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Chill Chullo",
+		"image": "2102766778280446913",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Patriot Peak",
+		"image": "4063914827240175050",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Civilian Grade JACK Hat",
+		"image": "8379906975439440533",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bedouin Bandana",
+		"image": "-6174728788661345302",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Military Grade JACK Hat",
+		"image": "6648192073029563940",
+		"usedBy": "All class"
+	},
+	{
+		"name": "PASS Time Early Participation Pin",
+		"image": "4091658425244907349",
+		"usedBy": "All class"
+	},
+	{
+		"name": "PASS Time Miniature Half JACK",
+		"image": "-150436566652966551",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Prinny Hat",
+		"image": "-3820168868143940463",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Prinny Pouch",
+		"image": "-2727402543635325919",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Class Crown",
+		"image": "-7449999106551133122",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Lil' Bitey",
+		"image": "-3243446412710986089",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Nasty Norsemann",
+		"image": "3198714042062637146",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Spooktacles",
+		"image": "-1336697538915558149",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Toadstool Topper",
+		"image": "-4160436769899626679",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Head Prize",
+		"image": "4966873982696802096",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Snowmann",
+		"image": "5159415079114458875",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Woolen Warmer",
+		"image": "690161645295937478",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Audio File",
+		"image": "-3593088094176826255",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Legendary Lid",
+		"image": "8824113091087473079",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Aztec Warrior",
+		"image": "-146697916044397545",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Croaking Hazard",
+		"image": "-973702202809357762",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hunter in Darkness",
+		"image": "-8448389979989256245",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Jungle Wreath",
+		"image": "6205369304248194241",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Monstrous Memento",
+		"image": "4094899675706648800",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pithy Professional",
+		"image": "4387706460548239434",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Saxton",
+		"image": "-3514277709192246715",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Quizzical Quetzal",
+		"image": "5547843346935128402",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Saxton",
+		"image": "4611340316830436959",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Slithering Scarf",
+		"image": "-3675717692129011867",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Balloonihoodie",
+		"image": "-5788301434095624170",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Caribou Companion",
+		"image": "9035510608927805520",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Santa",
+		"image": "-3896271304534117982",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Yeti",
+		"image": "-497833110309603298",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Sledder's Sidekick",
+		"image": "-5465818069379841332",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Robin Walkers",
+		"image": "-4313147478725975450",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Tundra Top",
+		"image": "-766789668908973099",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Deadbeats",
+		"image": "-2981336672817071206",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Lucky Cat Hat",
+		"image": "-2752402340858883526",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Terror-antula",
+		"image": "-8182471084523205750",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bread Heads",
+		"image": "8840523258131681458",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Admin",
+		"image": "4799025161549306375",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Polar Pal",
+		"image": "-2084395344236423211",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Stapler's Specs",
+		"image": "-6164036489167949938",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bat Hat",
+		"image": "-8727623517979730264",
+		"usedBy": "All class"
+	},
+	{
+		"name": "BINOCULUS!",
+		"image": "615971231194666205",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bread Biter",
+		"image": "2754779111470664273",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Horrible Horns",
+		"image": "-9154820846236475733",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mister Bones",
+		"image": "-1840849587438148738",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pocket Halloween Boss",
+		"image": "7651141208542741985",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bumble Beenie",
+		"image": "-5308791888146835293",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Candy Crown",
+		"image": "-7991646538631342334",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Citizen Cane",
+		"image": "-950115833717908271",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Gingerbread Mann",
+		"image": "2265938071111205603",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Glittering Garland",
+		"image": "1632420827836150757",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Globetrotter",
+		"image": "-5687809530183098161",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Pebbles the Penguin",
+		"image": "-5447916376735570497",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Smissmas Saxton",
+		"image": "5299932340636277245",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Yule Hog",
+		"image": "-2005588254690284100",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Breadcrab",
+		"image": "-8584447006441469063",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hypno-Eyes",
+		"image": "-2220825198838091282",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Loaf Loafers",
+		"image": "-6228197944013257458",
+		"usedBy": "All class"
+	},
+	{
+		"name": "A Handsome Handy Thing",
+		"image": "-4824362269810438572",
+		"usedBy": "All class"
+	},
+	{
+		"name": "All Hallows' Hatte",
+		"image": "3246389335519178733",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Balloonicorpse",
+		"image": "-6485605953130462176",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Eye-See-You",
+		"image": "-5661924196913886676",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Gourd Grin",
+		"image": "-6885631718158419028",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Handsome Devil",
+		"image": "-2392388946568400949",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hollowed Helm",
+		"image": "-2648474749497465367",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Impish Ears",
+		"image": "-1990809351725791731",
+		"usedBy": "All class"
+	},
+	{
+		"name": "King Cardbeard",
+		"image": "-8690315928353017993",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Misfortune Fedora",
+		"image": "-7172069801118201375",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Sir Pumpkinton",
+		"image": "-3483212218748850327",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Wrap-A-Khamon",
+		"image": "7031021360613574731",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Candy Cantlers",
+		"image": "-711873685036581415",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Festive Fascinator",
+		"image": "8468282775028564946",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Festive Flip-Thwomps",
+		"image": "-3449855914342492785",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Jolly Jingler",
+		"image": "-8834652075841293602",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Professional's Pom-Pom",
+		"image": "6806381323614000786",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Reindoonibeanie",
+		"image": "-7220854594592830915",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Shoestring Santa",
+		"image": "-1144466089066556162",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Smissmas Sorcerer",
+		"image": "-6348750326467983075",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Towering Pile of Presents",
+		"image": "-5135225117257247703",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Towering Pillar of Beanies",
+		"image": "5047973006543729831",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ballooniphones",
+		"image": "-8283999773913005306",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Manndatory Attire",
+		"image": "-1516631018442468550",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Alakablamicon",
+		"image": "8728054540191980756",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Beanie The All-Gnawing",
+		"image": "-2368444608408479225",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Bone Cone",
+		"image": "-7530673152234944624",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Creepy Crawlers",
+		"image": "-5780713990117205252",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Eyequarium",
+		"image": "5258996279174738764",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Goalkeeper",
+		"image": "-7374840459875031238",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hat Outta Hell",
+		"image": "2663990633764311581",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Scariest Mask EVER",
+		"image": "8157450088656849236",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Second-Head Headwear",
+		"image": "-2412469850428012642",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Spooky Head-Bouncers",
+		"image": "-1818092555721344927",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Towering Patch of Pumpkins",
+		"image": "-7400393539581551838",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Twisted Topper",
+		"image": "5729613111949352576",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Brain Cane",
+		"image": "-1518714530138764399",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Cozy Catchers",
+		"image": "913998733323283288",
+		"usedBy": "All class"
+	},
+	{
+		"name": "El Fiestibrero",
+		"image": "-9132263080333755032",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Elf-Made Bandanna",
+		"image": "8714501508737205469",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Festive Frames",
+		"image": "7936457722102094912",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Giftcrafter",
+		"image": "-6952972515718410282",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Gnome Dome",
+		"image": "-6309758712261220103",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Hat Chocolate",
+		"image": "-2013542170085897508",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Jolly Jester",
+		"image": "-5698385743102320764",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Merry Cone",
+		"image": "-1115693598065500609",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Oh Deer!",
+		"image": "-947014945851167402",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ominous Offering",
+		"image": "2542904164279658269",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Reindoonihorns",
+		"image": "1302004134637218093",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Seasonal Spring",
+		"image": "-7465822260431286363",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Decorated Veteran",
+		"image": "3910992390007789499",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Undercover Brolly",
+		"image": "3079864199674688599",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Beaten and Bruised",
+		"image": "5011095547851957920",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Onimann",
+		"image": "567361272168328839",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Starlight Sorcerer",
+		"image": "7288754808345288246",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Battle Bear",
+		"image": "8195639722675767336",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Colonel Kringle",
+		"image": "5889920526403212643",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Festive Rack",
+		"image": "7807461721850478498",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Lumbercap",
+		"image": "2823191605620723199",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Trapper's Flap",
+		"image": "4690433687678863723",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Brothers in Blues",
+		"image": "-5222846192209724844",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Full Metal Helmet",
+		"image": "-138305870502803082",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Clown's Cover-Up",
+		"image": "8754790757350236401",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Demonic Dome",
+		"image": "-1567053726102649805",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Ludicrously Lunatic Lunon Fedora",
+		"image": "4991746607231880362",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Mean Captain",
+		"image": "3150529168727407331",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Boarder's Beanie",
+		"image": "6912825908253745349",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Cozy Cover-Up",
+		"image": "8761140594021340558",
+		"usedBy": "All class"
+	},
+	{
+		"name": "Dapper Dickens",
+		"image": "-3197895231215560078",
+		"usedBy": "All class"
+	}
+]

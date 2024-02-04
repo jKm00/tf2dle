@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Loader2 } from 'lucide-svelte';
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 
 	export let data: { img: string; value: string }[] = [];
 	export let guessed: string[];
@@ -13,10 +13,15 @@
 	let value = '';
 	let inputElement: HTMLInputElement;
 	let selectTimeout = false;
+	let sliceAmount = 10;
 
-	$: filteredData = data.filter(
-		(d) => !guessed.includes(d.value) && d.value.toLowerCase().includes(value.toLowerCase())
-	);
+	// TODO: Add virtual scroll bar to dropdown
+
+	$: filteredData = data
+		.filter(
+			(d) => !guessed.includes(d.value) && d.value.toLowerCase().includes(value.toLowerCase())
+		)
+		.slice(0, sliceAmount);
 
 	$: showDropdown = value.length > 0 && filteredData.length > 0;
 
@@ -45,6 +50,12 @@
 			}
 		}
 	}
+
+	function handleScroll() {
+		if (sliceAmount < data.length) {
+			sliceAmount += 10;
+		}
+	}
 </script>
 
 <div class="relative">
@@ -65,12 +76,19 @@
 	{#if showDropdown}
 		<ul
 			data-testId="dropdown"
-			class="absolute bg-background w-full border border-input ring-offset-background rounded-md max-h-80 overflow-y-auto z-50"
+			class="dropdown absolute bg-background w-full border border-input ring-offset-background rounded-md max-h-80 overflow-y-auto z-50"
+			on:scroll={handleScroll}
 		>
 			{#each filteredData as d}
 				<li class="p-1">
 					<button on:click={() => handleSelect(d.value)} class="flex items-center gap-4 p-2 w-full">
-						<img src={d.img} alt={d.value} class="img" style={`--width: ${imageSize}rem`} />
+						<img
+							src={d.img}
+							alt={d.value}
+							class="img"
+							style={`--width: ${imageSize}rem`}
+							loading="lazy"
+						/>
 						<span>{d.value}</span>
 					</button>
 				</li>

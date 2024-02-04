@@ -56,3 +56,14 @@ export type WeaponGuessResponse = {
 		value: string[];
 	};
 };
+
+export type CosmeticDto = {
+	name: string;
+	thumbnail: string;
+};
+
+export type CosmeticGuessResponse = {
+	name: string;
+	thumbnail: string;
+	correct: boolean;
+};

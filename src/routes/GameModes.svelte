@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Axe, Map } from 'lucide-svelte';
+	import { Axe, GraduationCap, Map } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
 
 	const gameModes = [
@@ -13,6 +13,12 @@
 			name: 'Map',
 			description: 'Guess the correct map',
 			icon: Map,
+			disabled: false
+		},
+		{
+			name: 'Cosmetic',
+			description: 'Guess the correct cosmetic',
+			icon: GraduationCap,
 			disabled: false
 		}
 	];
