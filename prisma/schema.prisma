@@ -29,3 +29,13 @@ model DailyWeapons {
   name       String
   hasWon     Int      @default(0)
 }
+
+model DailyCosmetics {
+  id         Int      @id @default(autoincrement())
+  selectedAt DateTime @default(now()) @db.Date
+  name       String
+  thumbnail  String
+  rotation   Int
+  usedBy     String
+  hasWon     Int      @default(0)
+}

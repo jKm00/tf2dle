@@ -66,4 +66,13 @@ export type CosmeticGuessResponse = {
 	name: string;
 	thumbnail: string;
 	correct: boolean;
+	usedBy?: string;
+};
+
+export type CurrentCosmeticDto = {
+	cosmetic: {
+		thumbnail: string;
+		rotation: number;
+	};
+	numbersOfCorrectGuesses: number;
 };

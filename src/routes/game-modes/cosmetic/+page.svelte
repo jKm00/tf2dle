@@ -3,10 +3,14 @@
 	import * as Card from '$lib/components/ui/card';
 	import { useLocalStorage } from '$lib/composables/useLocalStorage';
 	import dayjs from '$lib/configs/dayjsConfig.js';
-	import type { CosmeticDto, CosmeticGuessResponse } from '$lib/dtos.js';
+	import type { CosmeticDto, CosmeticGuessResponse, CurrentCosmeticDto } from '$lib/dtos.js';
 	import { Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
+	import CosmeticShowcase from './CosmeticShowcase.svelte';
+	import Hints from './Hints.svelte';
+	import GuessesList from './GuessesList.svelte';
+	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 
 	export let data;
 
@@ -22,13 +26,20 @@
 	let validating = false;
 
 	let cosmetics: CosmeticDto[] = [];
-	let numberOfCorrectGuesses: number | null = null;
+	let todaysCosmetic: CurrentCosmeticDto | undefined;
+	let numberOfCorrectGuesses: number;
+
+	let usedBy: string | undefined = 'scout';
+
+	let openDialog = false;
 
 	onMount(async () => {
 		// Fetch data
 		try {
-			const [res1] = await Promise.all([data.cosmetics]);
+			const [res1, res2] = await Promise.all([data.cosmetics, data.todaysCosmetic]);
 			cosmetics = res1 ?? [];
+			todaysCosmetic = res2;
+			numberOfCorrectGuesses = res2?.numbersOfCorrectGuesses ?? 0;
 		} catch (err) {
 			loadingState = 'error';
 			return;
@@ -64,10 +75,13 @@
 	async function handleSelect(name: string) {
 		if (gameState === 'won') return;
 
+		lastEvent.set({ event: 'guessed', date: dayjs.utc().format() });
+
 		const result = await checkGuess(name);
 
 		if (result) {
 			guesses.update((guesses) => [result, ...guesses]);
+			usedBy = result.usedBy;
 
 			if (result.correct) {
 				won();
@@ -85,7 +99,10 @@
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({ guess })
+				body: JSON.stringify({
+					guess,
+					numberOfGuesses: $guesses.length + 1
+				})
 			});
 			const data = (await res.json()) as CosmeticGuessResponse;
 
@@ -107,8 +124,12 @@
 
 	function won() {
 		setTimeout(() => {
+			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
+			streak.update((streak) => streak + 1);
+			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			gameState = 'won';
-		}, 1000);
+			openDialog = true;
+		}, 500);
 	}
 </script>
 
@@ -123,11 +144,11 @@
 				<div class="flex gap-4">
 					<p class="flex items-center">
 						<Dices aria-label="Number of guesses" />
-						2
+						{$guesses.length}
 					</p>
 					<p class="flex items-center">
 						<Flame aria-label="streak" />
-						0
+						{$streak}
 					</p>
 				</div>
 			</div>
@@ -142,25 +163,55 @@
 					Something went wrong. Please try to refresh.
 					<RotateCw class="w-4 h-4" />
 				</a>
-			{:else if gameState === 'guessing'}
-				<p class="text-center text-sm text-muted-foreground">
-					{numberOfCorrectGuesses}
-					{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays cosmetic
-				</p>
-				<Input
-					data={cosmetics?.map((c) => ({
-						img: `/images/cosmetics/${c.thumbnail}.png`,
-						value: c.name
-					}))}
-					guessed={$guesses.map((guess) => guess.name)}
-					{validating}
-					on:select={(e) => handleSelect(e.detail)}
-				/>
 			{:else}
-				<p class="text-center text-sm text-muted-foreground my-10" data-testId="completed-message">
-					You are 1 out of {numberOfCorrectGuesses} that have guessed todays cosmetic!
-				</p>
+				<div class="grid gap-8">
+					{#if todaysCosmetic}
+						<CosmeticShowcase
+							cosmetic={todaysCosmetic?.cosmetic}
+							guesses={$guesses.length}
+							hasWon={gameState === 'won'}
+						/>
+					{/if}
+					<Hints guesses={$guesses.length} {usedBy} />
+					{#if gameState === 'guessing'}
+						<p class="text-sm text-center text-muted-foreground">
+							{numberOfCorrectGuesses}
+							{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays cosmetic
+						</p>
+						<Input
+							data={cosmetics?.map((c) => ({
+								img: `/images/cosmetics/${c.thumbnail}.png`,
+								value: c.name
+							}))}
+							guessed={$guesses.map((guess) => guess.name)}
+							{validating}
+							on:select={(e) => handleSelect(e.detail)}
+						/>
+					{:else}
+						<p class="text-sm text-center text-muted-foreground">
+							You are 1 out of {numberOfCorrectGuesses} that have guessed todays cosmetic!
+						</p>
+					{/if}
+					<GuessesList guesses={$guesses} />
+				</div>
 			{/if}
 		</Card.Content>
 	</Card.Root>
 </div>
+
+{#if $guesses.length > 0}
+	<VictoryDialog
+		bind:open={openDialog}
+		img={{
+			src: `/images/cosmetics/${todaysCosmetic?.cosmetic.thumbnail}.png`,
+			alt: 'Todays cosmetic'
+		}}
+		imgSize="96px"
+		label="Cosmetic"
+		value={$guesses[0].name}
+		tries={$guesses.length}
+		streak={$streak}
+		correctGuesses={numberOfCorrectGuesses ?? 1}
+		challenge="cosmetic"
+	/>
+{/if}
