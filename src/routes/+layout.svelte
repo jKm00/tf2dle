@@ -21,7 +21,6 @@
 <ModeWatcher />
 <Toaster />
 
-<p class="fixed bg-primary py-2 px-40 -rotate-45 -left-36 top-4 z-50">BETA</p>
 <div class="flex flex-col gap-10 width px-2 m-auto py-10 min-h-screen">
 	<Header />
 	<div class="flex-grow">

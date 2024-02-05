@@ -2,7 +2,7 @@
 	import { Glasses, RefreshCcwDot, Sparkle } from 'lucide-svelte';
 
 	export let guesses: number;
-	export let usedBy: string | undefined;
+	export let usedBy: string | null;
 
 	const ROTATION_HINT = 5;
 	const GRAYSCALE_HINT = 10;

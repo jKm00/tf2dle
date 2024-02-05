@@ -29,7 +29,7 @@
 	let todaysCosmetic: CurrentCosmeticDto | undefined;
 	let numberOfCorrectGuesses: number;
 
-	let usedBy: string | undefined = 'scout';
+	let usedBy = useLocalStorage<string | null>('cosmetic_used_by', null);
 
 	let openDialog = false;
 
@@ -49,6 +49,7 @@
 		if ($lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
+			usedBy.set(null);
 			gameState = 'guessing';
 		} else {
 			switch ($lastEvent.event) {
@@ -58,12 +59,14 @@
 					} else {
 						gameState = 'guessing';
 						guesses.set([]);
+						usedBy.set(null);
 					}
 					break;
 				case 'guessed':
 					gameState = 'guessing';
 					if (!dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
 						guesses.set([]);
+						usedBy.set(null);
 					}
 					break;
 			}
@@ -81,7 +84,10 @@
 
 		if (result) {
 			guesses.update((guesses) => [result, ...guesses]);
-			usedBy = result.usedBy;
+
+			if (result.usedBy) {
+				usedBy.set(result.usedBy);
+			}
 
 			if (result.correct) {
 				won();
@@ -172,7 +178,7 @@
 							hasWon={gameState === 'won'}
 						/>
 					{/if}
-					<Hints guesses={$guesses.length} {usedBy} />
+					<Hints guesses={$guesses.length} usedBy={$usedBy} />
 					{#if gameState === 'guessing'}
 						<p class="text-sm text-center text-muted-foreground">
 							{numberOfCorrectGuesses}
