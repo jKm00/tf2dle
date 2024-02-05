@@ -9,5 +9,5 @@ export type PatchNote = {
 export type Change = {
 	title: string;
 	description: string;
-	gameMode: 'all' | 'weapon' | 'map';
+	gameMode: 'all' | 'weapon' | 'map' | 'cosmetic';
 };

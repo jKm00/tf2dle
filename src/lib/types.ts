@@ -31,3 +31,9 @@ export type Weapon = {
 	ammoCarried: string | null;
 	qualities: string[];
 };
+
+export type Cosmetic = {
+	name: string;
+	image: string;
+	usedBy: string;
+};
