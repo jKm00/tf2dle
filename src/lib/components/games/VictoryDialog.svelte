@@ -29,7 +29,7 @@
 		<Dialog.Header>
 			<Dialog.Title>
 				Won!
-				<TwitterShare {challenge} {tries} {streak} class="mb-2">Share</TwitterShare>
+				<TwitterShare {challenge} {tries} {streak} class="mb-2" />
 			</Dialog.Title>
 			<Dialog.Description
 				>You are gamer number {correctGuesses} to guess the correct {challenge.toLowerCase()}!</Dialog.Description
