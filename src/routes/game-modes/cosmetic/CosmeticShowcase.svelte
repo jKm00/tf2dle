@@ -45,8 +45,10 @@
 				wrapper.style.transform = `rotate(0deg)`;
 			}
 			if (guesses < 10) {
+				wrapper.style.filter = 'grayscale(100%)';
 				ctx.filter = 'grayscale(100%)';
 			} else {
+				wrapper.style.filter = 'grayscale(0)';
 				ctx.filter = 'grayscale(0)';
 			}
 

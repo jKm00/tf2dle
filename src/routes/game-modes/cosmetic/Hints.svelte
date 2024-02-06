@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Glasses, RefreshCcwDot, Sparkle } from 'lucide-svelte';
+	import { Glasses, RefreshCcwDot, Sparkles } from 'lucide-svelte';
 
 	export let guesses: number;
 	export let usedBy: string | null;
@@ -24,7 +24,7 @@
 				guesses < GRAYSCALE_HINT ? 'text-muted-foreground' : ''
 			}`}
 		>
-			<Sparkle />
+			<Sparkles />
 			<p>Remove gray filter in {Math.max(GRAYSCALE_HINT - guesses, 0)} tries</p>
 		</div>
 		<div

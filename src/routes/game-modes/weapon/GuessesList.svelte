@@ -11,10 +11,10 @@
 		{#if guesses.length > 0}
 			<div class="grid grid-cols-6 gap-2 items-center font-semibold" data-testId="guess-row-title">
 				<p>Image</p>
-				<p>Release Year</p>
 				<p>Used By</p>
 				<p>Slot</p>
 				<p>Magazine size</p>
+				<p>Release Year</p>
 				<p>Qualities</p>
 			</div>
 		{/if}
@@ -27,14 +27,6 @@
 					alt={guess.name}
 					class="w-20"
 				/>
-				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
-				>
-					{guess.releaseDate.value}
-					<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
-					<ArrowBigUp class={guess.releaseDate.status === 'later' ? '' : 'hidden'} />
-				</p>
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
@@ -53,6 +45,15 @@
 				>
 					{guess.magazineSize.value}
 				</p>
+				<p
+					in:fade={{ duration: fadeDuration, delay: fadeDuration }}
+					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
+				>
+					{guess.releaseDate.value}
+					<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
+					<ArrowBigUp class={guess.releaseDate.status === 'later' ? '' : 'hidden'} />
+				</p>
+
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 5 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.qualities.status}`}
