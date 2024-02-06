@@ -39,12 +39,12 @@
 			ctx.filter = 'grayscale(0)';
 			ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 		} else {
-			if (guesses < 5) {
+			if (guesses < 3) {
 				wrapper.style.transform = `rotate(${cosmetic.rotation}deg)`;
 			} else {
 				wrapper.style.transform = `rotate(0deg)`;
 			}
-			if (guesses < 10) {
+			if (guesses < 6) {
 				wrapper.style.filter = 'grayscale(100%)';
 				ctx.filter = 'grayscale(100%)';
 			} else {

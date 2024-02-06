@@ -4,9 +4,9 @@
 	export let guesses: number;
 	export let usedBy: string | null;
 
-	const ROTATION_HINT = 5;
-	const GRAYSCALE_HINT = 10;
-	const CLASS_HINT = 15;
+	const ROTATION_HINT = 3;
+	const GRAYSCALE_HINT = 6;
+	const CLASS_HINT = 9;
 </script>
 
 <div>

@@ -54,14 +54,14 @@ class CosmeticService {
 	 * @param guess the guess to validate
 	 * @param numberOfGuesses the number of tries the user has made
 	 * @returns an object containing information about the guess and if it was correct.
-	 * A hint is provided if the user has made 15 or more guesses
+	 * A hint is provided if the user has made 9 or more guesses
 	 */
 	public async validateGuess(guess: string, numberOfGuesses: number) {
 		const todaysCosmetic = await this.getTodaysCosmetic();
 		const guessedCosmetic = this.cosmetics.find((cosmetic) => cosmetic.name === guess);
 
 		let usedBy: string | undefined;
-		if (numberOfGuesses >= 15) {
+		if (numberOfGuesses >= 9) {
 			usedBy = todaysCosmetic.usedBy;
 		}
 
