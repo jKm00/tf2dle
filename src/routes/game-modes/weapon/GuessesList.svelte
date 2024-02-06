@@ -28,25 +28,25 @@
 					class="w-20"
 				/>
 				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 1 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
 				>
 					{guess.usedBy.value.join(', ')}
 				</p>
 				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
 				>
 					{guess.slot.value.join(', ')}
 				</p>
 				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 4 }}
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
 				>
 					{guess.magazineSize.value}
 				</p>
 				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration }}
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 5 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
 				>
 					{guess.releaseDate.value}
