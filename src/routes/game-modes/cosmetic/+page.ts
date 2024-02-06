@@ -2,6 +2,9 @@ import type { CosmeticDto, CurrentCosmeticDto } from '$lib/dtos';
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ fetch }) => {
+	/**
+	 * Load all cosmetics
+	 */
 	async function fetchCosmetics() {
 		let res;
 		let data;
@@ -25,6 +28,9 @@ export const load = async ({ fetch }) => {
 		return data;
 	}
 
+	/**
+	 * Fetch todays cosmetic
+	 */
 	async function fetchTodaysCosmetic() {
 		let res;
 		let data;

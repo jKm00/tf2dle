@@ -21,6 +21,11 @@ export default {
 			description:
 				'Grayfilter was not applied to cosmeitc on mobile devices. This should now be fixed.',
 			gamemode: 'cosmetic'
+		},
+		{
+			title: 'Fix streak reset',
+			description: "Streak will now proparly reset if you don't guess correct within two days",
+			gamemode: ['weapon', 'cosmetic']
 		}
 	]
 };

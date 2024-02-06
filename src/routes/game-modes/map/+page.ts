@@ -2,6 +2,9 @@ import type { MapDto, SelectedMapDto } from '$lib/dtos';
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ fetch }) => {
+	/**
+	 * Fetch todays map
+	 */
 	async function fetchTodaysMap() {
 		let res;
 		let data;
@@ -25,6 +28,9 @@ export const load = async ({ fetch }) => {
 		return data;
 	}
 
+	/**
+	 *  Fetch all maps
+	 */
 	async function fetchMaps() {
 		try {
 			const res = await fetch('/api/v1/maps');

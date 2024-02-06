@@ -3,6 +3,7 @@
 	import { ArrowBigDown, ArrowBigUp, MoveLeft, MoveRight } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 
+	// The guesses the user has made
 	export let guesses: WeaponGuessResponse[];
 </script>
 

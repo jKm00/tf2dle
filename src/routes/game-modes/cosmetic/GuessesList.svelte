@@ -2,6 +2,7 @@
 	import type { CosmeticGuessResponse } from '$lib/dtos';
 	import { scale } from 'svelte/transition';
 
+	// The guesses made by the user
 	export let guesses: CosmeticGuessResponse[];
 </script>
 

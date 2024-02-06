@@ -1,6 +1,9 @@
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ fetch }) => {
+	/**
+	 * Fetches the number of how many have already guessed todays weapon
+	 */
 	async function fetchNumberOfCorrectGuesses() {
 		let res;
 		let data;
@@ -24,6 +27,9 @@ export const load = async ({ fetch }) => {
 		return data;
 	}
 
+	/**
+	 * Fetches all weapons
+	 */
 	async function fetchWeapons() {
 		let res;
 		let data;

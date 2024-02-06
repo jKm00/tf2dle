@@ -3,6 +3,7 @@
 	import { ArrowBigDown, ArrowBigUp } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 
+	// The guesses made by the user
 	export let guesses: MapGuessResponse[];
 </script>
 
