@@ -10,11 +10,13 @@
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import { Dices, Flame, RotateCw } from 'lucide-svelte';
+	import { toast } from 'svelte-sonner';
 
 	export let data;
 
 	$: ({ todaysMap } = data);
 
+	// State persisted in local storage
 	let gameState: 'guessing' | 'won' = 'guessing';
 	let lastEvent = useLocalStorage<{ event: 'won' | 'guessed'; date: string } | null>(
 		'map_last_event',
@@ -23,6 +25,7 @@
 	let guesses = useLocalStorage<MapGuessResponse[]>('map_guesses', []);
 	let streak = useLocalStorage<number>('map_streak', 0);
 
+	// Current game state
 	let validating = false;
 	let todaysMapName: string = '';
 	let openDialog = false;
@@ -30,8 +33,10 @@
 	let numberOfCorrectGuesses: number | undefined = undefined;
 
 	onMount(async () => {
+		// Load data
 		numberOfCorrectGuesses = (await todaysMap)?.correctGuesses ?? 0;
 
+		// Init game state
 		if ($lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
@@ -47,7 +52,6 @@
 			streak.set(0);
 		}
 
-		// Initialize game state
 		switch ($lastEvent.event) {
 			case 'won':
 				if (dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
@@ -66,13 +70,20 @@
 		}
 	});
 
+	/**
+	 * Handle a user's guess
+	 * @param name of the map
+	 */
 	async function handleSelect(name: string) {
 		if (gameState === 'won') return;
 
+		// Update last event
 		lastEvent.set({ event: 'guessed', date: dayjs.utc().format() });
 
+		// Validate guess
 		const result = await checkGuess(name);
 
+		// Update game state based on result
 		if (result) {
 			guesses.update((guesses) => [result, ...guesses]);
 		}
@@ -82,8 +93,13 @@
 		}
 	}
 
+	/**
+	 * Validate a guess
+	 * @param value to validate
+	 */
 	async function checkGuess(value: string) {
 		validating = true;
+		let error = false;
 
 		try {
 			const res = await fetch('/api/v1/game-modes/map', {
@@ -95,14 +111,26 @@
 			});
 			const data = (await res.json()) as MapGuessResponse;
 
-			return data;
+			if (!res.ok) {
+				error = true;
+			} else {
+				return data;
+			}
 		} catch (err) {
-			console.error(err);
+			error = true;
 		} finally {
 			validating = false;
 		}
+
+		if (error) {
+			toast.error('Could not validate your guess, please try again.');
+		}
 	}
 
+	/**
+	 * Handle a user's victory
+	 * @param mapName of the correct map
+	 */
 	function won(mapName: string) {
 		// Wait for reveal animation to finish
 		setTimeout(() => {
@@ -193,12 +221,12 @@
 				src: `/images/maps/originals/${todaysMap?.image.url}.png`,
 				alt: todaysMapName
 			}}
-			label="Map"
+			challenge="Map"
 			value={todaysMapName}
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={numberOfCorrectGuesses ?? 1}
-			challenge="map"
+			nextChallenge="/game-modes/cosmetic"
 		/>
 	{/await}
 </div>

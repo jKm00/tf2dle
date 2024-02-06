@@ -29,6 +29,7 @@ export type Weapon = {
 	slot: string[];
 	ammoLoaded: string | null;
 	ammoCarried: string | null;
+	reloadType: string | null;
 	qualities: string[];
 };
 

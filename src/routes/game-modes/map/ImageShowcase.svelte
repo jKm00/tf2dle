@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 
+	// The image to display
 	export let url: string;
+	// Where to start the zoom
 	export let startingPos: { x: number; y: number };
+	// The number of guesses the user has made
 	export let numberOfGuesses: number;
+	// Whether the user has won the game
 	export let hasWon: boolean;
 
 	const STEPS = 11;
@@ -15,6 +19,7 @@
 	$: drawImage(img, numberOfGuesses, hasWon);
 
 	onMount(async () => {
+		// Load and draw image
 		img = new Image();
 		img.src = url;
 		img.onload = async () => {
@@ -23,6 +28,9 @@
 		};
 	});
 
+	/**
+	 * Redraw canvas and image when window is resized
+	 */
 	function handleWindowResize() {
 		const { width, height } = container.getBoundingClientRect();
 		canvas.width = width;
@@ -31,6 +39,12 @@
 		drawImage(img, numberOfGuesses, hasWon);
 	}
 
+	/**
+	 * Draws the image, applying correct zoom based on number of guesses
+	 * @param img to draw
+	 * @param guesses the user has made
+	 * @param hasWon whether the user has won the game
+	 */
 	function drawImage(img: HTMLImageElement, guesses: number, hasWon: boolean) {
 		if (!canvas || !img) return;
 

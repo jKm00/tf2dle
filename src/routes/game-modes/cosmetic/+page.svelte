@@ -14,27 +14,28 @@
 
 	export let data;
 
+	// State persisted in local storage
 	let guesses = useLocalStorage<CosmeticGuessResponse[]>('cosmetic_guesses', []);
 	let lastEvent = useLocalStorage<{ event: string; date: string } | null>(
 		'cosmetic_last_event',
 		null
 	);
 	let streak = useLocalStorage('cosmetic_streak', 0);
+	let usedBy = useLocalStorage<string | null>('cosmetic_used_by', null);
 
+	// Current game state
 	let loadingState: 'loading' | 'error' | 'success' = 'loading';
 	let gameState: 'guessing' | 'won' = 'guessing';
 	let validating = false;
+	let openDialog = false;
 
+	// Data
 	let cosmetics: CosmeticDto[] = [];
 	let todaysCosmetic: CurrentCosmeticDto | undefined;
 	let numberOfCorrectGuesses: number;
 
-	let usedBy = useLocalStorage<string | null>('cosmetic_used_by', null);
-
-	let openDialog = false;
-
 	onMount(async () => {
-		// Fetch data
+		// Load data
 		try {
 			const [res1, res2] = await Promise.all([data.cosmetics, data.todaysCosmetic]);
 			cosmetics = res1 ?? [];
@@ -52,6 +53,14 @@
 			usedBy.set(null);
 			gameState = 'guessing';
 		} else {
+			// Reset streak if last victory was more than 1 days ago
+			if (
+				dayjs($lastEvent.date).isBefore(dayjs.utc().subtract(1, 'day'), 'day') ||
+				$lastEvent.event !== 'won'
+			) {
+				streak.set(0);
+			}
+
 			switch ($lastEvent.event) {
 				case 'won':
 					if (dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
@@ -75,26 +84,35 @@
 		loadingState = 'success';
 	});
 
+	/**
+	 * Handle a guess
+	 * @param name of the cosmetic guessed
+	 */
 	async function handleSelect(name: string) {
 		if (gameState === 'won') return;
 
+		// Update last event
 		lastEvent.set({ event: 'guessed', date: dayjs.utc().format() });
 
+		// Validate guess
 		const result = await checkGuess(name);
 
+		// Update game state based on result
 		if (result) {
 			guesses.update((guesses) => [result, ...guesses]);
-
 			if (result.usedBy) {
 				usedBy.set(result.usedBy);
 			}
-
 			if (result.correct) {
 				won();
 			}
 		}
 	}
 
+	/**
+	 * Validate a guess
+	 * @param guess to validate
+	 */
 	async function checkGuess(guess: string) {
 		validating = true;
 		let error = false;
@@ -128,6 +146,9 @@
 		}
 	}
 
+	/**
+	 * Update game state when a user has won
+	 */
 	function won() {
 		setTimeout(() => {
 			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
@@ -213,11 +234,10 @@
 			alt: 'Todays cosmetic'
 		}}
 		imgSize="96px"
-		label="Cosmetic"
+		challenge="Cosmetic"
 		value={$guesses[0].name}
 		tries={$guesses.length}
 		streak={$streak}
 		correctGuesses={numberOfCorrectGuesses ?? 1}
-		challenge="cosmetic"
 	/>
 {/if}

@@ -13,8 +13,7 @@
 
 	export let data;
 
-	let loadingState: 'loading' | 'error' | 'success' = 'loading';
-
+	// State persisted in local storage
 	let gameState: 'guessing' | 'won' = 'guessing';
 	let guesses = useLocalStorage<WeaponGuessResponse[]>('weapon_guesses', []);
 	let lastEvent = useLocalStorage<{ event: string; date: string } | null>(
@@ -23,14 +22,17 @@
 	);
 	let streak = useLocalStorage('weapon__streak', 0);
 
+	// Current game state
+	let loadingState: 'loading' | 'error' | 'success' = 'loading';
 	let validating = false;
 	let openDialog = false;
 
+	// Data
 	let numberOfCorrectGuesses: number | undefined = undefined;
 	let weapons: string[] = [];
 
 	onMount(async () => {
-		// Wait for data
+		// Load data
 		try {
 			const [res1, res2] = await Promise.all([data.numberOfCorrectGuesses, data.weapons]);
 			numberOfCorrectGuesses = res1 ?? 0;
@@ -46,6 +48,14 @@
 			streak.set(0);
 			gameState = 'guessing';
 		} else {
+			// Reset streak if last victory was more than 1 days ago
+			if (
+				dayjs($lastEvent.date).isBefore(dayjs.utc().subtract(1, 'day'), 'day') ||
+				$lastEvent.event !== 'won'
+			) {
+				streak.set(0);
+			}
+
 			switch ($lastEvent.event) {
 				case 'won':
 					if (dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
@@ -67,13 +77,20 @@
 		loadingState = 'success';
 	});
 
+	/**
+	 * Handles a guess
+	 * @param guess name of the weapon guessed
+	 */
 	async function handleGuess(guess: string) {
 		if (gameState === 'won') return;
 
+		// Update last event
 		lastEvent.set({ event: 'guessed', date: dayjs.utc().format() });
 
+		// Validate guess
 		const result = await checkGuess(guess);
 
+		// Update game state based on result
 		if (result) {
 			guesses.update((guesses) => [result, ...guesses]);
 		}
@@ -83,6 +100,10 @@
 		}
 	}
 
+	/**
+	 * Validate a guess
+	 * @param guess to validate
+	 */
 	async function checkGuess(guess: string) {
 		let error = false;
 		validating = true;
@@ -110,6 +131,9 @@
 		toast.error('Could not validate your guess, please try again.');
 	}
 
+	/**
+	 * Handles a victory
+	 */
 	function won() {
 		// Wait for reveal animation to finish
 		setTimeout(() => {
@@ -195,12 +219,12 @@
 		<VictoryDialog
 			img={{ src: `/images/weapons/thumbnails/${$guesses[0].name}.png`, alt: $guesses[0].name }}
 			imgSize="10rem"
-			label="Weapon"
+			challenge="Weapon"
 			value={$guesses[0].name}
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={numberOfCorrectGuesses ?? 1}
-			challenge="weapon"
+			nextChallenge="/game-modes/map"
 			bind:open={openDialog}
 		/>
 	{/if}

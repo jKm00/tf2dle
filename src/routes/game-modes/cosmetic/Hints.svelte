@@ -1,12 +1,14 @@
 <script lang="ts">
-	import { Glasses, RefreshCcwDot, Sparkle } from 'lucide-svelte';
+	import { Glasses, RefreshCcwDot, Sparkles } from 'lucide-svelte';
 
+	// The number of guesses the user has made
 	export let guesses: number;
+	// The class the cosmetic is used by (Scout, Soldier, etc.)
 	export let usedBy: string | null;
 
-	const ROTATION_HINT = 5;
-	const GRAYSCALE_HINT = 10;
-	const CLASS_HINT = 15;
+	const ROTATION_HINT = 3;
+	const GRAYSCALE_HINT = 6;
+	const CLASS_HINT = 9;
 </script>
 
 <div>
@@ -24,7 +26,7 @@
 				guesses < GRAYSCALE_HINT ? 'text-muted-foreground' : ''
 			}`}
 		>
-			<Sparkle />
+			<Sparkles />
 			<p>Remove gray filter in {Math.max(GRAYSCALE_HINT - guesses, 0)} tries</p>
 		</div>
 		<div

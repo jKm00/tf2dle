@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
+	import { Share } from 'lucide-svelte';
 
 	export let challenge: string;
 	export let tries: number;
@@ -8,9 +9,10 @@
 	let clazz: string;
 	export { clazz as class };
 
+	// Query string for the tweet
 	$: query = [
 		`text=${encodeURIComponent(
-			`I guessed today's tf2dle ${challenge} in ${tries} ${
+			`I guessed today's tf2dle ${challenge.toLowerCase()} in ${tries} ${
 				tries === 1 ? 'try' : 'tries'
 			}. My streak is now ${streak}!`
 		)}`,
@@ -20,6 +22,10 @@
 
 	$: href = `https://twitter.com/intent/tweet?${query}`;
 
+	/**
+	 * Opens a new window with the tweet
+	 * @param e the link click event
+	 */
 	function open(e: Event) {
 		e.preventDefault();
 
@@ -33,4 +39,10 @@
 	}
 </script>
 
-<Button target="_blank" {href} on:click={open} class={clazz}><slot /></Button>
+<Button
+	target="_blank"
+	{href}
+	variant="ghost"
+	on:click={open}
+	class={`${clazz} text-muted-foreground`}><Share class="w-4 h-4" /></Button
+>

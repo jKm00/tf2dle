@@ -7,10 +7,11 @@ import LogService from './LogService';
 class WeaponService {
 	private weapons: Weapon[];
 	private repo: WeaponRepository;
+	// Map used to convert usedBy values to a list of classes
 	private usedByMap: Map<string, string[]>;
 
 	constructor(repository: WeaponRepository) {
-		this.weapons = weapons;
+		this.weapons = weapons as Weapon[];
 		this.repo = repository;
 		this.usedByMap = new Map();
 
@@ -54,6 +55,11 @@ class WeaponService {
 		return this.weapons.map((w) => w.name);
 	}
 
+	/**
+	 * Extracts the year from a date string formatted: Month Day, Year Patch(name of patch)
+	 * @param dateString date string to extract year from
+	 * @returns the year as a number
+	 */
 	private extractYear(dateString: string) {
 		if (dateString === 'unknown') return 2007;
 

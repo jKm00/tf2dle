@@ -3,6 +3,7 @@
 	import { ArrowBigDown, ArrowBigUp, MoveLeft, MoveRight } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 
+	// The guesses the user has made
 	export let guesses: WeaponGuessResponse[];
 </script>
 
@@ -11,10 +12,10 @@
 		{#if guesses.length > 0}
 			<div class="grid grid-cols-6 gap-2 items-center font-semibold" data-testId="guess-row-title">
 				<p>Image</p>
-				<p>Release Year</p>
 				<p>Used By</p>
 				<p>Slot</p>
 				<p>Magazine size</p>
+				<p>Release Year</p>
 				<p>Qualities</p>
 			</div>
 		{/if}
@@ -28,31 +29,32 @@
 					class="w-20"
 				/>
 				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration }}
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 1 }}
+					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
+				>
+					{guess.usedBy.value.join(', ')}
+				</p>
+				<p
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
+					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
+				>
+					{guess.slot.value.join(', ')}
+				</p>
+				<p
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
+					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
+				>
+					{guess.magazineSize.value}
+				</p>
+				<p
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 4 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
 				>
 					{guess.releaseDate.value}
 					<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
 					<ArrowBigUp class={guess.releaseDate.status === 'later' ? '' : 'hidden'} />
 				</p>
-				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
-				>
-					{guess.usedBy.value.join(', ')}
-				</p>
-				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
-				>
-					{guess.slot.value.join(', ')}
-				</p>
-				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 4 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
-				>
-					{guess.magazineSize.value}
-				</p>
+
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 5 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.qualities.status}`}
