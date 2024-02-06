@@ -16,27 +16,40 @@
 			{#if patch.newFeatures.length > 0}
 				<h3 class="text-sm text-primary font-semibold mb-2">New Features</h3>
 				{#each patch.newFeatures as feature}
+					{@const gameModes =
+						feature.gameMode instanceof Array ? feature.gameMode.join(', ') : feature.gameMode}
 					<article class="mb-6">
-						<h4 class="font-semibold mb-1">{feature.title}</h4>
-						<p class="text-sm text-muted-foreground">{feature.description}</p>
+						<h4 class="font-semibold mb-2">{feature.title}</h4>
+						<p class="text-sm mb-2">{feature.description}</p>
+						<p class="text-sm text-muted-foreground">Game modes: {gameModes}</p>
 					</article>
 				{/each}
 			{/if}
 			{#if patch.improvements.length > 0}
 				<h3 class="text-sm text-primary font-semibold mb-2">Improvements</h3>
 				{#each patch.improvements as improvement}
+					{@const gameModes =
+						improvement.gameMode instanceof Array
+							? improvement.gameMode.join(', ')
+							: improvement.gameMode}
+
 					<article class="mb-6">
-						<h4 class="font-semibold mb-1">{improvement.title}</h4>
-						<p class="text-sm text-muted-foreground">{improvement.description}</p>
+						<h4 class="font-semibold mb-2">{improvement.title}</h4>
+						<p class="text-sm mb-2">{improvement.description}</p>
+						<p class="text-sm text-muted-foreground">Game modes: {gameModes}</p>
 					</article>
 				{/each}
 			{/if}
 			{#if patch.bugFixes.length > 0}
 				<h3 class="text-sm text-primary font-semibold mb-2">Bug fixes</h3>
 				{#each patch.bugFixes as fix}
+					{@const gameModes =
+						fix.gameMode instanceof Array ? fix.gameMode.join(', ') : fix.gameMode}
+
 					<article class="mb-6">
-						<h4 class="font-semibold mb-1">{fix.title}</h4>
-						<p class="text-sm text-muted-foreground">{fix.description}</p>
+						<h4 class="font-semibold mb-2">{fix.title}</h4>
+						<p class="text-sm mb-2">{fix.description}</p>
+						<p class="text-sm text-muted-foreground">Game modes: {gameModes}</p>
 					</article>
 				{/each}
 			{/if}

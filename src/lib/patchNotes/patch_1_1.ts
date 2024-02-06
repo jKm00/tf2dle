@@ -6,13 +6,18 @@ export default {
 		{
 			title: 'Re-orderd weapon hints',
 			description: 'Weapon hints are now ordered in a more logical way.',
-			gamemode: 'weapon'
+			gameMode: 'weapon'
 		},
 		{
 			title: 'Made cosmetic easier',
 			description:
 				'The hints for the cosmetics are now given at 3, 6, and 9 tries instead of 5, 10, and 15.',
-			gamemode: 'cosmetic'
+			gameMode: 'cosmetic'
+		},
+		{
+			title: 'Next game mode navigation',
+			description: 'Can now navigate to the next game mode from the victory dialog.',
+			gameMode: 'all'
 		}
 	],
 	bugFixes: [
@@ -20,12 +25,12 @@ export default {
 			title: 'Fix grayfilter on mobile',
 			description:
 				'Grayfilter was not applied to cosmeitc on mobile devices. This should now be fixed.',
-			gamemode: 'cosmetic'
+			gameMode: 'cosmetic'
 		},
 		{
 			title: 'Fix streak reset',
 			description: "Streak will now proparly reset if you don't guess correct within two days",
-			gamemode: ['weapon', 'cosmetic']
+			gameMode: ['weapon', 'cosmetic']
 		}
 	]
 };
