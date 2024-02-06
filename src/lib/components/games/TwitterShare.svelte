@@ -8,6 +8,7 @@
 	let clazz: string;
 	export { clazz as class };
 
+	// Query string for the tweet
 	$: query = [
 		`text=${encodeURIComponent(
 			`I guessed today's tf2dle ${challenge} in ${tries} ${
@@ -20,6 +21,10 @@
 
 	$: href = `https://twitter.com/intent/tweet?${query}`;
 
+	/**
+	 * Opens a new window with the tweet
+	 * @param e the link click event
+	 */
 	function open(e: Event) {
 		e.preventDefault();
 

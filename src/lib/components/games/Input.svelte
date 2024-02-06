@@ -2,10 +2,13 @@
 	import { Loader2 } from 'lucide-svelte';
 	import { createEventDispatcher, onMount } from 'svelte';
 
+	// Data to show in dropdown
 	export let data: { img: string; value: string }[] = [];
+	// Already guessed values
 	export let guessed: string[];
 	export let placeholder = 'Enter your guess';
 	export let validating: boolean;
+	// Size of image to be displayed in the dropdown
 	export let imageSize = 3;
 
 	const dispatch = createEventDispatcher<{ select: string }>();
@@ -25,6 +28,10 @@
 
 	$: showDropdown = value.length > 0 && filteredData.length > 0;
 
+	/**
+	 * Handles the select event, dispatching the selected value
+	 * @param selected the value selected
+	 */
 	function handleSelect(selected: string) {
 		if (validating || selectTimeout || value === '') return;
 
@@ -38,6 +45,12 @@
 		}, 100);
 	}
 
+	/**
+	 * Handles and key press.
+	 * If esacpe is pressed, hide dropdown.
+	 * If enter is pressed, select the first value shown in the dropdown.
+	 * @param event the key press event
+	 */
 	function handleKeyPress(event: KeyboardEvent) {
 		if (event.key === 'Escape') {
 			showDropdown = false;
@@ -51,6 +64,10 @@
 		}
 	}
 
+	/**
+	 * Updates the amount of data shown in the dropdown on scroll
+	 * (lazy loading data into the dropdown)
+	 */
 	function handleScroll() {
 		if (sliceAmount < data.length) {
 			sliceAmount += 10;

@@ -3,13 +3,20 @@
 	import * as Dialog from '$lib/components/ui/dialog';
 	import TwitterShare from '$lib/components/games/TwitterShare.svelte';
 
+	// Image of the correct guess
 	export let img: { src: string; alt: string };
 	export let imgSize: string = '100%';
+	// Label of the correct guess (e.g. "Weapon", "Map", etc.)
 	export let label: string;
+	// Value of the correct guess (e.g. "Rocket Launcher", "Badlands", etc.)
 	export let value: string;
+	// Number of tries it took to guess the correct value
 	export let tries: number;
+	// The user's current streak
 	export let streak: number;
+	// How many have already guessed the current challenge
 	export let correctGuesses: number;
+	// Name of the challenge (e.g. "Weapon", "Map", etc.)
 	export let challenge: string;
 
 	export let open: boolean;
