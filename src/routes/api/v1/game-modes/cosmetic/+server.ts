@@ -1,6 +1,11 @@
 import { cosmeticService } from '$lib/server/services/CosmeticService';
 import { json } from '@sveltejs/kit';
 
+/**
+ * Returns the current cosmetic with the number of
+ * how many have already guessed it correctly
+ * @returns HttpResponse
+ */
 export async function GET() {
 	const todaysCosmetic = await cosmeticService.getTodaysCosmetic();
 
@@ -13,6 +18,12 @@ export async function GET() {
 	});
 }
 
+/**
+ * Validates the cosmetic guess
+ * @param param0 a RequestEvent containing a body with the guess
+ * and what number of try it is
+ * @returns CosmeticGuessResponse
+ */
 export async function POST({ request }) {
 	const { guess, numberOfGuesses } = await request.json();
 

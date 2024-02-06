@@ -23,7 +23,7 @@ export async function GET() {
  * Checks if the name of the map given is todays map
  * @param request a request object with a body containing
  * the name of the map to check in the field 'guess' ({ guess: string})
- * @returns true if the name of the map given is todays map, false otherwise
+ * @returns MapGuessResponse
  */
 export async function POST({ request }) {
 	const { guess } = await request.json();
