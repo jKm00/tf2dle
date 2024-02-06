@@ -15,7 +15,7 @@ class MapService {
 	}
 
 	/**
-	 * Selects a random map
+	 * Selects a random map for the current day
 	 */
 	public async selectRandomMap() {
 		// Select a random map
@@ -55,8 +55,11 @@ class MapService {
 	}
 
 	/**
-	 * Returns todays map name if the guess was correct, null otherwise
-	 * @param guess of the map to check
+	 * Validates a map guess
+	 * @param guess name of the map guessed
+	 * @returns an object containing if the guess was correct and
+	 * the hints for the guessed map with a value describing if
+	 * the hint of the guessed game matches the hint of the correct game
 	 */
 	public async validateGuess(guess: string) {
 		const todaysSavedMap = await this.getTodaysMap();

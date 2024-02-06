@@ -3,6 +3,7 @@ import cosmetics from '$lib/server/data/cosmetics.json';
 import type { CosmeticRepository } from '$lib/server/repositories/CosmeticRepository';
 import { cosmeticRepository } from '$lib/server/repositories/CosmeticRepositoryPrisma';
 import type { CosmeticGuessResponse } from '$lib/dtos';
+import LogService from './LogService';
 
 /**
  * Service for handling cosmetics
@@ -45,6 +46,11 @@ class CosmeticService {
 	private async selectRandomCosmetic() {
 		const randomIndex = Math.floor(Math.random() * this.cosmetics.length);
 		const randomRotation = Math.floor(Math.random() * 4) * 90;
+
+		LogService.log(
+			'Cosmetic',
+			`Selected cosmetic: ${this.cosmetics[randomIndex].name} with rotation ${randomRotation} degrees`
+		);
 
 		return this.repo.saveTodaysCosmetic(this.cosmetics[randomIndex], randomRotation);
 	}
