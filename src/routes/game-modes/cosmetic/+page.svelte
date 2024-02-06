@@ -234,11 +234,10 @@
 			alt: 'Todays cosmetic'
 		}}
 		imgSize="96px"
-		label="Cosmetic"
+		challenge="Cosmetic"
 		value={$guesses[0].name}
 		tries={$guesses.length}
 		streak={$streak}
 		correctGuesses={numberOfCorrectGuesses ?? 1}
-		challenge="cosmetic"
 	/>
 {/if}

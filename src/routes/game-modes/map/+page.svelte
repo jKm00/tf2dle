@@ -221,12 +221,12 @@
 				src: `/images/maps/originals/${todaysMap?.image.url}.png`,
 				alt: todaysMapName
 			}}
-			label="Map"
+			challenge="Map"
 			value={todaysMapName}
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={numberOfCorrectGuesses ?? 1}
-			challenge="map"
+			nextChallenge="/game-modes/cosmetic"
 		/>
 	{/await}
 </div>

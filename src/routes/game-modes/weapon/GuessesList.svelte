@@ -47,7 +47,7 @@
 					{guess.magazineSize.value}
 				</p>
 				<p
-					in:fade={{ duration: fadeDuration, delay: fadeDuration * 5 }}
+					in:fade={{ duration: fadeDuration, delay: fadeDuration * 4 }}
 					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
 				>
 					{guess.releaseDate.value}

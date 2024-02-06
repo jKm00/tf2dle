@@ -219,12 +219,12 @@
 		<VictoryDialog
 			img={{ src: `/images/weapons/thumbnails/${$guesses[0].name}.png`, alt: $guesses[0].name }}
 			imgSize="10rem"
-			label="Weapon"
+			challenge="Weapon"
 			value={$guesses[0].name}
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={numberOfCorrectGuesses ?? 1}
-			challenge="weapon"
+			nextChallenge="/game-modes/map"
 			bind:open={openDialog}
 		/>
 	{/if}
