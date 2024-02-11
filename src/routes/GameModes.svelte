@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Axe, GraduationCap, Map } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
+	import dayjs from '$lib/configs/dayjsConfig';
 
 	const gameModes = [
 		{
@@ -22,7 +23,7 @@
 			description: 'Guess the correct cosmetic',
 			icon: GraduationCap,
 			disabled: false,
-			new: true
+			new: dayjs.utc().isBefore(dayjs.utc('2024-03-11'), 'day')
 		}
 	];
 </script>

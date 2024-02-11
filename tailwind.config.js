@@ -32,9 +32,18 @@ const config = {
 					DEFAULT: 'hsl(var(--destructive) / <alpha-value>)',
 					foreground: 'hsl(var(--destructive-foreground) / <alpha-value>)'
 				},
-				correct: 'hsl(var(--correct) / <alpha-value>)',
-				partial: 'hsl(var(--partial) / <alpha-value>)',
-				incorrect: 'hsl(var(--incorrect) / <alpha-value>)',
+				correct: {
+					DEFAULT: 'hsl(var(--correct) / <alpha-value>)',
+					foreground: 'hsl(var(--correct-foreground) / <alpha-value>)'
+				},
+				partial: {
+					DEFAULT: 'hsl(var(--partial) / <alpha-value>)',
+					foreground: 'hsl(var(--partial-foreground) / <alpha-value>)'
+				},
+				incorrect: {
+					DEFAULT: 'hsl(var(--incorrect) / <alpha-value>)',
+					foreground: 'hsl(var(--incorrect-foreground) / <alpha-value>)'
+				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted) / <alpha-value>)',
 					foreground: 'hsl(var(--muted-foreground) / <alpha-value>)'

@@ -20,7 +20,7 @@
 			{@const fadeDuration = 500}
 			<img
 				in:fade={{ duration: fadeDuration }}
-				class={`w-full aspect-video object-cover rounded border ${
+				class={`w-full aspect-video object-cover rounded border-4 ${
 					guess.correct ? 'border-correct' : 'border-incorrect'
 				}`}
 				src={`/images/maps/thumbnails/${guess.thumbnail}.png`}
@@ -30,19 +30,21 @@
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 1 }}
 				class={`${
 					guess.gameModes.status === 'correct'
-						? 'border-correct'
+						? 'bg-correct text-correct-foreground'
 						: guess.gameModes.status === 'partial'
-							? 'border-partial'
-							: 'border-incorrect'
-				} flex items-center justify-center text-center gap-2 rounded-sm border p-1`}
+							? 'bg-partial text-partial-foreground'
+							: 'bg-incorrect text-incorrect-foreground'
+				} flex items-center justify-center text-center gap-2 rounded-sm p-1`}
 			>
 				{guess.gameModes.value.join(', ')}
 			</p>
 			<p
 				in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
 				class={`${
-					guess.releaseDate.status === 'correct' ? 'border-correct' : 'border-incorrect'
-				} flex items-center justify-center gap-1 rounded-sm border p-1`}
+					guess.releaseDate.status === 'correct'
+						? 'bg-correct text-correct-foreground'
+						: 'bg-incorrect text-incorrect-foreground'
+				} flex items-center justify-center gap-1 rounded-sm p-1`}
 			>
 				{guess.releaseDate.value}
 				<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
