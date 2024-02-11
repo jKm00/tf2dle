@@ -16,7 +16,6 @@
 
 	const submitUpdateColorBlindMode: SubmitFunction = ({ action }) => {
 		const colorblindMode = action.searchParams.get('active') === 'true';
-
 		document.documentElement.dataset.colorblind = colorblindMode.toString();
 	};
 </script>

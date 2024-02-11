@@ -8,8 +8,6 @@ export const handle = (async ({ event, resolve }) => {
 		colorBlindMode = newColorBlindMode === 'true';
 	}
 
-	console.log(colorBlindMode);
-
 	return await resolve(event, {
 		transformPageChunk: ({ html }): MaybePromise<string | undefined> =>
 			html.replace('data-colorblind=""', `data-colorblind="${colorBlindMode}"`)

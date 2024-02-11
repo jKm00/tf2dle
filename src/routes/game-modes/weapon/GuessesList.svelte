@@ -30,25 +30,25 @@
 				/>
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 1 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
+					class={`p-2 min-h-24 rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}
 				>
 					{guess.usedBy.value.join(', ')}
 				</p>
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 2 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
+					class={`p-2 min-h-24 rounded-sm flex items-center justify-center gap-2 ${guess.slot.status}`}
 				>
 					{guess.slot.value.join(', ')}
 				</p>
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 3 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
+					class={`p-2 min-h-24 rounded-sm flex items-center justify-center gap-2 ${guess.magazineSize.status}`}
 				>
 					{guess.magazineSize.value}
 				</p>
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 4 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
+					class={`p-2 min-h-24 rounded-sm flex items-center justify-center gap-2 ${guess.releaseDate.status}`}
 				>
 					{guess.releaseDate.value}
 					<ArrowBigDown class={guess.releaseDate.status === 'earlier' ? '' : 'hidden'} />
@@ -57,7 +57,7 @@
 
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 5 }}
-					class={`border p-2 h-full rounded-sm flex items-center justify-center gap-2 ${guess.qualities.status}`}
+					class={`p-2 min-h-24 rounded-sm flex items-center justify-center gap-2 ${guess.qualities.status}`}
 				>
 					{guess.qualities.value.join(', ')}
 				</p>
@@ -75,15 +75,18 @@
 	.incorrect,
 	.earlier,
 	.later {
-		border-color: hsl(var(--incorrect));
+		background-color: hsl(var(--incorrect));
+		color: hsl(var(--incorrect-foreground));
 	}
 
 	.partial {
-		border-color: hsl(var(--partial));
+		background-color: hsl(var(--partial));
+		color: hsl(var(--partial-foreground));
 	}
 
 	.correct {
-		border-color: hsl(var(--correct));
+		background-color: hsl(var(--correct));
+		color: hsl(var(--correct-foreground));
 	}
 
 	@media (min-width: 666px) {

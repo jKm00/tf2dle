@@ -10,9 +10,9 @@
 	{#each guesses as guess (guess.name)}
 		<div
 			in:scale={{ duration: 500, start: 0.5 }}
-			class="flex items-center justify-center border rounded-sm py-2 {guess.correct
-				? 'border-correct'
-				: 'border-incorrect'}"
+			class="flex items-center justify-center rounded-sm py-2 {guess.correct
+				? 'bg-correct text-correct-foreground'
+				: 'bg-incorrect text-incorrect-foreground'}"
 		>
 			<img src={`/images/cosmetics/${guess.thumbnail}.png`} alt={guess.name} />
 			<p class="text-sm">{guess.name}</p>
