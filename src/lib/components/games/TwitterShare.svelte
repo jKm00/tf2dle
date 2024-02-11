@@ -16,7 +16,7 @@
 				tries === 1 ? 'try' : 'tries'
 			}. My streak is now ${streak}!`
 		)}`,
-		`url=https://tf2dle.vercel.app`,
+		`url=https://tf2dle.com`,
 		`hashtags=TF2DLE`
 	].join('&');
 
