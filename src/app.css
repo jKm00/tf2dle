@@ -49,6 +49,12 @@
 		--input: 12 6.5% 15.1%;
 		--ring: 20.5 90.2% 48.2%;
 	}
+	html[data-colorblind='true'] {
+		/* TODO: Fix better colors */
+		--correct: 221 83% 53%;
+		--partial: 327 87% 82%;
+		--incorrect: 274 66% 32%;
+	}
 }
 
 @layer base {
