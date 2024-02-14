@@ -34,6 +34,7 @@ export type MapGuessResponse = {
 
 export type WeaponGuessResponse = {
 	correct: boolean;
+	guessedAt: string;
 	name: string;
 	numberOfCorrectGuesses: number;
 	releaseDate: {
