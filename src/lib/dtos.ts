@@ -16,6 +16,7 @@ export type MapDto = {
 
 export type MapGuessResponse = {
 	correct: boolean;
+	guessedAt: string;
 	name: {
 		status: 'correct' | 'incorrect';
 		value: string;

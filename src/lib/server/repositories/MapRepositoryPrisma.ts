@@ -1,4 +1,5 @@
 import dayjs from '$lib/configs/dayjsConfig';
+import type { Dayjs } from 'dayjs';
 import { db } from '../prisma';
 import type { MapRepository } from './MapRepository';
 
@@ -18,6 +19,14 @@ class MapRepositoryPrisma implements MapRepository {
 		return await db.dailyMaps.findFirst({
 			where: {
 				selectedAt: dayjs.utc().toDate()
+			}
+		});
+	}
+
+	public async getMap(date: Dayjs) {
+		return await db.dailyMaps.findFirst({
+			where: {
+				selectedAt: date.toDate()
 			}
 		});
 	}
