@@ -101,7 +101,7 @@ class MapService {
 		const releaseDateValue = dayjs(guessedMap?.releaseDate).year() ?? '';
 
 		if (correct) {
-			await this.repo.incrementTodaysNumberOfCorrectGuesses();
+			await this.repo.incrementTodaysNumberOfCorrectGuesses(currentTime);
 		}
 
 		return {

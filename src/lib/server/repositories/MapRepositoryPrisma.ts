@@ -31,10 +31,10 @@ class MapRepositoryPrisma implements MapRepository {
 		});
 	}
 
-	public async incrementTodaysNumberOfCorrectGuesses() {
+	public async incrementTodaysNumberOfCorrectGuesses(date: Dayjs) {
 		await db.dailyMaps.updateMany({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			},
 			data: {
 				hasWon: {

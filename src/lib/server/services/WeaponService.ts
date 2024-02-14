@@ -78,9 +78,9 @@ class WeaponService {
 	 * @returns a WeaponGuessResponse object
 	 */
 	public async validateGuess(guess: string) {
-		const currnetTime = dayjs.utc();
+		const currentTime = dayjs.utc();
 
-		const todaysWeapon = await this.getWeapon(currnetTime);
+		const todaysWeapon = await this.getWeapon(currentTime);
 		const guessedWeapon = this.weapons.find((w) => w.name === guess);
 
 		if (!guessedWeapon || !todaysWeapon) {
@@ -91,7 +91,7 @@ class WeaponService {
 		const correct = todaysWeapon.name === guess;
 
 		if (correct) {
-			await this.repo.incrementNumberOfCorrectGuesses();
+			await this.repo.incrementNumberOfCorrectGuesses(currentTime);
 		}
 
 		// Validate release year
@@ -156,7 +156,7 @@ class WeaponService {
 
 		return {
 			correct,
-			guessedAt: currnetTime.format(),
+			guessedAt: currentTime.format(),
 			name: guess,
 			numberOfCorrectGuesses: await this.repo.getNumberOfCorrectGuesses(),
 			releaseDate: {

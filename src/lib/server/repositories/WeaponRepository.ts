@@ -21,7 +21,8 @@ export interface WeaponRepository {
 	getNumberOfCorrectGuesses(): Promise<number>;
 
 	/**
-	 * Increments the number of correct guesses for the selected weapon of the current day
+	 * Increments the number of correct guesses for a given weapon
+	 * @param date of the selected weapon to increment
 	 */
-	incrementNumberOfCorrectGuesses(): Promise<void>;
+	incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void>;
 }

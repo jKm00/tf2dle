@@ -5,10 +5,10 @@ import { db } from '../prisma';
 import type { WeaponRepository } from './WeaponRepository';
 
 class WeaponRepositoryPrisma implements WeaponRepository {
-	async incrementNumberOfCorrectGuesses(): Promise<void> {
+	async incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void> {
 		await db.dailyWeapons.updateMany({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			},
 			data: {
 				hasWon: {

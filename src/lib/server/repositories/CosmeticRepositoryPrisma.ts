@@ -25,10 +25,10 @@ class CosmeticRepositoryPrisma implements CosmeticRepository {
 		});
 	}
 
-	public async incrementNumberOfCorrectGuesses() {
+	public async incrementNumberOfCorrectGuesses(date: Dayjs) {
 		await db.dailyCosmetics.updateMany({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			},
 			data: {
 				hasWon: {

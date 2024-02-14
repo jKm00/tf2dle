@@ -24,7 +24,8 @@ export interface MapRepository {
 	getMap(date: Dayjs): Promise<DailyMaps | null>;
 
 	/**
-	 * Increments the number of correct guesses for todays map
+	 * Increments the number of correct guesses for a map
+	 * @param date date of the selected map to increment
 	 */
-	incrementTodaysNumberOfCorrectGuesses(): Promise<void>;
+	incrementTodaysNumberOfCorrectGuesses(date: Dayjs): Promise<void>;
 }

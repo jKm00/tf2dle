@@ -78,7 +78,7 @@ class CosmeticService {
 		const correct = guess === todaysCosmetic.name;
 
 		if (correct) {
-			await this.repo.incrementNumberOfCorrectGuesses();
+			await this.repo.incrementNumberOfCorrectGuesses(currentTime);
 		}
 
 		return {

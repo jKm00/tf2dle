@@ -18,7 +18,8 @@ export interface CosmeticRepository {
 	saveTodaysCosmetic(cosmetic: Cosmetic, rotation: number): Promise<DailyCosmetics>;
 
 	/**
-	 * Increments the number of correct guesses for the selected cosmetic of the current day
+	 * Increments the number of correct guesses for a given cosmetic
+	 * @param date of the selected cosmetic to increment
 	 */
-	incrementNumberOfCorrectGuesses(): Promise<void>;
+	incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void>;
 }
