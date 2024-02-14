@@ -1,11 +1,14 @@
 import type { Cosmetic } from '$lib/types';
 import type { DailyCosmetics } from '@prisma/client';
+import type { Dayjs } from 'dayjs';
 
 export interface CosmeticRepository {
 	/**
-	 * Finds the cosmetic that is selected for the current day
+	 * Finds the cosmetic that is selected for the given date
+	 * @param date the date to get the cosmetic for
+	 * @return the selected cosmetic
 	 */
-	findTodaysCosmetic(): Promise<DailyCosmetics | null>;
+	findCosmetic(date: Dayjs): Promise<DailyCosmetics | null>;
 
 	/**
 	 * Saves a cosmetic as the selected cosmetic for the current day

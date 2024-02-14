@@ -1,13 +1,14 @@
 import dayjs from '$lib/configs/dayjsConfig';
 import type { Cosmetic } from '$lib/types';
+import type { Dayjs } from 'dayjs';
 import { db } from '../prisma';
 import type { CosmeticRepository } from './CosmeticRepository';
 
 class CosmeticRepositoryPrisma implements CosmeticRepository {
-	public async findTodaysCosmetic() {
+	public async findCosmetic(date: Dayjs) {
 		return await db.dailyCosmetics.findFirst({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			}
 		});
 	}

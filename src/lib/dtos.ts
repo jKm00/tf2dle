@@ -68,6 +68,7 @@ export type CosmeticGuessResponse = {
 	name: string;
 	thumbnail: string;
 	correct: boolean;
+	guessedAt: string;
 	usedBy?: string;
 };
 
