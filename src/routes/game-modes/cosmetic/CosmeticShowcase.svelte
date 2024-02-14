@@ -49,6 +49,7 @@
 
 		if (hasWon) {
 			wrapper.style.transform = `rotate(0deg)`;
+			wrapper.style.filter = 'grayscale(0)';
 			ctx.filter = 'grayscale(0)';
 			ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 		} else {
