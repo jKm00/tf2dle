@@ -1,11 +1,14 @@
 import type { Cosmetic } from '$lib/types';
 import type { DailyCosmetics } from '@prisma/client';
+import type { Dayjs } from 'dayjs';
 
 export interface CosmeticRepository {
 	/**
-	 * Finds the cosmetic that is selected for the current day
+	 * Finds the cosmetic that is selected for the given date
+	 * @param date the date to get the cosmetic for
+	 * @return the selected cosmetic
 	 */
-	findTodaysCosmetic(): Promise<DailyCosmetics | null>;
+	findCosmetic(date: Dayjs): Promise<DailyCosmetics | null>;
 
 	/**
 	 * Saves a cosmetic as the selected cosmetic for the current day
@@ -15,7 +18,8 @@ export interface CosmeticRepository {
 	saveTodaysCosmetic(cosmetic: Cosmetic, rotation: number): Promise<DailyCosmetics>;
 
 	/**
-	 * Increments the number of correct guesses for the selected cosmetic of the current day
+	 * Increments the number of correct guesses for a given cosmetic
+	 * @param date of the selected cosmetic to increment
 	 */
-	incrementNumberOfCorrectGuesses(): Promise<void>;
+	incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void>;
 }

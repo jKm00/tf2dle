@@ -4,6 +4,7 @@ import dayjs from '$lib/configs/dayjsConfig';
 import type { MapRepository } from '../repositories/MapRepository';
 import { mapRepository } from '../repositories/MapRepositoryPrisma';
 import LogService from './LogService';
+import type { Dayjs } from 'dayjs';
 
 class MapService {
 	private maps: Map[];
@@ -54,6 +55,16 @@ class MapService {
 		};
 	}
 
+	private async getMap(date: Dayjs) {
+		let savedMap = await this.repo.getMap(date);
+
+		if (!savedMap) {
+			savedMap = await this.selectRandomMap();
+		}
+
+		return this.maps.find((map) => map.name === savedMap?.name);
+	}
+
 	/**
 	 * Validates a map guess
 	 * @param guess name of the map guessed
@@ -62,8 +73,9 @@ class MapService {
 	 * the hint of the guessed game matches the hint of the correct game
 	 */
 	public async validateGuess(guess: string) {
-		const todaysSavedMap = await this.getTodaysMap();
-		const todaysMap = this.maps.find((map) => map.name === todaysSavedMap.name);
+		const currentTime = dayjs.utc();
+
+		const todaysMap = await this.getMap(currentTime);
 		const guessedMap = this.maps.find((map) => map.name.toLowerCase() === guess.toLowerCase());
 
 		const correct = guessedMap?.name === todaysMap?.name;
@@ -93,11 +105,12 @@ class MapService {
 		const releaseDateValue = dayjs(guessedMap?.releaseDate).year() ?? '';
 
 		if (correct) {
-			await this.repo.incrementTodaysNumberOfCorrectGuesses();
+			await this.repo.incrementTodaysNumberOfCorrectGuesses(currentTime);
 		}
 
 		return {
 			correct,
+			guessedAt: currentTime.format(),
 			name: {
 				status: nameStatus,
 				value: nameValue

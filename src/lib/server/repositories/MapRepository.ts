@@ -1,4 +1,5 @@
 import type { DailyMaps } from '@prisma/client';
+import type { Dayjs } from 'dayjs';
 
 export interface MapRepository {
 	/**
@@ -17,7 +18,14 @@ export interface MapRepository {
 	getTodaysMap(): Promise<DailyMaps | null>;
 
 	/**
-	 * Increments the number of correct guesses for todays map
+	 * Returns the map that was selected for the given time
+	 * @param time time to get the map for
 	 */
-	incrementTodaysNumberOfCorrectGuesses(): Promise<void>;
+	getMap(date: Dayjs): Promise<DailyMaps | null>;
+
+	/**
+	 * Increments the number of correct guesses for a map
+	 * @param date date of the selected map to increment
+	 */
+	incrementTodaysNumberOfCorrectGuesses(date: Dayjs): Promise<void>;
 }

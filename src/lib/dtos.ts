@@ -16,6 +16,7 @@ export type MapDto = {
 
 export type MapGuessResponse = {
 	correct: boolean;
+	guessedAt: string;
 	name: {
 		status: 'correct' | 'incorrect';
 		value: string;
@@ -33,6 +34,7 @@ export type MapGuessResponse = {
 
 export type WeaponGuessResponse = {
 	correct: boolean;
+	guessedAt: string;
 	name: string;
 	numberOfCorrectGuesses: number;
 	releaseDate: {
@@ -66,6 +68,7 @@ export type CosmeticGuessResponse = {
 	name: string;
 	thumbnail: string;
 	correct: boolean;
+	guessedAt: string;
 	usedBy?: string;
 };
 

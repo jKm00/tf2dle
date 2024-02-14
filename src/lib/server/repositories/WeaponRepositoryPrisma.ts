@@ -1,13 +1,14 @@
 import dayjs from '$lib/configs/dayjsConfig';
 import type { Weapon } from '$lib/types';
+import type { Dayjs } from 'dayjs';
 import { db } from '../prisma';
 import type { WeaponRepository } from './WeaponRepository';
 
 class WeaponRepositoryPrisma implements WeaponRepository {
-	async incrementNumberOfCorrectGuesses(): Promise<void> {
+	async incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void> {
 		await db.dailyWeapons.updateMany({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			},
 			data: {
 				hasWon: {
@@ -27,10 +28,10 @@ class WeaponRepositoryPrisma implements WeaponRepository {
 			.then((weapon) => weapon?.hasWon ?? 0);
 	}
 
-	async getTodaysWeapon(): Promise<string | null> {
+	async getWeapon(date: Dayjs): Promise<string | null> {
 		const weapon = await db.dailyWeapons.findFirst({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			}
 		});
 

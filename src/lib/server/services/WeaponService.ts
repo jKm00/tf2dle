@@ -3,6 +3,8 @@ import type { Weapon } from '$lib/types';
 import { weaponRepository } from '$lib/server/repositories/WeaponRepositoryPrisma';
 import type { WeaponRepository } from '$lib/server/repositories/WeaponRepository';
 import LogService from './LogService';
+import dayjs from '$lib/configs/dayjsConfig';
+import type { Dayjs } from 'dayjs';
 
 class WeaponService {
 	private weapons: Weapon[];
@@ -76,7 +78,9 @@ class WeaponService {
 	 * @returns a WeaponGuessResponse object
 	 */
 	public async validateGuess(guess: string) {
-		const todaysWeapon = await this.getTodaysWeapon();
+		const currentTime = dayjs.utc();
+
+		const todaysWeapon = await this.getWeapon(currentTime);
 		const guessedWeapon = this.weapons.find((w) => w.name === guess);
 
 		if (!guessedWeapon || !todaysWeapon) {
@@ -87,7 +91,7 @@ class WeaponService {
 		const correct = todaysWeapon.name === guess;
 
 		if (correct) {
-			await this.repo.incrementNumberOfCorrectGuesses();
+			await this.repo.incrementNumberOfCorrectGuesses(currentTime);
 		}
 
 		// Validate release year
@@ -152,6 +156,7 @@ class WeaponService {
 
 		return {
 			correct,
+			guessedAt: currentTime.format(),
 			name: guess,
 			numberOfCorrectGuesses: await this.repo.getNumberOfCorrectGuesses(),
 			releaseDate: {
@@ -178,11 +183,12 @@ class WeaponService {
 	}
 
 	/**
-	 * Returns todays weapon
+	 * Returns the selected weapon for a given date
+	 * @param date to get weapon for
 	 * @returns name of todays weapon
 	 */
-	private async getTodaysWeapon() {
-		let weapon = await this.repo.getTodaysWeapon();
+	private async getWeapon(date: Dayjs) {
+		let weapon = await this.repo.getWeapon(date);
 
 		if (!weapon) {
 			weapon = await this.selectNewRandomWeapon();

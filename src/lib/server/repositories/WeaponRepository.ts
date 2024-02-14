@@ -1,10 +1,13 @@
 import type { Weapon } from '$lib/types';
+import type { Dayjs } from 'dayjs';
 
 export interface WeaponRepository {
 	/**
-	 * Returns the name of todays weapon
+	 * Returns the name of weapon selected for the given date
+	 * @param date the date to get the weapon for
+	 * @returns the name of the weapon selected for the given date
 	 */
-	getTodaysWeapon(): Promise<string | null>;
+	getWeapon(date: Dayjs): Promise<string | null>;
 
 	/**
 	 * Saves a weapon as the selected weapon for the current day
@@ -18,7 +21,8 @@ export interface WeaponRepository {
 	getNumberOfCorrectGuesses(): Promise<number>;
 
 	/**
-	 * Increments the number of correct guesses for the selected weapon of the current day
+	 * Increments the number of correct guesses for a given weapon
+	 * @param date of the selected weapon to increment
 	 */
-	incrementNumberOfCorrectGuesses(): Promise<void>;
+	incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void>;
 }

@@ -84,15 +84,14 @@
 	async function handleGuess(guess: string) {
 		if (gameState === 'won') return;
 
-		// Update last event
-		lastEvent.set({ event: 'guessed', date: dayjs.utc().format() });
-
 		// Validate guess
 		const result = await checkGuess(guess);
 
 		// Update game state based on result
 		if (result) {
 			guesses.update((guesses) => [result, ...guesses]);
+			// Update last event
+			lastEvent.set({ event: result.correct ? 'won' : 'guessed', date: result.guessedAt });
 		}
 
 		if (result?.correct) {
@@ -137,7 +136,6 @@
 	function won() {
 		// Wait for reveal animation to finish
 		setTimeout(() => {
-			lastEvent.set({ event: 'won', date: dayjs.utc().format() });
 			streak.update((streak) => streak + 1);
 			gameState = 'won';
 			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;

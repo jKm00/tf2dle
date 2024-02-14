@@ -2,8 +2,9 @@ import type { Cosmetic } from '$lib/types';
 import cosmetics from '$lib/server/data/cosmetics.json';
 import type { CosmeticRepository } from '$lib/server/repositories/CosmeticRepository';
 import { cosmeticRepository } from '$lib/server/repositories/CosmeticRepositoryPrisma';
-import type { CosmeticGuessResponse } from '$lib/dtos';
 import LogService from './LogService';
+import dayjs from '$lib/configs/dayjsConfig';
+import type { Dayjs } from 'dayjs';
 
 /**
  * Service for handling cosmetics
@@ -26,11 +27,12 @@ class CosmeticService {
 	}
 
 	/**
-	 * Returns the cosmetic that is selected for the current day
+	 * Returns the cosmetic that is selected for the given date
+	 * @param date the date to get the cosmetic for
 	 * @returns cosmetic for the current day
 	 */
-	public async getTodaysCosmetic() {
-		let cosmetic = await this.repo.findTodaysCosmetic();
+	public async getCosmetic(date: Dayjs) {
+		let cosmetic = await this.repo.findCosmetic(date);
 
 		if (!cosmetic) {
 			cosmetic = await this.selectRandomCosmetic();
@@ -63,7 +65,9 @@ class CosmeticService {
 	 * A hint is provided if the user has made 9 or more guesses
 	 */
 	public async validateGuess(guess: string, numberOfGuesses: number) {
-		const todaysCosmetic = await this.getTodaysCosmetic();
+		const currentTime = dayjs.utc();
+
+		const todaysCosmetic = await this.getCosmetic(currentTime);
 		const guessedCosmetic = this.cosmetics.find((cosmetic) => cosmetic.name === guess);
 
 		let usedBy: string | undefined;
@@ -74,13 +78,14 @@ class CosmeticService {
 		const correct = guess === todaysCosmetic.name;
 
 		if (correct) {
-			await this.repo.incrementNumberOfCorrectGuesses();
+			await this.repo.incrementNumberOfCorrectGuesses(currentTime);
 		}
 
 		return {
 			name: guessedCosmetic?.name ?? '',
 			thumbnail: guessedCosmetic?.image ?? '',
 			correct: correct,
+			guessedAt: currentTime.format(),
 			usedBy
 		};
 	}

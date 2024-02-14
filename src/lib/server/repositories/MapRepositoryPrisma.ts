@@ -1,4 +1,5 @@
 import dayjs from '$lib/configs/dayjsConfig';
+import type { Dayjs } from 'dayjs';
 import { db } from '../prisma';
 import type { MapRepository } from './MapRepository';
 
@@ -22,10 +23,18 @@ class MapRepositoryPrisma implements MapRepository {
 		});
 	}
 
-	public async incrementTodaysNumberOfCorrectGuesses() {
+	public async getMap(date: Dayjs) {
+		return await db.dailyMaps.findFirst({
+			where: {
+				selectedAt: date.toDate()
+			}
+		});
+	}
+
+	public async incrementTodaysNumberOfCorrectGuesses(date: Dayjs) {
 		await db.dailyMaps.updateMany({
 			where: {
-				selectedAt: dayjs.utc().toDate()
+				selectedAt: date.toDate()
 			},
 			data: {
 				hasWon: {

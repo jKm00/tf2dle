@@ -1,3 +1,4 @@
+import dayjs from '$lib/configs/dayjsConfig';
 import { cosmeticService } from '$lib/server/services/CosmeticService';
 import { json } from '@sveltejs/kit';
 
@@ -7,7 +8,8 @@ import { json } from '@sveltejs/kit';
  * @returns HttpResponse
  */
 export async function GET() {
-	const todaysCosmetic = await cosmeticService.getTodaysCosmetic();
+	const currentTime = dayjs.utc();
+	const todaysCosmetic = await cosmeticService.getCosmetic(currentTime);
 
 	return json({
 		cosmetic: {
