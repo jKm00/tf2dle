@@ -56,7 +56,11 @@ class MapService {
 	}
 
 	private async getMap(date: Dayjs) {
-		const savedMap = await this.repo.getMap(date);
+		let savedMap = await this.repo.getMap(date);
+
+		if (!savedMap) {
+			savedMap = await this.selectRandomMap();
+		}
 
 		return this.maps.find((map) => map.name === savedMap?.name);
 	}
