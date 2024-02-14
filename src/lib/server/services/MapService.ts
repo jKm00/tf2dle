@@ -55,7 +55,7 @@ class MapService {
 		};
 	}
 
-	private async getMapBasedOnTime(date: Dayjs) {
+	private async getMap(date: Dayjs) {
 		const savedMap = await this.repo.getMap(date);
 
 		return this.maps.find((map) => map.name === savedMap?.name);
@@ -71,7 +71,7 @@ class MapService {
 	public async validateGuess(guess: string) {
 		const currentTime = dayjs.utc();
 
-		const todaysMap = await this.getMapBasedOnTime(currentTime);
+		const todaysMap = await this.getMap(currentTime);
 		const guessedMap = this.maps.find((map) => map.name.toLowerCase() === guess.toLowerCase());
 
 		const correct = guessedMap?.name === todaysMap?.name;
