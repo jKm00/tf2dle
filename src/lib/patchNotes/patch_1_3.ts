@@ -1,6 +1,6 @@
 export default {
 	version: '1.3',
-	date: '',
+	date: '14.02.2024',
 	newFeatures: [],
 	improvements: [],
 	bugFixes: [
@@ -13,7 +13,7 @@ export default {
 		{
 			title: 'Cosmetic color show when correct',
 			description:
-				'Previously, the color of the cosmetic would not be shown when you guessed it correctly prior to the hint. This has been fixed and the color will now be shown when you guess the cosmetic correctly.',
+				"Previously, the gray filter of the cosmetic would still be applied when you guessed correct cosmetic prior to the color hint. This has been fixed and the gray filter will now be removed whenever you guess the correct cosmetic, regardless if it's prior to the color hint or not.",
 			gameMode: 'cosmetics'
 		}
 	]
