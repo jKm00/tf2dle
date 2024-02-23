@@ -23,7 +23,7 @@
 			description: 'Guess the correct cosmetic',
 			icon: GraduationCap,
 			disabled: false,
-			new: dayjs.utc().isBefore(dayjs.utc('2024-03-11'), 'day')
+			new: dayjs.utc().isBefore(dayjs.utc('2024-03-01'), 'day')
 		}
 	];
 </script>
