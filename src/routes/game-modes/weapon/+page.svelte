@@ -58,7 +58,7 @@
 
 			switch ($lastEvent.event) {
 				case 'won':
-					if (dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
+					if (dayjs.utc($lastEvent.date).isSame(dayjs.utc(), 'date')) {
 						gameState = 'won';
 					} else {
 						gameState = 'guessing';
@@ -67,7 +67,7 @@
 					break;
 				case 'guessed':
 					gameState = 'guessing';
-					if (!dayjs($lastEvent.date).isSame(dayjs.utc(), 'date')) {
+					if (!dayjs.utc($lastEvent.date).isSame(dayjs.utc(), 'date')) {
 						guesses.set([]);
 					}
 					break;
