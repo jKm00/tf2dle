@@ -11,6 +11,7 @@
 	import Hints from './Hints.svelte';
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
+	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 
 	export let data;
 
@@ -158,7 +159,7 @@
 	}
 </script>
 
-<div>
+<div class="grid gap-4">
 	<Card.Root>
 		<Card.Header>
 			<div class="flex justify-between">
@@ -222,6 +223,8 @@
 			{/if}
 		</Card.Content>
 	</Card.Root>
+
+	<ColorExplanation />
 </div>
 
 {#if $guesses.length > 0}
