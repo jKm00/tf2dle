@@ -11,6 +11,7 @@
 	import Hints from './Hints.svelte';
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
+	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 
 	export let data;
 
@@ -158,7 +159,7 @@
 	}
 </script>
 
-<div>
+<div class="grid gap-4">
 	<Card.Root>
 		<Card.Header>
 			<div class="flex justify-between">
@@ -222,20 +223,22 @@
 			{/if}
 		</Card.Content>
 	</Card.Root>
-</div>
 
-{#if $guesses.length > 0}
-	<VictoryDialog
-		bind:open={openDialog}
-		img={{
-			src: `/images/cosmetics/${todaysCosmetic?.cosmetic.thumbnail}.png`,
-			alt: 'Todays cosmetic'
-		}}
-		imgSize="96px"
-		challenge="Cosmetic"
-		value={$guesses[0].name}
-		tries={$guesses.length}
-		streak={$streak}
-		correctGuesses={numberOfCorrectGuesses ?? 1}
-	/>
-{/if}
+	<ColorExplanation />
+
+	{#if $guesses.length > 0}
+		<VictoryDialog
+			bind:open={openDialog}
+			img={{
+				src: `/images/cosmetics/${todaysCosmetic?.cosmetic.thumbnail}.png`,
+				alt: 'Todays cosmetic'
+			}}
+			imgSize="96px"
+			challenge="Cosmetic"
+			value={$guesses[0].name}
+			tries={$guesses.length}
+			streak={$streak}
+			correctGuesses={numberOfCorrectGuesses ?? 1}
+		/>
+	{/if}
+</div>
