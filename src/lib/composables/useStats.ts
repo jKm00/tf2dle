@@ -36,8 +36,26 @@ export function useStats(gamemode: string) {
 		}
 	}
 
+	function clearStats() {
+		store.set([]);
+
+		if (browser) {
+			localStorage.removeItem(LOCAL_STORAGE_KEY);
+		}
+	}
+
 	return {
 		subscribe: store.subscribe,
-		incrementAttempt
+		incrementAttempt,
+		clearStats
 	};
 }
+
+function getReturnType<R>(f: (...args: any[]) => R): { returnType: R } {
+	return null!;
+}
+
+// dummy variable used to retrieve return type of `useStats`
+const useStatsType = getReturnType(useStats);
+
+export type UseStats = typeof useStatsType.returnType;

@@ -29,7 +29,8 @@
 		<div class="grid gap-4">
 			{#if stats.length === 0}
 				<p class="text-muted-foreground text-sm pt-4">
-					You have not correctly guessed and challenges yet.
+					You have no recorded stats at the moment. Guess correct once and come back to see the
+					graph!
 				</p>
 			{:else}
 				{#each stats as stat, index}
