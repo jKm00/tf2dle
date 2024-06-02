@@ -4,7 +4,7 @@
 	import { useLocalStorage } from '$lib/composables/useLocalStorage';
 	import dayjs from '$lib/configs/dayjsConfig.js';
 	import type { CosmeticDto, CosmeticGuessResponse, CurrentCosmeticDto } from '$lib/dtos.js';
-	import { Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
+	import { AreaChart, Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
 	import CosmeticShowcase from './CosmeticShowcase.svelte';
@@ -12,8 +12,13 @@
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
+	import { useStats } from '$lib/composables/useStats';
+	import StatsDialog from '$lib/components/games/StatsDialog.svelte';
 
 	export let data;
+
+	const stats = useStats('cosmetic');
+	let openStatsDialog = false;
 
 	// State persisted in local storage
 	let guesses = useLocalStorage<CosmeticGuessResponse[]>('cosmetic_guesses', []);
@@ -152,6 +157,7 @@
 	function won() {
 		setTimeout(() => {
 			streak.update((streak) => streak + 1);
+			stats.incrementAttempt($guesses.length);
 			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			gameState = 'won';
 			openDialog = true;
@@ -176,6 +182,9 @@
 						<Flame aria-label="streak" />
 						{$streak}
 					</p>
+					<button on:click={() => (openStatsDialog = true)}>
+						<AreaChart aria-label="Stats" />
+					</button>
 				</div>
 			</div>
 		</Card.Header>
@@ -225,6 +234,8 @@
 	</Card.Root>
 
 	<ColorExplanation />
+
+	<StatsDialog bind:open={openStatsDialog} stats={$stats} />
 
 	{#if $guesses.length > 0}
 		<VictoryDialog

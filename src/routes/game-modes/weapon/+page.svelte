@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card';
-	import { Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
+	import { AreaChart, Dices, Flame, LineChart, Loader2, RotateCw } from 'lucide-svelte';
 	import Input from '$lib/components/games/Input.svelte';
 	import { onMount } from 'svelte';
 	import dayjs from '$lib/configs/dayjsConfig.js';
@@ -10,8 +10,13 @@
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
+	import { useStats } from '$lib/composables/useStats';
+	import StatsDialog from '$lib/components/games/StatsDialog.svelte';
 
 	export let data;
+
+	const stats = useStats('weapon');
+	let openStatsDialog = false;
 
 	// State persisted in local storage
 	let gameState: 'guessing' | 'won' = 'guessing';
@@ -138,6 +143,7 @@
 		setTimeout(() => {
 			streak.update((streak) => streak + 1);
 			gameState = 'won';
+			stats.incrementAttempt($guesses.length);
 			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			openDialog = true;
 		}, 500 * 6);
@@ -161,6 +167,9 @@
 						<Flame aria-label="Streak" />
 						{$streak}
 					</p>
+					<button on:click={() => (openStatsDialog = true)}>
+						<AreaChart aria-label="Stats" />
+					</button>
 				</div>
 			</div>
 		</Card.Header>
@@ -212,6 +221,8 @@
 	</Card.Root>
 
 	<ColorExplanation />
+
+	<StatsDialog bind:open={openStatsDialog} stats={$stats} />
 
 	{#if $guesses.length > 0}
 		<VictoryDialog

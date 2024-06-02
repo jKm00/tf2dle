@@ -9,12 +9,17 @@
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
-	import { Dices, Flame, RotateCw } from 'lucide-svelte';
+	import { AreaChart, Dices, Flame, RotateCw } from 'lucide-svelte';
 	import { toast } from 'svelte-sonner';
+	import { useStats } from '$lib/composables/useStats';
+	import StatsDialog from '$lib/components/games/StatsDialog.svelte';
 
 	export let data;
 
 	$: ({ todaysMap } = data);
+
+	const stats = useStats('map');
+	let openStatsDialog = false;
 
 	// State persisted in local storage
 	let gameState: 'guessing' | 'won' = 'guessing';
@@ -135,6 +140,7 @@
 		setTimeout(() => {
 			streak.update((streak) => streak + 1);
 			todaysMapName = mapName;
+			stats.incrementAttempt($guesses.length);
 			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			gameState = 'won';
 			openDialog = true;
@@ -156,6 +162,9 @@
 						{$guesses.length}
 					</p>
 					<p class="flex items-center"><Flame aria-label="streak" /> {$streak}</p>
+					<button on:click={() => (openStatsDialog = true)}>
+						<AreaChart aria-label="Stats" />
+					</button>
 				</div>
 			</div>
 		</Card.Header>
@@ -211,6 +220,8 @@
 	</Card.Root>
 
 	<ColorExplanation />
+
+	<StatsDialog bind:open={openStatsDialog} stats={$stats} />
 
 	{#await data.todaysMap then todaysMap}
 		<VictoryDialog
