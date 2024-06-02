@@ -5,7 +5,7 @@ import { get, writable } from 'svelte/store';
  * A store that tracks the stats of the player locally
  * @param gamemode to track the stats of
  * @returns a store providing a subscribe function and a function
- * for incrementing the stats
+ * for incrementing the stats and one for clearing the stats
  */
 export function useStats(gamemode: string) {
 	const LOCAL_STORAGE_KEY = `${gamemode}_stats`;
@@ -36,6 +36,9 @@ export function useStats(gamemode: string) {
 		}
 	}
 
+	/**
+	 * Clears the stats
+	 */
 	function clearStats() {
 		store.set([]);
 
