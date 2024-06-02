@@ -1,11 +1,6 @@
 import { browser } from '$app/environment';
 import { get, writable } from 'svelte/store';
 
-type DataPoint = {
-	attempt: number;
-	count: number;
-};
-
 /**
  * A store that tracks the stats of the player locally
  * @param gamemode to track the stats of
@@ -19,7 +14,7 @@ export function useStats(gamemode: string) {
 	const storedValue = browser && localStorage.getItem(LOCAL_STORAGE_KEY);
 	const value = storedValue ? JSON.parse(storedValue) : [];
 
-	const store = writable<Record<number, number>>(value);
+	const store = writable<number[]>(value);
 
 	/**
 	 * Increments the number of correct guesses with the number of attempts
@@ -27,13 +22,14 @@ export function useStats(gamemode: string) {
 	 */
 	function incrementAttempt(attempt: number) {
 		let currentStats = get(store);
-		console.log(attempt, currentStats);
 
-		if (currentStats[attempt]) {
-			currentStats[attempt]++;
+		if (currentStats[attempt - 1]) {
+			currentStats[attempt - 1]++;
 		} else {
-			currentStats[attempt] = 1;
+			currentStats[attempt - 1] = 1;
 		}
+
+		store.set(currentStats);
 
 		if (browser) {
 			localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(currentStats));
@@ -41,7 +37,7 @@ export function useStats(gamemode: string) {
 	}
 
 	return {
-		subscript: store.subscribe,
+		subscribe: store.subscribe,
 		incrementAttempt
 	};
 }
