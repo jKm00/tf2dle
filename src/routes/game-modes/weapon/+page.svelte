@@ -167,7 +167,7 @@
 						<Flame aria-label="Streak" />
 						{$streak}
 					</p>
-					<button on:click={() => (openStatsDialog = true)}>
+					<button on:click={() => (openStatsDialog = true)} data-testId="openStatsDialog">
 						<AreaChart aria-label="Stats" />
 					</button>
 				</div>
