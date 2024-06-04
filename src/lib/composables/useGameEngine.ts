@@ -1,0 +1,142 @@
+import { get, readable, writable, type Writable } from "svelte/store";
+import { useLocalStorage } from "./useLocalStorage";
+import { type GuessResponse, type WeaponGuessResponse } from "$lib/dtos";
+import { onMount } from "svelte";
+import dayjs from "$lib/configs/dayjsConfig";
+import { toast } from "svelte-sonner";
+import { useStats } from "./useStats";
+
+export function useGameEngine<T extends GuessResponse>(gamemode: string, numberOfCorrectGuesses: Writable<number | undefined>) {
+	const gameState = writable<'guessing' | 'won'>('guessing');
+	const guesses = useLocalStorage<T[]>(`${gamemode}_guesses`, []);
+	const lastEvent = useLocalStorage<{ event: String; date: string } | null>(
+		`${gamemode}_last_event`,
+		null
+	);
+	const streak = useLocalStorage(`${gamemode}_streak`, 0);
+	const stats = useStats(gamemode);
+
+	const validating = writable(false);
+	const openVictoryDialog = writable(false);
+
+	onMount(() => {
+		initGameState();
+	});
+
+	/**
+	 * Initializes game state based on last event
+	 */
+	function initGameState() {
+		const _lastEvent = get(lastEvent);
+
+		if (_lastEvent === null) {
+			guesses.set([]);
+			streak.set(0);
+			gameState.set('guessing');
+		} else {
+			// Reset streak if last victory was more than 1 days ago
+			if (
+				dayjs(_lastEvent.date).isBefore(dayjs.utc().subtract(1, 'day'), 'day') ||
+				_lastEvent.event !== 'won'
+			) {
+				streak.set(0);
+			}
+
+			switch (_lastEvent.event) {
+				case 'won':
+					if (dayjs.utc(_lastEvent.date).isSame(dayjs.utc(), 'date')) {
+						gameState.set('won');
+					} else {
+						gameState.set('guessing');
+						guesses.set([]);
+					}
+					break;
+				case 'guessed':
+					gameState.set('guessing');
+					if (!dayjs.utc(_lastEvent.date).isSame(dayjs.utc(), 'date')) {
+						guesses.set([]);
+					}
+					break;
+			}
+		}
+	}
+
+	/**
+	 * Handles a guess
+	 * @param guess name of the item guessed
+	 */
+	async function handleGuess(guess: string) {
+		if (get(gameState) === 'won') return;
+
+		const result = await checkGuess(guess);
+
+		if (result) {
+			guesses.update((guesses) => [result, ...guesses]);
+			lastEvent.set({ event: result.correct ? 'won' : 'guessed', date: result.guessedAt });
+		}
+
+		if (result?.correct) {
+			won();
+		}
+	}
+
+	/**
+	 * Validate a guess
+	 * @param guess to validate
+	 */
+	async function checkGuess(guess: string) {
+		let data: T | null = null;
+		let error = false;
+		validating.set(true);
+
+		try {
+			const res = await fetch(`/api/v1/game-modes/${gamemode}`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ guess })
+			});
+			data = (await res.json()) as T;
+
+			if (!res.ok) {
+				error = true;
+			}
+		} catch (err) {
+			error = true;
+		} finally {
+			validating.set(false);
+		}
+
+		if (error) {
+			toast.error('Could not validate your guess, please try again!');
+		} else {
+			return data;
+		}
+	}
+
+	/**
+	 * Handles a victory
+	 */
+	function won() {
+		setTimeout(() => {
+			gameState.set('won');
+			streak.update((streak) => streak + 1);
+			stats.incrementAttempt(get(guesses).length);
+      const _numberOfCorrectGuesses = get(numberOfCorrectGuesses)
+      numberOfCorrectGuesses.set(_numberOfCorrectGuesses ? _numberOfCorrectGuesses + 1 : 1)
+			openVictoryDialog.set(true);
+		}, 500 * 6);
+		// TODO: Change timeout delay based on gamemode
+	}
+
+	return {
+		gameState,
+		guesses,
+		streak,
+		stats,
+		validating,
+		openVictoryDialog,
+		handleGuess
+	};
+}

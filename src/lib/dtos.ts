@@ -14,6 +14,11 @@ export type MapDto = {
 	thumbnail: string;
 };
 
+export interface GuessResponse {
+	correct: boolean;
+	guessedAt: string
+}
+
 export type MapGuessResponse = {
 	correct: boolean;
 	guessedAt: string;
@@ -32,9 +37,7 @@ export type MapGuessResponse = {
 	thumbnail: string;
 };
 
-export type WeaponGuessResponse = {
-	correct: boolean;
-	guessedAt: string;
+export interface WeaponGuessResponse extends GuessResponse {
 	name: string;
 	numberOfCorrectGuesses: number;
 	releaseDate: {
