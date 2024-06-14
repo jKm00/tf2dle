@@ -19,6 +19,7 @@
 	{...$$restProps}
 	let:action
 	let:attrs
+	style="padding: 0;"
 >
 	<slot {action} {attrs} />
 </CommandPrimitive.Item>
