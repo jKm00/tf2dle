@@ -4,6 +4,7 @@
 	import Header from '$lib/components/layouts/Header.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import { ModeWatcher, setMode } from 'mode-watcher';
+	import CommandBox from '$lib/components/CommandBox/CommandBox.svelte';
 
 	setMode('dark');
 </script>
@@ -21,7 +22,9 @@
 <ModeWatcher />
 <Toaster />
 
-<div class="flex flex-col gap-10 width px-2 m-auto py-10 min-h-screen">
+<CommandBox />
+
+<div class="flex flex-col gap-10 width px-2 m-auto pt-14 pb-10 min-h-screen">
 	<Header />
 	<div class="flex-grow">
 		<slot />
