@@ -6,6 +6,7 @@
 	import Button from './ui/button/button.svelte';
 	import { useStats, type UseStats } from '$lib/composables/useStats';
 	import { toast } from 'svelte-sonner';
+	import { openSettings } from '$lib/stores/settings';
 
 	const weaponStats = useStats('weapon');
 	const mapStats = useStats('map');
@@ -24,7 +25,7 @@
 	}
 </script>
 
-<Dialog.Root>
+<Dialog.Root bind:open={$openSettings}>
 	<Dialog.Trigger class={buttonVariants({ variant: 'ghost' })}>
 		<Settings class="text-muted-foreground" />
 	</Dialog.Trigger>
