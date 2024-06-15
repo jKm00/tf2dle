@@ -7,8 +7,11 @@
 	import CommandGroup from './CommandGroup.svelte';
 	import CommandOptions from './CommandOptions.svelte';
 
+	const keypressRegex = /^[a-zA-Z0-9]$/;
+
 	type ActionFunction = (...args: any[]) => any;
 
+	let inputEl: HTMLInputElement;
 	let input = '';
 	let open = false;
 	let selectedCommand: CommandType | null = null;
@@ -23,6 +26,10 @@
 			if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
 				e.preventDefault();
 				open = !open;
+			}
+
+			if (open && keypressRegex.test(e.key)) {
+				inputEl.focus();
 			}
 		}
 
@@ -86,6 +93,7 @@
 			<input
 				type="test"
 				bind:value={input}
+				bind:this={inputEl}
 				autofocus
 				placeholder="Type a command..."
 				class="bg-transparent focus:outline-none"

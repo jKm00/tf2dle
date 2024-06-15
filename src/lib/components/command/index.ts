@@ -68,7 +68,7 @@ export const commandGroups: CommandGroup[] = [
 			{
 				label: 'Patch notes',
 				icon: Scroll,
-				keywords: ['Pacth notes', 'Navigation'],
+				keywords: ['Patch notes', 'Navigation'],
 				action: () => goto('/patch-notes')
 			}
 		]
