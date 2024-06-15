@@ -5,7 +5,7 @@ vite.config.ts.timestamp-*
 
 # Virtual Environment
 Include/
-Lib/
+# Lib/
 Lib/site-packages/
 bin/
 
