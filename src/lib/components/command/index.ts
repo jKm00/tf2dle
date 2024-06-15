@@ -21,8 +21,9 @@ export type CommandGroup = {
 export type CommandType = {
 	icon: ComponentType;
 	label: string;
-	options?: CommandOption[];
+	keywords: string[];
 	action: (...args: any[]) => any;
+	options?: CommandOption[];
 };
 
 export type CommandOption = {
@@ -38,11 +39,13 @@ export const commandGroups: CommandGroup[] = [
 			{
 				label: 'Home',
 				icon: Home,
+				keywords: ['Home', 'Navigation'],
 				action: () => goto('/')
 			},
 			{
 				label: 'Gamemodes',
 				icon: Gamepad2,
+				keywords: ['Gamemodes', 'Navigation'],
 				options: [
 					{
 						label: 'Weapon',
@@ -65,6 +68,7 @@ export const commandGroups: CommandGroup[] = [
 			{
 				label: 'Patch notes',
 				icon: Scroll,
+				keywords: ['Pacth notes', 'Navigation'],
 				action: () => goto('/patch-notes')
 			}
 		]
@@ -75,6 +79,7 @@ export const commandGroups: CommandGroup[] = [
 			{
 				label: 'Settings',
 				icon: Settings,
+				keywords: ['Settings', 'Preferences'],
 				action: () => openSettings.set(true)
 			}
 		]
@@ -85,11 +90,13 @@ export const commandGroups: CommandGroup[] = [
 			{
 				label: 'Give feedback',
 				icon: MessageSquareText,
+				keywords: ['Give feedback', 'Other'],
 				action: () => window.open('https://www.reddit.com/user/jaakim/', '_blank')
 			},
 			{
 				label: 'Support this page',
 				icon: Heart,
+				keywords: ['Support this page', 'Other'],
 				action: () => window.open('https://buymeacoffee.com/joakimedvam', '_blank')
 			}
 		]

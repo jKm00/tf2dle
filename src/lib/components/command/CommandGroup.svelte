@@ -9,7 +9,7 @@
 	export let input: string;
 
 	$: filteredCommands = commands.filter((command) =>
-		command.label.toLowerCase().includes(input.toLowerCase())
+		command.keywords.find((keyword) => keyword.toLowerCase().includes(input.toLowerCase()))
 	);
 
 	function handleSelect(command: CommandType) {
@@ -24,7 +24,8 @@
 			{#each filteredCommands as command}
 				<button
 					on:click={() => handleSelect(command)}
-					class="flex items-center gap-2 w-full text-left p-2"
+					on:mouseenter={() => focus()}
+					class="flex items-center gap-2 w-full text-left p-2 focus:outline-none focus:bg-muted rounded"
 				>
 					<svelte:component this={command.icon} />
 					{command.label}

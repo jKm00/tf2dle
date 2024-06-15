@@ -82,9 +82,11 @@
 		<!-- Command search -->
 		<div class="flex p-4 border-b gap-2 text-sm items-center">
 			<Search class="w-4 h-4" />
+			<!-- svelte-ignore a11y-autofocus -->
 			<input
 				type="test"
 				bind:value={input}
+				autofocus
 				placeholder="Type a command..."
 				class="bg-transparent focus:outline-none"
 			/>

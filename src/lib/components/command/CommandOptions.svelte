@@ -13,6 +13,8 @@
 		option.label.toLowerCase().includes(input.toLowerCase())
 	);
 
+	$: searchIncludesBack = 'back'.includes(input.toLowerCase());
+
 	function handleSelect(option: CommandOption) {
 		dispatch('select', { option });
 	}
@@ -22,20 +24,23 @@
 	}
 </script>
 
-{#if filteredOptions.length > 0}
+{#if filteredOptions.length > 0 || searchIncludesBack}
 	<div>
 		<h2 class="text-muted-foreground text-xs p-2">{title}</h2>
 		<div class="text-sm">
 			{#each filteredOptions as option (option.label)}
 				<button
 					on:click={() => handleSelect(option)}
-					class="flex items-center gap-2 w-full text-left p-2"
+					class="flex items-center gap-2 w-full text-left p-2 focus:outline-none focus:bg-muted rounded"
 				>
 					<svelte:component this={option.icon} />
 					{option.label}
 				</button>
 			{/each}
-			<button on:click={handleNavBack} class="flex items-center gap-2 w-full text-left p-2">
+			<button
+				on:click={handleNavBack}
+				class="flex items-center gap-2 w-full text-left p-2 focus:outline-none focus:bg-muted rounded"
+			>
 				<ChevronLeft />
 				Back
 			</button>
