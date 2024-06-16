@@ -71,3 +71,37 @@ pnpm dev
 1. Create a new branch from main where you can develop your feature in piece. Remember to commit regularly!
 2. Create a merge request to main when done. Make sure all workflows pass and wait for approval.
 3. When approved, merge and delete the branch.
+
+## Testing
+
+Run development server
+
+_**Note:** Make sure the dev server has optimized all the dependencies_
+
+```
+pnpm dev
+```
+
+Run tests
+
+```ts
+// Integration tests
+pnpm test:integration
+
+// With trace viewer
+pnpm test:integration --trace on
+
+// Specific test file
+pnpm test:integration <filename.test.ts>
+
+// Specific test based on name
+pnpm test:integration -g "name of test"
+
+// Unit tests
+pnpm test:unit
+
+// All tests
+pnpm test
+```
+
+Use [this](https://playwright.dev/docs/running-tests) for more info on flags to run with tests

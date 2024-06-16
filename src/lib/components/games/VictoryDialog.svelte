@@ -54,7 +54,9 @@
 			{#if nextChallenge}
 				<Button href={nextChallenge} class="mb-2">Next challenge</Button>
 			{/if}
-			<Button on:click={() => (open = false)} variant="secondary">Close</Button>
+			<Button on:click={() => (open = false)} variant="secondary" data-testId="victoryClose"
+				>Close</Button
+			>
 		</div>
 	</Dialog.Content>
 </Dialog.Root>

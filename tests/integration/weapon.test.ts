@@ -105,6 +105,7 @@ test('Toast is shown when guess fetch fails', async ({ page }) => {
 	await expect(page.locator('.toast').first()).toBeVisible();
 });
 
+// TODO: Fix... fails cause it cant find the 'input' after new day
 test('Won state is reset when new day starts', async ({ page }) => {
 	await mockCorrectGuess(page);
 
@@ -117,7 +118,7 @@ test('Won state is reset when new day starts', async ({ page }) => {
 
 	await page.goto('/');
 
-	updateDate(page, 1);
+	await updateDate(page, 1);
 
 	await page.goto('/game-modes/weapon');
 
@@ -137,7 +138,7 @@ test('Guesses are reset when new day starts', async ({ page }) => {
 
 	await page.goto('/');
 
-	updateDate(page, 1);
+	await updateDate(page, 1);
 
 	await page.goto('/game-modes/weapon');
 
@@ -157,6 +158,40 @@ test('Can see how many have guessed correct', async ({ page }) => {
 	await expect(page.getByTestId('number-of-correct-guesses')).toBeVisible();
 });
 
+test('Stats are empty on first visit', async ({ page }) => {
+	await page.goto('/game-modes/weapon');
+
+	const openStatsButton = page.getByTestId('openStatsDialog');
+
+	await openStatsButton.click();
+
+	await expect(page.getByTestId('statsDialog')).toBeVisible();
+	await expect(page.getByTestId('noStatsMessage')).toBeVisible();
+});
+
+test('Stats are saved and displayed', async ({ page }) => {
+	await page.goto('/game-modes/weapon');
+
+	await page.getByTestId('input').fill('shortstop');
+	await page.getByRole('button', { name: 'Shortstop' }).click();
+
+	await page.waitForTimeout(3000);
+
+	await mockCorrectGuess(page);
+
+	await page.getByTestId('input').fill('scattergun');
+	await page.getByRole('button', { name: 'Scattergun' }).click();
+
+	await page.waitForTimeout(3000);
+
+	await page.getByTestId('victoryClose').click();
+
+	await page.getByTestId('openStatsDialog').click();
+
+	await expect(page.getByTestId('statsDialog')).toBeVisible();
+	expect(await page.locator('[data-pw="statsGraph"]').count()).toBe(2);
+});
+
 async function updateDate(page: Page, daysToAdd: number) {
 	const overrideDate = (daysToAdd: number) => {
 		const originalDate = Date;
@@ -174,7 +209,7 @@ async function updateDate(page: Page, daysToAdd: number) {
 		globalThis.Date = NewDate as any;
 	};
 
-	await page.addInitScript(overrideDate, 1);
+	await page.addInitScript(overrideDate, daysToAdd);
 }
 
 async function mockCorrectGuess(page: Page) {

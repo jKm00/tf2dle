@@ -26,15 +26,15 @@
 			<Dialog.Title>Stats</Dialog.Title>
 			<Dialog.Description>Overview of your guessing performance.</Dialog.Description>
 		</Dialog.Header>
-		<div class="grid gap-4">
+		<div class="grid gap-4" data-testId="statsDialog">
 			{#if stats.length === 0}
-				<p class="text-muted-foreground text-sm pt-4">
+				<p class="text-muted-foreground text-sm pt-4" data-testId="noStatsMessage">
 					You have no recorded stats at the moment. Guess correct once and come back to see the
 					graph!
 				</p>
 			{:else}
 				{#each stats as stat, index}
-					<div class="flex w-full items-center gap-2">
+					<div class="flex w-full items-center gap-2" data-pw="statsGraph">
 						<p>{index + 1}</p>
 						<div class="bg-primary h-full bar" style="--width: {columnSize * stat}%"></div>
 						<p>{stat || ''}</p>
