@@ -1,12 +1,15 @@
-import { get, readable, writable, type Writable } from "svelte/store";
-import { useLocalStorage } from "./useLocalStorage";
-import { type GuessResponse, type WeaponGuessResponse } from "$lib/dtos";
-import { onMount } from "svelte";
-import dayjs from "$lib/configs/dayjsConfig";
-import { toast } from "svelte-sonner";
-import { useStats } from "./useStats";
+import { get, readable, writable, type Writable } from 'svelte/store';
+import { useLocalStorage } from './useLocalStorage';
+import { type GuessResponse, type WeaponGuessResponse } from '$lib/dtos';
+import { onMount } from 'svelte';
+import dayjs from '$lib/configs/dayjsConfig';
+import { toast } from 'svelte-sonner';
+import { useStats } from './useStats';
 
-export function useGameEngine<T extends GuessResponse>(gamemode: string, numberOfCorrectGuesses: Writable<number | undefined>) {
+export function useGameEngine<T extends GuessResponse>(
+	gamemode: string,
+	numberOfCorrectGuesses: Writable<number | undefined>
+) {
 	const gameState = writable<'guessing' | 'won'>('guessing');
 	const guesses = useLocalStorage<T[]>(`${gamemode}_guesses`, []);
 	const lastEvent = useLocalStorage<{ event: String; date: string } | null>(
@@ -19,7 +22,19 @@ export function useGameEngine<T extends GuessResponse>(gamemode: string, numberO
 	const validating = writable(false);
 	const openVictoryDialog = writable(false);
 
+	// Typo in weapon__streak. To make sure the streaks are not lost this needs to map to the new streak.
+	// Should leave it like this for some time before it can be removed completed when most users have had their
+	// streak converted to the correct key value pair in local storage
+	// TODO: Remove around 16.07.24
+	const oldWeaponStreak = useLocalStorage('weapon__streak', 0);
+	// ---
+
 	onMount(() => {
+		// TODO: Remove around 16.07.24
+		if (gamemode === 'weapon') {
+			streak.set(get(oldWeaponStreak));
+		}
+		// ---
 		initGameState();
 	});
 
@@ -32,6 +47,11 @@ export function useGameEngine<T extends GuessResponse>(gamemode: string, numberO
 		if (_lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
+			// TODO: Remove around 16.07.24
+			if (gamemode === 'weapon') {
+				oldWeaponStreak.set(0);
+			}
+			// ---
 			gameState.set('guessing');
 		} else {
 			// Reset streak if last victory was more than 1 days ago
@@ -40,6 +60,11 @@ export function useGameEngine<T extends GuessResponse>(gamemode: string, numberO
 				_lastEvent.event !== 'won'
 			) {
 				streak.set(0);
+				// TODO: Remove around 16.07.24
+				if (gamemode === 'weapon') {
+					oldWeaponStreak.set(0);
+				}
+				// ---
 			}
 
 			switch (_lastEvent.event) {
@@ -122,9 +147,14 @@ export function useGameEngine<T extends GuessResponse>(gamemode: string, numberO
 		setTimeout(() => {
 			gameState.set('won');
 			streak.update((streak) => streak + 1);
+			// TODO: Remove around 16.07.24
+			if (gamemode === 'weapon') {
+				oldWeaponStreak.update((streak) => streak + 1);
+			}
+			// ---
 			stats.incrementAttempt(get(guesses).length);
-      const _numberOfCorrectGuesses = get(numberOfCorrectGuesses)
-      numberOfCorrectGuesses.set(_numberOfCorrectGuesses ? _numberOfCorrectGuesses + 1 : 1)
+			const _numberOfCorrectGuesses = get(numberOfCorrectGuesses);
+			numberOfCorrectGuesses.set(_numberOfCorrectGuesses ? _numberOfCorrectGuesses + 1 : 1);
 			openVictoryDialog.set(true);
 		}, 500 * 6);
 		// TODO: Change timeout delay based on gamemode
