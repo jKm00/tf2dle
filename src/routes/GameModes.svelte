@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Axe, GraduationCap, Map } from 'lucide-svelte';
+	import { Axe, GraduationCap, Map, Sparkles } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
 	import dayjs from '$lib/configs/dayjsConfig';
 
@@ -24,6 +24,13 @@
 			icon: GraduationCap,
 			disabled: false,
 			new: dayjs.utc().isBefore(dayjs.utc('2024-03-01'), 'day')
+		},
+		{
+			name: 'Unusual',
+			description: 'Guess the correct unusual effect',
+			icon: Sparkles,
+			disabled: false,
+			new: true
 		}
 	];
 </script>

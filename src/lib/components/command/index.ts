@@ -9,7 +9,8 @@ import {
 	MessageSquareText,
 	Heart,
 	Home,
-	Scroll
+	Scroll,
+	Sparkles
 } from 'lucide-svelte';
 import type { ComponentType } from 'svelte';
 
@@ -61,6 +62,11 @@ export const commandGroups: CommandGroup[] = [
 						label: 'Cosmetic',
 						value: 'cosmetic',
 						icon: GraduationCap
+					},
+					{
+						label: 'Unusual',
+						value: 'unusual',
+						icon: Sparkles
 					}
 				],
 				action: (gamemode: string) => goto(`/game-modes/${gamemode}`)

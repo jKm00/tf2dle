@@ -16,7 +16,7 @@ export type MapDto = {
 
 export interface GuessResponse {
 	correct: boolean;
-	guessedAt: string
+	guessedAt: string;
 }
 
 export type MapGuessResponse = {
@@ -60,7 +60,7 @@ export interface WeaponGuessResponse extends GuessResponse {
 		status: 'correct' | 'incorrect' | 'partial';
 		value: string[];
 	};
-};
+}
 
 export type CosmeticDto = {
 	name: string;
@@ -82,3 +82,14 @@ export type CurrentCosmeticDto = {
 	};
 	numbersOfCorrectGuesses: number;
 };
+
+export interface UnusualGuessResponse extends GuessResponse {
+	name: {
+		status: 'correct' | 'incorrect';
+		value: string;
+	};
+	series: {
+		status: 'correct' | 'incorrect';
+		value: string;
+	};
+}
