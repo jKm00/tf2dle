@@ -6,7 +6,7 @@
 	export let guesses: UnusualGuessResponse[];
 </script>
 
-<div class="grid gap-2">
+<div class="grid gap-4">
 	{#if guesses.length > 0}
 		<div class="flex gap-4 font-semibold">
 			<p class="w-20">Image</p>
