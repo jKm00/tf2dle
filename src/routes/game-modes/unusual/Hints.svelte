@@ -34,7 +34,7 @@
 		>
 			<Glasses />
 			{#if guesses >= SERIES_HINT && series}
-				<p class="flex flex-col">Used by: <span>{series}</span></p>
+				<p class="flex flex-col">Series: <span>{series}</span></p>
 			{:else}
 				<p>Series clue in {Math.max(SERIES_HINT - guesses, 0)} tries</p>
 			{/if}
