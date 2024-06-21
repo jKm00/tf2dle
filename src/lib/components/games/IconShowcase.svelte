@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	// The cosmetic to display
-	export let cosmetic: { thumbnail: string; rotation: number };
+	// Gamemode
+	export let gamemode: string;
+	// The icon to display
+	export let icon: { thumbnail: string; rotation: number };
 	// The number of guesses the user has made
 	export let guesses: number;
 	// Whether the user has won the game
 	export let hasWon: boolean;
+	// Icon size
+	export let size: { width: number; height: number } = { width: 96, height: 75 };
 
 	let wrapper: HTMLDivElement;
 	let canvas: HTMLCanvasElement;
@@ -20,14 +24,14 @@
 		drawCanvas();
 
 		img = new Image();
-		img.src = `/images/cosmetics/${cosmetic.thumbnail}.png`;
+		img.src = `/images/${gamemode}/${icon.thumbnail}.png`;
 		img.onload = () => {
 			drawImage(img, guesses, hasWon);
 		};
 	});
 
 	/**
-	 * Draw teh	canvas to the correct size
+	 * Draw the	canvas to the correct size
 	 */
 	function drawCanvas() {
 		canvas.width = wrapper.clientWidth;
@@ -54,7 +58,7 @@
 			ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 		} else {
 			if (guesses < 3) {
-				wrapper.style.transform = `rotate(${cosmetic.rotation}deg)`;
+				wrapper.style.transform = `rotate(${icon.rotation}deg)`;
 			} else {
 				wrapper.style.transform = `rotate(0deg)`;
 			}
@@ -73,7 +77,11 @@
 
 <div class="flex justify-center">
 	<div class="border py-2 rounded-sm">
-		<div bind:this={wrapper} class="w-[96px] h-[75px] overflow-hidden">
+		<div
+			bind:this={wrapper}
+			style="width: {size.width}px; height: {size.height}px"
+			class="overflow-hidden"
+		>
 			<canvas bind:this={canvas}></canvas>
 		</div>
 	</div>

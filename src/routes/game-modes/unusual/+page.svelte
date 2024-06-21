@@ -4,17 +4,20 @@
 	import { useGameEngine } from '$lib/composables/useGameEngine';
 	import type { UnusualGuessResponse } from '$lib/dtos.js';
 	import { writable } from 'svelte/store';
+	import Hints from './Hints.svelte';
+	import IconShowcase from '$lib/components/games/IconShowcase.svelte';
 
 	export let data;
 
 	$: ({ todaysUnusual, unusuals } = data);
 
-	let numberOfCorrectGuesses = writable<number | undefined>(undefined);
+	let numberOfCorrectGuesses = writable<number>(0);
 
 	let loadingState: 'loading' | 'error' | 'success' = 'loading';
 
 	$: if (todaysUnusual) {
 		numberOfCorrectGuesses.set(todaysUnusual.numberOfCorrectGuesses);
+		console.log($numberOfCorrectGuesses);
 		loadingState = 'success';
 	}
 
@@ -34,9 +37,15 @@
 >
 	<div class="grid gap-4">
 		{#if todaysUnusual}
-			<div>{todaysUnusual}</div>
+			<IconShowcase
+				gamemode="unusuals"
+				icon={todaysUnusual.unusual}
+				guesses={$guesses.length}
+				hasWon={$gameState === 'won'}
+				size={{ width: 200, height: 200 }}
+			/>
 		{/if}
-		<p>Some hints</p>
+		<Hints guesses={$guesses.length} />
 		{#if $gameState === 'guessing'}
 			<p class="text-sm text-center text-muted-foreground">
 				{$numberOfCorrectGuesses}
