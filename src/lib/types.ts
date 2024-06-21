@@ -38,3 +38,9 @@ export type Cosmetic = {
 	image: string;
 	usedBy: string;
 };
+
+export type Unusual = {
+	name: string;
+	image: string;
+	series: string;
+};

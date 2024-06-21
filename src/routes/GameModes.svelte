@@ -23,14 +23,14 @@
 			description: 'Guess the correct cosmetic',
 			icon: GraduationCap,
 			disabled: false,
-			new: dayjs.utc().isBefore(dayjs.utc('2024-03-01'), 'day')
+			new: false
 		},
 		{
 			name: 'Unusual',
 			description: 'Guess the correct unusual effect',
 			icon: Sparkles,
 			disabled: false,
-			new: true
+			new: dayjs.utc().isBefore(dayjs.utc('2024-08-01'), 'day')
 		}
 	];
 </script>

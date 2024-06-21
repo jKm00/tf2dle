@@ -1,7 +1,6 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card';
 	import { AreaChart, Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
-	import Input from '$lib/components/games/Input.svelte';
 	import ColorExplanation from './ColorExplanation.svelte';
 	import StatsDialog from './StatsDialog.svelte';
 	import VictoryDialog from './VictoryDialog.svelte';

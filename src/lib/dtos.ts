@@ -93,3 +93,16 @@ export interface UnusualGuessResponse extends GuessResponse {
 		value: string;
 	};
 }
+
+export type UnusualResponse = {
+	name: string;
+	thumbnail: string;
+};
+
+export type CurrentUnusualDto = {
+	unusual: {
+		thumbnail: string;
+		rotation: number;
+	};
+	numberOfCorrectGuesses: number;
+};

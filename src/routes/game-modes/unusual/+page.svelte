@@ -43,7 +43,7 @@
 				{$numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays unusual
 			</p>
 			<Input
-				data={unusuals.map((u) => ({
+				data={unusuals?.map((u) => ({
 					img: `/images/unusuals/${u.thumbnail}`,
 					value: u.name
 				}))}
