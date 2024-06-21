@@ -21,7 +21,6 @@
 
 	$: if (todaysUnusual) {
 		numberOfCorrectGuesses.set(todaysUnusual.numberOfCorrectGuesses);
-		console.log($numberOfCorrectGuesses);
 		loadingState = 'success';
 	}
 

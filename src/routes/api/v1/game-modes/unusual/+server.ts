@@ -16,7 +16,7 @@ export async function GET() {
 			thumbnail: todaysUnusual.thumbnail,
 			rotation: todaysUnusual.rotation
 		},
-		numberOfCorrectGuessed: todaysUnusual.hasWon
+		numberOfCorrectGuesses: todaysUnusual.hasWon
 	});
 }
 
