@@ -4,6 +4,7 @@ import type { UnusualRepository } from '../repositories/UnusualRepository';
 import { unusualRepository } from '../repositories/UnusualRepositoryPrisma';
 import type { Dayjs } from 'dayjs';
 import LogService from './LogService';
+import dayjs from '$lib/configs/dayjsConfig';
 
 class UnusualService {
 	private unusuals: Unusual[];
@@ -52,6 +53,39 @@ class UnusualService {
 		);
 
 		return this.repo.saveUnusualForCurrentDate(this.unusuals[randomIndex], randomRotation);
+	}
+
+	/**
+	 * Validates a guess
+	 * @param guess to validate
+	 * @param numberOfGuesses number of tries the user has made
+	 * @returns an object containing information abou the guess and if it was correct.
+	 * A hint is provided if the user has made 9 or more guesses
+	 */
+	public async validateGuess(guess: string, numberOfGuesses: number) {
+		const currentTime = dayjs.utc();
+
+		const todaysUnusual = await this.getUnusualByDay(currentTime);
+		const guessedUnusual = this.unusuals.find((unusual) => unusual.name === guess);
+
+		let series: string | undefined;
+		if (numberOfGuesses >= 9) {
+			series = todaysUnusual.series;
+		}
+
+		const correct = guess === todaysUnusual.name;
+
+		if (correct) {
+			await this.repo.incrementNumberOfCorrectGuesses(currentTime);
+		}
+
+		return {
+			name: guessedUnusual?.name ?? '',
+			thumbnail: guessedUnusual?.image ?? '',
+			correct,
+			guessedAt: currentTime.format(),
+			series
+		};
 	}
 }
 

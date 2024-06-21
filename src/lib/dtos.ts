@@ -84,14 +84,9 @@ export type CurrentCosmeticDto = {
 };
 
 export interface UnusualGuessResponse extends GuessResponse {
-	name: {
-		status: 'correct' | 'incorrect';
-		value: string;
-	};
-	series: {
-		status: 'correct' | 'incorrect';
-		value: string;
-	};
+	name: string;
+	thumbnail: string;
+	series?: string;
 }
 
 export type UnusualResponse = {

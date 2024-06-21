@@ -19,3 +19,12 @@ export async function GET() {
 		numberOfCorrectGuessed: todaysUnusual.hasWon
 	});
 }
+
+// @ts-ignore
+export async function POST({ request }) {
+	const { guess, numberOfGuesses } = await request.json();
+
+	const result = await unusualService.validateGuess(guess, numberOfGuesses);
+
+	return json(result);
+}

@@ -6,10 +6,14 @@
 	import { writable } from 'svelte/store';
 	import Hints from './Hints.svelte';
 	import IconShowcase from '$lib/components/games/IconShowcase.svelte';
+	import { useLocalStorage } from '$lib/composables/useLocalStorage';
+	import GuessesList from './GuessesList.svelte';
 
 	export let data;
 
 	$: ({ todaysUnusual, unusuals } = data);
+
+	let series = useLocalStorage<string | null>('unusual_series', null);
 
 	let numberOfCorrectGuesses = writable<number>(0);
 
@@ -22,12 +26,21 @@
 	}
 
 	const { gameState, guesses, streak, stats, validating, openVictoryDialog, handleGuess } =
-		useGameEngine<UnusualGuessResponse>('unusual', numberOfCorrectGuesses);
+		useGameEngine<UnusualGuessResponse>('unusual', 2, numberOfCorrectGuesses);
+
+	async function guess(value: string) {
+		const result = await handleGuess(value);
+
+		if (result && result.series) {
+			series.set(result.series);
+		}
+	}
 </script>
 
 <GameShell
 	title="Unusuals"
 	description="Guess today's unusual effect"
+	img={{ basePath: '/images/unusuals/', guessKey: 'thumbnail' }}
 	{loadingState}
 	{guesses}
 	{streak}
@@ -45,7 +58,7 @@
 				size={{ width: 200, height: 200 }}
 			/>
 		{/if}
-		<Hints guesses={$guesses.length} />
+		<Hints guesses={$guesses.length} series={$series} />
 		{#if $gameState === 'guessing'}
 			<p class="text-sm text-center text-muted-foreground">
 				{$numberOfCorrectGuesses}
@@ -53,17 +66,18 @@
 			</p>
 			<Input
 				data={unusuals?.map((u) => ({
-					img: `/images/unusuals/${u.thumbnail}`,
+					img: `/images/unusuals/${u.thumbnail}.png`,
 					value: u.name
 				}))}
-				guessed={$guesses.map((guess) => guess.name.value)}
+				guessed={$guesses.map((guess) => guess.name)}
 				bind:validating={$validating}
-				on:select={(e) => handleGuess(e.detail)}
+				on:select={(e) => guess(e.detail)}
 			/>
 		{:else}
 			<p class="text-sm text-center text-muted-foreground">
 				You are 1 out of {$numberOfCorrectGuesses} that have guessed todays unusual
 			</p>
 		{/if}
+		<GuessesList guesses={$guesses} />
 	</div>
 </GameShell>

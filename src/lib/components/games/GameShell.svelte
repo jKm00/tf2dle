@@ -10,6 +10,7 @@
 
 	export let title: string;
 	export let description: string;
+	export let img: { basePath: string; guessKey: string };
 	export let loadingState: 'loading' | 'error' | 'success';
 
 	// TODO: Pass in generic?
@@ -72,7 +73,7 @@
 
 	{#if $guesses.length > 0}
 		<VictoryDialog
-			img={{ src: `/images/weapons/thumbnails/${$guesses[0].name}.png`, alt: $guesses[0].name }}
+			img={{ src: `${img.basePath}${$guesses[0][img.guessKey]}.png`, alt: $guesses[0].name }}
 			imgSize="10rem"
 			challenge="Weapon"
 			value={$guesses[0].name}

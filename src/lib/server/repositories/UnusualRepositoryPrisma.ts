@@ -25,8 +25,18 @@ class UnusualRepositoryPrisma implements UnusualRepository {
 			}
 		});
 	}
-	incrementNumberOfCorrectGuesses(date: Dayjs): Promise<void> {
-		throw new Error('Method not implemented.');
+
+	public async incrementNumberOfCorrectGuesses(date: Dayjs) {
+		await db.dailyUnusuals.updateMany({
+			where: {
+				selectedAt: date.toDate()
+			},
+			data: {
+				hasWon: {
+					increment: 1
+				}
+			}
+		});
 	}
 }
 
