@@ -6,7 +6,47 @@
 	},
 	{
 		"name": "Unusual 2",
-		"image": "unusual-1",
+		"image": "unusual-2",
 		"series": "Series 2"
+	},
+	{
+		"name": "Unusual 3",
+		"image": "unusual-2",
+		"series": "Series 3"
+	},
+	{
+		"name": "Unusual 4",
+		"image": "unusual-2",
+		"series": "Series 4"
+	},
+	{
+		"name": "Unusual 5",
+		"image": "unusual-2",
+		"series": "Series 6"
+	},
+	{
+		"name": "Unusual 6",
+		"image": "unusual-2",
+		"series": "Series 6"
+	},
+	{
+		"name": "Unusual 7",
+		"image": "unusual-2",
+		"series": "Series 7"
+	},
+	{
+		"name": "Unusual 8",
+		"image": "unusual-2",
+		"series": "Series 8"
+	},
+	{
+		"name": "Unusual 9",
+		"image": "unusual-2",
+		"series": "Series 9"
+	},
+	{
+		"name": "Unusual 10",
+		"image": "unusual-2",
+		"series": "Series 10"
 	}
 ]
