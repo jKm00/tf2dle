@@ -20,7 +20,7 @@
 						feature.gameMode instanceof Array ? feature.gameMode.join(', ') : feature.gameMode}
 					<article class="mb-6">
 						<h4 class="font-semibold mb-2">{feature.title}</h4>
-						<p class="text-sm mb-2 leading-6">{feature.description}</p>
+						<p class="text-sm mb-2 leading-6">{@html feature.description}</p>
 						<p class="text-sm text-muted-foreground">Game modes: {gameModes}</p>
 					</article>
 				{/each}
@@ -56,3 +56,9 @@
 		</Card.Content>
 	</Card.Root>
 {/each}
+
+<style>
+	:global(.patch-link) {
+		text-decoration: underline;
+	}
+</style>

@@ -1,17 +1,17 @@
 import type { CosmeticDto, CurrentCosmeticDto } from '$lib/dtos';
 import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
-export const load = async ({ fetch }) => {
+export const load: PageLoad = async ({ fetch }) => {
 	/**
 	 * Load all cosmetics
 	 */
 	async function fetchCosmetics() {
-		let res;
 		let data;
 		let errorMessage: string | null = null;
 
 		try {
-			res = await fetch('/api/v1/cosmetics');
+			const res = await fetch('/api/v1/cosmetics');
 			data = (await res.json()) as CosmeticDto[];
 
 			if (!res.ok) {
@@ -32,12 +32,11 @@ export const load = async ({ fetch }) => {
 	 * Fetch todays cosmetic
 	 */
 	async function fetchTodaysCosmetic() {
-		let res;
 		let data;
 		let errorMessage: string | null = null;
 
 		try {
-			res = await fetch('/api/v1/game-modes/cosmetic');
+			const res = await fetch('/api/v1/game-modes/cosmetic');
 			data = (await res.json()) as CurrentCosmeticDto;
 
 			if (!res.ok) {

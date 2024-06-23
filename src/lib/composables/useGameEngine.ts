@@ -8,6 +8,7 @@ import { useStats } from './useStats';
 
 export function useGameEngine<T extends GuessResponse>(
 	gamemode: string,
+	fadingHints: number,
 	numberOfCorrectGuesses: Writable<number | undefined>
 ) {
 	const gameState = writable<'guessing' | 'won'>('guessing');
@@ -103,6 +104,8 @@ export function useGameEngine<T extends GuessResponse>(
 		if (result?.correct) {
 			won();
 		}
+
+		return result;
 	}
 
 	/**
@@ -120,7 +123,7 @@ export function useGameEngine<T extends GuessResponse>(
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({ guess })
+				body: JSON.stringify({ guess, numberOfGuesses: get(guesses).length + 1 })
 			});
 			data = (await res.json()) as T;
 
@@ -156,7 +159,7 @@ export function useGameEngine<T extends GuessResponse>(
 			const _numberOfCorrectGuesses = get(numberOfCorrectGuesses);
 			numberOfCorrectGuesses.set(_numberOfCorrectGuesses ? _numberOfCorrectGuesses + 1 : 1);
 			openVictoryDialog.set(true);
-		}, 500 * 6);
+		}, 500 * fadingHints);
 		// TODO: Change timeout delay based on gamemode
 	}
 

@@ -26,6 +26,7 @@ export async function GET() {
  * and what number of try it is
  * @returns CosmeticGuessResponse
  */
+// @ts-ignore
 export async function POST({ request }) {
 	const { guess, numberOfGuesses } = await request.json();
 

@@ -39,3 +39,13 @@ model DailyCosmetics {
   usedBy     String
   hasWon     Int      @default(0)
 }
+
+model DailyUnusuals {
+  id          Int @id @default(autoincrement())
+  selectedAt  DateTime @default(now()) @db.Date
+  name        String
+  thumbnail   String
+  rotation    Int
+  series      String
+  hasWon      Int @default(0)
+}

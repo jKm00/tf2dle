@@ -7,7 +7,7 @@
 	import { AreaChart, Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
-	import CosmeticShowcase from './CosmeticShowcase.svelte';
+	import CosmeticShowcase from '../../../lib/components/games/IconShowcase.svelte';
 	import Hints from './Hints.svelte';
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
@@ -202,7 +202,8 @@
 				<div class="grid gap-8">
 					{#if todaysCosmetic}
 						<CosmeticShowcase
-							cosmetic={todaysCosmetic?.cosmetic}
+							gamemode="cosmetics"
+							icon={todaysCosmetic?.cosmetic}
 							guesses={$guesses.length}
 							hasWon={gameState === 'won'}
 						/>

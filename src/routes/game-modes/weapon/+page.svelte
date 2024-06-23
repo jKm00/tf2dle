@@ -15,7 +15,7 @@
 	let loadingState: 'loading' | 'error' | 'success' = 'loading';
 
 	const { gameState, guesses, streak, stats, validating, openVictoryDialog, handleGuess } =
-		useGameEngine<WeaponGuessResponse>('weapon', numberOfCorrectGuesses);
+		useGameEngine<WeaponGuessResponse>('weapon', 6, numberOfCorrectGuesses);
 
 	onMount(async () => {
 		// Load data
@@ -35,6 +35,7 @@
 <GameShell
 	title="Weapon"
 	description="Guess today's weapon"
+	img={{ basePath: '/images/weapons/thumbnails/', guessKey: 'name' }}
 	{loadingState}
 	{guesses}
 	{streak}
