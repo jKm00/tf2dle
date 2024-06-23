@@ -43,4 +43,5 @@ export type Unusual = {
 	name: string;
 	image: string;
 	series: string;
+	type: string;
 };
