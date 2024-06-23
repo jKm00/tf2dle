@@ -26,22 +26,41 @@ TODO
 
 <h3 id="cosmetics">Cosmetics</h3>
 
-## Instructions
+## Setting up python environment
 
 1. Cd into folder
-2. Activate environment:
+
+```
+cd scripts
+```
+
+3. Create environment
+
+```
+python -m venv .
+```
+
+4. Activate environment:
 
 ```
 ./Scripts/activate
 ```
 
-3. If it's your first time activating the environment, you also need to install packages to it before you can continue:
+5. Install requirements
 
 ```
 pip install -r requirements.txt
 ```
 
-4. Run a python file
+## Running python files
+
+1. Make sure you have activated your python environment
+
+```
+./Scripts/activate
+```
+
+2. Run a python file
 
 ```
 python <filename>
