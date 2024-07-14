@@ -2,37 +2,7 @@
 	import { Axe, GraduationCap, Map, Sparkles } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
 	import dayjs from '$lib/configs/dayjsConfig';
-
-	const gameModes = [
-		{
-			name: 'Weapon',
-			description: 'Guess the correct weapon',
-			icon: Axe,
-			disabled: false,
-			new: false
-		},
-		{
-			name: 'Map',
-			description: 'Guess the correct map',
-			icon: Map,
-			disabled: false,
-			new: false
-		},
-		{
-			name: 'Cosmetic',
-			description: 'Guess the correct cosmetic',
-			icon: GraduationCap,
-			disabled: false,
-			new: false
-		},
-		{
-			name: 'Unusual',
-			description: 'Guess the correct unusual effect',
-			icon: Sparkles,
-			disabled: false,
-			new: dayjs.utc().isBefore(dayjs.utc('2024-08-01'), 'day')
-		}
-	];
+	import { gameModes } from '$lib/game-modes';
 </script>
 
 <Card.Root>
