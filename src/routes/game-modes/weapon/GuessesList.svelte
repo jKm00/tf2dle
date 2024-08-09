@@ -22,10 +22,10 @@
 		<div class="grid grid-cols-6 gap-2 items-center text-sm">
 			{#each guesses as guess (guess.name)}
 				{@const fadeDuration = 500}
-				<div class="relative flex items-center justify-center w-full h-full">
+				<div class="relative flex items-center justify-center w-full min-h-24">
 					<div
 						in:fade={{ duration: fadeDuration, delay: fadeDuration * 6 }}
-						class="{guess.correct ? 'correct' : 'incorrect'} absolute inset-0 rounded-md"
+						class="{guess.correct ? 'correct' : 'incorrect'} absolute inset-0 rounded-sm"
 					/>
 					<img
 						in:fade={{ duration: fadeDuration }}
