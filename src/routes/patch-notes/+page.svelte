@@ -35,7 +35,7 @@
 
 					<article class="mb-6">
 						<h4 class="font-semibold mb-2">{improvement.title}</h4>
-						<p class="text-sm mb-2 leading-6">{improvement.description}</p>
+						<p class="text-sm mb-2 leading-6">{@html improvement.description}</p>
 						<p class="text-sm text-muted-foreground">Game modes: {gameModes}</p>
 					</article>
 				{/each}
@@ -48,7 +48,7 @@
 
 					<article class="mb-6">
 						<h4 class="font-semibold mb-2">{fix.title}</h4>
-						<p class="text-sm mb-2 leading-6">{fix.description}</p>
+						<p class="text-sm mb-2 leading-6">{@html fix.description}</p>
 						<p class="text-sm text-muted-foreground">Game modes: {gameModes}</p>
 					</article>
 				{/each}

@@ -8,8 +8,10 @@ import patch_1_4 from './patch_1_4';
 import patch_1_5 from './patch_1_5';
 import patch_1_6 from './patch_1_6';
 import patch_1_7 from './patch_1_7';
+import patch_1_8 from './patch_1_8';
 
 const patchNotes = [
+	patch_1_8,
 	patch_1_7,
 	patch_1_6,
 	patch_1_5,
