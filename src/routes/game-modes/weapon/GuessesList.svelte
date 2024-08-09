@@ -22,12 +22,18 @@
 		<div class="grid grid-cols-6 gap-2 items-center text-sm">
 			{#each guesses as guess (guess.name)}
 				{@const fadeDuration = 500}
-				<img
-					in:fade={{ duration: fadeDuration }}
-					src={`/images/weapons/thumbnails/${guess.name}.png`}
-					alt={guess.name}
-					class="w-20"
-				/>
+				<div class="relative flex items-center justify-center w-full h-full">
+					<div
+						in:fade={{ duration: fadeDuration, delay: fadeDuration * 6 }}
+						class="{guess.correct ? 'correct' : 'incorrect'} absolute inset-0 rounded-md"
+					/>
+					<img
+						in:fade={{ duration: fadeDuration }}
+						src={`/images/weapons/thumbnails/${guess.name}.png`}
+						alt={guess.name}
+						class="w-20 relative z-10"
+					/>
+				</div>
 				<p
 					in:fade={{ duration: fadeDuration, delay: fadeDuration * 1 }}
 					class={`p-2 min-h-24 rounded-sm flex items-center justify-center gap-2 ${guess.usedBy.status}`}

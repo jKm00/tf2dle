@@ -15,7 +15,7 @@
 	let loadingState: 'loading' | 'error' | 'success' = 'loading';
 
 	const { gameState, guesses, streak, stats, validating, openVictoryDialog, handleGuess } =
-		useGameEngine<WeaponGuessResponse>('weapon', 6, numberOfCorrectGuesses);
+		useGameEngine<WeaponGuessResponse>('weapon', 7, numberOfCorrectGuesses);
 
 	onMount(async () => {
 		// Load data
