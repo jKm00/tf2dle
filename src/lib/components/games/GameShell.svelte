@@ -12,6 +12,7 @@
 	export let description: string;
 	export let img: { basePath: string; guessKey: string };
 	export let loadingState: 'loading' | 'error' | 'success';
+	export let nextChallenge: string | undefined = undefined;
 
 	// TODO: Pass in generic?
 	export let guesses: Writable<any>;
@@ -80,7 +81,7 @@
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={$numberOfCorrectGuesses ?? 1}
-			nextChallenge="/game-modes/map"
+			{nextChallenge}
 			bind:open={$openVictoryDialog}
 		/>
 	{/if}

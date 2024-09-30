@@ -251,6 +251,7 @@
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={numberOfCorrectGuesses ?? 1}
+			nextChallenge="/game-modes/unusual"
 		/>
 	{/if}
 </div>
