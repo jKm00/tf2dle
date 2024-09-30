@@ -2,6 +2,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Dialog from '$lib/components/ui/dialog';
 	import TwitterShare from '$lib/components/games/TwitterShare.svelte';
+	import { Dices, Flame } from 'lucide-svelte';
 
 	// TODO: Swap share button with next and place share somewhere else
 
@@ -36,20 +37,30 @@
 			>
 		</Dialog.Header>
 		<div class="grid" data-testId="dialog">
-			<img src={img.src} alt={img.alt} class="rounded-sm my-4" style={`--width: ${imgSize}`} />
-			<div class="grid gap-2 border p-4 rounded-sm mb-4">
-				<p class="flex justify-between">
-					<span class="font-semibold">{challenge}:</span>
-					{value}
-				</p>
-				<p class="flex justify-between">
-					<span class="font-semibold">Tries:</span>
-					{tries}
-				</p>
-				<p class="flex justify-between">
-					<span class="font-semibold">Streak:</span>
-					{streak}
-				</p>
+			<div class="text-center">
+				<img
+					src={img.src}
+					alt={img.alt}
+					class="rounded-sm mt-4 mb-2"
+					style={`--width: ${imgSize}`}
+				/>
+				<h1 class="font-semibold text-lg">{value}</h1>
+			</div>
+			<div class="flex justify-around my-12">
+				<div class="flex items-center gap-2">
+					<Dices class="w-8 h-8" />
+					<div class="leading-3">
+						<p class="text-sm text-muted-foreground">Tries</p>
+						<p>{tries}</p>
+					</div>
+				</div>
+				<div class="flex items-center gap-2">
+					<Flame class="w-8 h-8" />
+					<div class="leading-3">
+						<p class="text-sm text-muted-foreground">Streak</p>
+						<p>{streak}</p>
+					</div>
+				</div>
 			</div>
 			{#if nextChallenge}
 				<Button href={nextChallenge} class="mb-2">Next challenge</Button>
