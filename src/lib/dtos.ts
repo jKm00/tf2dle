@@ -62,6 +62,21 @@ export interface WeaponGuessResponse extends GuessResponse {
 	};
 }
 
+export interface WeaponTwoGuessResponse extends GuessResponse {
+	name: string;
+	numberOfCorrectGuesses: number;
+}
+
+export interface WeaponTwoResponse {
+	weapon: {
+		attributes: {
+			text: string;
+			variant: 'positive' | 'negative' | 'neutral';
+		}[];
+	};
+	numberOfCorrectGuesses: number;
+}
+
 export type CosmeticDto = {
 	name: string;
 	thumbnail: string;

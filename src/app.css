@@ -30,6 +30,10 @@
 		--input: 20 5.9% 90%;
 		--ring: 24.6 95% 53.1%;
 		--radius: 0.5rem;
+
+		--positive: 210 100% 80%;
+		--negative: var(--incorrect);
+		--neutral: var(var(--foreground));
 	}
 	.dark {
 		--background: 20 14.3% 4.1%;
