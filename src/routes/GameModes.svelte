@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { Axe, GraduationCap, Map, Sparkles } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
-	import dayjs from '$lib/configs/dayjsConfig';
 	import { gameModes } from '$lib/game-modes';
 </script>
 
@@ -13,10 +11,9 @@
 	<Card.Content>
 		<ul class="grid gap-2">
 			{#each gameModes.filter((g) => !g.disabled) as gameMode}
-				{@const name = gameMode.name.toLowerCase()}
 				<a
-					href={`/game-modes/${name}`}
-					data-testId={name}
+					href={`/game-modes${gameMode.href}`}
+					data-testId={gameMode.name.toLowerCase()}
 					class="relative overflow-hidden hover:scale-[1.02] transition-transform"
 				>
 					{#if gameMode.new}

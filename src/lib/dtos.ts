@@ -1,3 +1,5 @@
+import type { WeaponAttribute } from './types';
+
 export type SelectedMapDto = {
 	image: {
 		url: string;
@@ -60,6 +62,22 @@ export interface WeaponGuessResponse extends GuessResponse {
 		status: 'correct' | 'incorrect' | 'partial';
 		value: string[];
 	};
+}
+
+export interface WeaponTwoGuessResponse extends GuessResponse {
+	name: string;
+	attributes: WeaponAttribute[];
+}
+
+export interface WeaponTwoResponse {
+	weapon: {
+		numberOfTotalAttributes: number;
+		attributes: {
+			text: string;
+			variant: 'positive' | 'negative' | 'neutral';
+		}[];
+	};
+	numberOfCorrectGuesses: number;
 }
 
 export type CosmeticDto = {

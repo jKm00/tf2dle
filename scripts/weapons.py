@@ -18,6 +18,7 @@ class Weapon:
     self.ammo_carried = ammo_carried
     self.reload_type = reload_type
     self.qualities = qualities
+    self.attributes = []
   
   def add_class_user(self, class_name):
     self.used_by.append(class_name) 
@@ -27,6 +28,9 @@ class Weapon:
 
   def add_quality(self, quality):
     self.qualities.append(quality)
+
+  def add_attribute(self, attribute):
+    self.attributes.append(attribute)
 
   def to_dict(self):
     """Converts the object to a dictionary"""
@@ -41,11 +45,31 @@ class Weapon:
       'ammoLoaded': self.ammo_loaded,
       'ammoCarried': self.ammo_carried,
       'reloadType': self.reload_type,
-      'qualities': self.qualities
+      'qualities': self.qualities,
+      'attributes': [attribute.to_dict() for attribute in self.attributes]
     }
+
+class Attribute:
+  def __init__(self, text, variant):
+    self.text = text
+    self.variant = variant
+
+  def to_dict(self):
+    return {
+      'text': self.text,
+      'variant': self.variant
+    }
+
+attribute_class_map = {
+  'att_level': 'level',
+  'att_positive': 'positive',
+  'att_negative': 'negative',
+  'att_neutral': 'neutral'
+}
 
 # If the script should download images (weapon icons and kill icons)
 enable_img_download = '--enable-img-download' in sys.argv
+test_run = '--test-run' in sys.argv
 
 if enable_img_download:
   print("Image download enabled")
@@ -164,6 +188,24 @@ for weapon in weapons.values():
   qualitiy_divs = weapon_soup.find_all("div", { "class": "quality-tag" })
   for div in qualitiy_divs:
     weapon.add_quality(div.find("a").find("span").text)
+
+  # Find attributes
+  attribute_container = weapon_soup.find("td", class_="loadout-tooltip-container")
+  attributes = attribute_container.find_all("span", class_=lambda x: x and x.startswith("att_"))
+  
+  for attribute in attributes:
+    attribute_class = attribute.get("class")[0]
+
+    for br in attribute.find_all("br"):
+      br.replace_with("\n")
+
+    attribute_text = attribute.text
+
+    if attribute_class in attribute_class_map.keys():
+      weapon.add_attribute(Attribute(attribute_text, attribute_class_map[attribute_class]))
+
+  if test_run and index == 5:
+    break
 
 # Convert hashmap to json
 weapons_json = json.dumps([weapon.to_dict() for weapon in weapons.values()], indent=4)

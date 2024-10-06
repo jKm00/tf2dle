@@ -29,7 +29,7 @@
 	<Dialog.Content>
 		<Dialog.Header>
 			<Dialog.Title>
-				Won!
+				Correct!
 				<TwitterShare {challenge} {tries} {streak} class="mb-2" />
 			</Dialog.Title>
 			<Dialog.Description

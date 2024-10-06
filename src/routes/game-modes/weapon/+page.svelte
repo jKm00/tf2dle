@@ -36,7 +36,7 @@
 	title="Weapon"
 	description="Guess today's weapon"
 	img={{ basePath: '/images/weapons/thumbnails/', guessKey: 'name' }}
-	nextChallenge="/game-modes/map"
+	nextChallenge="/game-modes/weapon-2"
 	{loadingState}
 	{guesses}
 	{streak}

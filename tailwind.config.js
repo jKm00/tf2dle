@@ -59,7 +59,10 @@ const config = {
 				card: {
 					DEFAULT: 'hsl(var(--card) / <alpha-value>)',
 					foreground: 'hsl(var(--card-foreground) / <alpha-value>)'
-				}
+				},
+				positive: 'hsl(var(--positive) / <alpha-value>)',
+				negative: 'hsl(var(--negative) / <alpha-value>)',
+				neutral: 'hsl(var(--neutral) / <alpha-value>)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

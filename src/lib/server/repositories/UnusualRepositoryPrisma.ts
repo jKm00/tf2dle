@@ -1,5 +1,4 @@
 import type { Unusual } from '$lib/types';
-import type { DailyUnusuals } from '@prisma/client';
 import type { Dayjs } from 'dayjs';
 import type { UnusualRepository } from './UnusualRepository';
 import { db } from '../prisma';

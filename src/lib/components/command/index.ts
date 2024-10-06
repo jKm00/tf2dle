@@ -10,7 +10,8 @@ import {
 	Heart,
 	Home,
 	Scroll,
-	Sparkles
+	Sparkles,
+	Sword
 } from 'lucide-svelte';
 import type { ComponentType } from 'svelte';
 
@@ -52,6 +53,11 @@ export const commandGroups: CommandGroup[] = [
 						label: 'Weapon',
 						value: 'weapon',
 						icon: Axe
+					},
+					{
+						label: 'Weapon 2',
+						value: 'weapon-2',
+						icon: Sword
 					},
 					{
 						label: 'Map',

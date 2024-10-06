@@ -30,6 +30,13 @@ model DailyWeapons {
   hasWon     Int      @default(0)
 }
 
+model DailyWeaponsTwo {
+  id          Int @id @default(autoincrement())
+  selectedAt  DateTime @default(now()) @db.Date
+  name        String
+  hasWon      Int @default(0)
+}
+
 model DailyCosmetics {
   id         Int      @id @default(autoincrement())
   selectedAt DateTime @default(now()) @db.Date
