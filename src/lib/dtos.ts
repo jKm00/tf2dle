@@ -1,3 +1,5 @@
+import type { WeaponAttribute } from './types';
+
 export type SelectedMapDto = {
 	image: {
 		url: string;
@@ -64,11 +66,12 @@ export interface WeaponGuessResponse extends GuessResponse {
 
 export interface WeaponTwoGuessResponse extends GuessResponse {
 	name: string;
-	numberOfCorrectGuesses: number;
+	attributes: WeaponAttribute[];
 }
 
 export interface WeaponTwoResponse {
 	weapon: {
+		numberOfTotalAttributes: number;
 		attributes: {
 			text: string;
 			variant: 'positive' | 'negative' | 'neutral';

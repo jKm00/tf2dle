@@ -1,3 +1,5 @@
+import dayjs from '$lib/configs/dayjsConfig';
+import { weaponTwoService } from '$lib/server/services/WeaponTwoService';
 import { json } from '@sveltejs/kit';
 
 /**
@@ -5,35 +7,22 @@ import { json } from '@sveltejs/kit';
  * @returns number of correct guesses
  */
 export async function GET() {
+	const currentTime = dayjs.utc();
+	const todaysWeapon = await weaponTwoService.getWeaponByDay(currentTime);
+
 	return json({
 		weapon: {
-			attributes: [
-				{
-					text: '+50% faster firing speed',
-					variant: 'positive'
-				},
-				{
-					text: 'Knockback on the target and shooter',
-					variant: 'positive'
-				},
-				{
-					text: '+20% bullets per shot',
-					variant: 'positive'
-				},
-				{
-					text: '-10% damage penalty',
-					variant: 'negative'
-				},
-				{
-					text: '-66% clip size',
-					variant: 'negative'
-				},
-				{
-					text: 'This weapon reloads its entire clip at once',
-					variant: 'neutral'
-				}
-			]
+			numberOfTotalAttributes: todaysWeapon.attributes.length - 1,
+			attributes: [todaysWeapon.attributes[1]]
 		},
-		numberOfCorrectGuesses: 10
+		numberOfCorrectGuesses: todaysWeapon.hasWon
 	});
+}
+
+export async function POST({ request }) {
+	const { guess, numberOfGuesses } = await request.json();
+
+	const result = await weaponTwoService.validateGuess(guess, numberOfGuesses);
+
+	return json(result);
 }

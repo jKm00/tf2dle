@@ -31,6 +31,12 @@ export type Weapon = {
 	ammoCarried: string | null;
 	reloadType: string | null;
 	qualities: string[];
+	attributes: WeaponAttribute[];
+};
+
+export type WeaponAttribute = {
+	text: string;
+	variant: 'positive' | 'negative' | 'neutral';
 };
 
 export type Cosmetic = {
