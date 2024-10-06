@@ -74,6 +74,16 @@ pnpm dev
 
 ## Testing
 
+### Prerequisites
+
+Playwright browsers
+
+```
+pnpm exec playwright install
+```
+
+### Steps
+
 Run development server
 
 _**Note:** Make sure the dev server has optimized all the dependencies_
