@@ -206,7 +206,7 @@
 				{#if gameState === 'guessing'}
 					<p class="text-sm text-center text-muted-foreground mb-2">
 						{numberOfCorrectGuesses}
-						{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays unusual
+						{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
 					</p>
 					<Input
 						data={weapons?.map((weapon) => ({
