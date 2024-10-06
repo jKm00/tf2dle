@@ -1,6 +1,6 @@
 export default {
-	version: '1.8',
-	date: '09.08.2024',
+	version: '1.9',
+	date: '06.10.2024',
 	newFeatures: [
 		{
 			title: 'New game mode: Weapon 2!',
