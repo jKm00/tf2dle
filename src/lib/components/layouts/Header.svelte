@@ -7,8 +7,6 @@
 	const lastPatchNote = patchNotes[0];
 
 	$: hasViewedPatchNotes = $lastViewedPatchNote === lastPatchNote.version;
-
-	$: console.log($lastViewedPatchNote);
 </script>
 
 <header class="flex items-center justify-center">
