@@ -1,5 +1,5 @@
 export default {
-	version: '1.8',
+	version: '1.6.1',
 	date: '09.08.2024',
 	newFeatures: [],
 	improvements: [],

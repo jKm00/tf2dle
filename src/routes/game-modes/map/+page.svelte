@@ -207,6 +207,7 @@
 					{/if}
 				{:catch error}
 					<a
+						data-sveltekit-reload
 						href="/game-modes/map"
 						class="grid justify-items-center gap-4 p-4"
 						data-testId="refresh"

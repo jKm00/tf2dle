@@ -47,7 +47,7 @@ export const load = async ({ fetch }) => {
 	}
 
 	return {
-		todaysWeapon: await fetchTodaysWeapon(),
-		weapons: await fetchWeapons()
+		todaysWeapon: fetchTodaysWeapon(),
+		weapons: fetchWeapons()
 	};
 };
