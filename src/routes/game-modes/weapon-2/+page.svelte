@@ -6,7 +6,7 @@
 	import type { WeaponTwoGuessResponse } from '$lib/dtos.js';
 	import { onMount } from 'svelte';
 	import * as Card from '$lib/components/ui/card';
-	import { AreaChart, Dices, Flame } from 'lucide-svelte';
+	import { AreaChart, Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
 	import { toast } from 'svelte-sonner';
 	import GuessesList from './GuessesList.svelte';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
@@ -14,8 +14,6 @@
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 
 	export let data;
-
-	$: ({ todaysWeapon, weapons } = data);
 
 	const stats = useStats('weapon_2');
 	let openStatsDialog = false;
@@ -44,6 +42,8 @@
 	$: hiddenClues = numberOfTotalAttributes > 0 ? numberOfTotalAttributes - $clues.length : 0;
 
 	onMount(async () => {
+		const [todaysWeapon, weapons] = await Promise.all([data.todaysWeapon, data.weapons]);
+
 		// Load data
 		numberOfCorrectGuesses = todaysWeapon?.numberOfCorrectGuesses ?? 0;
 		numberOfTotalAttributes = todaysWeapon?.weapon.numberOfTotalAttributes ?? 0;
@@ -167,62 +167,82 @@
 			</div>
 		</Card.Header>
 		<Card.Content>
-			<div>
-				{#if todaysWeapon}
-					<div class="grid gap-4 text-sm justify-items-center mb-8">
-						{#if $correctWeapon}
-							<img
-								src="/images/weapons/thumbnails/{$correctWeapon}.png"
-								alt={$correctWeapon}
-								class="size-20 object-contain border rounded-md"
-							/>
-							<h2 class="rounded-md text-lg py-2 px-4">
-								{$correctWeapon}
-							</h2>
-						{:else}
-							<div class="size-20 border rounded-md"></div>
-							<h2 class="rounded-md text-lg py-2 px-4 w-[150px] text-muted-foreground text-center">
-								???
-							</h2>
-						{/if}
-						<div class="grid gap-1 text-center">
-							{#each $clues as clue}
-								{@const color =
-									clue.variant === 'positive'
-										? 'text-positive'
-										: clue.variant === 'negative'
-											? 'text-negative'
-											: 'text-neutral'}
-								<p class={color}>{clue.text}</p>
-							{/each}
-							{#each Array(hiddenClues) as _, index}
-								<p class="bg-muted rounded-md text-muted-foreground text-sm py-1 px-2">
-									Clue {$clues.length + index + 1}
-								</p>
-							{/each}
-						</div>
+			<div class="grid gap-4">
+				{#await data.todaysWeapon}
+					<div class="flex justify-center p-4">
+						<Loader2 class="w-4 h-4 animate-spin" />
 					</div>
-				{/if}
-				{#if gameState === 'guessing'}
-					<p class="text-sm text-center text-muted-foreground mb-2">
-						{numberOfCorrectGuesses}
-						{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
-					</p>
-					<Input
-						data={weapons?.map((weapon) => ({
-							img: `/images/weapons/thumbnails/${weapon}.png`,
-							value: weapon
-						}))}
-						guessed={$guesses.map((guess) => guess.name)}
-						on:select={(e) => handleSelect(e.detail)}
-						bind:validating
-					/>
-				{:else}
-					<p class="text-sm text-center text-muted-foreground">
-						You are 1 our of {numberOfCorrectGuesses} that have guessed todays weapon
-					</p>
-				{/if}
-				<GuessesList guesses={$guesses} />
+				{:then todaysWeapon}
+					{#if todaysWeapon}
+						<div class="grid gap-4 text-sm justify-items-center mb-8">
+							{#if $correctWeapon}
+								<img
+									src="/images/weapons/thumbnails/{$correctWeapon}.png"
+									alt={$correctWeapon}
+									class="size-20 object-contain border rounded-md"
+								/>
+								<h2 class="rounded-md text-lg py-2 px-4">
+									{$correctWeapon}
+								</h2>
+							{:else}
+								<div class="size-20 border rounded-md"></div>
+								<h2
+									class="rounded-md text-lg py-2 px-4 w-[150px] text-muted-foreground text-center"
+								>
+									???
+								</h2>
+							{/if}
+							<div class="grid gap-1 text-center">
+								{#each $clues as clue}
+									{@const color =
+										clue.variant === 'positive'
+											? 'text-positive'
+											: clue.variant === 'negative'
+												? 'text-negative'
+												: 'text-neutral'}
+									<p class={color}>{clue.text}</p>
+								{/each}
+								{#each Array(hiddenClues) as _, index}
+									<p class="bg-muted rounded-md text-muted-foreground text-sm py-1 px-2">
+										Clue {$clues.length + index + 1}
+									</p>
+								{/each}
+							</div>
+						</div>
+						{#await data.weapons then weapons}
+							{#if gameState === 'guessing'}
+								<p class="text-sm text-center text-muted-foreground mb-2">
+									{numberOfCorrectGuesses}
+									{numberOfCorrectGuesses === 1 ? 'gamer' : 'gamers'} have guessed todays weapon
+								</p>
+								<Input
+									data={weapons?.map((weapon) => ({
+										img: `/images/weapons/thumbnails/${weapon}.png`,
+										value: weapon
+									}))}
+									guessed={$guesses.map((guess) => guess.name)}
+									on:select={(e) => handleSelect(e.detail)}
+									bind:validating
+								/>
+							{:else}
+								<p class="text-sm text-center text-muted-foreground">
+									You are 1 our of {numberOfCorrectGuesses} that have guessed todays weapon
+								</p>
+							{/if}
+						{/await}
+						<GuessesList guesses={$guesses} />
+					{/if}
+				{:catch error}
+					<a
+						data-sveltekit-reload
+						href="/game-modes/weapon-2"
+						class="grid justify-items-center gap-4 p-4"
+						data-testId="refresh"
+					>
+						{error.body.message}
+						<RotateCw class="w-4 h-4" />
+					</a>
+				{/await}
 			</div>
 		</Card.Content>
 	</Card.Root>
@@ -231,7 +251,7 @@
 
 	<StatsDialog bind:open={openStatsDialog} stats={$stats} />
 
-	{#if todaysWeapon}
+	{#await data.todaysWeapon then todaysWeapon}
 		<VictoryDialog
 			bind:open={openVictoryDialog}
 			img={{
@@ -246,5 +266,5 @@
 			correctGuesses={numberOfCorrectGuesses ?? 1}
 			nextChallenge="/game-modes/map"
 		/>
-	{/if}
+	{/await}
 </div>
