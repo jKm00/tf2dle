@@ -1,3 +1,4 @@
+import { useLocalStorage } from '$lib/composables/useLocalStorage';
 import patch_0_1_0 from './patch_0_1_0';
 import patch_0_2_0 from './patch_0_2_0';
 import patch_1_0_0 from './patch_1_0_0';
@@ -29,3 +30,5 @@ const patchNotes = [
 ];
 
 export default patchNotes;
+
+export const lastViewedPatchNote = useLocalStorage('last_viewed_patch_note', '0.0.1');

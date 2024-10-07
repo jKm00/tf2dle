@@ -1,6 +1,11 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card';
-	import patchNotes from '$lib/patchNotes';
+	import patchNotes, { lastViewedPatchNote } from '$lib/patchNotes';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		lastViewedPatchNote.set(patchNotes[0].version);
+	});
 </script>
 
 {#each patchNotes as patch}
