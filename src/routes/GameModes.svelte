@@ -11,21 +11,37 @@
 	<Card.Content>
 		<ul class="grid gap-2">
 			{#each gameModes.filter((g) => !g.disabled) as gameMode}
+				{@const favoritePosition = gameMode.new ? '-right-4' : '-right-16'}
+				{@const descMargin =
+					gameMode.new && gameMode.favorite
+						? 'mr-[120px]'
+						: gameMode.new || gameMode.favorite
+							? 'mr-[70px]'
+							: 'mr-[0px]'}
 				<a
 					href={`/game-modes${gameMode.href}`}
 					data-testId={gameMode.name.toLowerCase()}
 					class="relative overflow-hidden hover:scale-[1.02] transition-transform"
 				>
 					{#if gameMode.new}
-						<p class="absolute -right-5 top-1/2 -translate-y-1/2 -rotate-45 bg-primary px-10">
+						<p
+							class="absolute -right-12 top-1/2 -translate-y-1/2 -rotate-45 bg-primary py-1 px-20 text-sm"
+						>
 							NEW!
+						</p>
+					{/if}
+					{#if gameMode.favorite}
+						<p
+							class="absolute {favoritePosition} top-1/2 -translate-y-1/2 -rotate-45 bg-negative py-1 px-20 text-sm"
+						>
+							FAVORITE!
 						</p>
 					{/if}
 					<li class="flex items-center gap-4 bg-secondary rounded px-4 py-2">
 						<svelte:component this={gameMode.icon} class="text-primary" />
 						<div>
 							<h2 class="font-semibold">{gameMode.name}</h2>
-							<p class="text-sm">{gameMode.description}</p>
+							<p class="text-sm {descMargin}">{gameMode.description}</p>
 						</div>
 					</li>
 				</a>

@@ -10,6 +10,7 @@ export const gameModes = [
 		icon: Axe,
 		disabled: false,
 		new: false,
+		favorite: true,
 		stats: useStats('weapon')
 	},
 	{
@@ -19,6 +20,7 @@ export const gameModes = [
 		icon: Sword,
 		disabled: false,
 		new: dayjs.utc().isBefore(dayjs.utc('2024-12-01'), 'day'),
+		favorite: false,
 		stats: useStats('weapon2')
 	},
 	{
@@ -28,6 +30,7 @@ export const gameModes = [
 		icon: Map,
 		disabled: false,
 		new: false,
+		favorite: false,
 		stats: useStats('map')
 	},
 	{
@@ -37,6 +40,7 @@ export const gameModes = [
 		icon: GraduationCap,
 		disabled: false,
 		new: false,
+		favorite: false,
 		stats: useStats('cosmetic')
 	},
 	{
@@ -46,6 +50,7 @@ export const gameModes = [
 		icon: Sparkles,
 		disabled: false,
 		new: dayjs.utc().isBefore(dayjs.utc('2024-08-01'), 'day'),
+		favorite: false,
 		stats: useStats('unusual')
 	}
 ];
