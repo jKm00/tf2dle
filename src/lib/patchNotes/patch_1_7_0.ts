@@ -5,8 +5,15 @@ export default {
 		{
 			title: 'New game mode: Weapon 2!',
 			description:
-				'The new <a href="/game-modes/weapon-2" class="patch-link">weapon game mode</a> is now available! Guess daily weapons based on its attributes show in-game. Big thanks to <a href="https://www.reddit.com/user/becausewhybnot/" target="_blank" class="patch-link">becausewhybnot</a> for recommending the game mode!',
-			gameMode: 'Weapon 2'
+				'The new <a href="/game-modes/weapon-2" class="patch-link">weapon game mode</a> is now available! Guess daily weapons based on its attributes show in-game.',
+			gameMode: 'Weapon 2',
+			reportedBy: {
+				user: {
+					name: 'becausewhybnot',
+					link: 'https://www.reddit.com/user/becausewhybnot/'
+				},
+				note: 'Big thanks for the suggestion!'
+			}
 		}
 	],
 	improvements: [],

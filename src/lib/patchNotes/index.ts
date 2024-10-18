@@ -13,6 +13,7 @@ import patch_1_6_1 from './patch_1_6_1';
 import patch_1_7_0 from './patch_1_7_0';
 import patch_1_7_1 from './patch_1_7_1';
 import patch_1_7_2 from './patch_1_7_2';
+import type { PatchNote } from './types';
 
 const patchNotes = [
 	patch_1_7_2,
@@ -29,7 +30,7 @@ const patchNotes = [
 	patch_1_0_0,
 	patch_0_2_0,
 	patch_0_1_0
-];
+] as PatchNote[];
 
 export default patchNotes;
 
