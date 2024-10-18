@@ -5,6 +5,7 @@ import type { MapRepository } from '../repositories/MapRepository';
 import { mapRepository } from '../repositories/MapRepositoryPrisma';
 import LogService from './LogService';
 import type { Dayjs } from 'dayjs';
+import { generateRandomInteger } from 'oslo/crypto';
 
 class MapService {
 	private maps: Map[];
@@ -20,7 +21,7 @@ class MapService {
 	 */
 	public async selectRandomMap() {
 		// Select a random map
-		const map = this.maps[Math.floor(Math.random() * this.maps.length)];
+		const map = this.maps[generateRandomInteger(this.maps.length)];
 
 		// Select a random starting position for the image
 		const startingPos = {
