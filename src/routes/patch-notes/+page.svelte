@@ -15,7 +15,7 @@
 between the sidebar and the main content (total: 125px - 4px = 121px). Makes the main content 
 in the center of the screen 
 -->
-<div class="flex gap-2 justify-center lg:-translate-x-[121px]">
+<div class="flex gap-2 justify-center xl:-translate-x-[121px]">
 	<PatchNoteSidebar />
 	<div class="width">
 		{#each patchNotes as patch}
