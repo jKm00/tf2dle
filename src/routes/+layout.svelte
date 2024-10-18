@@ -24,7 +24,7 @@
 
 <Command />
 
-<div class="flex flex-col gap-10 width px-2 m-auto pt-14 pb-10 min-h-screen">
+<div class="flex flex-col gap-10 px-2 m-auto pt-14 pb-10 min-h-screen">
 	<Header />
 	<div class="flex-grow">
 		<slot />
