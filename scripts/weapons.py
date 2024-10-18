@@ -72,9 +72,12 @@ enable_img_download = '--enable-img-download' in sys.argv
 test_run = '--test-run' in sys.argv
 
 if enable_img_download:
-  print("Image download enabled")
+  print("INFO: Image download enabled")
 else:
-  print("Image download disabled")
+  print("INFO: Image download disabled")
+
+if test_run:
+  print("INFO: Test run enabled - Only scraping the first 5 weapons")
 
 # Go to the wiki page
 BASE_URL = "https://wiki.teamfortress.com"
@@ -131,7 +134,7 @@ for weapon in weapons.values():
   # Prevent getting blocked by the server
   time.sleep(2)
 
-  print(f"#### Scraping {weapon.name} #### {index}/{len(weapons)}")
+  print(f"RUNNING: Scraping {weapon.name} ({index}/{len(weapons)})")
   index += 1
 
   # Load weapon page
@@ -191,7 +194,10 @@ for weapon in weapons.values():
 
   # Find attributes
   attribute_container = weapon_soup.find("td", class_="loadout-tooltip-container")
-  attributes = attribute_container.find_all("span", class_=lambda x: x and x.startswith("att_"))
+  if attribute_container:
+    attributes = attribute_container.find_all("span", class_=lambda x: x and x.startswith("att_"))
+  else:
+    attributes = []
   
   for attribute in attributes:
     attribute_class = attribute.get("class")[0]
@@ -202,7 +208,6 @@ for weapon in weapons.values():
     attribute_text = attribute.text
 
     # Replace weapon name with ___ to not give it away
-    # TODO: Test if this works
     attribute_text = attribute_text.replace(weapon.name, "___")
 
     if attribute_class in attribute_class_map.keys():
