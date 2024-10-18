@@ -5,6 +5,7 @@ import { unusualRepository } from '../repositories/UnusualRepositoryPrisma';
 import type { Dayjs } from 'dayjs';
 import LogService from './LogService';
 import dayjs from '$lib/configs/dayjsConfig';
+import { generateRandomInteger } from 'oslo/crypto';
 
 class UnusualService {
 	private unusuals: Unusual[];
@@ -44,8 +45,8 @@ class UnusualService {
 	 * @return the selected unusual
 	 */
 	private async selectRandomUnusual() {
-		const randomIndex = Math.floor(Math.random() * this.unusuals.length);
-		const randomRotation = Math.floor(Math.random() * 4) * 90;
+		const randomIndex = generateRandomInteger(this.unusuals.length);
+		const randomRotation = generateRandomInteger(4) * 90;
 
 		LogService.log(
 			'Unusual',

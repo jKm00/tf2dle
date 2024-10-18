@@ -5,6 +5,7 @@ import type { WeaponRepository } from '$lib/server/repositories/WeaponRepository
 import LogService from './LogService';
 import dayjs from '$lib/configs/dayjsConfig';
 import type { Dayjs } from 'dayjs';
+import { generateRandomInteger } from 'oslo/crypto';
 
 class WeaponService {
 	private weapons: Weapon[];
@@ -202,7 +203,7 @@ class WeaponService {
 	 * @returns the name of the selected weapon
 	 */
 	public async selectNewRandomWeapon() {
-		const weapon = this.weapons[Math.floor(Math.random() * this.weapons.length)];
+		const weapon = this.weapons[generateRandomInteger(this.weapons.length)];
 
 		await this.repo.save(weapon);
 
