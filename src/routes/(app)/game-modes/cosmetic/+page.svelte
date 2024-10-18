@@ -7,13 +7,13 @@
 	import { AreaChart, Dices, Flame, Loader2, RotateCw } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
-	import CosmeticShowcase from '../../../lib/components/games/IconShowcase.svelte';
 	import Hints from './Hints.svelte';
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 	import { useStats } from '$lib/composables/useStats';
 	import StatsDialog from '$lib/components/games/StatsDialog.svelte';
+	import CosmeticShowcase from '$lib/components/games/IconShowcase.svelte';
 
 	export let data;
 

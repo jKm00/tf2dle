@@ -47,7 +47,7 @@
 	</p>
 </div>
 
-<footer class="text-muted-foreground text-sm">
+<footer class="text-muted-foreground text-sm width m-auto">
 	<p>
 		Made by <a href="https://edvardsen.dev" target="_blank" class="underline">Joakim Edvardsen</a>
 	</p>
@@ -61,3 +61,9 @@
 		<a href="https://www.reddit.com/user/jaakim" target="_blank" class="underline">here!</a>
 	</p>
 </footer>
+
+<style scoped>
+	.width {
+		width: min(100%, 700px);
+	}
+</style>
