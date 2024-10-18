@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 
 	let activePatchNote = patchNotes[0].version;
+	let disableObserver = false;
 
 	onMount(() => {
 		if (browser) {
@@ -20,6 +21,8 @@
 			pacthNotes.forEach((patchNote) => observer.observe(patchNote));
 
 			function handleIntersect(entries: IntersectionObserverEntry[]) {
+				if (disableObserver) return;
+
 				entries.forEach((entry) => {
 					const id = entry.target.id;
 
@@ -30,6 +33,15 @@
 			}
 		}
 	});
+
+	function handleClick(patchNote: string) {
+		disableObserver = true;
+		activePatchNote = patchNote;
+
+		setTimeout(() => {
+			disableObserver = false;
+		}, 1000);
+	}
 </script>
 
 <Card.Root class="sticky top-4 h-fit max-lg:hidden max-height overflow-y-auto overflow-x-hidden">
@@ -41,7 +53,7 @@
 			{#each patchNotes as patch}
 				<a
 					href="#{patch.version}"
-					on:click={() => (activePatchNote = patch.version)}
+					on:click={() => handleClick(patch.version)}
 					class={activePatchNote === patch.version ? 'text-primary' : 'text-muted-foreground'}
 					>Patch {patch.version}</a
 				>
