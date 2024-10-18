@@ -14,7 +14,7 @@ export default {
 		{
 			title: 'Hide item names from hints',
 			description:
-				'Replaces item names in hints with a placeholder. Hopyfully, all Game Modes item names are now hidden, but exceptions may still exist.',
+				'Replaces item names in hints with a placeholder. Hopyfully, all item names are now hidden, but exceptions may still exist.',
 			gameMode: 'Weapon 2',
 			reportedBy: {
 				user: {
