@@ -22,7 +22,35 @@ Scrapes the web for all official tf2 maps. This is what it collects for each map
 
 <h3 id="weapons">Weapons</h3>
 
-TODO
+Scrapes the web for all official tf2 weapons.
+
+```
+- name          # Name of weapon
+- link          # Link to weapon wiki page
+- image         # Image icon
+- killIcon      # Icon shown in kill feed
+- releaseDate   # The date / patch the weapon was release
+- usedBy        # Array of class names
+- slot          # Array of slots
+- ammoLoaded
+- ammoCarried
+- reloadType    # How the weapon is reloaded
+- qualitities   # Array of available qualities for the weapons
+- attributes    # Array of attributes
+    - text      # Text description of weapon
+    - variant   # Type of attribute (level, neutral, positive, negative)
+```
+
+#### Manual changes
+
+Some manual changes has been done to the `weapons.json`:
+
+- The script does not add weapons from the jungle inferno update. These has been manually added as there is only 5-6 weapons. (Check if this still is true when running the script)
+- Hide weapon name from attribute text.
+  - The script has been updated and should automatically hide weapons name, but the script has not been ran since and therefore this is not tested.
+  - Currently this has been done manually for:
+    - Ap-Sap
+    - Sandvich
 
 <h3 id="cosmetics">Cosmetics</h3>
 
