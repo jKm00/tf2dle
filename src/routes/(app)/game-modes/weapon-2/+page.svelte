@@ -226,7 +226,7 @@
 								/>
 							{:else}
 								<p class="text-sm text-center text-muted-foreground">
-									You are 1 our of {numberOfCorrectGuesses} that have guessed todays weapon
+									You are 1 out of {numberOfCorrectGuesses} that have guessed todays weapon
 								</p>
 							{/if}
 						{/await}
