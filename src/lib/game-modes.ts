@@ -19,7 +19,7 @@ export const gameModes = [
 		icon: Sword,
 		disabled: false,
 		new: dayjs.utc().isBefore(dayjs.utc('2024-12-01'), 'day'),
-		stats: useStats('weapon2')
+		stats: useStats('weapon_2')
 	},
 	{
 		name: 'Map',
