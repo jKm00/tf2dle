@@ -3300,7 +3300,7 @@
 				"variant": "level"
 			},
 			{
-				"text": "Eat to regain up to 300 health.\nAlt-fire: Share a ___ with a friend (Medium Health Kit)",
+				"text": "Eat to regain up to 300 health.\nAlt-fire: Share a Sandvich with a friend (Medium Health Kit)",
 				"variant": "neutral"
 			}
 		]
@@ -5687,7 +5687,7 @@
 				"variant": "level"
 			},
 			{
-				"text": "Mann Co. got a great deal from a nice lady in an abandoned science facility on a warehouse full of slightly used, possibly mildly defective sappers. Unlike our other sappers, the ___ is sentient, and will provide hours of lively, one-sided conversation while you're trying to work.",
+				"text": "Mann Co. got a great deal from a nice lady in an abandoned science facility on a warehouse full of slightly used, possibly mildly defective sappers. Unlike our other sappers, the Ap-Sap is sentient, and will provide hours of lively, one-sided conversation while you're trying to work.",
 				"variant": "neutral"
 			}
 		]
