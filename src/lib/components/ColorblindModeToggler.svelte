@@ -18,6 +18,12 @@
 		const colorblindMode = action.searchParams.get('active') === 'true';
 		document.documentElement.dataset.colorblind = colorblindMode.toString();
 	};
+
+	function handleKeyUp(event: KeyboardEvent) {
+		if (event.key === 'Enter') {
+			form.requestSubmit();
+		}
+	}
 </script>
 
 <form
@@ -31,6 +37,9 @@
 			<Palette class="2-4" />
 			Colorblind mode
 		</label>
-		<Switch type="submit" id="colorblind" bind:checked={active} />
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div on:keyup={handleKeyUp}>
+			<Switch type="submit" id="colorblind" bind:checked={active} />
+		</div>
 	</div>
 </form>
