@@ -30,6 +30,16 @@ class WeaponTwoService {
 
 		const foundWeapon = this.weapons.find((w) => w.name === weapon.name);
 
+		// Hide the name of the weapon in the attributes
+		const attributesWithHiddenName = foundWeapon?.attributes.map((attr) => {
+			return {
+				...attr,
+				text: attr.text.replace(foundWeapon.name, '___')
+			};
+		});
+
+		foundWeapon!.attributes = attributesWithHiddenName!;
+
 		return {
 			...foundWeapon!,
 			hasWon: weapon.hasWon

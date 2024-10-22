@@ -46,11 +46,6 @@ Scrapes the web for all official tf2 weapons.
 Some manual changes has been done to the `weapons.json`:
 
 - The script does not add weapons from the jungle inferno update. These has been manually added as there is only 5-6 weapons. (Check if this still is true when running the script)
-- Hide weapon name from attribute text.
-  - The script has been updated and should automatically hide weapons name, but the script has not been ran since and therefore this is not tested.
-  - Currently this has been done manually for:
-    - Ap-Sap
-    - Sandvich
 
 <h3 id="cosmetics">Cosmetics</h3>
 

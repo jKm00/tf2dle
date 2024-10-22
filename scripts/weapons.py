@@ -207,9 +207,6 @@ for weapon in weapons.values():
 
     attribute_text = attribute.text
 
-    # Replace weapon name with ___ to not give it away
-    attribute_text = attribute_text.replace(weapon.name, "___")
-
     if attribute_class in attribute_class_map.keys():
       weapon.add_attribute(Attribute(attribute_text, attribute_class_map[attribute_class]))
 
