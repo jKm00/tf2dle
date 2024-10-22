@@ -3300,7 +3300,7 @@
 				"variant": "level"
 			},
 			{
-				"text": "Eat to regain up to 300 health.\nAlt-fire: Share a Sandvich with a friend (Medium Health Kit)",
+				"text": "Eat to regain up to 300 health.\nAlt-fire: Share a ___ with a friend (Medium Health Kit)",
 				"variant": "neutral"
 			}
 		]
