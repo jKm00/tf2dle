@@ -19,21 +19,23 @@
 	let openStatsDialog = false;
 	let openVictoryDialog = false;
 	let numberOfCorrectGuesses: number | undefined = undefined;
-	let todaysMapName = useLocalStorage<string>('map_name', '');
+	let todaysMapName = useLocalStorage<string>('map_answer', '');
+
+	const { state, stats, guesses, streak, validating, init, guess } =
+		useGameEngine<MapGuessResponse>({
+			name: 'map',
+			apiRoute: 'map',
+			victoryMessageDelay: 1500,
+			onReset,
+			onWon
+		});
 
 	onMount(async () => {
 		// Load data
 		numberOfCorrectGuesses = (await todaysMap)?.correctGuesses ?? 0;
-	});
 
-	const { state, stats, guesses, streak, validating, guess } = useGameEngine<MapGuessResponse>(
-		'map',
-		{
-			victoryMessageDelay: 2000,
-			onReset,
-			onWon
-		}
-	);
+		init();
+	});
 
 	function onReset() {
 		todaysMapName.set('');

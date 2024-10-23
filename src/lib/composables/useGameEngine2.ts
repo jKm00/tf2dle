@@ -2,7 +2,6 @@ import type { GuessResponse } from '$lib/dtos';
 import { get, writable } from 'svelte/store';
 import { useLocalStorage } from './useLocalStorage';
 import { useStats } from './useStats';
-import { onMount } from 'svelte';
 import dayjs from '$lib/configs/dayjsConfig';
 import { toast } from 'svelte-sonner';
 
@@ -17,6 +16,8 @@ type GameEvent = {
 };
 
 type GameEngineOptions<T> = {
+	name: string;
+	apiRoute: string;
 	victoryMessageDelay?: number;
 	onReset?: () => void;
 	onGuess?: (response: T) => void;
@@ -40,27 +41,20 @@ const defaultOptions = {
  *      guesses     - {@code []<T>} of guesses
  *      streak      - {@code number} of consecutive wins
  *      validating  - {@code boolean}
+ *      init        - {@code () => void} function to initialize the game
  *      guess       - {@code (guess: string) => void} function to make a guess
  */
-export function useGameEngine<T extends GuessResponse>(
-	name: string,
-	options?: GameEngineOptions<T>
-) {
+export function useGameEngine<T extends GuessResponse>(options: GameEngineOptions<T>) {
 	const state = writable<GameState>(GameState.GUESSING);
-
-	const stats = useStats(name);
-
-	const lastEvent = useLocalStorage<GameEvent | null>(`${name}_last_event`, null);
-	const guesses = useLocalStorage<T[]>(`${name}_guesses`, []);
-	const streak = useLocalStorage<number>(`${name}_streak`, 0);
-
 	const validating = writable<boolean>(false);
 
-	options = { ...defaultOptions, ...options };
+	const stats = useStats(options.name);
 
-	onMount(() => {
-		init();
-	});
+	const lastEvent = useLocalStorage<GameEvent | null>(`${options.name}_last_event`, null);
+	const guesses = useLocalStorage<T[]>(`${options.name}_guesses`, []);
+	const streak = useLocalStorage<number>(`${options.name}_streak`, 0);
+
+	options = { ...defaultOptions, ...options };
 
 	function init() {
 		const _lastEvent = get(lastEvent);
@@ -122,7 +116,7 @@ export function useGameEngine<T extends GuessResponse>(
 		let result: T | null = null;
 		let error: string | null = null;
 		try {
-			const res = await fetch(`/api/v1/game-modes/${name}`, {
+			const res = await fetch(`/api/v1/game-modes/${options.apiRoute}`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -148,29 +142,25 @@ export function useGameEngine<T extends GuessResponse>(
 		}
 
 		guesses.update((prev) => [result, ...prev]);
-		if (options?.onGuess) {
-			options.onGuess(result);
-		}
+		lastEvent.set({ event: result.correct ? 'won' : 'guessed', date: result.guessedAt });
 
-		if (result.correct) {
-			won(result);
-		} else {
-			lastEvent.set({ event: 'guessed', date: result.guessedAt });
-		}
+		setTimeout(() => {
+			if (result.correct) {
+				won(result);
+			} else if (options?.onGuess) {
+				options.onGuess(result);
+			}
+		}, options!.victoryMessageDelay);
 	}
 
 	function won(result: T) {
-		lastEvent.set({ event: 'won', date: result.guessedAt });
+		streak.update((prev) => prev + 1);
+		stats.incrementAttempt(get(guesses).length);
+		state.set(GameState.WON);
 
-		setTimeout(() => {
-			streak.update((prev) => prev + 1);
-			stats.incrementAttempt(get(guesses).length);
-			state.set(GameState.WON);
-
-			if (options?.onWon) {
-				options.onWon(result);
-			}
-		}, options!.victoryMessageDelay);
+		if (options?.onWon) {
+			options.onWon(result);
+		}
 	}
 
 	return {
@@ -179,6 +169,7 @@ export function useGameEngine<T extends GuessResponse>(
 		guesses,
 		streak,
 		validating,
+		init,
 		guess
 	};
 }
