@@ -6,7 +6,7 @@ import { onMount } from 'svelte';
 import dayjs from '$lib/configs/dayjsConfig';
 import { toast } from 'svelte-sonner';
 
-enum GameState {
+export enum GameState {
 	WON,
 	GUESSING
 }
@@ -17,7 +17,7 @@ type GameEvent = {
 };
 
 type GameEngineOptions<T> = {
-	victoryMessageDelay: number;
+	victoryMessageDelay?: number;
 	onReset?: () => void;
 	onGuess?: (response: T) => void;
 	onWon?: (result: T) => void;
@@ -27,9 +27,24 @@ const defaultOptions = {
 	victoryMessageDelay: 3000
 };
 
+/**
+ * Game engine providing game state management and game logic.
+ *
+ * @param name      of the game mode
+ * @param options   to customize and add additional logic that should be
+ *                  triggered on certain events,
+ *                  Look at {@link GameEngineOptions} for more information.
+ * @returns
+ *      state       - {@link GameState} of the game
+ *      stats       - {@code []} of stats
+ *      guesses     - {@code []<T>} of guesses
+ *      streak      - {@code number} of consecutive wins
+ *      validating  - {@code boolean}
+ *      guess       - {@code (guess: string) => void} function to make a guess
+ */
 export function useGameEngine<T extends GuessResponse>(
 	name: string,
-	options: GameEngineOptions<T>
+	options?: GameEngineOptions<T>
 ) {
 	const state = writable<GameState>(GameState.GUESSING);
 
@@ -87,7 +102,7 @@ export function useGameEngine<T extends GuessResponse>(
 		guesses.set([]);
 		state.set(GameState.GUESSING);
 
-		if (options.onReset) {
+		if (options?.onReset) {
 			options.onReset();
 		}
 	}
@@ -133,7 +148,7 @@ export function useGameEngine<T extends GuessResponse>(
 		}
 
 		guesses.update((prev) => [result, ...prev]);
-		if (options.onGuess) {
+		if (options?.onGuess) {
 			options.onGuess(result);
 		}
 
@@ -145,15 +160,17 @@ export function useGameEngine<T extends GuessResponse>(
 	}
 
 	function won(result: T) {
+		lastEvent.set({ event: 'won', date: result.guessedAt });
+
 		setTimeout(() => {
 			streak.update((prev) => prev + 1);
 			stats.incrementAttempt(get(guesses).length);
 			state.set(GameState.WON);
 
-			if (options.onWon) {
+			if (options?.onWon) {
 				options.onWon(result);
 			}
-		}, options.victoryMessageDelay);
+		}, options!.victoryMessageDelay);
 	}
 
 	return {

@@ -4,150 +4,45 @@
 	import * as Card from '$lib/components/ui/card';
 	import Input from '$lib/components/games/Input.svelte';
 	import ImageShowcase from './ImageShowcase.svelte';
-	import dayjs from '$lib/configs/dayjsConfig';
 	import type { MapGuessResponse } from '$lib/dtos.js';
 	import ColorExplanation from '$lib/components/games/ColorExplanation.svelte';
 	import GuessesList from './GuessesList.svelte';
 	import VictoryDialog from '$lib/components/games/VictoryDialog.svelte';
 	import { AreaChart, Dices, Flame, RotateCw } from 'lucide-svelte';
-	import { toast } from 'svelte-sonner';
-	import { useStats } from '$lib/composables/useStats';
 	import StatsDialog from '$lib/components/games/StatsDialog.svelte';
+	import { GameState, useGameEngine } from '$lib/composables/useGameEngine2';
 
 	export let data;
 
 	$: ({ todaysMap } = data);
 
-	const stats = useStats('map');
 	let openStatsDialog = false;
-
-	// State persisted in local storage
-	let gameState: 'guessing' | 'won' = 'guessing';
-	let lastEvent = useLocalStorage<{ event: 'won' | 'guessed'; date: string } | null>(
-		'map_last_event',
-		null
-	);
-	let guesses = useLocalStorage<MapGuessResponse[]>('map_guesses', []);
-	let streak = useLocalStorage<number>('map_streak', 0);
-	let todaysMapName = useLocalStorage<string>('map_todays_map_name', '');
-
-	// Current game state
-	let validating = false;
-	let openDialog = false;
-
+	let openVictoryDialog = false;
 	let numberOfCorrectGuesses: number | undefined = undefined;
+	let todaysMapName = useLocalStorage<string>('map_name', '');
 
 	onMount(async () => {
 		// Load data
 		numberOfCorrectGuesses = (await todaysMap)?.correctGuesses ?? 0;
-
-		// Init game state
-		if ($lastEvent === null) {
-			guesses.set([]);
-			streak.set(0);
-			todaysMapName.set('');
-			gameState = 'guessing';
-			return;
-		}
-
-		// Reset streak if last victory was more than 1 days ago
-		if (
-			dayjs($lastEvent.date).isBefore(dayjs.utc().subtract(1, 'day'), 'day') ||
-			$lastEvent.event !== 'won'
-		) {
-			streak.set(0);
-		}
-
-		switch ($lastEvent.event) {
-			case 'won':
-				if (dayjs.utc($lastEvent.date).isSame(dayjs.utc(), 'date')) {
-					gameState = 'won';
-				} else {
-					gameState = 'guessing';
-					guesses.set([]);
-					todaysMapName.set('');
-				}
-				break;
-			case 'guessed':
-				gameState = 'guessing';
-				if (!dayjs.utc($lastEvent.date).isSame(dayjs.utc(), 'date')) {
-					guesses.set([]);
-					todaysMapName.set('');
-				}
-				break;
-		}
 	});
 
-	/**
-	 * Handle a user's guess
-	 * @param name of the map
-	 */
-	async function handleSelect(name: string) {
-		if (gameState === 'won') return;
-
-		// Validate guess
-		const result = await checkGuess(name);
-
-		if (result) {
-			// Update guesses list
-			guesses.update((guesses) => [result, ...guesses]);
-			// Update last event
-			lastEvent.set({ event: result.correct ? 'won' : 'guessed', date: result.guessedAt });
-
-			if (result.correct) {
-				won(result.name.value);
-			}
+	const { state, stats, guesses, streak, validating, guess } = useGameEngine<MapGuessResponse>(
+		'map',
+		{
+			victoryMessageDelay: 2000,
+			onReset,
+			onWon
 		}
+	);
+
+	function onReset() {
+		todaysMapName.set('');
 	}
 
-	/**
-	 * Validate a guess
-	 * @param value to validate
-	 */
-	async function checkGuess(value: string) {
-		validating = true;
-		let error = false;
-
-		try {
-			const res = await fetch('/api/v1/game-modes/map', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({ guess: value })
-			});
-			const data = (await res.json()) as MapGuessResponse;
-
-			if (!res.ok) {
-				error = true;
-			} else {
-				return data;
-			}
-		} catch (err) {
-			error = true;
-		} finally {
-			validating = false;
-		}
-
-		if (error) {
-			toast.error('Could not validate your guess, please try again.');
-		}
-	}
-
-	/**
-	 * Handle a user's victory
-	 * @param mapName of the correct map
-	 */
-	function won(mapName: string) {
-		// Wait for reveal animation to finish
-		setTimeout(() => {
-			streak.update((streak) => streak + 1);
-			todaysMapName.set(mapName);
-			stats.incrementAttempt($guesses.length);
-			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
-			gameState = 'won';
-			openDialog = true;
-		}, 2000);
+	function onWon(result: MapGuessResponse) {
+		todaysMapName.set(result.name.value);
+		numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
+		openVictoryDialog = true;
 	}
 </script>
 
@@ -181,11 +76,11 @@
 							url={`/images/maps/originals/${todaysMap.image.url}.png`}
 							startingPos={todaysMap.image.startingPos}
 							numberOfGuesses={$guesses.length}
-							hasWon={gameState === 'won'}
+							hasWon={$state === GameState.WON}
 							mapName={$todaysMapName}
 						/>
 						{#await data.maps then maps}
-							{#if gameState === 'guessing'}
+							{#if $state === GameState.GUESSING}
 								{#if numberOfCorrectGuesses !== undefined}
 									<p class="text-center text-sm text-muted-foreground">
 										{numberOfCorrectGuesses}
@@ -193,13 +88,13 @@
 									</p>
 								{/if}
 								<Input
-									on:select={(event) => handleSelect(event.detail)}
+									on:select={(event) => guess(event.detail)}
 									data={maps?.map((map) => ({
 										img: `/images/maps/thumbnails/${map.thumbnail}.png`,
 										value: map.name
 									}))}
 									guessed={$guesses.map((guess) => guess.name.value)}
-									bind:validating
+									bind:validating={$validating}
 								/>
 							{:else if numberOfCorrectGuesses !== undefined}
 								<p class="text-center text-sm text-muted-foreground">
@@ -230,7 +125,7 @@
 
 	{#await data.todaysMap then todaysMap}
 		<VictoryDialog
-			bind:open={openDialog}
+			bind:open={openVictoryDialog}
 			img={{
 				src: `/images/maps/originals/${todaysMap?.image.url}.png`,
 				alt: $todaysMapName
