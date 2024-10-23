@@ -29,10 +29,10 @@
 	);
 	let guesses = useLocalStorage<MapGuessResponse[]>('map_guesses', []);
 	let streak = useLocalStorage<number>('map_streak', 0);
+	let todaysMapName = useLocalStorage<string>('map_todays_map_name', '');
 
 	// Current game state
 	let validating = false;
-	let todaysMapName: string = '';
 	let openDialog = false;
 
 	let numberOfCorrectGuesses: number | undefined = undefined;
@@ -45,6 +45,7 @@
 		if ($lastEvent === null) {
 			guesses.set([]);
 			streak.set(0);
+			todaysMapName.set('');
 			gameState = 'guessing';
 			return;
 		}
@@ -64,12 +65,14 @@
 				} else {
 					gameState = 'guessing';
 					guesses.set([]);
+					todaysMapName.set('');
 				}
 				break;
 			case 'guessed':
 				gameState = 'guessing';
 				if (!dayjs.utc($lastEvent.date).isSame(dayjs.utc(), 'date')) {
 					guesses.set([]);
+					todaysMapName.set('');
 				}
 				break;
 		}
@@ -139,7 +142,7 @@
 		// Wait for reveal animation to finish
 		setTimeout(() => {
 			streak.update((streak) => streak + 1);
-			todaysMapName = mapName;
+			todaysMapName.set(mapName);
 			stats.incrementAttempt($guesses.length);
 			numberOfCorrectGuesses = numberOfCorrectGuesses ? numberOfCorrectGuesses + 1 : 1;
 			gameState = 'won';
@@ -179,6 +182,7 @@
 							startingPos={todaysMap.image.startingPos}
 							numberOfGuesses={$guesses.length}
 							hasWon={gameState === 'won'}
+							mapName={$todaysMapName}
 						/>
 						{#await data.maps then maps}
 							{#if gameState === 'guessing'}
@@ -229,10 +233,10 @@
 			bind:open={openDialog}
 			img={{
 				src: `/images/maps/originals/${todaysMap?.image.url}.png`,
-				alt: todaysMapName
+				alt: $todaysMapName
 			}}
 			challenge="Map"
-			value={todaysMapName}
+			value={$todaysMapName}
 			tries={$guesses.length}
 			streak={$streak}
 			correctGuesses={numberOfCorrectGuesses ?? 1}
