@@ -9,6 +9,8 @@
 	export let numberOfGuesses: number;
 	// Whether the user has won the game
 	export let hasWon: boolean;
+	// Name of map to display when user has won
+	export let mapName: string;
 
 	const STEPS = 11;
 
@@ -74,8 +76,13 @@
 
 <svelte:window on:resize={handleWindowResize} />
 
-<div class="relative overflow-hidden aspect-video rounded" bind:this={container}>
-	<div class="absolute inset-0 bg-muted animate-pulse"></div>
-	<!-- svelte-ignore a11y-img-redundant-alt -->
-	<canvas bind:this={canvas} class="absolute w-full h-full"></canvas>
+<div>
+	<div class="relative overflow-hidden aspect-video rounded" bind:this={container}>
+		<div class="absolute inset-0 bg-muted animate-pulse"></div>
+		<!-- svelte-ignore a11y-img-redundant-alt -->
+		<canvas bind:this={canvas} class="absolute w-full h-full"></canvas>
+	</div>
+	{#if hasWon}
+		<p class="text-center mt-2 font-semibold">{mapName}</p>
+	{/if}
 </div>
