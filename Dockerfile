@@ -3,8 +3,10 @@ WORKDIR /app
 
 ARG PUBLIC_CDN_URL
 ARG PUBLIC_APP_VERSION=dev
+ARG ORIGIN
 ENV PUBLIC_CDN_URL=$PUBLIC_CDN_URL
 ENV PUBLIC_APP_VERSION=$PUBLIC_APP_VERSION
+ENV ORIGIN=$ORIGIN
 
 # Install pnpm
 RUN npm install -g npm@12.2.0 && npm install -g pnpm@12.10.1
@@ -19,7 +21,7 @@ COPY . .
 # Generate Prisma client
 RUN pnpm db:client
 
-RUN pnpm check && pnpm build
+RUN test -n "$ORIGIN" && pnpm check && pnpm build
 RUN pnpm prune --production
 
 FROM node:24-alpine
@@ -35,8 +37,6 @@ COPY --from=builder /app/build build/
 COPY --from=builder /app/node_modules node_modules/
 COPY --from=builder /app/prisma prisma/
 COPY --from=builder /app/prisma.config.ts .
-COPY server.mjs .
-COPY server-handler.mjs .
 COPY package.json .
 
 EXPOSE 3000
@@ -44,4 +44,4 @@ EXPOSE 3000
 ENV NODE_ENV=production
 ENV PUBLIC_APP_VERSION=$PUBLIC_APP_VERSION
 
-CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy && exec node server.mjs"]
+CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy && exec node build"]

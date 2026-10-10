@@ -7,8 +7,10 @@ test('Production origin rejects cross-origin forms and ignores spoofed proxy hea
 	const sameOrigin = await request.post('/admin/login', {
 		headers: {
 			origin: baseURL!,
+			host: 'attacker.example',
 			'x-forwarded-proto': 'https',
-			'x-forwarded-host': 'attacker.example'
+			'x-forwarded-host': 'attacker.example',
+			'x-forwarded-port': '9999'
 		},
 		form: { password: 'wrong-migration-password' }
 	});
