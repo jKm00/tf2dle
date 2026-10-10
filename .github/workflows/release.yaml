@@ -33,8 +33,11 @@ jobs:
         run: echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
 
       - name: Build Docker image
+        env:
+          ORIGIN: ${{ secrets.ORIGIN }}
         run: |
           docker build \
+            --build-arg ORIGIN="$ORIGIN" \
             --build-arg PUBLIC_CDN_URL="https://cdn.jsdelivr.net/gh/edvardsen-dev/tf2dle@$(git rev-parse HEAD)/static/images" \
             --build-arg PUBLIC_APP_VERSION="$RELEASE_TAG" \
             -t "$IMAGE_REPOSITORY:$RELEASE_TAG" \

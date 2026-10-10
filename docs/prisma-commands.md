@@ -2,7 +2,7 @@
 
 Use the installed CLI, locked to the same version as the client. Do not run `prisma@latest` through `dlx` or `npx`; the latest tag can point to a different major version. The production image retains this CLI and runs committed migrations at startup without downloading dependencies.
 
-Prisma CLI, client, and PostgreSQL adapter are pinned to `7.10.0`. The root `prisma.config.ts` loads `dotenv/config`, selects `prisma/schema.prisma` and `prisma/migrations`, and reads `DATABASE_URL`. The schema no longer contains the connection URL.
+Prisma CLI, client, and PostgreSQL adapter are pinned to `7.10.0`. The root `prisma.config.ts` loads `.env` with `dotenv` and expands `${POSTGRES_*}` references with `dotenv-expand`, selects `prisma/schema.prisma` and `prisma/migrations`, and reads `DATABASE_URL`. Set `DOTENV_CONFIG_PATH` to load a different environment file. Explicit process environment values take precedence over file values and are not expanded, including empty values. The schema no longer contains the connection URL.
 
 ## Generate migration
 
@@ -32,13 +32,15 @@ pnpm db:migrate
 
 ## Runtime connection
 
-The application creates `PrismaPg` using `process.env.DATABASE_URL` and fails at runtime if it is missing. Kit's build analysis can initialize modules without a database URL; it does not execute database requests during generation or build. The adapter pool allows 10 connections per process, waits up to 10 seconds for connection acquisition, and closes idle connections after 300 seconds. The acquisition and idle limits retain the old Prisma pool timeouts; the connection count is now fixed rather than CPU-dependent. The driver also uses the acquisition timeout for establishing connections, replacing Prisma's former 5-second connect timeout. Interactive transactions retain Prisma's defaults of 2 seconds to acquire a transaction and 5 seconds to run it.
+The application creates `PrismaPg` using the `DATABASE_URL` export from Kit 3's server-only `$app/env/private` module, declared as a dynamic private variable in `src/env.ts`, and fails at runtime if it is missing. Kit supplies the environment during development and at runtime; the Prisma CLI loader is separate. Kit's build analysis can initialize modules without a database URL; it does not execute database requests during generation or build. The adapter pool allows 10 connections per process, waits up to 10 seconds for connection acquisition, and closes idle connections after 300 seconds. The acquisition and idle limits retain the old Prisma pool timeouts; the connection count is now fixed rather than CPU-dependent. The driver also uses the acquisition timeout for establishing connections, replacing Prisma's former 5-second connect timeout. Interactive transactions retain Prisma's defaults of 2 seconds to acquire a transaction and 5 seconds to run it.
 
 Prisma URL options such as `connection_limit`, `pool_timeout`, and `connect_timeout` no longer configure the runtime pool. Configure it in `src/lib/server/prisma.ts`. TLS follows the connection URL and the PostgreSQL driver's certificate checks; the adapter does not disable SSL or certificate verification. SQL `date` fields must still round-trip as UTC midnight and match lookups with non-midnight inputs.
 
+In production, Prisma disconnects on adapter-node's `sveltekit:shutdown` event after HTTP requests drain. This closes the PostgreSQL pool so idle connections do not delay process exit.
+
 ## Production image
 
-Generate the client in the build stage before building the application. Retain `prisma`, `@prisma/client`, `@prisma/adapter-pg`, and `dotenv` as production dependencies. Copy the root `prisma.config.ts`, `prisma/schema.prisma`, and the full `prisma/migrations` directory into the final image so the installed CLI can run `prisma migrate deploy` at startup.
+Generate the client in the build stage before building the application. Retain `prisma`, `@prisma/client`, `@prisma/adapter-pg`, `dotenv`, and `dotenv-expand` as production dependencies. Copy the root `prisma.config.ts`, `prisma/schema.prisma`, and the full `prisma/migrations` directory into the final image so the installed CLI can run `prisma migrate deploy` at startup.
 
 Include the generated client's runtime code in the application build or copy `src/lib/server/generated/prisma` into the final image if the build leaves external references to it. Keep its explicit `.ts` imports intact. Supply `DATABASE_URL` at runtime; do not bake environment files or credentials into the image.
 

@@ -15,8 +15,6 @@ on:
         required: true
       SSH_USER:
         required: true
-      ORIGIN:
-        required: true
       DATABASE_URL:
         required: true
       DATABASE_USER:
@@ -103,7 +101,6 @@ jobs:
         env:
           GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
           GHCR_USER: ${{ github.actor }}
-          ORIGIN: ${{ secrets.ORIGIN }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_USER: ${{ secrets.DATABASE_USER }}
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
@@ -113,7 +110,7 @@ jobs:
           host: ${{ secrets.VM_IP }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          envs: GHCR_TOKEN,GHCR_USER,DEPLOY_TAG,APP_DIR,ORIGIN,DATABASE_URL,DATABASE_USER,DATABASE_PASSWORD,DATABASE_NAME,ADMIN_PASSWORD
+          envs: GHCR_TOKEN,GHCR_USER,DEPLOY_TAG,APP_DIR,DATABASE_URL,DATABASE_USER,DATABASE_PASSWORD,DATABASE_NAME,ADMIN_PASSWORD
           command_timeout: 10m
           script: |
             cd "$APP_DIR" && bash ./deploy.sh

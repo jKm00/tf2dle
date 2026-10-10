@@ -15,11 +15,11 @@ if (
 
 const config: PlaywrightTestConfig = {
 	webServer: {
-		command: 'pnpm build && node server.mjs',
+		command: 'pnpm build && node build',
 		env: {
 			PORT: '4173',
 			HOST: '127.0.0.1',
-			APP_ORIGIN: 'http://127.0.0.1:4173'
+			ORIGIN: 'http://127.0.0.1:4173'
 		},
 		port: 4173,
 		timeout: 180000,

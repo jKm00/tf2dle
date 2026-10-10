@@ -4,8 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        ORIGIN: http://localhost:3000
     environment:
-      APP_ORIGIN: http://localhost:3000
       DATABASE_URL: postgresql://postgres:postgres@db:5432/tf2dle
     ports:
       - 3000:3000
