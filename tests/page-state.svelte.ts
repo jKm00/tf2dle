@@ -11,7 +11,7 @@ export const page = $state<Page>({
 	data: {},
 	form: null,
 	state: {},
-	shallow: false
+	shallow: null
 });
 
 export function setPage(next: Partial<Page>) {

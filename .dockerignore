@@ -22,6 +22,7 @@ Dockerfile
 .env
 .env.*
 .svelte-kit
+src/lib/server/generated/prisma
 node_modules
 build
 package

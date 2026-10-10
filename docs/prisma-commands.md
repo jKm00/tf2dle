@@ -18,7 +18,7 @@ Set `DATABASE_URL` to a development database. This command requires a database c
 pnpm db:client
 ```
 
-Generation does not require `DATABASE_URL` or a running database. The `prisma-client` generator writes ESM TypeScript files to `src/lib/server/generated/prisma`. Generate before type checking, tests, or building. Do not commit generated files.
+Generation does not require `DATABASE_URL` or a running database. `pnpm db:client` runs Kit sync before Prisma generation so the `$app/tsconfig` base exists on a fresh checkout. The `prisma-client` generator writes ESM TypeScript files to `src/lib/server/generated/prisma`. Generate before type checking, tests, or building. Do not commit generated files.
 
 Server code imports `PrismaClient` from `#lib/server/generated/prisma/client.ts`. Model-only imports use `import type` from `#lib/server/generated/prisma/browser.ts`, including types consumed by browser code. This entry point exports model names such as `AppNotification`; `models.ts` exports names such as `AppNotificationModel`. Never import the server client at runtime from browser code. TypeScript configuration must enable `allowImportingTsExtensions` for the explicit `.ts` imports.
 
@@ -32,7 +32,7 @@ pnpm db:migrate
 
 ## Runtime connection
 
-The application creates `PrismaPg` using `process.env.DATABASE_URL` and fails if it is missing. The adapter pool allows 10 connections per process, waits up to 10 seconds for connection acquisition, and closes idle connections after 300 seconds. The acquisition and idle limits retain the old Prisma pool timeouts; the connection count is now fixed rather than CPU-dependent. The driver also uses the acquisition timeout for establishing connections, replacing Prisma's former 5-second connect timeout. Interactive transactions retain Prisma's defaults of 2 seconds to acquire a transaction and 5 seconds to run it.
+The application creates `PrismaPg` using `process.env.DATABASE_URL` and fails at runtime if it is missing. Kit's build analysis can initialize modules without a database URL; it does not execute database requests during generation or build. The adapter pool allows 10 connections per process, waits up to 10 seconds for connection acquisition, and closes idle connections after 300 seconds. The acquisition and idle limits retain the old Prisma pool timeouts; the connection count is now fixed rather than CPU-dependent. The driver also uses the acquisition timeout for establishing connections, replacing Prisma's former 5-second connect timeout. Interactive transactions retain Prisma's defaults of 2 seconds to acquire a transaction and 5 seconds to run it.
 
 Prisma URL options such as `connection_limit`, `pool_timeout`, and `connect_timeout` no longer configure the runtime pool. Configure it in `src/lib/server/prisma.ts`. TLS follows the connection URL and the PostgreSQL driver's certificate checks; the adapter does not disable SSL or certificate verification. SQL `date` fields must still round-trip as UTC midnight and match lookups with non-midnight inputs.
 

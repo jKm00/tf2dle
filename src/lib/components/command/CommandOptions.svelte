@@ -30,7 +30,7 @@
 			{#each filteredOptions as option (option.label)}
 				<button
 					onclick={() => onselect(option)}
-					class="flex items-center gap-2 w-full text-left p-2 focus:outline-none focus:bg-muted rounded"
+					class="flex items-center gap-2 w-full text-left p-2 focus:outline-hidden focus:bg-muted rounded"
 				>
 					<option.icon />
 					{option.label}
@@ -38,7 +38,7 @@
 			{/each}
 			<button
 				onclick={onback}
-				class="flex items-center gap-2 w-full text-left p-2 focus:outline-none focus:bg-muted rounded"
+				class="flex items-center gap-2 w-full text-left p-2 focus:outline-hidden focus:bg-muted rounded"
 			>
 				<ChevronLeft />
 				Back

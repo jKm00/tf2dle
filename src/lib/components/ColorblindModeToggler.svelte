@@ -7,19 +7,42 @@
 
 	let form = $state<HTMLFormElement>();
 	let active = $state(false);
+	let pending = $state(false);
+	let saveError = $state<string | null>(null);
 
 	if (browser) {
 		const htmlColorblindMode = document.documentElement.dataset.colorblind;
 		active = htmlColorblindMode === 'true';
 	}
 
-	const submitUpdateColorBlindMode: SubmitFunction = ({ action }) => {
-		const colorblindMode = action.searchParams.get('active') === 'true';
-		document.documentElement.dataset.colorblind = colorblindMode.toString();
+	const submitUpdateColorBlindMode: SubmitFunction = ({ action, cancel }) => {
+		if (pending) {
+			cancel();
+			return;
+		}
+		const previousMode = document.documentElement.dataset.colorblind === 'true';
+		const colorblindMode = active;
+		// A mouse click can submit before Svelte updates the form's action attribute.
+		action.searchParams.set('active', colorblindMode.toString());
+		pending = true;
+		saveError = null;
+
+		return ({ result }) => {
+			// Do not use the default callback: this root action must not navigate away from the game.
+			if (result.type === 'success') {
+				document.documentElement.dataset.colorblind = colorblindMode.toString();
+				active = colorblindMode;
+			} else {
+				active = previousMode;
+				saveError =
+					'Could not save colorblind mode. The previous setting was restored. Please try again.';
+			}
+			pending = false;
+		};
 	};
 
 	function handleKeyUp(event: KeyboardEvent) {
-		if (event.key === 'Enter' || event.key === ' ') {
+		if (!pending && (event.key === 'Enter' || event.key === ' ')) {
 			form?.requestSubmit();
 		}
 	}
@@ -38,7 +61,19 @@
 		</label>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div onkeyup={handleKeyUp}>
-			<Switch type="submit" id="colorblind" bind:checked={active} />
+			<Switch
+				type="submit"
+				id="colorblind"
+				bind:checked={active}
+				disabled={pending}
+				aria-busy={pending}
+			/>
 		</div>
 	</div>
+	{#if pending}
+		<p role="status" class="text-sm text-muted-foreground">Saving colorblind mode...</p>
+	{/if}
+	{#if saveError}
+		<p role="alert" class="text-sm text-destructive">{saveError}</p>
+	{/if}
 </form>

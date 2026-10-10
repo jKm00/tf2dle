@@ -1,5 +1,27 @@
 import test, { expect } from '@playwright/test';
 
+test('Production origin rejects cross-origin forms and ignores spoofed proxy headers', async ({
+	request,
+	baseURL
+}) => {
+	const sameOrigin = await request.post('/admin/login', {
+		headers: {
+			origin: baseURL!,
+			'x-forwarded-proto': 'https',
+			'x-forwarded-host': 'attacker.example'
+		},
+		form: { password: 'wrong-migration-password' }
+	});
+	expect(sameOrigin.status()).toBe(400);
+
+	const crossOrigin = await request.post('/admin/login', {
+		headers: { origin: 'https://attacker.example' },
+		form: { password: 'migration-test-password' }
+	});
+	expect(crossOrigin.status()).toBe(403);
+	expect((await request.get('/admin/logs')).status()).toBe(401);
+});
+
 test('Admin rejects wrong passwords and protects logs across login, reload, and logout', async ({
 	page
 }) => {

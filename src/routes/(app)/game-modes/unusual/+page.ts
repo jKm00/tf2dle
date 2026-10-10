@@ -1,7 +1,8 @@
 import type { CurrentUnusualDto, UnusualResponse } from '#lib/dtos.ts';
 import { error } from '@sveltejs/kit';
+import type { PageLoadEvent } from './$types.js';
 
-export const load = async ({ fetch }) => {
+export const load = async ({ fetch }: PageLoadEvent) => {
 	async function fetchTodaysUnusual() {
 		let data;
 		let errorMessage: string | null = null;

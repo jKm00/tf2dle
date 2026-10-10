@@ -101,7 +101,7 @@
 				bind:this={inputEl}
 				autofocus
 				placeholder="Type a command..."
-				class="bg-transparent focus:outline-none"
+				class="bg-transparent focus:outline-hidden"
 			/>
 		</div>
 		<div class="p-1">

@@ -1,5 +1,6 @@
 import { weaponService } from '#lib/server/services/WeaponService.ts';
 import MetricsService from '#lib/server/services/MetricsService.ts';
+import type { RequestEvent } from './$types.js';
 
 /**
  * Returns info of todays weapon
@@ -17,7 +18,7 @@ export async function GET() {
  * the name of the weapon to validate in the field 'guess' ({ guess: string})
  * @returns WeaponGuessResponse
  */
-export async function POST({ request }) {
+export async function POST({ request }: RequestEvent) {
 	const { guess, numberOfGuesses } = await request.json();
 
 	try {

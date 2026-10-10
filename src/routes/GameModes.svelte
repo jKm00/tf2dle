@@ -73,7 +73,7 @@
 					<a
 						href={`/game-modes${gameMode.href}`}
 						data-testId={gameMode.name.toLowerCase()}
-						class="relative grid gap-3 overflow-hidden rounded bg-secondary px-4 py-3 transition-colors hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:flex sm:items-center sm:justify-between"
+						class="relative grid gap-3 overflow-hidden rounded bg-secondary px-4 py-3 transition-colors hover:bg-secondary/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:flex sm:items-center sm:justify-between"
 					>
 						<div class="flex min-w-0 items-start gap-3 sm:items-center sm:gap-4">
 							<gameMode.icon class="mt-0.5 shrink-0 text-primary sm:mt-0" />

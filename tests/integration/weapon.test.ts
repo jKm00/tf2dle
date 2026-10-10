@@ -1,5 +1,16 @@
 import test, { expect, type Page } from '@playwright/test';
 
+test('Production image URLs use the build-time CDN', async ({ page }) => {
+	await page.goto('/game-modes/weapon');
+	await page.getByTestId('input').fill('scattergun');
+	const image = page.getByTestId('dropdown').getByAltText('Scattergun');
+	await expect(image).toBeVisible();
+	const base =
+		process.env.PUBLIC_CDN_URL ||
+		'https://cdn.jsdelivr.net/gh/edvardsen-dev/tf2dle@main/static/images';
+	expect((await image.getAttribute('src'))?.startsWith(`${base}/`)).toBe(true);
+});
+
 test.beforeEach(async ({ page }) => {
 	await page.goto('/');
 	await page.evaluate(() => {

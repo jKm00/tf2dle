@@ -15,7 +15,12 @@ if (
 
 const config: PlaywrightTestConfig = {
 	webServer: {
-		command: 'pnpm build && pnpm preview --host 127.0.0.1',
+		command: 'pnpm build && node server.mjs',
+		env: {
+			PORT: '4173',
+			HOST: '127.0.0.1',
+			APP_ORIGIN: 'http://127.0.0.1:4173'
+		},
 		port: 4173,
 		timeout: 180000,
 		reuseExistingServer: false

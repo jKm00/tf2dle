@@ -13,7 +13,7 @@
 		"check": "pnpm check:svelte && tsc --noEmit -p ./tsconfig.json",
 		"check:svelte": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"db:client": "prisma generate",
+		"db:client": "svelte-kit sync && prisma generate",
 		"db:migrate": "prisma migrate deploy",
 		"db:up": "docker compose -f docker-compose.dev.yaml up",
 		"db:studio": "prisma studio",
@@ -50,7 +50,6 @@
 	"type": "module",
 	"dependencies": {
 		"@lucide/svelte": "1.55.0",
-		"@oslojs/crypto": "^1.0.1",
 		"@prisma/adapter-pg": "7.10.0",
 		"@prisma/client": "7.10.0",
 		"@types/node-schedule": "^2.1.8",
