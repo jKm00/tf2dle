@@ -17,9 +17,9 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Generate Prisma client
-RUN pnpm exec prisma generate
+RUN pnpm db:client
 
-RUN pnpm exec svelte-kit sync && pnpm build
+RUN pnpm check && pnpm build
 RUN pnpm prune --production
 
 FROM node:24-alpine
@@ -36,6 +36,7 @@ COPY --from=builder /app/node_modules node_modules/
 COPY --from=builder /app/prisma prisma/
 COPY --from=builder /app/prisma.config.ts .
 COPY server.mjs .
+COPY server-handler.mjs .
 COPY package.json .
 
 EXPOSE 3000
@@ -43,4 +44,4 @@ EXPOSE 3000
 ENV NODE_ENV=production
 ENV PUBLIC_APP_VERSION=$PUBLIC_APP_VERSION
 
-CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy && node server.mjs"]
+CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy && exec node server.mjs"]

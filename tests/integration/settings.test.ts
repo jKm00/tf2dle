@@ -1,5 +1,171 @@
 import test, { expect } from '@playwright/test';
 
+test('Colorblind mode preserves the mounted weapon game for mouse and keyboard toggles and reloads', async ({
+	page,
+	context
+}) => {
+	await page.goto('/game-modes/weapon?settings-regression=true#challenge');
+	const gameUrl = page.url();
+	const html = page.locator('html');
+	const trigger = page.getByRole('button', { name: 'Settings', exact: true });
+	const settings = page.getByRole('dialog', { name: 'Settings', exact: true });
+	const toggle = settings.getByRole('switch', { name: 'Colorblind mode', exact: true });
+	const challenge = page.getByTestId('title');
+	const input = page.getByTestId('input');
+	await expect(html).toHaveAttribute('data-colorblind', 'false');
+
+	for (const [interaction, enabled] of [
+		['mouse', true],
+		['Space', false],
+		['Enter', true]
+	] as const) {
+		await expect(challenge).toHaveText('Weapon');
+		await expect(input).toBeVisible();
+		const mountedChallenge = await challenge.elementHandle();
+		const mountedInput = await input.elementHandle();
+		await trigger.click();
+		await expect(settings).toBeVisible();
+		await expect(toggle).toBeChecked({ checked: !enabled });
+		if (interaction === 'mouse') {
+			await toggle.click();
+		} else {
+			await toggle.focus();
+			await toggle.press(interaction);
+		}
+		await expect(toggle).toBeChecked({ checked: enabled });
+		await expect(toggle).toHaveAttribute('aria-busy', 'false');
+		await expect(html).toHaveAttribute('data-colorblind', String(enabled));
+		await expect
+			.poll(
+				async () =>
+					(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value
+			)
+			.toBe(String(enabled));
+		await expect(page).toHaveURL(gameUrl);
+		await expect(settings).toBeVisible();
+		await expect(challenge).toHaveText('Weapon');
+		expect(await mountedChallenge!.evaluate((node) => node.isConnected)).toBe(true);
+		expect(await mountedInput!.evaluate((node) => node.isConnected)).toBe(true);
+		await mountedChallenge!.dispose();
+		await mountedInput!.dispose();
+
+		await page.reload();
+		await expect(page).toHaveURL(gameUrl);
+		await expect(challenge).toHaveText('Weapon');
+		await expect(input).toBeVisible();
+		await expect(html).toHaveAttribute('data-colorblind', String(enabled));
+		expect(
+			(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value
+		).toBe(String(enabled));
+		await trigger.click();
+		await expect(toggle).toBeChecked({ checked: enabled });
+		await page.keyboard.press('Escape');
+		await expect(settings).not.toBeVisible();
+	}
+});
+
+for (const failure of ['action failure', 'server error', 'network error'] as const) {
+	test(`Colorblind mode shows pending feedback and restores the saved preference after ${failure}`, async ({
+		page,
+		context
+	}) => {
+		await context.addCookies([
+			{ name: 'colorBlindMode', value: 'true', url: 'http://127.0.0.1:4173' }
+		]);
+		await page.goto('/game-modes/weapon');
+		const gameUrl = page.url();
+		const challenge = page.getByTestId('title');
+		await expect(page.getByTestId('input')).toBeVisible();
+		const mountedChallenge = await challenge.elementHandle();
+		await page.getByRole('button', { name: 'Settings', exact: true }).click();
+		const settings = page.getByRole('dialog', { name: 'Settings', exact: true });
+		const toggle = settings.getByRole('switch', { name: 'Colorblind mode', exact: true });
+		await expect(toggle).toBeChecked();
+		let release!: () => void;
+		const pendingResponse = new Promise<void>((resolve) => {
+			release = resolve;
+		});
+		const actionUrl = (url: URL) => url.searchParams.has('/setColorBlindMode');
+		await page.route(actionUrl, async (route) => {
+			expect(route.request().method()).toBe('POST');
+			expect(new URL(route.request().url()).searchParams.get('active')).toBe('false');
+			await pendingResponse;
+			if (failure === 'network error') {
+				await route.abort('failed');
+			} else if (failure === 'server error') {
+				await route.fulfill({ status: 500, body: 'Internal Server Error' });
+			} else {
+				await route.fulfill({ status: 400, json: { type: 'failure', status: 400, data: '[]' } });
+			}
+		});
+		await toggle.click();
+		await expect(toggle).not.toBeChecked();
+		await expect(toggle).toBeDisabled();
+		await expect(toggle).toHaveAttribute('aria-busy', 'true');
+		await expect(settings.getByRole('status')).toHaveText('Saving colorblind mode...');
+		await expect(page.locator('html')).toHaveAttribute('data-colorblind', 'true');
+		expect(
+			(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value
+		).toBe('true');
+		release();
+		await expect(settings.getByRole('alert')).toHaveText(
+			'Could not save colorblind mode. The previous setting was restored. Please try again.'
+		);
+		await expect(toggle).toBeChecked();
+		await expect(toggle).toBeEnabled();
+		await expect(toggle).toHaveAttribute('aria-busy', 'false');
+		await expect(page.locator('html')).toHaveAttribute('data-colorblind', 'true');
+		expect(
+			(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value
+		).toBe('true');
+		await expect(page).toHaveURL(gameUrl);
+		await expect(settings).toBeVisible();
+		expect(await mountedChallenge!.evaluate((node) => node.isConnected)).toBe(true);
+		await mountedChallenge!.dispose();
+
+		await page.unroute(actionUrl);
+		await toggle.focus();
+		await toggle.press('Space');
+		await expect(page.locator('html')).toHaveAttribute('data-colorblind', 'false');
+		await expect(toggle).not.toBeChecked();
+		await expect(settings.getByRole('alert')).toHaveCount(0);
+		expect(
+			(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value
+		).toBe('false');
+		await expect(page).toHaveURL(gameUrl);
+		await expect(settings).toBeVisible();
+	});
+}
+
+test('Settings keyboard focus retains visible outlines in forced colors', async ({ page }) => {
+	await page.emulateMedia({ forcedColors: 'active' });
+	await page.goto('/');
+	const trigger = page.getByRole('button', { name: 'Settings', exact: true });
+	const dialog = page.getByRole('dialog', { name: 'Settings', exact: true });
+	const toggle = dialog.getByRole('switch', { name: 'Hide reset timer', exact: true });
+
+	for (const control of [trigger, toggle]) {
+		if (control === toggle) {
+			await page.keyboard.press('Enter');
+			await expect(dialog).toBeVisible();
+		}
+		for (let tabs = 0; tabs < 20; tabs++) {
+			await page.keyboard.press('Tab');
+			if (await control.evaluate((node) => node === document.activeElement)) break;
+		}
+		await expect(control).toBeVisible();
+		await expect(control).toBeInViewport();
+		await expect(control).toBeFocused();
+		expect(await control.evaluate((node) => node.matches(':focus-visible'))).toBe(true);
+		await expect(control).toHaveCSS('outline-style', 'solid');
+		await expect
+			.poll(() =>
+				control.evaluate((node) => Number.parseFloat(getComputedStyle(node).outlineWidth))
+			)
+			.toBeGreaterThan(0);
+	}
+});
+
 test('Settings supports Escape and keyboard toggles and persists the timer preference', async ({
 	page
 }) => {

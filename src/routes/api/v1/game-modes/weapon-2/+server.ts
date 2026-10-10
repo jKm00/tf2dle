@@ -1,6 +1,7 @@
 import dayjs from '#lib/configs/dayjsConfig.ts';
 import MetricsService from '#lib/server/services/MetricsService.ts';
 import { weaponTwoService } from '#lib/server/services/WeaponTwoService.ts';
+import type { RequestEvent } from './$types.js';
 
 /**
  * Returns number of correct guesses for todays weapon
@@ -19,7 +20,7 @@ export async function GET() {
 	});
 }
 
-export async function POST({ request }) {
+export async function POST({ request }: RequestEvent) {
 	const { guess, numberOfGuesses } = await request.json();
 
 	const result = await weaponTwoService.validateGuess(guess, numberOfGuesses);

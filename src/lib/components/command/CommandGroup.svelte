@@ -28,7 +28,7 @@
 				<button
 					onclick={() => onselect(command)}
 					onmouseenter={(event) => event.currentTarget.focus()}
-					class="flex items-center gap-2 w-full text-left p-2 focus:outline-none focus:bg-muted rounded"
+					class="flex items-center gap-2 w-full text-left p-2 focus:outline-hidden focus:bg-muted rounded"
 				>
 					<command.icon />
 					{command.label}

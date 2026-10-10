@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
+import type { PageLoadEvent } from './$types.js';
 
-export const load = async ({ fetch }) => {
+export const load = async ({ fetch }: PageLoadEvent) => {
 	/**
 	 * Fetches the number of how many have already guessed todays weapon
 	 */

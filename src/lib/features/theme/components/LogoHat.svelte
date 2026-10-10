@@ -10,7 +10,7 @@
 		<XmasHat />
 	</div>
 {:else if !$disableExtraVisuals && isHalloween()}
-	<div class="absolute w-20 -right-7 rotate-[12deg] -top-8">
+	<div class="absolute w-20 -right-6 rotate-[12deg] -top-8 sm:-right-7">
 		<HalloweenLogoDecor />
 	</div>
 {/if}

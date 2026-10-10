@@ -61,62 +61,62 @@ Status: complete. Full gate and offline production image smoke test passed.
 
 ## Step 2a: npm and pnpm 12
 
-Status: in progress. Added to the required scope in the continuation session.
+Status: complete. Local versions, frozen installs, CI pins, clean image build and offline runtime verified.
 
-- [ ] Install npm 12.2.0 and pnpm 12.10.1 locally, and pin the same versions in Docker and CI.
-- [ ] Update package-manager declarations, dependency-build approvals, and lockfile using pnpm 12; prove frozen-lockfile installs work.
-- [ ] Pass the complete gate and production image smoke test; verify actual npm/pnpm versions rather than only configuration values.
+- [x] Install npm 12.2.0 and pnpm 12.10.1 locally, and pin the same versions in Docker and CI.
+- [x] Update package-manager declarations, dependency-build approvals, and lockfile using pnpm 12; prove frozen-lockfile installs work.
+- [x] Pass the complete gate and production image smoke test; verify actual npm/pnpm versions rather than only configuration values.
 
 ## Step 3: full Svelte 5 runes and UI migration
 
-Status: pending. Depends on step 2.
+Status: complete. All 88 components compile in forced runes mode; full regression and image gates passed.
 
-- [ ] Install the compatible final Svelte 5/Kit 3/Vite/plugin/check/test-tool stack. Verify this coupled application increment together with step 4, because the new UI APIs and runes conversion are interdependent.
-- [ ] Upgrade Testing Library and adapt test mounting, cleanup, and rerendering where needed.
-- [ ] Upgrade or replace incompatible UI dependencies: bits-ui, cmdk-sv, mode-watcher, svelte-sonner, and icon components.
-- [ ] Adapt checked-in UI wrappers and their consumers to supported APIs; preserve keyboard focus, Escape/close behavior, settings, and styling.
-- [ ] Convert every application `.svelte` component to runes, snippets, and callback props. Remove legacy `export let`, `$:` declarations, slots, event directives, dispatchers, `$$Props`, and legacy dynamic-component syntax. Preserve existing store/localStorage contracts.
-- [ ] Audit every component and enforce runes mode globally so no legacy component silently remains.
-- [ ] Add regression coverage for all game modes, destructive settings confirmations, navigation, notifications, and mobile/desktop rendering as needed.
-- [ ] Fix reactive error-page reads; exercise navigation and error recovery.
-- [ ] Pass the complete gate and production image smoke test.
+- [x] Install the compatible final Svelte 5/Kit 3/Vite/plugin/check/test-tool stack. Verify this coupled application increment together with step 4, because the new UI APIs and runes conversion are interdependent.
+- [x] Upgrade Testing Library and adapt test mounting, cleanup, and rerendering where needed.
+- [x] Upgrade or replace incompatible UI dependencies: bits-ui, cmdk-sv, mode-watcher, svelte-sonner, and icon components. Removed unused cmdk-sv and replaced deprecated lucide-svelte with @lucide/svelte.
+- [x] Adapt checked-in UI wrappers and their consumers to supported APIs; preserve keyboard focus, Escape/close behavior, settings, and styling.
+- [x] Convert every application `.svelte` component to runes, snippets, and callback props. Remove legacy `export let`, `$:` declarations, slots, event directives, dispatchers, `$$Props`, and legacy dynamic-component syntax. Preserve existing store/localStorage contracts.
+- [x] Audit every component and enforce runes mode globally so no legacy component silently remains.
+- [x] Add regression coverage for all game modes, destructive settings confirmations, navigation, notifications, and mobile/desktop rendering as needed.
+- [x] Fix reactive error-page reads; exercise navigation and error recovery.
+- [x] Pass the complete gate and production image smoke test.
 
 ## Step 4: SvelteKit 3 and current build/test tooling
 
-Status: pending. Depends on step 3.
+Status: complete. Kit 3, native TS7, Tailwind 4, runtime origin handling and all gates verified.
 
-- [ ] Review the current Kit 3 migration guide; run the official migrator on a clean, reviewable increment if useful.
-- [ ] Move `svelte.config.js` configuration into the Vite plugin and update the Node adapter.
-- [ ] Add package `#lib` imports and replace `$lib` references, including explicit module filenames/extensions, test mocks, and component-generator aliases.
-- [ ] Replace `$app/stores` with `$app/state`; update reactive consumers and mocks rather than doing an import-only replacement.
-- [ ] Update `$app/environment`, hook type imports, and TypeScript config/include/exclude settings.
-- [ ] Replace adapter-node `ORIGIN` configuration with `paths.origin`; verify form posts and CSRF behavior behind the deployment proxy.
-- [ ] Upgrade Vite, its Svelte plugin, Vitest, svelte-check, jsdom, and TypeScript. Use TS7 native `tsc` plus Microsoft's TS6 API compatibility package for Kit/Svelte tools; retain full Svelte diagnostics.
-- [ ] Migrate Tailwind 4 with its Vite plugin, CSS theme/configuration, and current tailwind-merge/tailwind-variants. Preserve theme colors, utility behavior, dialogs, focus styling, and responsive layouts.
-- [ ] Review removed/deprecated error, navigation, environment, and response APIs actually used by this app.
-- [ ] Pass the complete gate and production image smoke test, including admin form submissions and real Prisma queries with the new bundler.
+- [x] Review the current Kit 3 migration guide and migrate the used APIs manually.
+- [x] Move `svelte.config.js` configuration into the Vite plugin and update the Node adapter.
+- [x] Add package `#lib` imports and replace `$lib` references, including explicit module filenames/extensions, test mocks, and component-generator aliases.
+- [x] Replace `$app/stores` with `$app/state`; update reactive consumers and mocks rather than doing an import-only replacement.
+- [x] Update `$app/environment`, hook type imports, and TypeScript config/include/exclude settings.
+- [x] Preserve runtime origin configuration with the Node entry point's canonical headers and `APP_ORIGIN`. Kit 3's `paths.origin` is build-time-only; do not bake a deployment-specific origin into the image. Verify same-origin forms, rejected cross-origin forms, spoofed proxy headers, and HTTPS proxy behavior.
+- [x] Upgrade Vite, its Svelte plugin, Vitest, svelte-check, jsdom, and TypeScript. Use TS7 native `tsc` plus Microsoft's TS6 API compatibility package for Kit/Svelte tools; retain full Svelte diagnostics.
+- [x] Migrate Tailwind 4 with its Vite plugin, CSS theme/configuration, and current tailwind-merge/tailwind-variants. Preserve theme colors, utility behavior, dialogs, focus styling, and responsive layouts.
+- [x] Review removed/deprecated error, navigation, environment, and response APIs actually used by this app.
+- [x] Pass the complete gate and production image smoke test, including admin form submissions and real Prisma queries with the new bundler.
 
 ## Step 5: stable Prisma 7
 
-Status: pending. Depends on step 4; may be done independently after step 2 if framework work is paused.
+Status: complete. Empty/restored databases, schema comparison, full regressions and offline pruned-image startup verified.
 
-- [ ] Install matching stable Prisma CLI, client, and PostgreSQL adapter versions explicitly; do not install the Prisma 8 release candidate.
-- [ ] Add root `prisma.config.ts`, explicit CLI environment loading, schema path, migration path, and database URL configuration.
-- [ ] Switch to the supported client generator with explicit output; update client and generated-model imports, mocks, and ignored generated files.
-- [ ] Initialize the shared client with the PostgreSQL driver adapter; choose explicit connection-pool/timeout behavior where required.
-- [ ] Update generation and migration packaging for CI and Docker, including builds that have no live database connection.
-- [ ] Apply preserved migrations to an empty disposable database, then test an upgrade against a restored disposable database with existing data and migration records.
-- [ ] Pass the complete gate and production image smoke test. Verify date-only lookups, counts, metrics upserts, and admin persistence against real PostgreSQL.
+- [x] Install matching stable Prisma CLI, client, and PostgreSQL adapter versions explicitly; do not install the Prisma 8 release candidate.
+- [x] Add root `prisma.config.ts`, explicit CLI environment loading, schema path, migration path, and database URL configuration.
+- [x] Switch to the supported client generator with explicit output; update client and generated-model imports, mocks, and ignored generated files.
+- [x] Initialize the shared client with the PostgreSQL driver adapter; choose explicit connection-pool/timeout behavior where required.
+- [x] Update generation and migration packaging for CI and Docker, including builds that have no live database connection.
+- [x] Apply preserved migrations to an empty disposable database, then test an upgrade against a restored disposable database with existing data and migration records.
+- [x] Pass the complete gate and production image smoke test. Verify date-only lookups, counts, metrics upserts, and admin persistence against real PostgreSQL.
 
 ## Step 6: smaller dependency maintenance
 
-Status: pending. Run each group as its own verified increment.
+Status: complete for the requested toolchain. Audit exceptions below remain upstream follow-ups, not silently ignored checks.
 
-- [ ] Refresh compatible patch/minor dependencies, Playwright browsers, formatting tools, and browser compatibility data.
-- [ ] Replace the deprecated `@oslojs/crypto` random-integer helper with Node's supported crypto API, after adding tests for its exclusive upper bound and invalid inputs.
-- [ ] npm/pnpm upgrades are required in step 2a, not optional maintenance.
-- [ ] Review remaining deprecated/transitive packages and security advisories; document exceptions instead of forcing incompatible overrides.
-- [ ] Pass the complete gate after each group.
+- [x] Refresh the requested UI/build/test toolchain, Playwright browsers, formatting tools, and their browser compatibility data.
+- [x] Replace the deprecated `@oslojs/crypto` random-integer helper with Node's supported crypto API and tests for its exclusive upper bound and invalid inputs.
+- [x] Complete npm/pnpm upgrades in step 2a.
+- [x] Review remaining deprecated/transitive packages and security advisories; document exceptions instead of forcing incompatible overrides.
+- [x] Pass the complete gate for the final combined maintenance increment.
 
 ## Step 7: PostgreSQL support deadline
 
@@ -174,11 +174,64 @@ Status: pending. Separate operational migration; PostgreSQL 14 support ends 2026
 - The image started on a Docker internal network with internet access blocked. Migration execution succeeded; HTTP requests from inside the container returned 200 for `/` and the database-backed weapon endpoint. Prisma version output confirmed CLI/client 6.19.3, Node 24.21.0, and packaged Alpine ARM64 query/schema engines. Internal-network port forwarding was unavailable from the host, so this offline smoke check ran inside the container.
 - No SQL schema/data migration was added, and no production data or deployment was changed.
 
+### Continuation: requested upgrades verified
+
+The expanded Svelte/runes, Kit, Tailwind, Prisma, and compiler migration was integrated as one coupled application increment, then passed the full gate. Completion below refers to the final combined code and lockfile, not to an untested intermediate dependency bump.
+
+| Tool                                     | Verified version                                 |
+| ---------------------------------------- | ------------------------------------------------ |
+| Production Node                          | 24.21.0                                          |
+| npm                                      | 12.2.0                                           |
+| pnpm                                     | 12.10.1                                          |
+| Svelte                                   | 5.57.2                                           |
+| SvelteKit / Node adapter                 | 3.0.1 / 6.0.0                                    |
+| Native TypeScript compiler               | 7.0.2                                            |
+| Svelte/Kit TypeScript API implementation | 6.0.3, through Microsoft's compatibility package |
+| Prisma CLI / client / PostgreSQL adapter | 7.10.0                                           |
+| Tailwind / Vite plugin                   | 4.3.3                                            |
+| Vite / Svelte Vite plugin                | 8.3.4 / 7.3.1                                    |
+| Vitest / Testing Library                 | 5.0.3 / 5.4.2                                    |
+| Playwright                               | 1.64.0                                           |
+| Bits UI                                  | 2.19.5                                           |
+| Icons / mode watcher / Sonner            | @lucide/svelte 1.55.0 / 1.1.0 / 1.2.1            |
+| Prettier / Svelte plugin                 | 3.9.10 / 4.1.1                                   |
+
+- `pnpm install --frozen-lockfile` passed with pnpm 12. Engine and build approvals moved from `.npmrc` into `pnpm-workspace.yaml`; only explicitly approved dependency scripts run.
+- `pnpm check` passed with zero errors and warnings. It runs full Svelte checking followed by actual native TS7 `tsc --noEmit`. Seven route event parameters needed explicit generated route types because standalone TS7 does not inject Svelte tooling's contextual types.
+- `pnpm test` passed: 17 unit files / 89 unit tests and 42 browser/API tests. Browser tests run `pnpm build && node server.mjs`, exercising the production entry point instead of preview.
+- The offline Python suite passed: 33 tests. No scraper dependency or data-generation behavior was changed.
+- All 88 application components compile with global forced runes. Source audit found no remaining legacy props, reactive declarations, slots, event directives, dispatchers, legacy dynamic components, `$app/stores`, `$lib`, old environment imports, or deprecated icon imports.
+- Regressions cover all five games, guesses and win persistence, errors/retry, route/error reactivity, notifications, timers, database counts/metrics, admin forms/authentication, nested destructive confirmations, keyboard focus, forced colors, mobile overflow, and colorblind preference persistence without navigating away from the current game.
+- Bits UI 2 no longer auto-closes AlertDialog actions or initially focuses Cancel. Controlled confirmations and explicit cancel autofocus preserve the original behavior. Fake-clock game tests now advance their outro transition before asserting the dialog has closed.
+- Tailwind 4 uses CSS theme tokens and its Vite plugin. The neutral-color CSS typo was fixed; the old small-shadow value and forced-color focus outline semantics were preserved. Mobile overflow came from the rotated Halloween hat, fixed only below the existing `sm` breakpoint; browser dimension checks passed at 320, 375, 390, 639, 640, and 1280 pixels.
+- The colorblind enhanced form now handles success/failure locally rather than using Kit 3's cross-page navigation default. Mouse, Space, Enter, reload, failed actions, HTTP errors, and network failures are tested.
+- The commit-pinned CDN setting now uses Kit's static public environment API. Full browser gates built with `PUBLIC_CDN_URL=https://migration.invalid/release-images` and verified actual image URLs, rather than testing only an empty/default setting.
+- The project's original `skipLibCheck: true` remains unchanged. Application and Svelte diagnostics are not filtered. A narrowly scoped `runed@0.35.1` optional Kit-peer allowance accepts Kit 3; strict peers remain enabled elsewhere. Its consumed utilities and Bits UI consumers passed the regressions.
+- `pnpm db:client` runs Kit sync before generation, fixing clean-container generation when `$app/tsconfig` does not exist yet. Generated Prisma files are ignored and excluded from Docker context. Generation and clean Docker builds do not need a live database or embedded credentials.
+- The final pruned image built successfully with no local `.env` files. Docker runs `pnpm check && pnpm build` before pruning, so native TS7 and Svelte checking also passed on Linux ARM64. Runtime version checks confirmed Node 24.21.0, npm 12.2.0, and Prisma 7.10.0.
+- All 14 committed migrations applied to an empty disposable PostgreSQL database. A `pg_dump` snapshot with notification data, historical/current daily selections, and migration records was restored into a second disposable database. The old Prisma 6 image and new CLI both previously verified that history without pending changes; after Docker recovery the restore and new-image checks were repeated.
+- The restored database retained 14 migration records, notification version 7, and historical win count 17. A real API win changed today's count from 5 to 6 and stored starts/guesses/wins/total-guesses-to-win as 1/1/1/1. `prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma` reported no differences.
+- Final-image startup migrations, database-backed requests, HTTPS canonical-origin login, Secure cookie authentication, spoofed proxy headers, and cross-origin form rejection passed on an internal Docker network with internet access blocked. Request error containment and asynchronous shutdown ordering have focused unit tests; the image also stopped with exit code 0.
+- Docker's first clean-build attempt exposed low disk space and a storage I/O failure. With operator approval, Docker Desktop was recovered and only migration image tags were removed. The development database was restarted and `pg_isready` passed; unrelated images and development volumes were not pruned. Disposable databases and final verification were recreated afterward.
+- Local host gates used Node 24.18.1; no global Node installation was changed. Docker and CI use the Node 24 LTS policy. CI definitions are updated; remote GitHub Actions were not triggered because no commit, push, or deployment was requested.
+
+### Upstream audit exceptions
+
+`pnpm audit --prod` reports three advisories in Prisma 7.10.0's CLI dependency tree. This is not a clean security audit. They are documented rather than hidden by audit ignores or forced cross-major dependency overrides.
+
+| Dependency         | Severity / advisory           | Current scope                                                                                                                                                      |
+| ------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| deepmerge-ts 7.1.5 | High, GHSA-ggr8-5vv4-36mx     | Prisma CLI configuration merging. This project supplies trusted, nonrecursive config objects, not request-controlled object graphs. Upstream fix requires major 8. |
+| mysql2 3.15.3      | High, GHSA-3f6p-5ww8-9rcr     | Prisma CLI's unused MySQL backend. This application and migrations use PostgreSQL, not MySQL authentication.                                                       |
+| mysql2 3.15.3      | Moderate, GHSA-rgwj-5xj2-c3m3 | Prisma CLI's unused MySQL compressed protocol. No application request path uses it.                                                                                |
+
+Follow up when Prisma 7 ships patched dependencies or when a separately reviewed, scoped override can be validated. The CLI remains in the runtime image for locked startup migrations; its dependency tree therefore still appears in production audits. Do not describe these advisories as fixed.
+
 ## Current checkpoint
 
-Steps 0, 1, and 2 are complete. The continuation session is implementing all requested application/toolchain upgrades, including full runes conversion, TS7 and Tailwind 4. Newly expanded steps remain open until the complete final gate passes. PostgreSQL production cutover and Prisma 8 remain outside this application migration.
+All requested application/toolchain upgrades are complete and verified: steps 0 through 6, including 2a. PostgreSQL production cutover and Prisma 8 remain outside this application migration. No production deployment was performed.
 
-The migration app container, internal network, and disposable database were stopped and removed after verification. Existing development containers, volumes, and databases were left untouched. Local build images and ignored test reports remain available; no images were published.
+The migration app container, internal network, both disposable databases, and migration image tags were removed after verification. The final app stopped with exit code 0. The development database is running again after the approved Docker recovery; its volume and data were not modified by the migration. Unrelated images and volumes were preserved. Ignored test reports and build cache remain available; no images were published.
 
 ## References
 

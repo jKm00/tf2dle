@@ -32,6 +32,9 @@ Prerequisites
 
 - Docker
 - Node 24 LTS, matching `.nvmrc` and the production image
+- npm 12.2.0 and pnpm 12.10.1. The project pins pnpm in `package.json`; CI and Docker use the same versions.
+
+The app uses Svelte 5 runes, SvelteKit 3, Tailwind 4, Prisma 7, and TypeScript 7. `pnpm check` runs both the Svelte checker and native TypeScript 7 `tsc`. Kit and Svelte tooling still need Microsoft's TS6 compiler-API compatibility package, installed under `typescript`; the native TS7 compiler is installed under `@typescript/native`. Neither check replaces the other.
 
 ### Step by step
 
@@ -56,6 +59,8 @@ pnpm db:client
 
 The script uses the installed Prisma CLI from the lockfile. CLI and client versions are pinned together; it does not download a newer CLI through `dlx`.
 
+Generation runs Kit sync first, because Prisma reads the Kit-generated tsconfig. It does not need a database connection. Generate before checking, testing, or building a fresh checkout.
+
 5. Apply prisma migration to your local database
 
 ```
@@ -78,6 +83,8 @@ pnpm dev
 
 Publishing a GitHub release runs **Release**, which builds and publishes `ghcr.io/edvardsen-dev/tf2dle/sveltekit` with the release tag and `latest`, then calls the shared deployment workflow. The build pins `PUBLIC_CDN_URL` to the release commit SHA, so production image URLs match the app build. Local development serves images from `/images`.
 
+Kit 3 configuration lives in `vite.config.ts`. The production entry point is `server.mjs`, which loads the generated Node handler. Compose maps the existing deployment `ORIGIN` setting to `APP_ORIGIN`. The entry point derives canonical host/protocol headers from that runtime origin instead of trusting client-supplied forwarded headers. This preserves runtime deployment configuration without baking an origin into the image or disabling CSRF checks. Direct local HTTP runs can omit `APP_ORIGIN`; deployments behind HTTPS proxies must supply their public HTTP(S) origin without a path, credentials, or query string.
+
 To deploy an existing image or roll back, run **Deploy** from `main` in GitHub Actions and enter its exact version tag, including `v` if present. `latest` is not accepted. This workflow does not build or publish an image. The shared workflow authenticates to GHCR and checks the selected image's manifest on the Actions runner before connecting to the VM, so an inaccessible image fails before server files are changed. Both workflows use the current default branch's Compose file and deployment script.
 
 Server deployments are serialized across both workflows. After the selected app image responds successfully on port 3010, deployment removes unused local images from this app's exact repository. Images referenced by running or stopped containers, images with tags or digest references under another repository, unrelated images, and database volumes are preserved. Existing dangling images without an identifiable repository are left alone. GHCR images are not deleted; deploying a removed local version pulls it again.
@@ -96,7 +103,7 @@ pnpm exec playwright install
 
 ### Isolated integration database
 
-Integration tests start their own production preview at `http://127.0.0.1:4173` and refuse to use a development database. Stop any preview already using that port. Tests run serially because API regression tests seed and inspect shared database rows.
+Integration tests build the app and start the actual production entry point at `http://127.0.0.1:4173`; they refuse to use a development database. Stop any server already using that port. Tests run serially because API regression tests seed and inspect shared database rows.
 
 Start a disposable PostgreSQL instance without mounting your development data:
 

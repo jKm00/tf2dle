@@ -134,8 +134,10 @@ for (const fixture of modes) {
 		await expect(page.getByTestId('dialog')).toBeVisible();
 		await expect(page.getByTestId('dialog').getByText(fixture.name, { exact: true })).toBeVisible();
 		await page.getByRole('button', { name: 'Close', exact: true }).click();
+		await page.clock.runFor(250);
+		await expect(page.getByTestId('dialog')).not.toBeVisible();
 		await expect(page.getByTestId('completed-message')).toBeVisible();
-		await expect(page.getByTestId('share-result')).toBeVisible();
+		await expect(page.getByTestId('completed-message').getByTestId('share-result')).toBeVisible();
 		expect(
 			await page.evaluate((key) => localStorage.getItem(key), `${fixture.storage}_stats`)
 		).toBe('[1]');

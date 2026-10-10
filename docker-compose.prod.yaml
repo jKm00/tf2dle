@@ -1,6 +1,7 @@
 services:
   app:
     image: ${IMAGE_URL}
+    stop_grace_period: 35s
     environment:
       APP_ORIGIN: ${ORIGIN}
       DATABASE_URL: ${DATABASE_URL}

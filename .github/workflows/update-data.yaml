@@ -95,6 +95,7 @@ jobs:
         env:
           PUBLIC_APP_VERSION: data-update-check
         run: |
+          npm install --global npm@12.2.0
           pnpm install --frozen-lockfile
           pnpm db:client
           pnpm check

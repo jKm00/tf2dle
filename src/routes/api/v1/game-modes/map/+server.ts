@@ -1,5 +1,6 @@
 import { mapService } from '#lib/server/services/MapService.ts';
 import MetricsService from '#lib/server/services/MetricsService.ts';
+import type { RequestEvent } from './$types.js';
 
 /**
  * Returns the info of todays map
@@ -25,7 +26,7 @@ export async function GET() {
  * the name of the map to check in the field 'guess' ({ guess: string})
  * @returns MapGuessResponse
  */
-export async function POST({ request }) {
+export async function POST({ request }: RequestEvent) {
 	const { guess, numberOfGuesses } = await request.json();
 
 	const result = await mapService.validateGuess(guess);
