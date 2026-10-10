@@ -90,7 +90,7 @@ Status: complete. Kit 3, native TS7, Tailwind 4, runtime origin handling and all
 - [x] Add package `#lib` imports and replace `$lib` references, including explicit module filenames/extensions, test mocks, and component-generator aliases.
 - [x] Replace `$app/stores` with `$app/state`; update reactive consumers and mocks rather than doing an import-only replacement.
 - [x] Update `$app/environment`, hook type imports, and TypeScript config/include/exclude settings.
-- [x] Use adapter-node's standard entry point and Kit 3's build-time `paths.origin`. Pass `ORIGIN` during image builds; changing origins now requires rebuilding. Verify same-origin forms, rejected cross-origin forms, and spoofed host/proxy headers without disabling CSRF checks.
+- [x] Use adapter-node's standard entry point with runtime origin handling from Nginx's overwritten host/protocol headers. Leave `paths.origin` unset, bind the backend to loopback, and build without `ORIGIN`. Verify HTTP/HTTPS origins, nonstandard ports, and rejected cross-origin forms without disabling CSRF checks.
 - [x] Upgrade Vite, its Svelte plugin, Vitest, svelte-check, jsdom, and TypeScript. Use TS7 native `tsc` plus Microsoft's TS6 API compatibility package for Kit/Svelte tools; retain full Svelte diagnostics.
 - [x] Migrate Tailwind 4 with its Vite plugin, CSS theme/configuration, and current tailwind-merge/tailwind-variants. Preserve theme colors, utility behavior, dialogs, focus styling, and responsive layouts.
 - [x] Review removed/deprecated error, navigation, environment, and response APIs actually used by this app.

@@ -1,6 +1,6 @@
 import test, { expect } from '@playwright/test';
 
-test('Production origin rejects cross-origin forms and ignores spoofed proxy headers', async ({
+test('Runtime origin rejects cross-origin forms and uses the proxy host', async ({
 	request,
 	baseURL
 }) => {
@@ -8,8 +8,8 @@ test('Production origin rejects cross-origin forms and ignores spoofed proxy hea
 		headers: {
 			origin: baseURL!,
 			host: 'attacker.example',
-			'x-forwarded-proto': 'https',
-			'x-forwarded-host': 'attacker.example',
+			'x-forwarded-proto': 'http',
+			'x-forwarded-host': new URL(baseURL!).host,
 			'x-forwarded-port': '9999'
 		},
 		form: { password: 'wrong-migration-password' }
@@ -22,6 +22,29 @@ test('Production origin rejects cross-origin forms and ignores spoofed proxy hea
 	});
 	expect(crossOrigin.status()).toBe(403);
 	expect((await request.get('/admin/logs')).status()).toBe(401);
+});
+
+test('One build accepts different public HTTPS origins supplied at runtime', async ({
+	request
+}) => {
+	for (const origin of ['https://tf2dle.example', 'https://preview.tf2dle.example:8443']) {
+		const headers = {
+			origin,
+			'x-forwarded-proto': 'https',
+			'x-forwarded-host': new URL(origin).host
+		};
+		const sameOrigin = await request.post('/admin/login', {
+			headers,
+			form: { password: 'wrong-migration-password' }
+		});
+		expect(sameOrigin.status()).toBe(400);
+
+		const crossOrigin = await request.post('/admin/login', {
+			headers: { ...headers, origin: 'https://attacker.example' },
+			form: { password: 'migration-test-password' }
+		});
+		expect(crossOrigin.status()).toBe(403);
+	}
 });
 
 test('Admin rejects wrong passwords and protects logs across login, reload, and logout', async ({

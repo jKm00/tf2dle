@@ -3,10 +3,8 @@ WORKDIR /app
 
 ARG PUBLIC_CDN_URL
 ARG PUBLIC_APP_VERSION=dev
-ARG ORIGIN
 ENV PUBLIC_CDN_URL=$PUBLIC_CDN_URL
 ENV PUBLIC_APP_VERSION=$PUBLIC_APP_VERSION
-ENV ORIGIN=$ORIGIN
 
 # Install pnpm
 RUN npm install -g npm@12.2.0 && npm install -g pnpm@12.10.1
@@ -21,7 +19,7 @@ COPY . .
 # Generate Prisma client
 RUN pnpm db:client
 
-RUN test -n "$ORIGIN" && pnpm check && pnpm build
+RUN pnpm check && pnpm build
 RUN pnpm prune --production
 
 FROM node:24-alpine
