@@ -3,10 +3,12 @@ services:
     image: ${IMAGE_URL}
     stop_grace_period: 35s
     environment:
+      PROTOCOL_HEADER: x-forwarded-proto
+      HOST_HEADER: x-forwarded-host
       DATABASE_URL: ${DATABASE_URL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     ports:
-      - 3010:3000
+      - 127.0.0.1:3010:3000
     depends_on:
       - db
     networks:

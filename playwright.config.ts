@@ -19,7 +19,8 @@ const config: PlaywrightTestConfig = {
 		env: {
 			PORT: '4173',
 			HOST: '127.0.0.1',
-			ORIGIN: 'http://127.0.0.1:4173'
+			PROTOCOL_HEADER: 'x-forwarded-proto',
+			HOST_HEADER: 'x-forwarded-host'
 		},
 		port: 4173,
 		timeout: 180000,
@@ -31,6 +32,11 @@ const config: PlaywrightTestConfig = {
 	use: {
 		trace: 'on-first-retry',
 		baseURL: 'http://127.0.0.1:4173',
+		// The direct test connection supplies the headers Nginx sets in production.
+		extraHTTPHeaders: {
+			'x-forwarded-proto': 'http',
+			'x-forwarded-host': '127.0.0.1:4173'
+		},
 		timezoneId: 'UTC'
 	},
 	reporter: 'html'

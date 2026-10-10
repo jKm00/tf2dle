@@ -83,9 +83,11 @@ pnpm dev
 
 Publishing a GitHub release runs **Release**, which builds and publishes `ghcr.io/edvardsen-dev/tf2dle/sveltekit` with the release tag and `latest`, then calls the shared deployment workflow. The build pins `PUBLIC_CDN_URL` to the release commit SHA, so production image URLs match the app build. Local development serves images from `/images`.
 
-Kit 3 configuration lives in `vite.config.ts`. Production runs the standard adapter-node entry point with `node build`. Kit's `paths.origin` uses the build-time `ORIGIN` value, so request URLs and CSRF checks use the canonical origin rather than client-supplied host or forwarded headers. Release builds pass the existing GitHub `ORIGIN` secret as a Docker build argument. It must be an HTTP(S) origin without a trailing slash, path, credentials, query, or fragment. Docker builds require this argument; local `pnpm build` defaults to `http://localhost:3000`. `pnpm dev` uses the development server's origin instead.
+Kit 3 configuration lives in `vite.config.ts`. Production runs the standard adapter-node entry point with `node build`, with `paths.origin` unset. Compose sets `PROTOCOL_HEADER=x-forwarded-proto` and `HOST_HEADER=x-forwarded-host`. Adapter-node derives the public origin at request time from these headers, and Kit uses that origin for request URLs and CSRF checks. Builds do not need an origin, and the same image can serve different public origins without rebuilding. Kit 3 no longer reads the old runtime `ORIGIN` variable.
 
-Changing the public origin requires rebuilding the image. Setting `ORIGIN` at container startup does not change it. For a local production check on another port, build with the matching origin, then start the generated server, for example `ORIGIN=http://localhost:4173 pnpm build` followed by `PORT=4173 node --env-file=.env build`. Use a fully expanded `DATABASE_URL` in that environment file, since Node's env-file loader does not expand `${...}` placeholders.
+Nginx on the VM supplies the public origin at runtime. Its template in `../iac/roles/proxy/templates/nginx.j2` overwrites `X-Forwarded-Proto` with `$scheme` and `X-Forwarded-Host` with `$host`; the site configuration in `../iac/roles/proxy/vars/main.yaml` proxies TF2DLE to `127.0.0.1:3010`. Compose binds the app port only to loopback so public clients cannot bypass Nginx and supply their own trusted headers. No custom application server is needed. Configure public domains in Nginx rather than in the image build or an `ORIGIN` secret.
+
+`pnpm dev` and `pnpm preview` handle their own development origins. For a container-based local production check, `docker compose -f docker-compose.test.yaml up --build` uses a standard Nginx proxy at `http://localhost:3000` to forward the local HTTP origin. A direct `node build` run defaults to an HTTPS request origin unless the configured protocol header supplies another protocol.
 
 To deploy an existing image or roll back, run **Deploy** from `main` in GitHub Actions and enter its exact version tag, including `v` if present. `latest` is not accepted. This workflow does not build or publish an image. The shared workflow authenticates to GHCR and checks the selected image's manifest on the Actions runner before connecting to the VM, so an inaccessible image fails before server files are changed. Both workflows use the current default branch's Compose file and deployment script.
 
@@ -105,7 +107,7 @@ pnpm exec playwright install
 
 ### Isolated integration database
 
-Integration tests build the app and start the actual production entry point at `http://127.0.0.1:4173`; they refuse to use a development database. Stop any server already using that port. Tests run serially because API regression tests seed and inspect shared database rows.
+Integration tests build the app and start the actual production entry point at `http://127.0.0.1:4173`; they refuse to use a development database. The direct browser/API test connections supply the forwarded headers Nginx sets in production. Origin regression tests also submit HTTPS origins, including a nonstandard port, against the same build and check cross-origin rejection. Stop any server already using that port. Tests run serially because API regression tests seed and inspect shared database rows.
 
 Start a disposable PostgreSQL instance without mounting your development data:
 
