@@ -3,6 +3,8 @@ import { twMerge } from "tailwind-merge";
 import { cubicOut } from "svelte/easing";
 import type { TransitionConfig } from "svelte/transition";
 
+export type WithElementRef<T, U extends HTMLElement = HTMLElement> = T & { ref?: U | null };
+
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }

@@ -20,6 +20,7 @@ uv run python src/maps.py --img-download
 uv run python src/weapons.py --img-download
 uv run python src/cosmetics.py --img-download
 uv run python src/unusuals.py --img-download
+uv run python src/warpaints.py --img-download
 ```
 
 3. Review generated JSON and image counts under `scripts/output/`.
@@ -31,6 +32,7 @@ scripts/output/maps/data.json -> src/lib/server/data/maps.json
 scripts/output/weapons/data.json -> src/lib/server/data/weapons.json
 scripts/output/cosmetics/data.json -> src/lib/server/data/cosmetics.json
 scripts/output/unusuals/data.json -> src/lib/server/data/unusuals.json
+scripts/output/warpaints/data.json -> src/lib/server/data/warpaints.json
 ```
 
 5. Copy images into the app image folders.
@@ -41,6 +43,7 @@ scripts/output/maps/thumbnails/* -> static/images/maps/thumbnails/
 scripts/output/weapons/images/* -> static/images/weapons/thumbnails/
 scripts/output/cosmetics/images/* -> static/images/cosmetics/
 scripts/output/unusuals/images/* -> static/images/unusuals/
+scripts/output/warpaints/images/* -> static/images/warpaints/
 ```
 
 6. Update `DATA_LAST_UPDATED` in `src/lib/appMetadata.ts` to the date the app data was refreshed.

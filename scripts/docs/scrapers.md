@@ -4,12 +4,12 @@ Run all commands from `scripts/` with `uv run python src/<script>.py`.
 
 ## Shared Behavior
 
-| Arg                       | Applies To                                 | Behavior                                                                                 |
-| ------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `--start-date YYYY-MM-DD` | `maps`, `weapons`, `cosmetics`, `unusuals` | Keeps records released on or after the date. Unknown dates are skipped when this is set. |
-| `--img-download`          | `maps`, `weapons`, `cosmetics`, `unusuals` | Downloads images only for included records.                                              |
-| `--dry-run`               | all scripts                                | Performs scraping/selection work but does not write JSON or images.                      |
-| `--limit N`               | all scripts                                | Stops after N included records or processed images.                                      |
+| Arg                       | Applies To                                              | Behavior                                                                                 |
+| ------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `--start-date YYYY-MM-DD` | `maps`, `weapons`, `cosmetics`, `unusuals`, `warpaints` | Keeps records released on or after the date. Unknown dates are skipped when this is set. |
+| `--img-download`          | `maps`, `weapons`, `cosmetics`, `unusuals`, `warpaints` | Downloads images only for included records.                                              |
+| `--dry-run`               | all scripts                                             | Performs scraping/selection work but does not write JSON or images.                      |
+| `--limit N`               | all scripts                                             | Stops after N included records or processed images.                                      |
 
 Dates are normalized to `YYYY-MM-DD` in generated JSON. Output records are sorted by `releaseDate`, then `name`; unknown dates sort last.
 
@@ -72,6 +72,21 @@ output/unusuals/images/<hash>.png
 Collected fields: `name`, `image`, `series`, `type`, `releaseDate`.
 
 The wiki table groups unusual effects by series/update, not exact per-effect release dates. `--start-date` uses the maintained `SERIES_RELEASE_DATES` mapping in `src/unusuals.py`.
+
+## `warpaints.py`
+
+Scrapes the galleries in the TF2 Wiki War Paint collections section. Release dates come from the patch and update links in the same page's update history, matched to each collection's update link. A collection without a matching update date gets `unknown`.
+
+Output:
+
+```text
+output/warpaints/data.json
+output/warpaints/images/<hash>.png
+```
+
+Collected fields: `name`, `link`, `image`, `collection`, `grade`, `wear`, `releaseDate`.
+
+`link` points to the collection on the wiki. `image` is the stable local image ID, independent of the display name. Append `.png` to find the downloaded file; no image paths or source URLs are stored in JSON. Downloads use the original full-resolution PNGs with Factory New wear. Unused paints and older weapon-only skins are outside the collections section and are excluded.
 
 ## `compress.py`
 
