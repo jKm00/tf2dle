@@ -29,6 +29,7 @@
 				delete document.documentElement.dataset.season;
 			}
 
+			// Admin routes unmount this component and must not inherit the game theme.
 			return () => {
 				document.body.style.backgroundImage = previousBackground;
 				if (previousSeason === undefined) delete document.documentElement.dataset.season;

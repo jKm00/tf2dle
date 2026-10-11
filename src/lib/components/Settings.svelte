@@ -13,6 +13,7 @@
 	import MuteUpdateNotificationsToggle from '#lib/features/patchNotes/components/mute-update-notifications-toggle.svelte';
 	import HideTimerToggle from '#lib/components/HideTimerToggle.svelte';
 
+	// Bits UI actions leave closing to us, so track the active confirmation.
 	let resetTarget = $state<string | null>(null);
 
 	function clearStat(gamemode: string, stat: UseStats) {

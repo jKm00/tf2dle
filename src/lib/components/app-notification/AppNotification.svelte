@@ -14,6 +14,7 @@
 
 	let mounted = $state(false);
 
+	// Seed the persistent store once from the initial notification prop.
 	const notificationStore = useLocalStorage(
 		'app_notification',
 		untrack(() => (notification ? { version: notification.version, show: true } : null))

@@ -8,7 +8,7 @@
 	import { untrack } from 'svelte';
 	import type { PageProps } from './$types.js';
 
-	let { data, form }: Pick<PageProps, 'data' | 'form'> = $props();
+	let { data, form }: PageProps = $props();
 
 	let type = $state<NotificationLevel>(
 		untrack(() => (data.notification?.type as NotificationLevel) ?? NotificationLevel.INFO)

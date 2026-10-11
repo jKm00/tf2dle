@@ -3,7 +3,7 @@
 	import * as Card from '#lib/components/ui/card/index.ts';
 	import type { PageProps } from './$types.js';
 
-	let { form }: Pick<PageProps, 'form'> = $props();
+	let { form }: PageProps = $props();
 </script>
 
 <main class="mx-auto grid min-h-[55vh] w-full max-w-md content-center px-4">

@@ -8,7 +8,7 @@
 	import AdminLogs from './AdminLogs.svelte';
 	import KpiCard from './KpiCard.svelte';
 
-	let { data }: Pick<PageProps, 'data'> = $props();
+	let { data }: PageProps = $props();
 
 	let pendingMetricsLoggingEnabled = $state<boolean | null>(null);
 	const metricsLoggingEnabled = $derived(
