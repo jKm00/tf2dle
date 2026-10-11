@@ -37,6 +37,8 @@ pnpm build      # Production build
 
 See [testing](testing.md) for the integration database setup and browser tests, and [Prisma commands](prisma-commands.md) for database tasks.
 
+See [future game modes](plans/game-mode-ideas.md) for ranked ideas, Wiki sources, and the Who said it? gameplay plan.
+
 Create a branch from `main`, open a pull request, and wait for passing checks and approval before merging.
 
 ## Deployment
