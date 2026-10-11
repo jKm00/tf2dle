@@ -2,8 +2,8 @@
 	import * as Card from '#lib/components/ui/card/index.ts';
 	import dayjs from '#lib/configs/dayjsConfig.ts';
 	import WinterDecore from '#lib/features/theme/components/winter/WinterDecore.svelte';
-	import { gameModes } from '#lib/game-modes.ts';
 	import { onMount } from 'svelte';
+	import { gameModes } from '#lib/features/gamemodes/common/gamemodes.ts';
 
 	type ModeStatus = {
 		state: 'completed' | 'started' | 'not-started';
@@ -14,17 +14,14 @@
 
 	onMount(() => {
 		modeStatuses = Object.fromEntries(
-			gameModes.map((gameMode) => [gameMode.href, getModeStatus(gameMode.href)])
+			gameModes.map((gameMode) => [gameMode.id, getModeStatus(gameMode.id)])
 		);
 	});
 
-	function getModeStatus(href: string): ModeStatus {
-		const storageKey = storageKeyByHref[href];
-		if (!storageKey) return { state: 'not-started', guesses: 0 };
-
-		const guesses = parseJson<unknown[]>(localStorage.getItem(`${storageKey}_guesses`), []);
+	function getModeStatus(id: string): ModeStatus {
+		const guesses = parseJson<unknown[]>(localStorage.getItem(`${id}_guesses`), []);
 		const lastEvent = parseJson<{ event: string; date: string } | null>(
-			localStorage.getItem(`${storageKey}_last_event`),
+			localStorage.getItem(`${id}_last_event`),
 			null
 		);
 		const isToday = lastEvent?.date && dayjs.utc(lastEvent.date).isSame(dayjs.utc(), 'date');
@@ -49,14 +46,6 @@
 			return fallback;
 		}
 	}
-
-	const storageKeyByHref: Record<string, string> = {
-		'/weapon': 'weapon',
-		'/weapon-2': 'weapon_2',
-		'/map': 'map',
-		'/cosmetic': 'cosmetic',
-		'/unusual': 'unusual'
-	};
 </script>
 
 <Card.Root class="relative">
@@ -68,7 +57,7 @@
 		<WinterDecore />
 		<ul class="grid gap-2">
 			{#each gameModes.filter((g) => !g.disabled) as gameMode}
-				{@const status = modeStatuses[gameMode.href]}
+				{@const status = modeStatuses[gameMode.id]}
 				<li>
 					<a
 						href={`/game-modes${gameMode.href}`}

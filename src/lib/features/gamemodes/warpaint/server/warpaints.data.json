@@ -1,0 +1,1469 @@
+[
+	{
+		"name": "Anodized Aloha",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "7595369081124629595",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Autumn Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "1701039891043427112",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Freelance",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Backwoods Boomstick Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "12265931246816899279",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Bamboo Brushed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "2968961831867318624",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Bank Rolled",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "10407154822025893732",
+		"collection": "Infernal Reward Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Bloom Buffed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "16897543530232710954",
+		"collection": "Infernal Reward Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Bonk Varnished",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "9114435140830858502",
+		"collection": "Infernal Reward Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Bovine Blazemaker Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "14491594851523575708",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Cardboard Boxed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "5549854477946732636",
+		"collection": "Infernal Reward Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Carpet Bomber Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "4979578320499300481",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Civic Duty Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "5280590024795988187",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Civilian",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Civil Servant Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "1640098751970055179",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Civilian",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Clover Camo'd",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "14942076864519821803",
+		"collection": "Infernal Reward Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Croc Dusted",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "11375625389397659975",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Dead Reckoner Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "4487265821247293747",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Dragon Slayer",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Saxton_Select_Collection",
+		"image": "7044619310711154705",
+		"collection": "Saxton Select Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Dream Piped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "9439858282601495775",
+		"collection": "Infernal Reward Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Fire Glazed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "10098291492391477928",
+		"collection": "Infernal Reward Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Forest Fire Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "440333978475947051",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Freedom Wrapped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "12680571337327463957",
+		"collection": "Infernal Reward Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Iron Wood Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "10578724569003437649",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Freelance",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Kill Covered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "6162128678722464887",
+		"collection": "Infernal Reward Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Leopard Printed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "721261393881919339",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Macabre Web Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "1245592575443624900",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Freelance",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Macaw Masked",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "17032317890312320192",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Mannana Peeled",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "5784362863868269911",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Masked Mender Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "11938249738496840667",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Merc Stained",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "17019031162644961417",
+		"collection": "Infernal Reward Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Night Owl Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "3790576706175106627",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Nutcracker Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "18122953181282539613",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Civilian",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Park Pigmented",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "17374190133608294931",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Pizza Polished",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "3044614765772097168",
+		"collection": "Infernal Reward Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Pi\u00f1a Polished",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "277401434105016859",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Plaid Potshotter Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "3356894045988385842",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Freelance",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Quack Canvassed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "12520408745876638689",
+		"collection": "Infernal Reward Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Sax Waxed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "11793822034384291537",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Smalltown Bringdown Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Contract_Campaigner_Collection",
+		"image": "6599580919159444295",
+		"collection": "Contract Campaigner Collection",
+		"grade": "Civilian",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Star Crossed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Infernal_Reward_Collection",
+		"image": "2302466628759757967",
+		"collection": "Infernal Reward Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Tiger Buffed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "14812478938273925899",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Woodland Warrior Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "2424690144324234546",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Woodsy Widowmaker Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "6938304367271237993",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Wrapped Reviver Mk.II",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Decorated_War_Hero_Collection",
+		"image": "1053914341219122614",
+		"collection": "Decorated War Hero Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Yeti Coated",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Jungle_Jackpot_Collection",
+		"image": "15797820034101219479",
+		"collection": "Jungle Jackpot Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-10-20"
+	},
+	{
+		"name": "Alien Tech",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "7905143429675219696",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Bomber Soul",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "12488340809166923256",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Cabin Fevered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "971331006993244878",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Cosmic Calamity",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "14032241628869167741",
+		"collection": "Winter 2017 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Damascus and Mahogany",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "11745628782831855299",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Dovetailed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "5701260009596599859",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Geometrical Teams",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "5801748169535969180",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Hana",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "8698057634414887902",
+		"collection": "Winter 2017 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Hazard Warning",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "6085686583653834810",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Jazzy",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "6867072937579746385",
+		"collection": "Winter 2017 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Miami Element",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "1050248514932034516",
+		"collection": "Winter 2017 Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Mosaic",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "7671732119526747641",
+		"collection": "Winter 2017 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Neo Tokyo",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "6650907721662290537",
+		"collection": "Winter 2017 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Polar Surprise",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "14967996939695781573",
+		"collection": "Winter 2017 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Smissmas Sweater",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Mann_Co._Events_Collection",
+		"image": "10934474216710899242",
+		"collection": "Mann Co. Events Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Uranium",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2017_Collection",
+		"image": "1347795460995040456",
+		"collection": "Winter 2017 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2017-12-21"
+	},
+	{
+		"name": "Calavera Canvas",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "9757089633574838961",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Electroshocked",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "17124371184786839145",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Ghost Town",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "2364964617006894112",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Haunted Ghosts",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "11998663236564982463",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Horror Holiday",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "14219889579613908584",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Skull Study",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "9139275504542645771",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Spectral Shimmered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "192741184730079876",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Spirit of Halloween",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "14983099356886067642",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Totally Boned",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "1740158962975519043",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Tumor Toasted",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_X_Collection",
+		"image": "6884015116854274358",
+		"collection": "Scream Fortress X Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2018-10-19"
+	},
+	{
+		"name": "Alpine",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "9652489384258689205",
+		"collection": "Winter 2019 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Frost Ornamented",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "2499285149141201897",
+		"collection": "Winter 2019 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Gift Wrapped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "905136495880779047",
+		"collection": "Winter 2019 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Igloo",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "471573914708874033",
+		"collection": "Winter 2019 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Seriously Snowed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "5504507980712335190",
+		"collection": "Winter 2019 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Sleighin' Style",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "18390449725118946434",
+		"collection": "Winter 2019 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Smissmas Camo",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "393162234641572182",
+		"collection": "Winter 2019 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Smissmas Village",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "1614885593831799302",
+		"collection": "Winter 2019 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Snow Covered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "6233849971710290132",
+		"collection": "Winter 2019 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Winterland Wrapped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2019_Collection",
+		"image": "7368657923505141564",
+		"collection": "Winter 2019 Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2019-12-16"
+	},
+	{
+		"name": "Candy Coated",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "3328264350012569573",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Crawlspace Critters",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "12079180914114426966",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Death Deluxe",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "17772597416103654015",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Eyestalker",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "10263102087329042658",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Gourdy Green",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "12686884302727009074",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Helldriver",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "15077089650313207427",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Mummified Mimic",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "11442272471432971027",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Organ-ically Hellraised",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "11835666777290588256",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Portal Plastered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "9993458010060503495",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Pumpkin Pied",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "2324165355439479787",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Raving Dead",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "1204303409870273999",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Spectrum Splattered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "10775313730180108562",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Spider Season",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "17610109967561752062",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Spider's Cluster",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "12849451144852702208",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Sweet Toothed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XII_Collection",
+		"image": "445298984159049062",
+		"collection": "Scream Fortress XII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-10-01"
+	},
+	{
+		"name": "Cookie Fortress",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "12892076492530311071",
+		"collection": "Winter 2020 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Elfin Enamel",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "15946894900509959821",
+		"collection": "Winter 2020 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Frosty Delivery",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "4415860533479581167",
+		"collection": "Winter 2020 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Frozen Aurora",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "6258738244780432038",
+		"collection": "Winter 2020 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Gifting Mann's Wrapping Paper",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "950266172046378856",
+		"collection": "Winter 2020 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Gingerbread Winner",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "3148768337737876848",
+		"collection": "Winter 2020 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Glacial Glazed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "7500496848611443562",
+		"collection": "Winter 2020 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Peppermint Swirl",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "15556229765639087665",
+		"collection": "Winter 2020 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Saccharine Striped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "17705774526639924640",
+		"collection": "Winter 2020 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Smissmas Spycrabs",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "13354346883342693299",
+		"collection": "Winter 2020 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Snow Globalization",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "255004105972643911",
+		"collection": "Winter 2020 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Snowflake Swirled",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "11875132036375892070",
+		"collection": "Winter 2020 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Starlight Serenity",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Winter_2020_Collection",
+		"image": "16569139494219081512",
+		"collection": "Winter 2020 Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2020-12-03"
+	},
+	{
+		"name": "Broken Bones",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "15987710634218686726",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Kiln and Conquer",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "2006320456068881572",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Misfortunate",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "9446969032155951576",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Necromanced",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "1686413463030744055",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Neon-ween",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "9417809973504415722",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Party Phantoms",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "7200265362652317291",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Polter-Guised",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "6810119789527059190",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Potent Poison",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "1741438971666229951",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Sarsaparilla Sprayed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "10102294070143847409",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Searing Souls",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "2579446413637713988",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Simple Spirits",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "10355057162624235849",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Skull Cracked",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "2210366266720015131",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Swashbuckled",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIII_Collection",
+		"image": "18281260896853325173",
+		"collection": "Scream Fortress XIII Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2021-10-05"
+	},
+	{
+		"name": "Bonzo Gnawed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "12787112732594517663",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Chilly Autumn",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "4563244575931271687",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Cream Corned",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "13445553043275767697",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Ghoul Blaster",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "7307039811719472024",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Health and Hell",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "906775181524450620",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Health and Hell (Green)",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "9714261403805595426",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Hypergon",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "1355490617260405838",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Metalized Soul",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "1678016200542108336",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Pumpkin Plastered",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "14625309653446506428",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Sacred Slayer",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "15497120552533932228",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Sunriser",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XIV_Collection",
+		"image": "1988738409864640982",
+		"collection": "Scream Fortress XIV Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2022-10-05"
+	},
+	{
+		"name": "Bomb Carrier",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "10831730774018679333",
+		"collection": "Summer 2023 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Business Class",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "14739396157872026193",
+		"collection": "Summer 2023 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Deadly Dragon",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "15867782489058614818",
+		"collection": "Summer 2023 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Mechanized Monster",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "14650788523316521707",
+		"collection": "Summer 2023 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Pacific Peacemaker",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "14685944631169249612",
+		"collection": "Summer 2023 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Secretly Serviced",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "7800768475322682939",
+		"collection": "Summer 2023 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Sky Stallion",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "5697937404856034217",
+		"collection": "Summer 2023 Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Steel Brushed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "4889676401774199415",
+		"collection": "Summer 2023 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Team Serviced",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "4549952859699686992",
+		"collection": "Summer 2023 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Warborn",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2023_Collection",
+		"image": "12509975315449525645",
+		"collection": "Summer 2023 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2023-07-12"
+	},
+	{
+		"name": "Blackout",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "12644065731526499504",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Brawler's Iron",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "9529730030759356284",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Broken Record",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "3777960597117596542",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Gobi Glazed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "5549552096428128543",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Graphite Gripped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "6094537108345824120",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Necropolish",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "12601590427879595402",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Piranha Mania",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "3500314054006050433",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Sleek Greek",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "16012305922682348942",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Stardust",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "15028450004975221463",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Stealth Specialist",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "12574113403399319436",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Team Charged",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "13275952301448501990",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Team Detail",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Scream_Fortress_XVI_Collection",
+		"image": "15127087824157756217",
+		"collection": "Scream Fortress XVI Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2024-10-10"
+	},
+	{
+		"name": "Army Guns",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "18359623991494069656",
+		"collection": "Summer 2026 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Beachy Boy",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "14728109908411823997",
+		"collection": "Summer 2026 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Die'n Dasher",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "17713577582898785000",
+		"collection": "Summer 2026 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Krak-coated",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "9252541636714352479",
+		"collection": "Summer 2026 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Ocean Mapped",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "12073796484012809273",
+		"collection": "Summer 2026 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Sandwich Diner",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "1876044427769006643",
+		"collection": "Summer 2026 Collection",
+		"grade": "Commando",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Sideshow",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "11944420261498333994",
+		"collection": "Summer 2026 Collection",
+		"grade": "Mercenary",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Storage War",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "17664884875079257170",
+		"collection": "Summer 2026 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Taxi Cabbed",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "15908655339619977677",
+		"collection": "Summer 2026 Collection",
+		"grade": "Assassin",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	},
+	{
+		"name": "Team Union",
+		"link": "https://wiki.teamfortress.com/wiki/War_Paint#Summer_2026_Collection",
+		"image": "5499122935790177106",
+		"collection": "Summer 2026 Collection",
+		"grade": "Elite",
+		"wear": "Factory New",
+		"releaseDate": "2026-07-07"
+	}
+]

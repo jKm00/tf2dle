@@ -53,6 +53,23 @@ def unusual_page(*tables):
   return "".join(tables) + '<table class="wikitable"></table>' * 3
 
 
+def warpaint_collection(name="Test Collection", *names, update="Test_Update", grade="elite"):
+  entries = "".join(f'''<li class="gallerybox"><div class="thumb"><img
+    src="/w/images/thumb/a/ab/Backpack_{paint}_War_Paint_Factory_New.png/120px-Backpack_{paint}_War_Paint_Factory_New.png"></div>
+    <div class="gallerytext"><div class="warpaint item-grade {grade}">{paint}</div></div></li>''' for paint in names)
+  return f'''<h3><span class="mw-headline" id="{name.replace(' ', '_')}"><a href="/wiki/{update}">{name}</a></span></h3>
+    <ul class="gallery mw-gallery-traditional">{entries}</ul>'''
+
+
+def warpaint_page(*collections):
+  return '''<h2><span id="War_Paint_Collections">War Paint Collections</span></h2>''' + "".join(collections) + '''
+    <h2><span id="Update_history">Update history</span></h2><div class="update-history-container">
+    <b><a href="/wiki/October_1,_2026_Patch">October 1, 2026 Patch 1</a> (<a href="/wiki/Test_Update">Test Update</a>)</b>
+    <b><a href="/wiki/October_5,_2026_Patch">October 5, 2026 Patch</a> (<a href="/wiki/Test_Update">Test Update</a>)</b>
+    <b><a href="/wiki/January_1,_2000_Patch">January 1, 2000 Patch</a> (<a href="/wiki/Old_Update">Old Update</a>)</b></div>
+    <h2>Unused content</h2>''' + warpaint_collection("Unused Collection", "Unused")
+
+
 class ScraperTests(unittest.TestCase):
   def setUp(self):
     temporary = tempfile.TemporaryDirectory()
@@ -249,6 +266,59 @@ class ScraperTests(unittest.TestCase):
       with self.subTest(name=name), self.assertRaisesRegex(ValueError, "Conflicting duplicate"):
         self.scrape(name, "--limit", "1")
       self.assertFalse((self.root / name / "data.json").exists())
+
+  def test_warpaints_full_resolution_images_metadata_and_resume(self):
+    self.pages["/wiki/War_Paint"] = warpaint_page(warpaint_collection("Test Collection", "Beta", "Alpha"))
+    for name in ("Alpha", "Beta"):
+      self.pages[f"/w/images/a/ab/Backpack_{name}_War_Paint_Factory_New.png"] = png_bytes()
+    self.scrape("warpaints", "--img-download", "--limit", "1")
+    self.assertEqual(self.records("warpaints"), [{
+      "name": "Alpha", "link": common.WIKI_URL + "/wiki/War_Paint#Test_Collection",
+      "image": common.hash_id("Alpha"), "collection": "Test Collection", "grade": "Elite",
+      "wear": "Factory New", "releaseDate": "2026-10-01",
+    }])
+    image = self.root / "warpaints" / "images" / f"{common.hash_id('Alpha')}.png"
+    self.assertEqual(image.read_bytes(), png_bytes())
+    seeds = self.records("warpaints")
+    seeds[0]["image"] = "custom-image-id"
+    (self.root / "warpaints" / "data.json").write_text(json.dumps(seeds))
+    self.urls.clear()
+    self.scrape("warpaints", "--img-download")
+    self.assertEqual([record["name"] for record in self.records("warpaints")], ["Alpha", "Beta"])
+    self.assertEqual(self.records("warpaints")[0]["image"], "custom-image-id")
+    self.assertEqual(self.urls, [common.WIKI_URL + "/wiki/War_Paint",
+                               common.WIKI_URL + "/w/images/a/ab/Backpack_Beta_War_Paint_Factory_New.png"])
+
+  def test_warpaints_date_filter_dry_run_and_section_boundaries(self):
+    self.pages["/wiki/War_Paint"] = warpaint_page(
+      warpaint_collection("Old Collection", "Old", update="Old_Update"),
+      warpaint_collection("Test Collection", "New", grade="freelance"),
+      warpaint_collection("Unknown Collection", "Unknown", update="Unknown_Update"),
+    )
+    result = self.scrape("warpaints", "--start-date", "2026-10-01", "--dry-run", "--img-download")
+    self.assertEqual([record["name"] for record in result["records"]], ["New"])
+    self.assertEqual(result["records"][0]["grade"], "Freelance")
+    self.assertEqual(list(self.root.iterdir()), [])
+
+  def test_warpaints_conflicting_duplicates_and_malformed_entries_fail(self):
+    valid = warpaint_collection("Test Collection", "Alpha")
+    for html in (warpaint_page(valid, warpaint_collection("Other Collection", "Alpha")),
+                 warpaint_page(warpaint_collection("Empty Collection")),
+                 warpaint_page(warpaint_collection("Bad Collection", "Alpha", grade="unknown")),
+                 warpaint_page(valid).replace("_Factory_New.png", "_Battle_Scarred.png"),
+                 warpaint_page(valid).replace('class="update-history-container"', 'class="missing"'),
+                 "<html>Maintenance page</html>"):
+      with self.subTest(html=html), self.assertRaises(ValueError):
+        self.pages["/wiki/War_Paint"] = html
+        self.scrape("warpaints", "--limit", "1")
+      self.assertFalse((self.root / "warpaints" / "data.json").exists())
+
+  def test_warpaints_invalid_download_not_checkpointed(self):
+    self.pages.update({"/wiki/War_Paint": warpaint_page(warpaint_collection("Test Collection", "Alpha")),
+                       "/w/images/a/ab/Backpack_Alpha_War_Paint_Factory_New.png": b"not a PNG"})
+    with self.assertRaises(ValueError):
+      self.scrape("warpaints", "--img-download")
+    self.assertFalse((self.root / "warpaints" / "data.json").exists())
 
   def test_broken_and_empty_sources_fail(self):
     for name, path, empty in (("maps", "/wiki/List_of_maps", map_page()), ("weapons", "/wiki/Weapons", "<table></table>"),
