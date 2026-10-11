@@ -1,172 +1,46 @@
 # TF2DLE
 
-A worlde like game for TF2. Inspired by [wordle](https://www.nytimes.com/games/wordle/index.html), [loldle](https://loldle.net/), and [smidle](https://smidle.net/).
-
-## Structure
-
-```
-- docs/             # Documentation and command cheat-sheats
-
-- prisma/           # Schema and migrations
-
-- scripts/          # Python scripts for collecting tf2 data
-
-- src/              # Sveltekit related filed
-  - lib/
-    - components/   # Global components
-    - composables/  # Global composables
-    - server/       # All server code
-    - dtos.ts       # Types used between server and client
-    - types.ts      # General types
-  - routes/         # App routes
-    - api/          # Api routes
-
-- static            # Static sveltekit files
-
-- tests             # E2E tests
-```
+A Wordle-like game for Team Fortress 2. Inspired by [Wordle](https://www.nytimes.com/games/wordle/index.html), [LoLdle](https://loldle.net/), and [Smidle](https://smidle.net/).
 
 ## Getting started
 
-Prerequisites
+Requires Docker, Node 24 LTS, and pnpm 12.10.1.
 
-- Docker
-- Node 24 LTS, matching `.nvmrc` and the production image
-- npm 12.2.0 and pnpm 12.10.1. The project pins pnpm in `package.json`; CI and Docker use the same versions.
+1. Copy `.env.example` to `.env` and fill in the values.
+2. Install dependencies with `pnpm install --frozen-lockfile`.
+3. Start PostgreSQL with `pnpm db:up` in a separate terminal.
+4. Once the database is ready, run:
 
-The app uses Svelte 5 runes, SvelteKit 3, Tailwind 4, Prisma 7, and TypeScript 7. `pnpm check` runs both the Svelte checker and native TypeScript 7 `tsc`. Kit and Svelte tooling still need Microsoft's TS6 compiler-API compatibility package, installed under `typescript`; the native TS7 compiler is installed under `@typescript/native`. Neither check replaces the other.
-
-### Step by step
-
-1. Add `.env` file. Look at `.env.example` for all the variables needed.
-2. Install dependencies
-
-```
-pnpm install
-```
-
-3. Run local postgres with docker:
-
-```
-pnpm db:up
-```
-
-4. Generate prisma client
-
-```
+```sh
 pnpm db:client
-```
-
-The script uses the installed Prisma CLI from the lockfile. CLI and client versions are pinned together; it does not download a newer CLI through `dlx`.
-
-Generation runs Kit sync first, because Prisma reads the Kit-generated tsconfig. It does not need a database connection. Generate before checking, testing, or building a fresh checkout.
-
-5. Apply prisma migration to your local database
-
-```
 pnpm db:migrate
-```
-
-6. Run application
-
-```
 pnpm dev
 ```
 
-## Workflow
+## Project structure
 
-1. Create a new branch from main where you can develop your feature in piece. Remember to commit regularly!
-2. Create a merge request to main when done. Make sure all workflows pass and wait for approval.
-3. When approved, merge and delete the branch.
+- `src/routes/`: pages and API endpoints
+- `src/lib/`: components, composables, and server code
+- `prisma/`: database schema and migrations
+- `scripts/`: Python data collectors and updater
+- `static/`: local images and other static assets
+- `tests/`: unit and integration tests
+
+## Development
+
+```sh
+pnpm check       # Svelte and TypeScript checks
+pnpm test:unit   # Unit tests
+pnpm lint        # Formatting check
+pnpm build      # Production build
+```
+
+See [testing](testing.md) for the integration database setup and browser tests, and [Prisma commands](prisma-commands.md) for database tasks.
+
+Create a branch from `main`, open a pull request, and wait for passing checks and approval before merging.
 
 ## Deployment
 
-Publishing a GitHub release runs **Release**, which builds and publishes `ghcr.io/edvardsen-dev/tf2dle/sveltekit` with the release tag and `latest`, then calls the shared deployment workflow. The build pins `PUBLIC_CDN_URL` to the release commit SHA, so production image URLs match the app build. Local development serves images from `/images`.
+Publish a GitHub release to build and deploy a new version. To deploy an existing version or roll back, run the **Deploy** workflow from `main` with its exact image tag.
 
-Kit 3 configuration lives in `vite.config.ts`. Production runs the standard adapter-node entry point with `node build`, with `paths.origin` unset. Compose sets `PROTOCOL_HEADER=x-forwarded-proto` and `HOST_HEADER=x-forwarded-host`. Adapter-node derives the public origin at request time from these headers, and Kit uses that origin for request URLs and CSRF checks. Builds do not need an origin, and the same image can serve different public origins without rebuilding. Kit 3 no longer reads the old runtime `ORIGIN` variable.
-
-Nginx on the VM supplies the public origin at runtime. Its template in `../iac/roles/proxy/templates/nginx.j2` overwrites `X-Forwarded-Proto` with `$scheme` and `X-Forwarded-Host` with `$host`; the site configuration in `../iac/roles/proxy/vars/main.yaml` proxies TF2DLE to `127.0.0.1:3010`. Compose binds the app port only to loopback so public clients cannot bypass Nginx and supply their own trusted headers. No custom application server is needed. Configure public domains in Nginx rather than in the image build or an `ORIGIN` secret.
-
-`pnpm dev` and `pnpm preview` handle their own development origins. For a container-based local production check, `docker compose -f docker-compose.test.yaml up --build` uses a standard Nginx proxy at `http://localhost:3000` to forward the local HTTP origin. A direct `node build` run defaults to an HTTPS request origin unless the configured protocol header supplies another protocol.
-
-To deploy an existing image or roll back, run **Deploy** from `main` in GitHub Actions and enter its exact version tag, including `v` if present. `latest` is not accepted. This workflow does not build or publish an image. The shared workflow authenticates to GHCR and checks the selected image's manifest on the Actions runner before connecting to the VM, so an inaccessible image fails before server files are changed. Both workflows use the current default branch's Compose file and deployment script.
-
-Server deployments are serialized across both workflows. After the selected app image responds successfully on port 3010, deployment removes unused local images from this app's exact repository. Images referenced by running or stopped containers, images with tags or digest references under another repository, unrelated images, and database volumes are preserved. Existing dangling images without an identifiable repository are left alone. GHCR images are not deleted; deploying a removed local version pulls it again.
-
-Rollback selects an older app image but reapplies the current Compose configuration and secrets to the whole stack. It can also pull a newer `postgres:14-alpine` image and recreate the database container. Prisma migrations run at app startup and are not reversed, so the selected version must be compatible with the current database. A failed startup check leaves old images available but does not automatically restore the previous container.
-
-## Testing
-
-### Prerequisites
-
-Playwright browsers
-
-```
-pnpm exec playwright install
-```
-
-### Isolated integration database
-
-Integration tests build the app and start the actual production entry point at `http://127.0.0.1:4173`; they refuse to use a development database. The direct browser/API test connections supply the forwarded headers Nginx sets in production. Origin regression tests also submit HTTPS origins, including a nonstandard port, against the same build and check cross-origin rejection. Stop any server already using that port. Tests run serially because API regression tests seed and inspect shared database rows.
-
-Start a disposable PostgreSQL instance without mounting your development data:
-
-```sh
-docker run --detach --rm --name tf2dle-migration-postgres \
-  -p 127.0.0.1:55432:5432 \
-  -e POSTGRES_USER=tf2dle_test -e POSTGRES_PASSWORD=tf2dle_test \
-  -e POSTGRES_DB=tf2dle_migration_test postgres:14-alpine
-docker exec tf2dle-migration-postgres pg_isready -U tf2dle_test -d tf2dle_migration_test
-```
-
-Wait for `pg_isready` to report that it accepts connections. In the test shell, explicitly override local configuration before running migrations or tests:
-
-```sh
-export DATABASE_URL=postgresql://tf2dle_test:tf2dle_test@127.0.0.1:55432/tf2dle_migration_test
-export ADMIN_PASSWORD=migration-test-password
-export CRON_SECRET=migration-test-secret
-export PUBLIC_CDN_URL=
-export PUBLIC_APP_VERSION=test
-pnpm db:client
-pnpm db:migrate
-pnpm build
-pnpm check
-pnpm test
-```
-
-The database guard permits only this database/user on loopback, on port 55432 locally or 5432 in CI. Test credentials are public fixtures, not deployment credentials. Stop only the disposable container when finished:
-
-```sh
-docker stop tf2dle-migration-postgres
-```
-
-### Test commands
-
-```sh
-# Integration tests, using the explicit environment above
-pnpm test:integration
-
-# With trace viewer
-pnpm test:integration --trace on
-
-# Specific test file
-pnpm test:integration <filename.test.ts>
-
-# Specific test based on name
-pnpm test:integration -g "name of test"
-
-# Unit tests, non-watch mode
-pnpm test:unit
-
-# Unit tests, watch mode
-pnpm test:unit:watch
-
-# All JavaScript tests
-pnpm test
-```
-
-Run the offline Python suite from `scripts` with `uv run --locked python -m unittest discover -s tests -v`.
-
-The tracked upgrade checklist is [toolchain-migration.md](plans/toolchain-migration.md).
-
-Use [this](https://playwright.dev/docs/running-tests) for more info on flags to run with tests
+See [deployment](deployment.md) for runtime configuration and rollback behavior.

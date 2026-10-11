@@ -2,7 +2,7 @@ import { enhance, type SubmitFunction } from '$app/forms';
 import dayjs from '#lib/configs/dayjsConfig.ts';
 import { buildDashboardMetrics, resolveMonthSelection } from '#lib/server/metricsUtils.ts';
 import { cleanup, render, within } from '@testing-library/svelte';
-import { tick } from 'svelte';
+import { createRawSnippet, tick } from 'svelte';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import AdminLayout from '../../src/routes/admin/+layout.svelte';
 import MetricsPage from '../../src/routes/admin/+page.svelte';
@@ -22,6 +22,7 @@ vi.mock('chart.js/auto', () => ({
 }));
 
 const now = dayjs.utc('2026-07-26T12:00:00Z');
+const children = createRawSnippet(() => ({ render: () => '<p>Admin page content</p>' }));
 
 beforeEach(() => {
 	vi.stubGlobal(
@@ -53,7 +54,8 @@ describe('admin navigation', () => {
 			url: new URL('http://localhost/admin?month=2026-06'),
 			data: {}
 		});
-		const { getByRole, queryByRole } = render(AdminLayout);
+		const { getByRole, queryByRole, getByText } = render(AdminLayout, { children });
+		expect(getByText('Admin page content')).toBeTruthy();
 		const metrics = getByRole('link', { name: 'Metrics' });
 		const notification = getByRole('link', { name: 'Notification' });
 		expect(metrics.getAttribute('href')).toBe('/admin');
@@ -83,7 +85,7 @@ describe('admin navigation', () => {
 			url: new URL('http://localhost/admin/login'),
 			data: {}
 		});
-		const { getByRole, queryByRole } = render(AdminLayout);
+		const { getByRole, queryByRole } = render(AdminLayout, { children });
 		expect(queryByRole('navigation', { name: 'Admin navigation' })).toBeNull();
 		expect(queryByRole('button', { name: 'Logout' })).toBeNull();
 		expect(getByRole('link', { name: 'Open app' })).toBeTruthy();
@@ -93,6 +95,8 @@ describe('admin navigation', () => {
 describe('metrics menu bar', () => {
 	it('contains month navigation and disables next month for the current month', async () => {
 		const { getByRole, rerender } = render(MetricsPage, {
+			params: {},
+			form: null,
 			data: {
 				notification: null,
 				metrics: buildDashboardMetrics(resolveMonthSelection('2026-06', now), [], [], now),
@@ -126,6 +130,8 @@ describe('metrics menu bar', () => {
 
 	it('preserves the logging action and gives immediate feedback while it submits', async () => {
 		const { getByRole } = render(MetricsPage, {
+			params: {},
+			form: null,
 			data: {
 				notification: null,
 				metrics: buildDashboardMetrics(resolveMonthSelection(null, now), [], [], now),

@@ -18,6 +18,7 @@ afterEach(() => {
 describe('admin notification form', () => {
 	it('keeps the edited fields when applying a successful save', async () => {
 		const { getByLabelText } = render(NotificationPage, {
+			params: {},
 			data: { notification: null },
 			form: null
 		});
@@ -60,6 +61,7 @@ describe('admin notification form', () => {
 	it('dismisses success after three seconds and restarts the delay for another save', async () => {
 		vi.useFakeTimers();
 		const { getByText, queryByText, rerender, unmount } = render(NotificationPage, {
+			params: {},
 			data: { notification: null },
 			form: { action: 'update', success: true }
 		});
@@ -83,6 +85,7 @@ describe('admin notification form', () => {
 	it('leaves save errors visible and hides any previous success message', async () => {
 		vi.useFakeTimers();
 		const { getByRole, queryByText, rerender } = render(NotificationPage, {
+			params: {},
 			data: { notification: null },
 			form: { action: 'update', success: true }
 		});
@@ -96,6 +99,7 @@ describe('admin notification form', () => {
 
 	it('requires a non-empty message and disables visibility until the first save', async () => {
 		const { getByRole, getByLabelText, getByText } = render(NotificationPage, {
+			params: {},
 			data: { notification: null },
 			form: null
 		});
@@ -120,7 +124,7 @@ describe('admin notification form', () => {
 		};
 		const { getByRole, getByLabelText, getByText, queryByText, rerender } = render(
 			NotificationPage,
-			{ data: { notification }, form: null }
+			{ params: {}, data: { notification }, form: null }
 		);
 		const save = getByRole('button', { name: 'Save notification' }) as HTMLButtonElement;
 		const message = 'Disable the notification before saving changes.';
@@ -144,6 +148,7 @@ describe('admin notification form', () => {
 
 	it('shows saving feedback and keeps edits after a network error', async () => {
 		const { getByRole, getByLabelText } = render(NotificationPage, {
+			params: {},
 			data: { notification: null },
 			form: null
 		});
@@ -198,6 +203,7 @@ describe('notification visibility', () => {
 				enabled: initialEnabled
 			};
 			const { getByRole, getByLabelText, rerender } = render(NotificationPage, {
+				params: {},
 				data: { notification },
 				form: null
 			});
@@ -264,6 +270,7 @@ describe('notification visibility', () => {
 				enabled: false
 			};
 			const { getByRole, getByLabelText, rerender } = render(NotificationPage, {
+				params: {},
 				data: { notification },
 				form: null
 			});

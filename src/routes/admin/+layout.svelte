@@ -3,7 +3,7 @@
 	import { Activity, ExternalLink, LogOut } from '@lucide/svelte';
 	import type { Snippet } from 'svelte';
 
-	let { children }: { children?: Snippet } = $props();
+	let { children }: { children: Snippet } = $props();
 	const isLoginPage = $derived(page.route.id === '/admin/login');
 </script>
 
@@ -80,6 +80,6 @@
 	</header>
 
 	<div class="py-8">
-		{@render children?.()}
+		{@render children()}
 	</div>
 </div>

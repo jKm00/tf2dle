@@ -65,7 +65,7 @@ test('Colorblind mode preserves the mounted weapon game for mouse and keyboard t
 });
 
 for (const failure of ['action failure', 'server error', 'network error'] as const) {
-	test(`Colorblind mode shows pending feedback and restores the saved preference after ${failure}`, async ({
+	test(`Colorblind mode silently restores the saved preference after ${failure}`, async ({
 		page,
 		context
 	}) => {
@@ -102,18 +102,18 @@ for (const failure of ['action failure', 'server error', 'network error'] as con
 		await expect(toggle).not.toBeChecked();
 		await expect(toggle).toBeDisabled();
 		await expect(toggle).toHaveAttribute('aria-busy', 'true');
-		await expect(settings.getByRole('status')).toHaveText('Saving colorblind mode...');
+		await expect(settings.getByRole('status')).toHaveCount(0);
+		await expect(settings.getByRole('alert')).toHaveCount(0);
 		await expect(page.locator('html')).toHaveAttribute('data-colorblind', 'true');
 		expect(
 			(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value
 		).toBe('true');
 		release();
-		await expect(settings.getByRole('alert')).toHaveText(
-			'Could not save colorblind mode. The previous setting was restored. Please try again.'
-		);
 		await expect(toggle).toBeChecked();
 		await expect(toggle).toBeEnabled();
 		await expect(toggle).toHaveAttribute('aria-busy', 'false');
+		await expect(settings.getByRole('status')).toHaveCount(0);
+		await expect(settings.getByRole('alert')).toHaveCount(0);
 		await expect(page.locator('html')).toHaveAttribute('data-colorblind', 'true');
 		expect(
 			(await context.cookies()).find((cookie) => cookie.name === 'colorBlindMode')?.value

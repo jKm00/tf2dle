@@ -1,4 +1,7 @@
-<script lang="ts">
+<script
+	lang="ts"
+	generics="ImageKey extends string, Guess extends { name: string } & Record<ImageKey, string>"
+>
 	import * as Card from '#lib/components/ui/card/index.ts';
 	import { ChartArea, Dices, Flame, RotateCw } from '@lucide/svelte';
 	import ColorExplanation from './ColorExplanation.svelte';
@@ -17,11 +20,10 @@
 		challenge: string;
 		shareMode: ShareMode;
 		description: string;
-		img: { basePath: string; guessKey: string };
+		img: { basePath: string; guessKey: ImageKey };
 		loadingState: 'loading' | 'error' | 'success';
 		nextChallenge?: string;
-		// TODO: Pass in generic?
-		guesses: Writable<any>;
+		guesses: Writable<Guess[]>;
 		streak: Writable<number>;
 		stats: UseStats;
 		numberOfCorrectGuesses: Writable<number | undefined>;

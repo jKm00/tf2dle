@@ -8,7 +8,6 @@
 	let form = $state<HTMLFormElement>();
 	let active = $state(false);
 	let pending = $state(false);
-	let saveError = $state<string | null>(null);
 
 	if (browser) {
 		const htmlColorblindMode = document.documentElement.dataset.colorblind;
@@ -25,7 +24,6 @@
 		// A mouse click can submit before Svelte updates the form's action attribute.
 		action.searchParams.set('active', colorblindMode.toString());
 		pending = true;
-		saveError = null;
 
 		return ({ result }) => {
 			// Do not use the default callback: this root action must not navigate away from the game.
@@ -34,8 +32,6 @@
 				active = colorblindMode;
 			} else {
 				active = previousMode;
-				saveError =
-					'Could not save colorblind mode. The previous setting was restored. Please try again.';
 			}
 			pending = false;
 		};
@@ -70,10 +66,4 @@
 			/>
 		</div>
 	</div>
-	{#if pending}
-		<p role="status" class="text-sm text-muted-foreground">Saving colorblind mode...</p>
-	{/if}
-	{#if saveError}
-		<p role="alert" class="text-sm text-destructive">{saveError}</p>
-	{/if}
 </form>

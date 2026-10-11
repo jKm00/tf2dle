@@ -12,10 +12,9 @@
 	import { DevBanner } from '#lib/components/ui/dev-banner/index.ts';
 	import { page } from '$app/state';
 	import { AppNotification } from '#lib/components/app-notification/index.ts';
-	import type { Snippet } from 'svelte';
-	import type { LayoutData } from './$types.js';
+	import type { LayoutProps } from './$types.js';
 
-	let { data, children }: { data: LayoutData; children?: Snippet } = $props();
+	let { data, children }: LayoutProps = $props();
 
 	setMode('dark');
 
@@ -36,7 +35,7 @@
 <Toaster />
 
 {#if isAdminRoute}
-	{@render children?.()}
+	{@render children()}
 {:else}
 	<Command />
 
@@ -52,7 +51,7 @@
 		<AppNotification notification={data.notification} class="mx-auto w-full max-w-[700px]" />
 		<Header />
 		<div class="flex-grow">
-			{@render children?.()}
+			{@render children()}
 		</div>
 		<Footer />
 	</div>
