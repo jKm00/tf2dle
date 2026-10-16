@@ -7,7 +7,7 @@
 	const isLoginPage = $derived(page.route.id === '/admin/login');
 </script>
 
-<div class="min-h-screen bg-background text-foreground">
+<div class="flex min-h-dvh flex-col bg-background text-foreground">
 	<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
 		<div
 			class="absolute left-[-12rem] top-[-12rem] h-96 w-96 rounded-full bg-primary/15 blur-3xl"
@@ -79,7 +79,7 @@
 		</div>
 	</header>
 
-	<div class="py-8">
+	<div class="flex flex-1 flex-col py-8">
 		{@render children()}
 	</div>
 </div>

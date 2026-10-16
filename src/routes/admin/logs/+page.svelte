@@ -2,6 +2,6 @@
 	import AdminLogs from './AdminLogs.svelte';
 </script>
 
-<main class="mx-auto grid w-full max-w-7xl gap-6 px-4">
+<main class="flex w-full flex-1 flex-col gap-6 px-4">
 	<AdminLogs />
 </main>

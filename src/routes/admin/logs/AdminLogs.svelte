@@ -91,7 +91,7 @@
 	}
 </script>
 
-<Card.Root class="bg-card/90">
+<Card.Root class="flex flex-1 flex-col bg-card/90">
 	<Card.Header>
 		<div class="flex items-center justify-between gap-4">
 			<div>
@@ -105,8 +105,8 @@
 			</span>
 		</div>
 	</Card.Header>
-	<Card.Content>
-		<div class="h-[420px] overflow-y-auto pr-2 text-sm">
+	<Card.Content class="flex-1">
+		<div class="text-sm">
 			{#if logs.length === 0 && !loading && !errorMessage}
 				<p
 					class="rounded-md border border-dashed border-border p-4 text-center text-muted-foreground"
