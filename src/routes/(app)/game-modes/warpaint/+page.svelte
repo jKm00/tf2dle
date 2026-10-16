@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
+	import { prefersReducedMotion } from 'svelte/motion';
 	import GameShell from '#lib/components/games/GameShell.svelte';
 	import Input from '#lib/components/games/Input.svelte';
 	import CommunityStatus from '#lib/components/games/CommunityStatus.svelte';
@@ -19,11 +20,16 @@
 	let { data }: { data: PageData } = $props();
 	const numberOfCorrectGuesses = writable<number | undefined>(0);
 	const { gameState, guesses, streak, stats, validating, openVictoryDialog, handleGuess } =
-		useGameEngine<WarpaintGuessResponse>('warpaint', 0, numberOfCorrectGuesses);
+		useGameEngine<WarpaintGuessResponse>(
+			'warpaint',
+			prefersReducedMotion.current ? 0 : 4,
+			numberOfCorrectGuesses
+		);
 	let actionError = $state<string | null>(null);
 	let pendingGuess = $state<string | null>(null);
 	let latest = $derived($guesses[0]);
-	let hasWon = $derived($gameState === 'won' || latest?.correct === true);
+	let hasWon = $derived($gameState === 'won');
+	let revealingWin = $derived(latest?.correct === true && !hasWon);
 	let guessedNames = $derived($guesses.map((guess) => guess.name));
 	let clues = $derived({
 		shortlist: $guesses.length >= WARPAINT_HINTS.shortlist ? latest?.shortlist : undefined,
@@ -72,7 +78,7 @@
 			{clues}
 			{guessedNames}
 			{hasWon}
-			validating={$validating}
+			validating={$validating || revealingWin}
 			{pendingGuess}
 			onselect={guess}
 		/>
@@ -86,7 +92,7 @@
 					}))}
 					imageSize={4}
 					guessed={guessedNames}
-					validating={$validating}
+					validating={$validating || revealingWin}
 					onselect={guess}
 				/>
 			{/if}
