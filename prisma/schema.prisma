@@ -10,22 +10,6 @@ generator client {
   importFileExtension    = "ts"
 }
 
-model DailyMaps {
-  id           Int      @id @default(autoincrement())
-  selectedAt   DateTime @default(now()) @db.Date
-  name         String
-  startingPosX Float
-  startingPosY Float
-  hasWon       Int      @default(0)
-}
-
-model Logs {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  event     String
-  message   String
-}
-
 model DailyWeapons {
   id         Int      @id @default(autoincrement())
   selectedAt DateTime @default(now()) @db.Date
@@ -38,6 +22,15 @@ model DailyWeaponsTwo {
   selectedAt  DateTime @default(now()) @db.Date
   name        String
   hasWon      Int @default(0)
+}
+
+model DailyMaps {
+  id           Int      @id @default(autoincrement())
+  selectedAt   DateTime @default(now()) @db.Date
+  name         String
+  startingPosX Float
+  startingPosY Float
+  hasWon       Int      @default(0)
 }
 
 model DailyCosmetics {
@@ -58,6 +51,20 @@ model DailyUnusuals {
   rotation    Int
   series      String
   hasWon      Int @default(0)
+}
+
+model DailyWarpaint {
+  id         Int      @id @default(autoincrement())
+  selectedAt DateTime @default(now()) @db.Date
+  name       String
+  hasWon     Int      @default(0)
+}
+
+model Logs {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  event     String
+  message   String
 }
 
 model DailyGameModeMetrics {
