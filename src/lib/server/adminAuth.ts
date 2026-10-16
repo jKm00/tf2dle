@@ -50,8 +50,9 @@ export function isAdminAuthenticated(cookies: Cookies, password = getAdminPasswo
 }
 
 export function setAdminSessionCookie(cookies: Cookies, password: string) {
+	cookies.delete(ADMIN_COOKIE_NAME, { path: '/admin' });
 	cookies.set(ADMIN_COOKIE_NAME, createAdminSessionToken(password), {
-		path: '/admin',
+		path: '/',
 		httpOnly: true,
 		sameSite: 'strict',
 		secure: !dev,
@@ -60,8 +61,9 @@ export function setAdminSessionCookie(cookies: Cookies, password: string) {
 }
 
 export function clearAdminSessionCookie(cookies: Cookies) {
+	cookies.delete(ADMIN_COOKIE_NAME, { path: '/admin' });
 	cookies.delete(ADMIN_COOKIE_NAME, {
-		path: '/admin'
+		path: '/'
 	});
 }
 

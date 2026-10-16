@@ -21,7 +21,7 @@ test('Runtime origin rejects cross-origin forms and uses the proxy host', async 
 		form: { password: 'migration-test-password' }
 	});
 	expect(crossOrigin.status()).toBe(403);
-	expect((await request.get('/admin/logs')).status()).toBe(401);
+	expect((await request.get('/api/admin/logs')).status()).toBe(401);
 });
 
 test('One build accepts different public HTTPS origins supplied at runtime', async ({
@@ -50,7 +50,7 @@ test('One build accepts different public HTTPS origins supplied at runtime', asy
 test('Admin rejects wrong passwords and protects logs across login, reload, and logout', async ({
 	page
 }) => {
-	expect((await page.request.get('/admin/logs')).status()).toBe(401);
+	expect((await page.request.get('/api/admin/logs')).status()).toBe(401);
 	await page.goto('/admin');
 	await expect(page).toHaveURL('/admin/login');
 
@@ -58,7 +58,7 @@ test('Admin rejects wrong passwords and protects logs across login, reload, and 
 	await page.getByRole('button', { name: 'Open dashboard' }).click();
 	await expect(page.getByText('Invalid password', { exact: true })).toBeVisible();
 	await expect(page).toHaveURL('/admin/login');
-	expect((await page.request.get('/admin/logs')).status()).toBe(401);
+	expect((await page.request.get('/api/admin/logs')).status()).toBe(401);
 
 	await page.getByLabel('Password', { exact: true }).fill('migration-test-password');
 	await page.getByRole('button', { name: 'Open dashboard' }).click();
@@ -66,7 +66,7 @@ test('Admin rejects wrong passwords and protects logs across login, reload, and 
 	await expect(page.getByRole('navigation', { name: 'Admin navigation' })).toBeVisible();
 	const session = (await page.context().cookies()).find((cookie) => cookie.name === 'tf2dle_admin');
 	expect(session).toMatchObject({
-		path: '/admin',
+		path: '/',
 		httpOnly: true,
 		secure: true,
 		sameSite: 'Strict'
@@ -76,7 +76,7 @@ test('Admin rejects wrong passwords and protects logs across login, reload, and 
 	await expect(page).toHaveURL('/admin');
 	await expect(page.getByRole('button', { name: 'Logout', exact: true })).toBeVisible();
 	const logs = await page.evaluate(async () => {
-		const response = await fetch('/admin/logs');
+		const response = await fetch('/api/admin/logs');
 		return { status: response.status, body: await response.json() };
 	});
 	expect(logs.status).toBe(200);
@@ -90,7 +90,7 @@ test('Admin rejects wrong passwords and protects logs across login, reload, and 
 	expect((await page.context().cookies()).some((cookie) => cookie.name === 'tf2dle_admin')).toBe(
 		false
 	);
-	expect((await page.request.get('/admin/logs')).status()).toBe(401);
+	expect((await page.request.get('/api/admin/logs')).status()).toBe(401);
 	await page.goto('/admin');
 	await expect(page).toHaveURL('/admin/login');
 });
