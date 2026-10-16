@@ -59,7 +59,9 @@
 				params.set('afterId', String(nextCursor));
 			}
 
-			const response = await fetch(`/admin/logs?${params}`);
+			const response = await fetch(`/admin/logs?${params}`, {
+				headers: { Accept: 'application/json' }
+			});
 
 			if (!response.ok) {
 				throw new Error('Could not load logs.');
@@ -93,7 +95,7 @@
 	<Card.Header>
 		<div class="flex items-center justify-between gap-4">
 			<div>
-				<Card.Title>Operational logs</Card.Title>
+				<Card.Title tag="h1">Operational logs</Card.Title>
 				<Card.Description>Newest first. Scroll to load older entries.</Card.Description>
 			</div>
 			<span

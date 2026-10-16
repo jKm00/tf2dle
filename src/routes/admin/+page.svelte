@@ -5,7 +5,6 @@
 	import type { Chart as ChartInstance, ChartConfiguration } from 'chart.js';
 	import * as Card from '#lib/components/ui/card/index.ts';
 	import type { PageProps } from './$types.js';
-	import AdminLogs from './AdminLogs.svelte';
 	import KpiCard from './KpiCard.svelte';
 
 	let { data }: PageProps = $props();
@@ -553,10 +552,6 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-	</section>
-
-	<section>
-		<AdminLogs />
 	</section>
 </main>
 
