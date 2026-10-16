@@ -11,7 +11,15 @@ export default defineConfig({
 		sveltekit({
 			adapter: adapter(),
 			preprocess: vitePreprocess(),
-			compilerOptions: { runes: true }
+			experimental: {
+				remoteFunctions: true
+			},
+			compilerOptions: {
+				runes: true,
+				experimental: {
+					async: true
+				}
+			}
 		}),
 		svelteTesting()
 	],
