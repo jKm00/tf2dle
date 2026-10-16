@@ -52,6 +52,8 @@ export function isAdminAuthenticated(cookies: Cookies, password = getAdminPasswo
 export function setAdminSessionCookie(cookies: Cookies, password: string) {
 	cookies.delete(ADMIN_COOKIE_NAME, { path: '/admin' });
 	cookies.set(ADMIN_COOKIE_NAME, createAdminSessionToken(password), {
+		// /admin pages and /api/admin endpoints need the same session, so '/' is their shared path.
+		// The cookie is sent site-wide, but only admin routes validate and use it.
 		path: '/',
 		httpOnly: true,
 		sameSite: 'strict',

@@ -1,6 +1,6 @@
 import { getAdminPassword, isAdminAuthenticated, isAdminEnabled } from '#lib/server/adminAuth.ts';
 import { db } from '#lib/server/prisma.ts';
-import { error, type RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from '@sveltejs/kit';
 
 const DEFAULT_LIMIT = 30;
 const MAX_LIMIT = 100;
@@ -9,11 +9,11 @@ export const GET: RequestHandler = async ({ cookies, url }) => {
 	const adminPassword = getAdminPassword();
 
 	if (!isAdminEnabled(adminPassword)) {
-		error(404, 'Not found');
+		return Response.json({ status: 404, message: 'Not found' }, { status: 404 });
 	}
 
 	if (!isAdminAuthenticated(cookies, adminPassword)) {
-		error(401, 'Unauthorized');
+		return Response.json({ status: 401, message: 'Unauthorized' }, { status: 401 });
 	}
 
 	const limit = normalizeLimit(url.searchParams.get('limit'));
