@@ -5,6 +5,7 @@ import {
 	WARPAINT_HINTS,
 	type Warpaint,
 	type WarpaintClues,
+	type WarpaintFeedback,
 	type WarpaintGuessResponse
 } from '../types.ts';
 import type { WarpaintRepository } from './WarpaintRepository.ts';
@@ -59,17 +60,21 @@ export class WarpaintService {
 			correct,
 			guessedAt: now.format(),
 			...this.getClues(paint, now, attempt),
-			...(!correct ? { feedback: this.getFeedback(guessedPaint, paint) } : {})
+			feedback: this.getFeedback(guessedPaint, paint)
 		};
 	}
 
-	private getFeedback(guess: Warpaint, answer: Warpaint) {
-		const sameCollection = guess.collection === answer.collection;
-		const sameGrade = guess.grade === answer.grade;
-		if (sameCollection && sameGrade) return 'Same collection and grade.';
-		if (sameCollection) return 'Same collection.';
-		if (sameGrade) return 'Same grade.';
-		return 'Different collection and grade.';
+	private getFeedback(guess: Warpaint, answer: Warpaint): WarpaintFeedback {
+		return {
+			collection: {
+				value: guess.collection,
+				status: guess.collection === answer.collection ? 'correct' : 'incorrect'
+			},
+			grade: {
+				value: guess.grade,
+				status: guess.grade === answer.grade ? 'correct' : 'incorrect'
+			}
+		};
 	}
 
 	private getClues(paint: Warpaint, date: Dayjs, attempt: number): WarpaintClues {
