@@ -59,7 +59,8 @@ describe('admin notification form', () => {
 	});
 
 	it('dismisses success after three seconds and restarts the delay for another save', async () => {
-		vi.useFakeTimers();
+		// Keep animation frames real so Svelte's async tick can finish during rerenders.
+		vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
 		const { getByText, queryByText, rerender, unmount } = render(NotificationPage, {
 			params: {},
 			data: { notification: null },
@@ -78,12 +79,13 @@ describe('admin notification form', () => {
 		expect(queryByText('Notification saved.')).toBeNull();
 
 		await rerender({ form: { action: 'update', success: true } });
+		await vi.advanceTimersByTimeAsync(0);
 		unmount();
 		expect(vi.getTimerCount()).toBe(0);
 	});
 
 	it('leaves save errors visible and hides any previous success message', async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
 		const { getByRole, queryByText, rerender } = render(NotificationPage, {
 			params: {},
 			data: { notification: null },

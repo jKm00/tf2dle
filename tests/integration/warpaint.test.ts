@@ -210,33 +210,6 @@ test('A failed warpaint guess preserves the input and does not advance the clue'
 	expect(await page.evaluate(() => localStorage.getItem('warpaint_guesses'))).toBe('[]');
 });
 
-test('Existing prototype progress keeps actual guesses and drops reveal-only entries', async ({
-	page
-}) => {
-	await page.addInitScript((date) => {
-		localStorage.setItem(
-			'warpaint_guesses',
-			JSON.stringify([
-				{
-					action: 'guess',
-					name: 'Bank Rolled',
-					thumbnail: '7595369081124629595',
-					correct: false,
-					guessedAt: date
-				},
-				{ action: 'reveal', name: 'Reveal 1', thumbnail: '', correct: false, guessedAt: date }
-			])
-		);
-		localStorage.setItem('warpaint_last_event', JSON.stringify({ event: 'guessed', date }));
-	}, guessedAt);
-	await openWarpaint(page);
-	const history = page.getByRole('region', { name: 'Guesses', exact: true });
-	await expect(history.getByRole('listitem')).toHaveCount(1);
-	await expect(history.getByRole('img', { name: 'Bank Rolled', exact: true })).toBeVisible();
-	await submitSearchGuess(page, 'Bamboo Brushed');
-	expect(requests).toEqual([{ guess: 'Bamboo Brushed', numberOfGuesses: 2 }]);
-});
-
 test('A failed warpaint clue image has a retry action', async ({ page }) => {
 	await openWarpaint(page);
 	await page.route('**/warpaints/*.png', (route) => route.abort());

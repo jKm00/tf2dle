@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
-	import { onMount } from 'svelte';
 	import GameShell from '#lib/components/games/GameShell.svelte';
 	import Input from '#lib/components/games/Input.svelte';
 	import CommunityStatus from '#lib/components/games/CommunityStatus.svelte';
@@ -36,13 +35,6 @@
 
 	$effect(() => {
 		if (data.todaysWarpaint) numberOfCorrectGuesses.set(data.todaysWarpaint.numberOfCorrectGuesses);
-	});
-
-	onMount(() => {
-		// Keep submitted guesses from the prototype, without its old reveal-only entries.
-		guesses.update((saved) =>
-			saved.filter((guess) => !('action' in guess && guess.action === 'reveal'))
-		);
 	});
 
 	async function guess(value: string) {

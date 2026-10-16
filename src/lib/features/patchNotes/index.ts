@@ -22,8 +22,10 @@ import update_2026_07_24 from './updates/update_2026_07_24.ts';
 import update_2026_07_25 from './updates/update_2026_07_25.ts';
 import update_2026_07_31 from './updates/update_2026_07_31.ts';
 import update_2026_10_05 from './updates/update_2026_10_05.ts';
+import update_2026_10_16 from './updates/update_2026_10_16.ts';
 
 const updates = [
+	update_2026_10_16,
 	update_2026_10_05,
 	update_2026_07_31,
 	update_2026_07_25,
