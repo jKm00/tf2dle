@@ -13,7 +13,7 @@ export function useGameEngine<T extends GuessResponse>(
 ) {
 	const gameState = writable<'guessing' | 'won'>('guessing');
 	const guesses = useLocalStorage<T[]>(`${gamemode}_guesses`, []);
-	const lastEvent = useLocalStorage<{ event: String; date: string } | null>(
+	const lastEvent = useLocalStorage<{ event: string; date: string } | null>(
 		`${gamemode}_last_event`,
 		null
 	);
