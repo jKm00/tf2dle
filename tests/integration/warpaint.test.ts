@@ -3,14 +3,15 @@ import { fileURLToPath } from 'node:url';
 import type { WarpaintGuessResponse } from '#lib/features/gamemodes/warpaint/types.ts';
 
 const guessedAt = '2026-10-10T12:00:00.000Z';
-const names = [
-	'Anodized Aloha',
-	'Bank Rolled',
-	'Bamboo Brushed',
-	'Bloom Buffed',
-	'Bonk Varnished',
-	'Cardboard Boxed'
+const paints = [
+	{ name: 'Anodized Aloha', collection: 'Jungle Jackpot Collection', grade: 'Mercenary' },
+	{ name: 'Bank Rolled', collection: 'Infernal Reward Collection', grade: 'Commando' },
+	{ name: 'Bamboo Brushed', collection: 'Jungle Jackpot Collection', grade: 'Mercenary' },
+	{ name: 'Bloom Buffed', collection: 'Infernal Reward Collection', grade: 'Mercenary' },
+	{ name: 'Bonk Varnished', collection: 'Infernal Reward Collection', grade: 'Assassin' },
+	{ name: 'Cardboard Boxed', collection: 'Infernal Reward Collection', grade: 'Mercenary' }
 ];
+const names = paints.map(({ name }) => name);
 const requests: Array<{ guess: string; numberOfGuesses: number }> = [];
 
 async function openWarpaint(page: Page) {
@@ -46,12 +47,22 @@ async function openWarpaint(page: Page) {
 		const body = route.request().postDataJSON();
 		requests.push(body);
 		const correct = body.guess === names[0];
+		const paint = paints.find(({ name }) => name === body.guess)!;
 		const result: WarpaintGuessResponse = {
 			name: body.guess,
 			thumbnail: '7595369081124629595',
 			correct,
 			guessedAt,
-			...(!correct ? { feedback: 'Different collection and grade.' } : {}),
+			feedback: {
+				collection: {
+					value: paint.collection,
+					status: paint.collection === paints[0].collection ? 'correct' : 'incorrect'
+				},
+				grade: {
+					value: paint.grade,
+					status: paint.grade === paints[0].grade ? 'correct' : 'incorrect'
+				}
+			},
 			...(body.numberOfGuesses >= 4
 				? {
 						shortlist: names.map((name, index) => ({
@@ -107,20 +118,40 @@ test('Warpaint schedules its hints, replaces search with six choices, and persis
 			.getByRole('img', { name: 'Bank Rolled' })
 	).toBeVisible();
 	await input.press('Enter');
-	await expect(page.getByText('Different collection and grade.', { exact: true })).toBeVisible();
 	await expect(clue).not.toHaveAttribute('viewBox', initialView!);
 	const history = page.getByRole('region', { name: 'Guesses', exact: true });
+	await expect(history.getByRole('columnheader')).toHaveText([
+		'Image',
+		'Name',
+		'Collection',
+		'Grade'
+	]);
 	await expect(history.getByRole('img', { name: 'Bank Rolled', exact: true })).toBeVisible();
-	const wrongGuess = history.getByRole('listitem').filter({ hasText: 'Bank Rolled' });
+	const wrongGuess = history.getByRole('row').filter({ hasText: 'Bank Rolled' });
 	await expect(wrongGuess).not.toHaveClass(/bg-incorrect/);
-	await expect(wrongGuess.locator('.bg-incorrect')).toBeVisible();
+	await expect(wrongGuess.locator('.bg-incorrect')).toHaveCount(3);
 	await expect(wrongGuess.getByRole('img').locator('..')).not.toHaveClass(
 		/bg-incorrect|bg-correct/
 	);
 	await expect(wrongGuess.locator('svg, button')).toHaveCount(0);
 	await expect(hints.getByText('Unlocks in 3 guesses', { exact: true })).toBeVisible();
 	await submitSearchGuess(page, 'Bamboo Brushed');
+	const sameCollection = history.getByRole('row').filter({ hasText: 'Bamboo Brushed' });
+	await expect(sameCollection.getByRole('cell').nth(1)).toHaveClass(/bg-incorrect/);
+	await expect(sameCollection.getByRole('cell').nth(2)).toHaveClass(/bg-correct/);
+	await expect(sameCollection.getByRole('cell').nth(2)).toContainText('Jungle Jackpot Collection');
+	await expect(sameCollection.getByRole('cell').nth(3)).toHaveClass(/bg-correct/);
 	await submitSearchGuess(page, 'Bloom Buffed');
+	const sameGrade = history.getByRole('row').filter({ hasText: 'Bloom Buffed' });
+	await expect(sameGrade.getByRole('cell').nth(2)).toHaveClass(/bg-incorrect/);
+	await expect(sameGrade.getByRole('cell').nth(3)).toHaveClass(/bg-correct/);
+	await expect(sameGrade.getByRole('cell').nth(3)).toContainText('Mercenary');
+	expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+	const comparisons = history.getByRole('region', { name: 'Warpaint guess comparisons' });
+	await comparisons.focus();
+	await comparisons.press('ArrowRight');
+	await page.clock.runFor(250);
+	await expect.poll(() => comparisons.evaluate((element) => element.scrollLeft)).toBeGreaterThan(0);
 	await expect(clue).toHaveAttribute('viewBox', '0 0 1 1');
 	await expect(input).toBeVisible();
 	await submitSearchGuess(page, 'Bonk Varnished');
@@ -162,8 +193,8 @@ test('Warpaint schedules its hints, replaces search with six choices, and persis
 	await expect(page.getByTestId('dialog')).not.toBeVisible();
 	await expect(page.getByText('Solved in 6 guesses', { exact: true })).toBeVisible();
 	await expect(
-		history.getByRole('listitem').filter({ hasText: 'Anodized Aloha' }).locator('.bg-correct')
-	).toBeVisible();
+		history.getByRole('row').filter({ hasText: 'Anodized Aloha' }).locator('.bg-correct')
+	).toHaveCount(3);
 	await expect(page.getByRole('link', { name: 'View on the TF2 Wiki' })).toHaveCount(0);
 	await page.getByRole('button', { name: 'Open stats' }).click();
 	await expect(page.getByText('Avg guesses', { exact: true })).toBeVisible();

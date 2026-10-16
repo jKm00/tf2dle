@@ -25,10 +25,20 @@ export type CurrentWarpaint = {
 	numberOfCorrectGuesses: number;
 };
 
+export type WarpaintComparison = {
+	value: string;
+	status: 'correct' | 'incorrect' | 'partial';
+};
+
+export type WarpaintFeedback = {
+	collection: WarpaintComparison;
+	grade: WarpaintComparison;
+};
+
 export interface WarpaintGuessResponse extends GuessResponse, WarpaintClues {
 	name: string;
 	thumbnail: string;
-	feedback?: string;
+	feedback: WarpaintFeedback;
 }
 
 export const WARPAINT_HINTS = {

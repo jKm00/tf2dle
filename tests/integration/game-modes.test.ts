@@ -113,7 +113,11 @@ const modes = [
 			name: 'Anodized Aloha',
 			thumbnail: '7595369081124629595',
 			correct: true,
-			guessedAt
+			guessedAt,
+			feedback: {
+				collection: { value: 'Jungle Jackpot Collection', status: 'correct' },
+				grade: { value: 'Mercenary', status: 'correct' }
+			}
 		} satisfies WarpaintGuessResponse
 	}
 ];

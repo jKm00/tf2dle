@@ -252,20 +252,49 @@ test.describe('Real database API regressions', () => {
 		const first = await (
 			await request.post(endpoint, { data: { guess: 'Bank Rolled', numberOfGuesses: 1 } })
 		).json();
-		expect(first).toMatchObject({ name: 'Bank Rolled', correct: false });
+		expect(first).toMatchObject({
+			name: 'Bank Rolled',
+			correct: false,
+			feedback: {
+				collection: { value: 'Infernal Reward Collection', status: 'incorrect' },
+				grade: { value: 'Commando', status: 'incorrect' }
+			}
+		});
 		expect(first).not.toHaveProperty('action');
 		expect(first).not.toHaveProperty('shortlist');
 		expect(first).not.toHaveProperty('collection');
-		await request.post(endpoint, { data: { guess: 'Autumn Mk.II', numberOfGuesses: 2 } });
-		const early = await (
-			await request.post(endpoint, { data: { guess: 'Bank Rolled', numberOfGuesses: 3 } })
+		const sameCollection = await (
+			await request.post(endpoint, { data: { guess: 'Croc Dusted', numberOfGuesses: 2 } })
 		).json();
-		expect(early).toMatchObject({ feedback: 'Different collection and grade.' });
+		expect(sameCollection).toMatchObject({
+			correct: false,
+			feedback: {
+				collection: { value: 'Jungle Jackpot Collection', status: 'correct' },
+				grade: { value: 'Commando', status: 'incorrect' }
+			}
+		});
+		const early = await (
+			await request.post(endpoint, { data: { guess: 'Bloom Buffed', numberOfGuesses: 3 } })
+		).json();
+		expect(early).toMatchObject({
+			correct: false,
+			feedback: {
+				collection: { value: 'Infernal Reward Collection', status: 'incorrect' },
+				grade: { value: 'Mercenary', status: 'correct' }
+			}
+		});
 		expect(early).not.toHaveProperty('shortlist');
 		const shortlist = await (
 			await request.post(endpoint, { data: { guess: 'Bamboo Brushed', numberOfGuesses: 4 } })
 		).json();
 		expect(shortlist.shortlist).toHaveLength(6);
+		expect(shortlist).toMatchObject({
+			correct: false,
+			feedback: {
+				collection: { value: 'Jungle Jackpot Collection', status: 'correct' },
+				grade: { value: 'Mercenary', status: 'correct' }
+			}
+		});
 		expect(new Set(shortlist.shortlist.map((option: { name: string }) => option.name)).size).toBe(
 			6
 		);
@@ -282,7 +311,14 @@ test.describe('Real database API regressions', () => {
 		const correct = await (
 			await request.post(endpoint, { data: { guess: 'Anodized Aloha', numberOfGuesses: 6 } })
 		).json();
-		expect(correct).toMatchObject({ correct: true, name: 'Anodized Aloha' });
+		expect(correct).toMatchObject({
+			correct: true,
+			name: 'Anodized Aloha',
+			feedback: {
+				collection: { value: 'Jungle Jackpot Collection', status: 'correct' },
+				grade: { value: 'Mercenary', status: 'correct' }
+			}
+		});
 		expect(correct).not.toHaveProperty('action');
 		expect(correct).not.toHaveProperty('answer');
 		expect(

@@ -100,18 +100,13 @@ Distractor selection needs prototyping. The current metadata can narrow candidat
 
 ## Wrong-guess feedback
 
-Give a compact message beneath each incorrect guess:
-
-- Same collection.
-- Same grade.
-- Same collection and grade.
-- Different collection and grade.
+Show separate Name, Collection, and Grade columns beside the image. Collection and Grade display the guessed paint's values and compare independently against the daily answer.
 
 For example, guessing Mosaic when the answer is Miami Element tells the player that they have found the right collection.
 
-Keep the image as the main puzzle. A large attribute-comparison table would add little with the available metadata. Wear is identical across every reference, so it is not a useful guessing attribute.
+Keep the image as the main puzzle. Wear is identical across every reference, so it is not a useful guessing attribute.
 
-Feedback uses text and the same correct/incorrect background colours as the other game modes. The image stays in its own neutral column; only the name and feedback receive the result colour. Unlocked hints use the same primary styling as unusual and cosmetic hints.
+Each result cell uses the shared correct, incorrect, or partial background colour and includes an accessible status label. Collection and grade are single-valued in the dataset, so their current comparisons are exact matches or mismatches. The image stays in its own neutral column. Unlocked hints use the same primary styling as unusual and cosmetic hints.
 
 ## Collection hints and difficulty
 
