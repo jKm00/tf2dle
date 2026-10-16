@@ -15,6 +15,6 @@
 
 <style>
 	.width {
-		width: min(100%, 700px);
+		width: min(100%, 880px);
 	}
 </style>

@@ -1,10 +1,21 @@
 # War Paint game mode
 
-Status: proposed design for prototyping.
+Status: playable prototype implemented at `/game-modes/warpaint`.
+
+## Implemented prototype
+
+- Hints unlock after submitted guesses, following the schedule below. Shortlist and collection cards count down with "Unlocks in X guesses" and use primary styling when unlocked. Image zoom changes have no explanatory card.
+- Stats, completion, and sharing use the number of guesses, like the other game modes.
+- The shortlist uses a date-seeded order and prefers distractors from the same collection or grade.
+- The default crop targets the upper painted canvas, away from the transparent border and spray cans. Entries can override it with an optional normalized `crop` containing `x`, `y`, `width`, and `height`.
+- Guess history and unlocked clues persist locally until the next daily puzzle. Players can keep guessing after the final reveal.
+- The searchable picker and guess history show item thumbnails. The late shortlist uses names only and replaces the picker when it unlocks.
+
+Individual crop selection and distractor quality still need playtesting across the dataset.
 
 ## Goal
 
-Build a daily visual puzzle where players identify a War Paint from progressively clearer images. Collectors can solve it through recognition; other players can use reveals, guess feedback, and a late shortlist to work toward the answer.
+Build a daily visual puzzle where players identify a War Paint from progressively clearer images. Collectors can solve it through recognition; other players can use image hints, guess feedback, and a late shortlist to work toward the answer.
 
 Recognising a design should help even when the player cannot remember its exact name. The mode should reward solving with fewer clues without requiring players to know all 163 War Paint names.
 
@@ -33,22 +44,21 @@ Examples inspected include Anodized Aloha, Miami Element, Smissmas Sweater, and 
 1. Everyone receives the same daily War Paint and initial crop.
 2. Players select a name through a searchable answer picker consistent with the other game modes.
 3. Each incorrect guess advances the reveal and provides brief metadata feedback.
-4. A **Reveal more** action lets players advance without submitting a random name. It counts toward their result.
-5. Later stages introduce a shortlist and a collection hint.
-6. Players can continue guessing after the final reveal. There is no hard failure at that point.
+4. Later guesses unlock a shortlist and a collection hint, grouped below the image. The shortlist replaces the searchable picker.
+5. Players can continue guessing after the final hint. There is no hard failure at that point.
 
-The challenge is to solve with fewer guesses and reveals. The exact scoring and share format still need to be defined; skips must count so using them does not produce an artificially better result.
+The challenge is to solve with fewer guesses. Stats and shared results use the guess count.
 
-## Proposed reveal progression
+## Hint progression
 
-| Stage | What the player sees                                                  |
-| ----- | --------------------------------------------------------------------- |
-| 1     | A small, enlarged crop containing a meaningful piece of the pattern   |
-| 2     | A larger crop around the same area                                    |
-| 3     | The painted canvas, including its different pattern areas             |
-| 4     | The full item image, including the spray cans                         |
-| 5     | A shortlist of six possible names                                     |
-| 6     | The collection, with incompatible shortlist choices visibly ruled out |
+| After this many guesses | What the player sees                                                  |
+| ----------------------- | --------------------------------------------------------------------- |
+| 0                       | A small, enlarged crop containing a meaningful piece of the pattern   |
+| 1                       | A larger crop around the same area                                    |
+| 2                       | The painted canvas, including its different pattern areas             |
+| 3                       | The full item image, including the spray cans                         |
+| 4                       | A shortlist of six possible names                                     |
+| 5                       | The collection, with incompatible shortlist choices visibly ruled out |
 
 These stages are a prototype proposal, not a fixed difficulty specification. Each stage should add information that helps players make an informed guess.
 
@@ -71,7 +81,7 @@ Use the same crop and progression for everyone playing a given daily puzzle.
 
 ## Answer picker and shortlist
 
-Use searchable names as the primary answer input. Before the full-item reveal, suggestions should not show image thumbnails or grade colours, since those would provide clues ahead of the reveal progression.
+Use searchable names with item thumbnails as the primary answer input. Thumbnails also appear beside previous guesses so players can compare the designs they have tried.
 
 The late shortlist helps players who recognise the appearance but cannot remember its name. For example, someone may recognise Miami Element's pink-and-teal design from a weapon without knowing what to search for.
 
@@ -84,7 +94,7 @@ Shortlist rules:
 - Keep the choices and their order consistent for the shared daily puzzle.
 - When the collection hint appears, visibly rule out incompatible choices rather than silently removing them.
 
-Showing full-image choices would make the challenge primarily about matching pictures. Names preserve a role for recognition and deduction.
+Keep the shortlist name-only so it helps players recall names without adding six full-image choices to the page.
 
 Distractor selection needs prototyping. The current metadata can narrow candidate pools, but it does not describe visual similarity.
 
@@ -101,7 +111,7 @@ For example, guessing Mosaic when the answer is Miami Element tells the player t
 
 Keep the image as the main puzzle. A large attribute-comparison table would add little with the available metadata. Wear is identical across every reference, so it is not a useful guessing attribute.
 
-Feedback should use text as well as any colour or icons.
+Feedback uses text and the same correct/incorrect background colours as the other game modes. The image stays in its own neutral column; only the name and feedback receive the result colour. Unlocked hints use the same primary styling as unusual and cosmetic hints.
 
 ## Collection hints and difficulty
 
@@ -116,9 +126,7 @@ Review visually similar paints and variants during crop selection. Difficulty sh
 After a correct guess, show:
 
 - The full item image and War Paint name.
-- Collection and grade.
-- A link to the wiki.
-- The player's result, including reveals used.
+- The player's result, showing the number of guesses.
 
 The reveal should help players learn an unfamiliar War Paint so they can recognise it in a future puzzle.
 
@@ -128,7 +136,6 @@ Implement the smallest playable version with:
 
 - The crop progression.
 - Searchable name selection.
-- The Reveal more action.
 - Compact feedback on incorrect guesses.
 - The late name shortlist and collection hint.
 
@@ -142,5 +149,4 @@ Also check whether players who recognise a design can use the shortlist to recov
 
 - Exact crop sizes and the final number of reveal stages.
 - How to generate and review plausible daily distractors.
-- How to count guesses and skips in stats and shared results.
 - Whether each stage is useful across the full dataset, including singleton collections and similar variants.

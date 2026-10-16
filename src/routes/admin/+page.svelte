@@ -27,7 +27,7 @@
 	type TrendChart = ChartInstance<'line', number[], string>;
 	type DailyModeChart = ChartInstance<'bar', number[], string>;
 	type DailyModeMetric = 'guesses' | 'wins';
-	type ModeKey = 'weapon' | 'weapon-2' | 'map' | 'cosmetic' | 'unusual';
+	type ModeKey = 'weapon' | 'weapon-2' | 'map' | 'cosmetic' | 'unusual' | 'warpaint';
 
 	let trendCanvas = $state<HTMLCanvasElement>();
 	let modeGuessesCanvas = $state<HTMLCanvasElement>();
@@ -242,7 +242,8 @@
 			'weapon-2': 'rgb(56 189 248)',
 			map: 'rgb(34 197 94)',
 			cosmetic: 'rgb(217 70 239)',
-			unusual: 'rgb(245 158 11)'
+			unusual: 'rgb(245 158 11)',
+			warpaint: 'rgb(20 184 166)'
 		};
 
 		return {

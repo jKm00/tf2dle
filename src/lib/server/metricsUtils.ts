@@ -1,6 +1,6 @@
 import dayjs from '#lib/configs/dayjsConfig.ts';
 
-export const GAME_MODES = ['weapon', 'weapon-2', 'map', 'cosmetic', 'unusual'] as const;
+export const GAME_MODES = ['weapon', 'weapon-2', 'map', 'cosmetic', 'unusual', 'warpaint'] as const;
 
 export type GameMode = (typeof GAME_MODES)[number];
 
@@ -9,7 +9,8 @@ export const GAME_MODE_LABELS: Record<GameMode, string> = {
 	'weapon-2': 'Weapon 2',
 	map: 'Map',
 	cosmetic: 'Cosmetic',
-	unusual: 'Unusual'
+	unusual: 'Unusual',
+	warpaint: 'Warpaint'
 };
 
 export type GameMetricRow = {

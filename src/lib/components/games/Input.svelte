@@ -8,7 +8,7 @@
 		placeholder?: string;
 		validating: boolean;
 		imageSize?: number;
-		onselect: (value: string) => void;
+		onselect: (value: string) => unknown;
 	}
 
 	let {
@@ -51,17 +51,19 @@
 	 * Handles the selected value
 	 * @param selected the value selected
 	 */
-	function handleSelect(selected: string) {
+	async function handleSelect(selected: string) {
 		if (validating || selectTimeout || value === '') return;
 
 		selectTimeout = true;
-		onselect(selected);
-		value = '';
-		inputElement?.focus();
-
-		selectTimer = setTimeout(() => {
-			selectTimeout = false;
-		}, 100);
+		try {
+			const result = await onselect(selected);
+			if (result !== false) value = '';
+			inputElement?.focus();
+		} finally {
+			selectTimer = setTimeout(() => {
+				selectTimeout = false;
+			}, 100);
+		}
 	}
 
 	function handleInput() {

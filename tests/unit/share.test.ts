@@ -3,6 +3,20 @@ import { buildShareText } from '#lib/share.ts';
 import type { WeaponGuessResponse } from '#lib/dtos.ts';
 
 describe('buildShareText', () => {
+	test('shares the warpaint guess count without revealing the answer', () => {
+		const text = buildShareText({
+			mode: 'warpaint',
+			guesses: [
+				{ name: 'Anodized Aloha', correct: true },
+				{ name: 'Bank Rolled', correct: false }
+			],
+			streak: 2
+		});
+		expect(text).toContain("I beat today's challenge in 2 guesses.");
+		expect(text).not.toContain('reveal');
+		expect(text).toContain('https://tf2dle.com/game-modes/warpaint');
+		expect(text).not.toContain('Anodized Aloha');
+	});
 	test('builds text-only share text for non-weapon modes', () => {
 		expect(
 			buildShareText({

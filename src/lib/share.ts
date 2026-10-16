@@ -1,6 +1,6 @@
 import type { WeaponGuessResponse } from '#lib/dtos.ts';
 
-export type ShareMode = 'weapon' | 'weapon-2' | 'map' | 'cosmetic' | 'unusual';
+export type ShareMode = 'weapon' | 'weapon-2' | 'map' | 'cosmetic' | 'unusual' | 'warpaint';
 
 type ShareOptions = {
 	mode: ShareMode;
@@ -15,7 +15,8 @@ const modeLabels: Record<ShareMode, { label: string; emoji: string; slug: string
 	'weapon-2': { label: 'Weapon 2', emoji: '⚔️', slug: 'weapon-2' },
 	map: { label: 'Map', emoji: '🗺️', slug: 'map' },
 	cosmetic: { label: 'Cosmetic', emoji: '🎩', slug: 'cosmetic' },
-	unusual: { label: 'Unusual', emoji: '✨', slug: 'unusual' }
+	unusual: { label: 'Unusual', emoji: '✨', slug: 'unusual' },
+	warpaint: { label: 'Warpaint', emoji: '🎨', slug: 'warpaint' }
 };
 
 export function buildShareText({ mode, guesses, streak }: ShareOptions) {

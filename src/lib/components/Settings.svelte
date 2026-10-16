@@ -7,7 +7,7 @@
 	import { type UseStats } from '#lib/composables/useStats.ts';
 	import { toast } from 'svelte-sonner';
 	import { openSettings } from '#lib/stores/settings.ts';
-	import { gameModes } from '#lib/game-modes.ts';
+	import { gameModes } from '#lib/features/gamemodes/common/gamemodes.ts';
 	import * as AlertDialog from '#lib/components/ui/alert-dialog/index.ts';
 	import DisableExtraVisualsToggle from '#lib/features/theme/components/DisableExtraVisualsToggle.svelte';
 	import MuteUpdateNotificationsToggle from '#lib/features/patchNotes/components/mute-update-notifications-toggle.svelte';
