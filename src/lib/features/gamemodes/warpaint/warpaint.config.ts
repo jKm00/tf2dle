@@ -7,7 +7,7 @@ export const details = {
 	id: 'warpaint',
 	name: 'Warpaint',
 	href: '/warpaint',
-	description: 'Guess the correct unusual effect',
+	description: 'Identify the warpaint from expanding image clues',
 	icon: PaintBucket,
 	disabled: false,
 	new: dayjs.utc().isBefore(dayjs.utc('2026-12-31'), 'day'),

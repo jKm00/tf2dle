@@ -9,6 +9,10 @@ import type {
 	WeaponTwoGuessResponse,
 	WeaponTwoResponse
 } from '#lib/dtos.ts';
+import type {
+	CurrentWarpaint,
+	WarpaintGuessResponse
+} from '#lib/features/gamemodes/warpaint/types.ts';
 
 const guessedAt = '2026-10-10T12:00:00.000Z';
 const modes = [
@@ -90,6 +94,27 @@ const modes = [
 			guessedAt,
 			series: 'Original'
 		} satisfies UnusualGuessResponse
+	},
+	{
+		mode: 'warpaint',
+		storage: 'warpaint',
+		title: 'Warpaint',
+		name: 'Anodized Aloha',
+		list: 'warpaints',
+		items: [{ name: 'Anodized Aloha', thumbnail: '7595369081124629595' }],
+		today: {
+			warpaint: {
+				thumbnail: '7595369081124629595',
+				crop: { x: 0.32, y: 0.29, width: 0.18, height: 0.18 }
+			},
+			numberOfCorrectGuesses: 7
+		} satisfies CurrentWarpaint,
+		guess: {
+			name: 'Anodized Aloha',
+			thumbnail: '7595369081124629595',
+			correct: true,
+			guessedAt
+		} satisfies WarpaintGuessResponse
 	}
 ];
 

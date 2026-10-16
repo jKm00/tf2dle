@@ -10,7 +10,7 @@ test.describe('Real database API regressions', () => {
 	let originalSettings: AdminSettings | null | undefined;
 	let today: Date;
 	let yesterday: Date;
-	const gameModes = ['weapon', 'weapon-2'];
+	const gameModes = ['weapon', 'weapon-2', 'warpaint'];
 	const path = '/patch-notes';
 
 	test.beforeAll(async () => {
@@ -62,6 +62,12 @@ test.describe('Real database API regressions', () => {
 					{ selectedAt: selectedYesterday, name: 'Force-A-Nature', hasWon: 11 }
 				]
 			}),
+			db.dailyWarpaint.createMany({
+				data: [
+					{ selectedAt: selectedToday, name: 'Anodized Aloha', hasWon: 7 },
+					{ selectedAt: selectedYesterday, name: 'Bank Rolled', hasWon: 11 }
+				]
+			}),
 			db.dailyGameModeMetrics.createMany({
 				data: gameModes.map((gameMode) => ({
 					date: yesterday,
@@ -102,19 +108,39 @@ test.describe('Real database API regressions', () => {
 			request
 		}) => {
 			const endpoint = `/api/v1/game-modes/${gameMode}`;
-			const correctGuess = gameMode === 'weapon' ? 'Scattergun' : 'Shortstop';
-			const wrongGuess = gameMode === 'weapon' ? 'Shortstop' : 'Scattergun';
-			const yesterdayAnswer = gameMode === 'weapon' ? 'Rocket Launcher' : 'Force-A-Nature';
+			const correctGuess =
+				gameMode === 'warpaint'
+					? 'Anodized Aloha'
+					: gameMode === 'weapon'
+						? 'Scattergun'
+						: 'Shortstop';
+			const wrongGuess =
+				gameMode === 'warpaint'
+					? 'Bank Rolled'
+					: gameMode === 'weapon'
+						? 'Shortstop'
+						: 'Scattergun';
+			const yesterdayAnswer =
+				gameMode === 'warpaint'
+					? 'Bank Rolled'
+					: gameMode === 'weapon'
+						? 'Rocket Launcher'
+						: 'Force-A-Nature';
 			const readSelections = () =>
-				gameMode === 'weapon'
-					? db.dailyWeapons.findMany({
+				gameMode === 'warpaint'
+					? db.dailyWarpaint.findMany({
 							where: { selectedAt: { in: [today, yesterday] } },
 							orderBy: { selectedAt: 'asc' }
 						})
-					: db.dailyWeaponsTwo.findMany({
-							where: { selectedAt: { in: [today, yesterday] } },
-							orderBy: { selectedAt: 'asc' }
-						});
+					: gameMode === 'weapon'
+						? db.dailyWeapons.findMany({
+								where: { selectedAt: { in: [today, yesterday] } },
+								orderBy: { selectedAt: 'asc' }
+							})
+						: db.dailyWeaponsTwo.findMany({
+								where: { selectedAt: { in: [today, yesterday] } },
+								orderBy: { selectedAt: 'asc' }
+							});
 			const seeded = await readSelections();
 			expect(seeded).toHaveLength(2);
 			expect(seeded[0]).toMatchObject({ selectedAt: yesterday, name: yesterdayAnswer, hasWon: 11 });
@@ -125,6 +151,14 @@ test.describe('Real database API regressions', () => {
 				expect(response.status()).toBe(200);
 				if (gameMode === 'weapon') {
 					expect(await response.json()).toBe(7);
+				} else if (gameMode === 'warpaint') {
+					expect(await response.json()).toEqual({
+						warpaint: {
+							thumbnail: '7595369081124629595',
+							crop: { x: 0.32, y: 0.29, width: 0.18, height: 0.18 }
+						},
+						numberOfCorrectGuesses: 7
+					});
 				} else {
 					expect(await response.json()).toEqual({
 						weapon: {
@@ -191,6 +225,93 @@ test.describe('Real database API regressions', () => {
 		});
 	}
 
+	test('Warpaint only accepts guesses and unlocks consistent clues at the scheduled guess counts', async ({
+		request
+	}) => {
+		const endpoint = '/api/v1/game-modes/warpaint';
+		const options = await (await request.get('/api/v1/warpaints')).json();
+		expect(options).toHaveLength(163);
+		expect(
+			options.every((option: object) => Object.keys(option).sort().join() === 'name,thumbnail')
+		).toBe(true);
+		for (const data of [
+			null,
+			{},
+			{ guess: 'Missing paint', numberOfGuesses: 1 },
+			{ guess: 'Anodized Aloha', numberOfGuesses: 0 },
+			{ action: 'reveal', numberOfGuesses: 1 },
+			{ action: 'reveal', guess: 'Bank Rolled', numberOfGuesses: 1 }
+		]) {
+			expect((await request.post(endpoint, { data })).status()).toBe(400);
+		}
+		expect(
+			await db.dailyGameModeMetrics.findUnique({
+				where: { date_gameMode: { date: today, gameMode: 'warpaint' } }
+			})
+		).toBeNull();
+		const first = await (
+			await request.post(endpoint, { data: { guess: 'Bank Rolled', numberOfGuesses: 1 } })
+		).json();
+		expect(first).toMatchObject({ name: 'Bank Rolled', correct: false });
+		expect(first).not.toHaveProperty('action');
+		expect(first).not.toHaveProperty('shortlist');
+		expect(first).not.toHaveProperty('collection');
+		await request.post(endpoint, { data: { guess: 'Autumn Mk.II', numberOfGuesses: 2 } });
+		const early = await (
+			await request.post(endpoint, { data: { guess: 'Bank Rolled', numberOfGuesses: 3 } })
+		).json();
+		expect(early).toMatchObject({ feedback: 'Different collection and grade.' });
+		expect(early).not.toHaveProperty('shortlist');
+		const shortlist = await (
+			await request.post(endpoint, { data: { guess: 'Bamboo Brushed', numberOfGuesses: 4 } })
+		).json();
+		expect(shortlist.shortlist).toHaveLength(6);
+		expect(new Set(shortlist.shortlist.map((option: { name: string }) => option.name)).size).toBe(
+			6
+		);
+		expect(shortlist.shortlist).toContainEqual({ name: 'Anodized Aloha', ruledOut: false });
+		expect(shortlist).not.toHaveProperty('collection');
+		const final = await (
+			await request.post(endpoint, { data: { guess: 'Bloom Buffed', numberOfGuesses: 5 } })
+		).json();
+		expect(final.collection).toBe('Jungle Jackpot Collection');
+		expect(final.shortlist.some((option: { ruledOut: boolean }) => option.ruledOut)).toBe(true);
+		expect(final.shortlist.map((option: { name: string }) => option.name)).toEqual(
+			shortlist.shortlist.map((option: { name: string }) => option.name)
+		);
+		const correct = await (
+			await request.post(endpoint, { data: { guess: 'Anodized Aloha', numberOfGuesses: 6 } })
+		).json();
+		expect(correct).toMatchObject({ correct: true, name: 'Anodized Aloha' });
+		expect(correct).not.toHaveProperty('action');
+		expect(correct).not.toHaveProperty('answer');
+		expect(
+			await db.dailyGameModeMetrics.findUnique({
+				where: { date_gameMode: { date: today, gameMode: 'warpaint' } }
+			})
+		).toMatchObject({ starts: 1, guesses: 6, wins: 1, totalGuessesToWin: 6 });
+		expect(await db.dailyWarpaint.findFirst({ where: { selectedAt: today } })).toMatchObject({
+			hasWon: 8
+		});
+	});
+
+	test('Concurrent first visits share one daily warpaint selection', async ({ request }) => {
+		await db.dailyWarpaint.deleteMany({ where: { selectedAt: today } });
+		const responses = await Promise.all(
+			Array.from({ length: 8 }, () => request.get('/api/v1/game-modes/warpaint'))
+		);
+		const puzzles = await Promise.all(
+			responses.map(async (response) => {
+				expect(response.status()).toBe(200);
+				return response.json();
+			})
+		);
+		expect(puzzles.every((puzzle) => JSON.stringify(puzzle) === JSON.stringify(puzzles[0]))).toBe(
+			true
+		);
+		expect(await db.dailyWarpaint.count({ where: { selectedAt: today } })).toBe(1);
+	});
+
 	test('Page views reuse the date/path key and stop creating or updating metrics when disabled', async ({
 		request
 	}) => {
@@ -218,6 +339,7 @@ test.describe('Real database API regressions', () => {
 		await db.$transaction([
 			db.dailyWeapons.deleteMany({ where: { selectedAt: { in: [today, yesterday] } } }),
 			db.dailyWeaponsTwo.deleteMany({ where: { selectedAt: { in: [today, yesterday] } } }),
+			db.dailyWarpaint.deleteMany({ where: { selectedAt: { in: [today, yesterday] } } }),
 			db.dailyGameModeMetrics.deleteMany({
 				where: { date: { in: [today, yesterday] }, gameMode: { in: gameModes } }
 			}),

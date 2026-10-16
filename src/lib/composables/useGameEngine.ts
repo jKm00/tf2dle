@@ -92,7 +92,7 @@ export function useGameEngine<T extends GuessResponse>(
 	 * @param guess name of the item guessed
 	 */
 	async function handleGuess(guess: string) {
-		if (get(gameState) === 'won') return;
+		if (get(gameState) === 'won' || get(validating) || get(guesses)[0]?.correct) return;
 
 		const result = await checkGuess(guess);
 

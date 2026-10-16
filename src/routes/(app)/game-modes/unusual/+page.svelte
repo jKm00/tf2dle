@@ -47,6 +47,7 @@
 	challenge="Unusual"
 	shareMode="unusual"
 	description="Guess today's unusual effect"
+	nextChallenge="/game-modes/warpaint"
 	img={{ basePath: `${CDN_URL}/unusuals/`, guessKey: 'thumbnail' }}
 	{loadingState}
 	{guesses}
