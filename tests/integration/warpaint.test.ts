@@ -177,6 +177,7 @@ test('Warpaint schedules its hints, replaces search with six choices, and persis
 	).toHaveClass(/bg-primary\/10/);
 	await expect(shortlist.getByRole('button', { name: /Cardboard Boxed/ })).toBeDisabled();
 	await expect(input).toHaveCount(0);
+	await page.clock.runFor(2100);
 	await testInfo.attach('warpaint-mobile-final-hints', {
 		body: await page.screenshot({ fullPage: true }),
 		contentType: 'image/png'
@@ -186,8 +187,42 @@ test('Warpaint schedules its hints, replaces search with six choices, and persis
 		body: await page.screenshot({ fullPage: true }),
 		contentType: 'image/png'
 	});
+	await page.evaluate(() => {
+		const revealOrder: string[] = [];
+		document.addEventListener(
+			'introstart',
+			(event) => {
+				if (!(event.target instanceof Element)) return;
+				const cell = event.target.closest('td');
+				if (cell?.closest('tr')?.querySelector('img')?.alt !== 'Anodized Aloha') return;
+				revealOrder.push(['Image', 'Name', 'Collection', 'Grade'][cell.cellIndex]);
+				document.documentElement.dataset.warpaintRevealOrder = JSON.stringify(revealOrder);
+			},
+			true
+		);
+	});
+	await page.clock.pauseAt(new Date('2026-10-10T12:01:00.000Z'));
+	const correctResponse = page.waitForResponse(
+		(response) =>
+			response.url().endsWith('/api/v1/game-modes/warpaint') &&
+			response.request().method() === 'POST'
+	);
 	await shortlist.getByRole('button', { name: 'Anodized Aloha', exact: true }).click();
+	await correctResponse;
+	await page.clock.runFor(16);
+	const winningRow = history.getByRole('row').filter({ hasText: 'Anodized Aloha' });
+	const gradeCell = winningRow.getByRole('cell').nth(3);
+	// Svelte uses native Web Animations, which run independently of Playwright's JS clock.
+	await expect(page.locator('html')).toHaveAttribute(
+		'data-warpaint-reveal-order',
+		JSON.stringify(['Image', 'Name', 'Collection', 'Grade'])
+	);
+	await expect(gradeCell).toHaveCSS('opacity', '1');
+	await page.clock.runFor(1900);
+	await expect(page.getByTestId('dialog')).not.toBeVisible();
+	await page.clock.runFor(200);
 	await expect(page.getByTestId('dialog')).toBeVisible();
+	await page.clock.resume();
 	await page.getByRole('button', { name: 'Close', exact: true }).click();
 	await page.clock.runFor(250);
 	await expect(page.getByTestId('dialog')).not.toBeVisible();
@@ -217,6 +252,31 @@ test('Warpaint schedules its hints, replaces search with six choices, and persis
 	await page.reload();
 	await expect(page.getByText('Solved in 6 guesses', { exact: true })).toBeVisible();
 	await expect(page.getByRole('combobox')).toHaveCount(0);
+});
+
+test('Reduced motion shows all warpaint feedback immediately without delaying victory', async ({
+	page
+}) => {
+	await page.emulateMedia({ reducedMotion: 'reduce' });
+	await openWarpaint(page);
+	await page.clock.pauseAt(new Date('2026-10-10T12:01:00.000Z'));
+	const input = page.getByRole('combobox', { name: 'Enter your guess' });
+	await input.fill('Anodized Aloha');
+	await page.clock.runFor(16);
+	const correctResponse = page.waitForResponse(
+		(response) =>
+			response.url().endsWith('/api/v1/game-modes/warpaint') &&
+			response.request().method() === 'POST'
+	);
+	await input.press('Enter');
+	await correctResponse;
+	await page.clock.runFor(50);
+	const row = page.locator('table[aria-label="Warpaint guesses"] tbody tr').first();
+	await expect(row.locator('img')).toHaveCSS('opacity', '1');
+	for (const cell of await row.locator('td').all()) {
+		await expect(cell).toHaveCSS('opacity', '1');
+	}
+	await expect(page.getByTestId('dialog')).toBeVisible();
 });
 
 test('A failed warpaint guess preserves the input and does not advance the clue', async ({

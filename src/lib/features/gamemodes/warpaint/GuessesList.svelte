@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { CDN_URL } from '#lib/constants.ts';
 	import type { WarpaintComparison, WarpaintGuessResponse } from './types.ts';
+	import { prefersReducedMotion } from 'svelte/motion';
+	import { fade } from 'svelte/transition';
 
 	let { guesses }: { guesses: WarpaintGuessResponse[] } = $props();
 
@@ -42,10 +44,12 @@
 				</thead>
 				<tbody>
 					{#each guesses as guess (guess.name)}
+						{@const fadeDuration = prefersReducedMotion.current ? 0 : 500}
 						<tr>
 							<td class="p-0 align-middle">
 								<div class="size-20 overflow-hidden rounded-sm bg-muted/20">
 									<img
+										in:fade={{ duration: fadeDuration }}
 										src="{CDN_URL}/warpaints/{guess.thumbnail}.png"
 										alt={guess.name}
 										width="80"
@@ -56,14 +60,16 @@
 								</div>
 							</td>
 							<td
+								in:fade={{ duration: fadeDuration, delay: fadeDuration }}
 								class="relative h-20 break-words rounded-sm p-2 align-middle font-medium {statusClasses[
 									guess.correct ? 'correct' : 'incorrect'
 								]}"
 							>
 								{guess.name}<span class="sr-only">. {guess.correct ? 'Correct' : 'Incorrect'}</span>
 							</td>
-							{#each [guess.feedback.collection, guess.feedback.grade] as comparison}
+							{#each [guess.feedback.collection, guess.feedback.grade] as comparison, index}
 								<td
+									in:fade|global={{ duration: fadeDuration, delay: fadeDuration * (index + 2) }}
 									class="relative h-20 break-words rounded-sm p-2 align-middle {statusClasses[
 										comparison.status
 									]}"
