@@ -22,7 +22,7 @@
 
 	<header class="border-b border-border/70 bg-background/85 backdrop-blur">
 		<div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-			<div class="flex gap-4 items-end">
+			<div class="flex flex-wrap gap-4 items-end">
 				<a href="/admin" class="flex items-center gap-3">
 					<span
 						class="grid h-10 w-10 place-items-center rounded-lg border border-primary/30 bg-primary/10 text-primary"
@@ -42,7 +42,7 @@
 						class="order-last flex w-full items-center gap-1 rounded-lg text-sm lg:order-none lg:w-auto"
 						aria-label="Admin navigation"
 					>
-						{#each [{ href: '/admin', label: 'Metrics' }, { href: '/admin/notification', label: 'Notification' }] as item}
+						{#each [{ href: '/admin', label: 'Metrics' }, { href: '/admin/logs', label: 'Logs' }, { href: '/admin/notification', label: 'Notification' }] as item}
 							<a
 								class="flex-1 rounded-md px-4 py-2 text-center text-muted-foreground hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring aria-[current=page]:bg-primary/10 aria-[current=page]:font-semibold aria-[current=page]:text-primary"
 								href={item.href}
