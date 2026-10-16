@@ -59,7 +59,7 @@
 				params.set('afterId', String(nextCursor));
 			}
 
-			const response = await fetch(`/admin/logs?${params}`, {
+			const response = await fetch(`/api/admin/logs?${params}`, {
 				headers: { Accept: 'application/json' }
 			});
 
