@@ -310,6 +310,9 @@ test.describe('Real database API regressions', () => {
 			true
 		);
 		expect(await db.dailyWarpaint.count({ where: { selectedAt: today } })).toBe(1);
+		await expect(
+			db.dailyWarpaint.create({ data: { selectedAt: today, name: 'Bank Rolled' } })
+		).rejects.toMatchObject({ code: 'P2002' });
 	});
 
 	test('Page views reuse the date/path key and stop creating or updating metrics when disabled', async ({

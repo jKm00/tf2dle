@@ -55,7 +55,7 @@ model DailyUnusuals {
 
 model DailyWarpaint {
   id         Int      @id @default(autoincrement())
-  selectedAt DateTime @default(now()) @db.Date
+  selectedAt DateTime @unique @default(now()) @db.Date
   name       String
   hasWon     Int      @default(0)
 }

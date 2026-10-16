@@ -21,11 +21,12 @@ export default defineConfig({
 				}
 			}
 		}),
-		svelteTesting()
+		svelteTesting({ autoCleanup: false })
 	],
 	test: {
 		include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
 		environment: 'jsdom',
+		setupFiles: ['./tests/setup.ts'],
 		maxWorkers: 2
 	}
 });
