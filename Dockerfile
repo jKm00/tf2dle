@@ -1,4 +1,4 @@
-FROM node:24-alpine AS builder
+FROM node:24.22.1-alpine AS builder
 WORKDIR /app
 
 ARG PUBLIC_CDN_URL
@@ -22,7 +22,7 @@ RUN pnpm db:client
 RUN pnpm check && pnpm build
 RUN pnpm prune --production
 
-FROM node:24-alpine
+FROM node:24.22.1-alpine
 WORKDIR /app
 
 RUN npm install -g npm@12.2.0
